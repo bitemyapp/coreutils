@@ -16,6 +16,9 @@ path = "src/true.rs"
 test = false
 doctest = false
 
+[features]
+startup-early-return = []
+
 [dependencies]
 clap = { workspace = true }
 fluent = { workspace = true }

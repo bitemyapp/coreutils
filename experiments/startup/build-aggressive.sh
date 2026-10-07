@@ -16,7 +16,11 @@ fi
 target=x86_64-unknown-linux-musl
 mkdir -p "$base/bin/$stage/single" "$base/bin/$stage/multi"
 for util in true ln; do
-    cargo build --locked --release --target "$target" -p "uu_$util" --bin "$util"
+    extra=()
+    if [[ "$util" == true && "$stage" == aggressive ]]; then
+        extra+=(--features startup-early-return)
+    fi
+    cargo build --locked --release --target "$target" -p "uu_$util" --bin "$util" "${extra[@]}"
     cp "$CARGO_TARGET_DIR/$target/release/$util" "$base/bin/$stage/single/$util"
 done
 cargo build --locked --release --target "$target" --features feat_os_unix_musl --bin coreutils

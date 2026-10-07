@@ -66,3 +66,29 @@ fn test_full() {
             .stderr_is("true: No space left on device\n");
     }
 }
+
+#[test]
+fn test_recognized_options_require_exact_single_argument() {
+    for args in [
+        vec!["--hel"],
+        vec!["--help="],
+        vec!["--version="],
+        vec!["--help", ""],
+        vec!["", "--version"],
+        vec!["--", "--help"],
+    ] {
+        new_ucmd!().args(&args).succeeds().no_output();
+    }
+}
+
+#[test]
+#[cfg(unix)]
+fn test_non_utf8_argument_is_ignored() {
+    use std::ffi::OsStr;
+    use std::os::unix::ffi::OsStrExt;
+
+    new_ucmd!()
+        .arg(OsStr::from_bytes(b"\xff--help"))
+        .succeeds()
+        .no_output();
+}
