@@ -35,10 +35,12 @@ Argument ordering, overrides, tie breaking, filenames, filesystem operations,
 exit statuses, and rendered messages are unchanged for valid locale assets.
 Floating-point and RNG behavior are not involved. The caller's original
 localization error handler is retained. Locale environment/files are observed
-when first needed. Consequently a silent success no longer rejects malformed
-unused external locale assets; a later localization failure can occur after
-work rather than before it. This is an experimental semantic tradeoff, not a
-claim of complete equivalence under broken/changing locale installations.
+when first needed, so concurrent changes to locale assets can be observed at a
+different point in execution. A fatal initialization error, if any, is likewise
+deferred. An additional damaged-external-locale check matched baseline: the
+existing implementation already falls back to embedded English for that case.
+This is an experimental branch, not a claim of suite-wide or cross-platform
+compatibility beyond the tested true/ln paths.
 
 Validation
 42 locale unit tests pass on GNU and musl targets, including deferred setup,
