@@ -18,6 +18,7 @@ doctest = false
 
 [features]
 startup-early-return = []
+startup-raw-entry = []
 
 [dependencies]
 clap = { workspace = true }

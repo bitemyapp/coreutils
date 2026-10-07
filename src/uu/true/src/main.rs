@@ -42,3 +42,13 @@ mod early_return {
         0
     }
 }
+
+// This entry uses only the Linux x86-64 initial stack and a relative jump.
+// In particular it accesses no GOT, TLS, heap, or unrelocated static pointers.
+#[cfg(all(
+    feature = "startup-raw-entry",
+    target_os = "linux",
+    target_env = "musl",
+    target_arch = "x86_64"
+))]
+core::arch::global_asm!(include_str!("early_start.S"));

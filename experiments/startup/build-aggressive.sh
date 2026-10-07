@@ -17,8 +17,11 @@ target=x86_64-unknown-linux-musl
 mkdir -p "$base/bin/$stage/single" "$base/bin/$stage/multi"
 for util in true ln; do
     extra=()
-    if [[ "$util" == true && "$stage" == aggressive ]]; then
-        extra+=(--features startup-early-return)
+    if [[ "$util" == true ]]; then
+        case "$stage" in
+            aggressive-crt) extra+=(--features startup-early-return) ;;
+            aggressive) extra+=(--features startup-raw-entry) ;;
+        esac
     fi
     cargo build --locked --release --target "$target" -p "uu_$util" --bin "$util" "${extra[@]}"
     cp "$CARGO_TARGET_DIR/$target/release/$util" "$base/bin/$stage/single/$util"

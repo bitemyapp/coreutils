@@ -92,3 +92,13 @@ fn test_non_utf8_argument_is_ignored() {
         .succeeds()
         .no_output();
 }
+
+#[test]
+fn test_all_partial_help_and_version_options_are_ignored() {
+    for option in ["--help", "--version"] {
+        for end in 0..option.len() {
+            new_ucmd!().arg(&option[..end]).succeeds().no_output();
+        }
+        new_ucmd!().arg(format!("{option}x")).succeeds().no_output();
+    }
+}
