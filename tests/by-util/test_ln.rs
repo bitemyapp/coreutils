@@ -1326,3 +1326,23 @@ fn test_hard_link_force_failed_link_keeps_destination() {
     assert!(at.file_exists("dst"));
     assert_eq!(at.read("dst"), "keep\n");
 }
+
+#[test]
+fn test_help_with_operands_does_not_create_link() {
+    let (at, mut ucmd) = at_and_ucmd!();
+    at.touch("source");
+    ucmd.args(&["--help", "source", "new-link"])
+        .succeeds()
+        .stdout_contains("Usage:");
+    assert!(!at.file_exists("new-link"));
+}
+
+#[test]
+fn test_parse_error_with_operands_does_not_create_link() {
+    let (at, mut ucmd) = at_and_ucmd!();
+    at.touch("source");
+    ucmd.args(&["-s", "source", "new-link", "--definitely-invalid"])
+        .fails_with_code(1)
+        .no_stdout();
+    assert!(!at.file_exists("new-link"));
+}

@@ -204,6 +204,7 @@ thread_local! {
         )
     )]
     static LOCALIZER: RefCell<Option<Localizer>> = const { RefCell::new(None) };
+    static PENDING_LOCALIZATION: RefCell<Option<PendingLocalization>> = const { RefCell::new(None) };
     /// Built on the first lookup that misses every ordinary bundle; `None`
     /// when there are no error strings to be found at all.
     #[cfg_attr(
@@ -500,6 +501,7 @@ fn set_localizer(localizer: Localizer) {
 }
 
 fn get_message_internal(id: &str, args: Option<FluentArgs>) -> String {
+    initialize_pending_localization();
     LOCALIZER.with_borrow(|slot| {
         slot.as_ref()
             .map_or_else(|| id.to_string(), |loc| loc.format(id, args.as_ref())) // Return the key ID if localizer not initialized
@@ -601,6 +603,36 @@ fn detect_system_locale() -> Result<LanguageIdentifier, LocalizationError> {
     })
 }
 
+struct PendingLocalization {
+    util: String,
+    on_error: fn(LocalizationError) -> !,
+}
+
+/// Experiment: defer locale I/O and parsing for true and ln until a message is
+/// requested. Other utilities retain their existing initialization ordering.
+/// The caller supplies its existing fatal-error handler for deferred failures.
+pub fn setup_localization_at_startup(p: &str, on_error: fn(LocalizationError) -> !) {
+    if matches!(p, "true" | "ln") {
+        PENDING_LOCALIZATION.with_borrow_mut(|pending| {
+            *pending = Some(PendingLocalization {
+                util: p.to_owned(),
+                on_error,
+            });
+        });
+    } else if let Err(error) = setup_localization(p) {
+        on_error(error);
+    }
+}
+
+fn initialize_pending_localization() {
+    let pending = PENDING_LOCALIZATION.with_borrow_mut(Option::take);
+    if let Some(pending) = pending
+        && let Err(error) = setup_localization(&pending.util)
+    {
+        (pending.on_error)(error);
+    }
+}
+
 /// Sets up localization using the system locale with English fallback.
 /// Always loads common strings in addition to utility-specific strings.
 ///
@@ -639,6 +671,9 @@ fn detect_system_locale() -> Result<LanguageIdentifier, LocalizationError> {
 /// }
 /// ```
 pub fn setup_localization(p: &str) -> Result<(), LocalizationError> {
+    // Resolve the canonical utility before an explicit help-template setup,
+    // which may use an invoked alias rather than the canonical utility name.
+    initialize_pending_localization();
     // Avoid duplicated and high-cost localizer setup
     thread_local! {
         #[cfg_attr(
@@ -1755,6 +1790,34 @@ invalid-syntax = This is { $missing
         } else {
             {} // Was already unset
         }
+    }
+
+    #[test]
+    fn test_startup_localization_waits_for_a_message() {
+        std::thread::spawn(|| {
+            setup_localization_at_startup("true", |error| panic!("{error}"));
+            assert!(LOCALIZER.with_borrow(Option::is_none));
+            assert!(PENDING_LOCALIZATION.with_borrow(Option::is_some));
+            assert_ne!(get_message("true-about"), "true-about");
+            assert!(LOCALIZER.with_borrow(Option::is_some));
+            assert!(PENDING_LOCALIZATION.with_borrow(Option::is_none));
+        })
+        .join()
+        .unwrap();
+    }
+
+    #[test]
+    fn test_deferred_localization_preserves_alias_and_switching() {
+        std::thread::spawn(|| {
+            setup_localization_at_startup("true", |error| panic!("{error}"));
+            setup_localization("no-such-util").unwrap();
+            assert_ne!(get_message("true-about"), "true-about");
+            setup_localization_at_startup("ln", |error| panic!("{error}"));
+            assert_ne!(get_message("ln-about"), "ln-about");
+            assert!(PENDING_LOCALIZATION.with_borrow(Option::is_none));
+        })
+        .join()
+        .unwrap();
     }
 
     #[test]

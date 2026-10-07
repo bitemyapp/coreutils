@@ -230,8 +230,9 @@ macro_rules! bin_inner {
 
             // suppress extraneous error output for SIGPIPE failures/panics
             uucore::panic::mute_sigpipe_panic();
-            locale::setup_localization(uucore::get_canonical_util_name(stringify!($util)))
-                .unwrap_or_else(|err| {
+            locale::setup_localization_at_startup(
+                uucore::get_canonical_util_name(stringify!($util)),
+                |err| {
                     match err {
                         uucore::locale::LocalizationError::ParseResource {
                             error: err_msg,
@@ -240,7 +241,8 @@ macro_rules! bin_inner {
                         other => eprintln!("Could not init the localization system: {other}"),
                     }
                     std::process::exit(99)
-                });
+                },
+            );
 
             // execute utility code
             let code = $util::uumain(uucore::args_os());

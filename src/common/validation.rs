@@ -72,7 +72,7 @@ pub fn unrecognized_option(binary_name: &str, option: &OsStr) -> ! {
 /// Sets up localization for a utility with proper error handling
 pub fn setup_localization_or_exit(util_name: &str) {
     let util_name = get_canonical_util_name(util_name);
-    locale::setup_localization(util_name).unwrap_or_else(|err| {
+    locale::setup_localization_at_startup(util_name, |err| {
         match err {
             locale::LocalizationError::ParseResource {
                 error: err_msg,
