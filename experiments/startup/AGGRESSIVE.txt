@@ -25,3 +25,66 @@ No backup option is accepted, so BackupMode::None ignores both backup env vars.
 Ordering is preserved; tie breaking and floating-point are N/A. RNG behavior
 in replacement is untouched. Paths are moved from the captured argv, not cloned.
 Golden output and differential parser/behavior checks are recorded separately.
+
+
+true CRT-return stage (aggressive-crt)
+- Feature startup-early-return wraps C main only on Linux/x86-64/musl.
+- Only argc==2 and an exact --help/--version goes through the original main.
+  All other combinations have the same documented silent success behavior.
+- Uses core::ffi only before the original runtime entry, without std I/O,
+  allocation, thread locals or argument iteration. CRT arguments are borrowed.
+- Initial timing: 70.9 -> 48.9 us. Callgrind still spends 19,102 of 20,482
+  user-space instructions in _start_c; this motivated the next stage.
+
+true raw-entry stage (selected aggressive build)
+- Feature startup-raw-entry selects a small assembly ELF entry for the same
+  exact quiet predicate, before musl relocates the executable or sets up TLS.
+- Linux/x86-64/musl only. It reads argc and argv[1] from the specified initial
+  process stack. Byte-by-byte checks stop at the first mismatch, including NUL;
+  no unconditional wide load can read beyond a short argument.
+- Exact single --help/--version jumps to the original _start with the stack and
+  rdx untouched; the ordinary musl and Rust startup then proceeds normally.
+- Quiet execution calls Linux exit_group(0). No absolute pointers, GOT, TLS,
+  allocation, constructors or unwinding are used on that path. Rejected exit
+  syscalls fall through to original startup. ASLR remains enabled (static PIE).
+- This explicitly skips CRT/Rust initialization and destructors for quiet true.
+  It is a platform-specific experiment, not a general replacement for Rust's
+  startup contract. Runtime instrumentation/constructors that require execution
+  on quiet invocations would need explicit handling. Only standalone true uses
+  this entry; the multicall binary keeps ordinary startup.
+- Score after CRT profile: impact 4 x confidence 4 / effort 2 = 8.
+- Ordering of argument recognition is preserved; tie-breaking, floating point
+  and RNG are N/A. The recognized help/version paths preserve original behavior.
+- ABI reference (specification only; no GNU implementation source read/copied):
+  https://gitlab.com/x86-psABIs/x86-64-ABI/-/raw/master/x86-64-ABI/low-level-sys-info.tex
+
+Validation
+Each stage passes the 528 baseline golden cases (exit, output, filesystem state),
+including external French locales. The selected final build matches the previous
+winner in 3,400 generated ln cases and 318 true cases, plus 40 combinations of
+closed descriptors, /dev/full, broken pipes, and default/inherited SIGPIPE.
+74 integration tests pass for the final build in both standalone and multicall
+forms and for the previous winner/CRT controls. New tests cover combined and
+interspersed short options, -- operands, exact/partial option recognition and
+non-UTF8 arguments. Targeted clippy and formatting checks complete; the existing
+unknown clippy::assert_is_empty lint warning remains. The golden SHA is verified.
+The assembly and native-entry implementation were reviewed against the ABI and
+all builds, tests, profiles and benchmarks ran on wx-workstation.
+
+Reproduction
+The build script takes a snapshot name and copies its binaries under bin/<name>:
+  STARTUP_RELR=1 bash experiments/startup/build-aggressive.sh aggressive-relr
+  bash experiments/startup/build-aggressive.sh aggressive-parser
+  bash experiments/startup/build-aggressive.sh aggressive-crt
+  bash experiments/startup/build-aggressive.sh aggressive
+To reproduce the pre-parser RELR candidate exactly, use the first experiment
+commit, before the ln source change; the current tree always includes the ln
+parser change. The CRT/raw features are selected by the named stage; other
+names select ordinary Rust entry. Ordinary RELA is selected unless STARTUP_RELR=1.
+
+Run tools from experiments/startup/aggressive/ on wx-workstation. Artifacts go to
+/home/callen/work/coreutils-startup-factorial/artifacts-aggressive and are synced
+to the original checkout's tests/artifacts/perf/2026-10-06-aggressive directory.
+Each optimization has a separate commit for review/reversion. Final results
+are in AGGRESSIVE-RESULTS.txt; the inherited RESULTS.txt records the earlier
+four-way experiment and is not the current experiment's result.
