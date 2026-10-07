@@ -1,0 +1,27 @@
+Aggressive startup experiment, based on codex/startup-lazy-musl
+
+All builds/tests/timings/profiles run on ssh wx-workstation. Branch is
+codex/startup-aggressive. Remote worktree is coreutils-startup-factorial/aggressive.
+Use bash experiments/startup/build-aggressive.sh <snapshot-name>.
+Optional STARTUP_RELR=1 recreates the rejected compact-relocation experiment.
+
+Profile-driven candidates (impact x confidence / effort, each >= 2):
+- RELR relocation table: 4 x 4 / 1 = 16. Rejected after measurement.
+- ln parser/argument allocation: 4 x 5 / 2 = 10.
+- true quiet invocation before Rust runtime: 4 x 4 / 2 = 8.
+
+RELR: 528 golden cases passed; PIE retained. Initial median true launch was
+70.4 us before / 70.7 after; multicall true 198.1 before / 210.8 after.
+Callgrind multicall true rose 378,574 -> 455,370 user-space instructions;
+_start_c exclusive instructions rose 365,658 -> 442,427. Keep ordinary RELA
+in the selected build. Native numbers will be checked in randomized final runs.
+
+ln: A safe parser recognizes exactly two operands and only -s/-f/-n/-T,
+including clusters and --. Duplicate non-s flags, all long options, other
+options and every unrecognized input fall back to Clap before side effects.
+The original exec/link/replace_link code handles filesystem semantics, failures,
+permissions, symlink directories, same-file handling and atomic replacement.
+No backup option is accepted, so BackupMode::None ignores both backup env vars.
+Ordering is preserved; tie breaking and floating-point are N/A. RNG behavior
+in replacement is untouched. Paths are moved from the captured argv, not cloned.
+Golden output and differential parser/behavior checks are recorded separately.

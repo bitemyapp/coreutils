@@ -3,6 +3,9 @@
 set -euo pipefail
 cd "$(dirname "$0")/../.."
 variant=$(cat experiments/startup/variant)
+if [[ "$variant" == aggressive ]]; then
+    exec bash experiments/startup/build-aggressive.sh aggressive
+fi
 base=${STARTUP_EXPERIMENT_ROOT:-/home/callen/work/coreutils-startup-factorial}
 target=x86_64-unknown-linux-gnu
 if [[ "$variant" == *musl ]]; then
