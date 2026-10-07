@@ -1,0 +1,74 @@
+--------------------------------------------------------------------------------
+Profile data file '/home/callen/work/coreutils-startup-factorial/artifacts-aggressive/aggressive-parser-multi-ln.callgrind' (creator: callgrind-3.22.0)
+--------------------------------------------------------------------------------
+I1 cache: 
+D1 cache: 
+LL cache: 
+Timerange: Basic block 0 - 82719
+Trigger: Program termination
+Profiled target:  /home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/multi/ln -s -f src.txt dst.txt (PID 2111034, part 1)
+Events recorded:  Ir
+Events shown:     Ir
+Event sort order: Ir
+Thresholds:       99
+Include dirs:     
+User annotated:   
+Auto-annotation:  off
+
+--------------------------------------------------------------------------------
+Ir               
+--------------------------------------------------------------------------------
+382,959 (100.0%)  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+Ir                file:function
+--------------------------------------------------------------------------------
+365,672 (95.49%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/crt/../ldso/dlstart.c:_start_c [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/multi/coreutils]
+  1,305 ( 0.34%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/meta.h:__libc_malloc_impl [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/multi/coreutils]
+  1,030 ( 0.27%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/malloc.c:alloc_slot'2 [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/multi/coreutils]
+    861 ( 0.22%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/env/__libc_start_main.c:__init_libc [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/multi/coreutils]
+    848 ( 0.22%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/string/x86_64/memcpy.s:0x000000000089507d [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/multi/coreutils]
+    793 ( 0.21%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/malloc.c:alloc_slot [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/multi/coreutils]
+    675 ( 0.18%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/meta.h:__libc_free
+    627 ( 0.16%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/malloc.c:__libc_malloc_impl
+    408 ( 0.11%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/meta.h:alloc_slot'2
+    405 ( 0.11%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/signal/sigaction.c:__libc_sigaction [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/multi/coreutils]
+    402 ( 0.10%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/env/__libc_start_main.c:libc_start_init [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/multi/coreutils]
+    364 ( 0.10%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/meta.h:alloc_slot
+    348 ( 0.09%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/mod.rs:coreutils::main
+    338 ( 0.09%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/free.c:__libc_free [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/multi/coreutils]
+    336 ( 0.09%)  /home/callen/work/coreutils-startup-factorial/aggressive/src/uucore/src/lib/features/signals.rs:uucore::features::signals::capture_startup_state [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/multi/coreutils]
+    332 ( 0.09%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/misc/getauxval.c:getauxval [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/multi/coreutils]
+    259 ( 0.07%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/string/strlen.c:strlen [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/multi/coreutils]
+    249 ( 0.07%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/malloc.c:__malloc_alloc_meta [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/multi/coreutils]
+    230 ( 0.06%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/stat/fstatat.c:fstatat [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/multi/coreutils]
+    213 ( 0.06%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/non_null.rs:coreutils::main
+    212 ( 0.06%)  /home/callen/work/coreutils-startup-factorial/aggressive/src/bin/coreutils.rs:coreutils::main [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/multi/coreutils]
+    207 ( 0.05%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/path.rs:<std::path::Components as core::iter::traits::double_ended::DoubleEndedIterator>::next_back [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/multi/coreutils]
+    199 ( 0.05%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/string/memcmp.c:memcmp [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/multi/coreutils]
+    182 ( 0.05%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/env/__init_tls.c:__init_tls [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/multi/coreutils]
+    166 ( 0.04%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/meta.h:nontrivial_free'2
+    156 ( 0.04%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/slice/memchr.rs:uucore::features::fs::replace_link
+    155 ( 0.04%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/free.c:nontrivial_free'2 [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/multi/coreutils]
+    151 ( 0.04%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/glue.h:__malloc_alloc_meta
+    144 ( 0.04%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/cmp.rs:coreutils::main
+    134 ( 0.03%)  /home/callen/work/coreutils-startup-factorial/aggressive/src/uucore/src/lib/features/fs.rs:uucore::features::fs::replace_link [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/multi/coreutils]
+    128 ( 0.03%)  /home/callen/work/coreutils-startup-factorial/aggressive/src/uu/ln/src/ln.rs:uu_ln::uumain [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/multi/coreutils]
+    126 ( 0.03%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/signal/sigaction.c:sigaction [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/multi/coreutils]
+    121 ( 0.03%)  ???:main [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/multi/coreutils]
+    116 ( 0.03%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/free.c:nontrivial_free [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/multi/coreutils]
+    112 ( 0.03%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/internal/syscall_ret.c:__syscall_ret [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/multi/coreutils]
+    107 ( 0.03%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/iter/macros.rs:coreutils::main
+    104 ( 0.03%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/internal/atomic.h:__libc_malloc_impl
+     99 ( 0.03%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/slice/iter/macros.rs:std::path::Components::parse_next_component_back
+     93 ( 0.02%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/internal/atomic.h:alloc_slot'2
+     85 ( 0.02%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/glue.h:__libc_malloc_impl
+     85 ( 0.02%)  /home/callen/work/coreutils-startup-factorial/aggressive/src/uu/ln/src/ln.rs:uu_ln::link [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/multi/coreutils]
+     84 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/sync/atomic.rs:uucore::features::signals::capture_startup_state
+     83 ( 0.02%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/path.rs:std::path::Components::parse_next_component_back [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/multi/coreutils]
+     82 ( 0.02%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/meta.h:nontrivial_free
+     82 ( 0.02%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/slice/memchr.rs:std::path::Path::is_symlink
+     80 ( 0.02%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/thread/__lock.c:__unlock [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/multi/coreutils]
+     78 ( 0.02%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/sync/once/futex.rs:std::sys::sync::once::futex::Once::call [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/multi/coreutils]
+     72 ( 0.02%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/internal/atomic.h:alloc_slot
+

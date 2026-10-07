@@ -1,0 +1,10 @@
+{
+  "tests-lazy-musl-single": 0,
+  "tests-lazy-musl-multi": 0,
+  "tests-aggressive-relr-single": 0,
+  "tests-aggressive-relr-multi": 0,
+  "tests-aggressive-parser-single": 0,
+  "tests-aggressive-parser-multi": 0,
+  "tests-aggressive-crt-single": 0,
+  "tests-aggressive-crt-multi": 0
+}

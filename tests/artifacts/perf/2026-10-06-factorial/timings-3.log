@@ -1,0 +1,127 @@
+Benchmark 1: baseline-single-true
+  Time (mean ± σ):     297.6 µs ±  31.6 µs    [User: 211.3 µs, System: 47.6 µs]
+  Range (min … max):   281.0 µs … 505.3 µs    1000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 2: lazy-musl-multi-true
+  Time (mean ± σ):     215.9 µs ±  49.4 µs    [User: 161.1 µs, System: 31.9 µs]
+  Range (min … max):   184.1 µs … 1007.6 µs    1000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 3: musl-multi-ln
+  Time (mean ± σ):     418.2 µs ±  35.3 µs    [User: 269.0 µs, System: 109.8 µs]
+  Range (min … max):   390.5 µs … 761.0 µs    1000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 4: baseline-single-ln
+  Time (mean ± σ):     407.9 µs ±  40.5 µs    [User: 272.3 µs, System: 90.7 µs]
+  Range (min … max):   374.7 µs … 721.7 µs    1000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 5: lazy-multi-true
+  Time (mean ± σ):     427.2 µs ±  37.1 µs    [User: 272.4 µs, System: 114.2 µs]
+  Range (min … max):   406.0 µs … 661.6 µs    1000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 6: gnu-ln
+  Time (mean ± σ):     222.2 µs ±  36.9 µs    [User: 159.1 µs, System: 29.3 µs]
+  Range (min … max):   204.5 µs … 739.5 µs    1000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 7: baseline-multi-ln
+  Time (mean ± σ):     577.6 µs ±  39.1 µs    [User: 328.7 µs, System: 203.5 µs]
+  Range (min … max):   547.3 µs … 957.7 µs    1000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 8: musl-single-true
+  Time (mean ± σ):     168.2 µs ±  35.4 µs    [User: 121.0 µs, System: 16.1 µs]
+  Range (min … max):   153.1 µs … 515.3 µs    1000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 9: lazy-single-ln
+  Time (mean ± σ):     330.2 µs ±  37.5 µs    [User: 228.8 µs, System: 60.3 µs]
+  Range (min … max):   311.0 µs … 749.8 µs    1000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 10: lazy-multi-ln
+  Time (mean ± σ):     520.4 µs ±  53.2 µs    [User: 307.9 µs, System: 167.7 µs]
+  Range (min … max):   479.7 µs … 978.0 µs    1000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 11: baseline-multi-true
+  Time (mean ± σ):     484.0 µs ±  39.5 µs    [User: 298.8 µs, System: 141.5 µs]
+  Range (min … max):   461.8 µs … 753.5 µs    1000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 12: lazy-musl-single-true
+  Time (mean ± σ):      75.2 µs ±  42.8 µs    [User: 52.4 µs, System: 3.9 µs]
+  Range (min … max):    64.2 µs … 628.9 µs    1000 runs
+ 
+  Warning: The first benchmarking run for this command was significantly slower than the rest (107.1 µs). This could be caused by (filesystem) caches that were not filled until after the first run. You are already using the '--warmup' option which helps to fill these caches before the actual benchmark. You can either try to increase the warmup count further or re-run this benchmark on a quiet system in case it was a random outlier. Alternatively, consider using the '--prepare' option to clear the caches before each timing run.
+ 
+Benchmark 13: lazy-musl-multi-ln
+  Time (mean ± σ):     313.6 µs ±  43.6 µs    [User: 215.9 µs, System: 65.0 µs]
+  Range (min … max):   286.3 µs … 785.7 µs    1000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 14: gnu-true
+  Time (mean ± σ):     167.9 µs ±  35.4 µs    [User: 123.6 µs, System: 15.8 µs]
+  Range (min … max):   152.1 µs … 496.0 µs    1000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 15: musl-single-ln
+  Time (mean ± σ):     281.3 µs ±  31.8 µs    [User: 202.8 µs, System: 40.9 µs]
+  Range (min … max):   266.1 µs … 547.4 µs    1000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 16: lazy-musl-single-ln
+  Time (mean ± σ):     199.8 µs ±  40.4 µs    [User: 142.3 µs, System: 23.9 µs]
+  Range (min … max):   171.0 µs … 597.9 µs    1000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 17: lazy-single-true
+  Time (mean ± σ):     258.2 µs ±  37.6 µs    [User: 181.0 µs, System: 40.6 µs]
+  Range (min … max):   233.4 µs … 731.4 µs    1000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 18: musl-multi-true
+  Time (mean ± σ):     301.5 µs ±  38.3 µs    [User: 211.5 µs, System: 57.0 µs]
+  Range (min … max):   278.2 µs … 639.2 µs    1000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Summary
+  lazy-musl-single-true ran
+    2.23 ± 1.36 times faster than gnu-true
+    2.24 ± 1.36 times faster than musl-single-true
+    2.66 ± 1.61 times faster than lazy-musl-single-ln
+    2.87 ± 1.76 times faster than lazy-musl-multi-true
+    2.96 ± 1.75 times faster than gnu-ln
+    3.43 ± 2.02 times faster than lazy-single-true
+    3.74 ± 2.17 times faster than musl-single-ln
+    3.96 ± 2.29 times faster than baseline-single-true
+    4.01 ± 2.34 times faster than musl-multi-true
+    4.17 ± 2.45 times faster than lazy-musl-multi-ln
+    4.39 ± 2.55 times faster than lazy-single-ln
+    5.43 ± 3.14 times faster than baseline-single-ln
+    5.56 ± 3.20 times faster than musl-multi-ln
+    5.68 ± 3.27 times faster than lazy-multi-true
+    6.44 ± 3.71 times faster than baseline-multi-true
+    6.92 ± 4.01 times faster than lazy-multi-ln
+    7.68 ± 4.41 times faster than baseline-multi-ln

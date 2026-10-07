@@ -1,0 +1,4 @@
+Get:1 http://us.archive.ubuntu.com/ubuntu noble/universe amd64 musl amd64 1.2.4-2 [416 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu noble/universe amd64 musl-dev amd64 1.2.4-2 [616 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu noble/universe amd64 musl-tools amd64 1.2.4-2 [5540 B]
+Fetched 1037 kB in 1s (2034 kB/s)

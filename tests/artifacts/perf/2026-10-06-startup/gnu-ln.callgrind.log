@@ -1,0 +1,11 @@
+==911150== Callgrind, a call-graph generating cache profiler
+==911150== Copyright (C) 2002-2017, and GNU GPL'd, by Josef Weidendorfer et al.
+==911150== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==911150== Command: /usr/bin/ln -s -f src.txt dst.txt
+==911150== 
+==911150== For interactive control, run 'callgrind_control -h'.
+==911150== 
+==911150== Events    : Ir
+==911150== Collected : 193094
+==911150== 
+==911150== I   refs:      193,094

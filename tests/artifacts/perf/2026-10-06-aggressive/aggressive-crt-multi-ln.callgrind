@@ -1,0 +1,4277 @@
+# callgrind format
+version: 1
+creator: callgrind-3.22.0
+pid: 2111072
+cmd:  /home/callen/work/coreutils-startup-factorial/bin/aggressive-crt/multi/ln -s -f src.txt dst.txt
+part: 1
+
+
+desc: I1 cache: 
+desc: D1 cache: 
+desc: LL cache: 
+
+desc: Timerange: Basic block 0 - 82723
+desc: Trigger: Program termination
+
+positions: line
+events: Ir
+summary: 382964
+
+
+ob=(1) /home/callen/work/coreutils-startup-factorial/bin/aggressive-crt/multi/coreutils
+fl=(1) ???
+fn=(0) 0x00000000001636da
+0 5
+cfi=(2) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/crt/../ldso/dlstart.c
+cfn=(2) _start_c
+calls=1 22 
+0 382959
+
+fn=(42) __do_init
+0 6
+
+fn=(242) __rustc::__rust_alloc
+0 9
+cfi=(37) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/lite_malloc.c
+cfn=(118) malloc
+calls=1 115 
+0 129
+
+fn=(58) main
+0 34
+cfi=(14) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/sched/sched_yield.c
+cfn=(60) poll
+calls=1 7 
+0 27
+0 5
+cfi=(17) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/signal/signal.c
+cfn=(68) signal
+calls=1 5 
+0 130
+0 4
+cfi=(19) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/conf/sysconf.c
+cfn=(72) sysconf
+calls=1 29 
+0 28
+0 17
+cfi=(13) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/signal/sigaction.c
+cfn=(52) sigaction
+calls=1 64 
+0 68
+0 8
+cfi=(20) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/pal/unix/stack_overflow.rs
+cfn=(74) std::sys::pal::unix::stack_overflow::imp::make_handler
+calls=1 250 
+0 309
+0 8
+cfi=(13)
+cfn=(52)
+calls=1 64 
+0 101
+0 4
+cfi=(13)
+cfn=(52)
+calls=1 64 
+0 68
+0 12
+cfi=(13)
+cfn=(52)
+calls=1 64 
+0 93
+0 4
+cfi=(29) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs
+cfn=(98) std::sys::backtrace::__rust_begin_short_backtrace
+calls=1 162 
+0 14116
+0 25
+
+fn=(594) __do_fini
+0 8
+
+fl=(3) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/crt/rcrt1.c
+fn=(4) __dls2
+13 7
+cfi=(4) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/env/__libc_start_main.c
+cfn=(6) (below main)
+calls=1 +61 
+* 17280
+
+fl=(4)
+fn=(36) libc_start_main_stage2
+90 3
++1 1
+-1 6
++2 1
+cfn=(38) libc_start_init
+calls=1 -32 
+* 989
++3 4
+cfi=(1)
+cfn=(58)
+calls=1 -95 
+* 15061
+
+fn=(38)
+60 3
++1 1
+cob=(2) ???
+cfi=(9) ???
+cfn=(40) 0x00000000001a1000
+calls=1 -61 
+* 3
++1 2
++1 158
++1 78
+cfi=(10) /home/callen/work/coreutils-startup-factorial/aggressive/src/uucore/src/lib/features/signals.rs
+cfn=(44) uucore::features::signals::capture_startup_state
+calls=77 665 
+* 578
+cfi=(1)
+cfn=(42)
+calls=1 -64 
+* 6
+-1 156
++2 4
+
+fn=(34) dummy1
+15 1
+
+fn=(8) __init_libc
+24 2
++1 43
++1 2
++1 106
++1 1
++1 202
++1 2
++1 3
++1 2
++2 2
++2 5
++1 1
+-3 73
++3 384
++2 2
+cfi=(5) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/env/__init_tls.c
+cfn=(10) __init_tls
+calls=1 +44 
+* 353
++1 2
+cfn=(34)
+calls=1 -25 
+* 1
++2 6
++1 3
++14 2
+
+fn=(6)
+74 4
++1 1
+-1 2
++6 1
+-6 1
++6 1
+cfn=(8)
+calls=1 -56 
+* 1197
++6 3
+-1 1
++2 3
+-1 1
+cfn=(36)
+calls=1 +4 
+* 16065
+
+fl=(14)
+fn=(60)
+7 1
+fi=(16) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/select/poll.c
++2 8
+cfi=(15) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/thread/__syscall_cp.c
+cfn=(62) __syscall_cp
+calls=1 +10 
+* 10
+* 2
+cfi=(12) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/internal/syscall_ret.c
+cfn=(50) __syscall_ret
+calls=1 -3 
+* 4
++11 2
+fe=(14)
+
+fl=(42) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/thread/__lock.c
+fn=(602) __lock
+21 1
++1 2
++30 1
+
+fn=(140) __unlock
+57 60
++5 20
+
+fl=(93) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/thread/pthread_rwlock_timedwrlock.c
+fn=(282) pthread_rwlock_timedwrlock
+4 15
++3 3
+cfi=(18) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/arch/x86_64/atomic_arch.h
+cfn=(284) pthread_rwlock_trywrlock
+calls=3 -3 
+* 21
++1 6
++15 12
+
+fl=(13)
+fn=(52)
+64 9
++3 9
+-3 9
++3 45
++8 18
++4 9
+cfn=(54) __libc_sigaction
+calls=9 -58 
+* 652
++6 27
+
+fn=(54)
+21 54
++2 18
++1 24
++2 4
+-1 2
++1 4
+-1 6
+fi=(18)
++39 2
+fe=(13)
+-28 10
++1 2
+fi=(6) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/arch/x86_64/syscall_arch.h
++1 1
+fe=(13)
+-1 2
+fi=(6)
++1 2
+fe=(13)
++1 1
++3 6
+fi=(18)
++46 10
+fe=(13)
+-39 2
+-3 2
++6 4
+-3 2
++3 2
++2 2
+-5 2
++1 4
++2 2
+cfi=(7) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/string/x86_64/memcpy.s
+cfn=(16) 0x000000000089507d
+calls=2 -45 
+* 24
+fi=(18)
++36 4
+fe=(13)
+-39 4
+-3 4
++6 8
+-3 4
++3 4
++2 4
+-5 4
++1 8
++2 4
+cfi=(7)
+cfn=(16)
+calls=4 -45 
+* 48
++2 30
+fi=(6)
+-17 6
++1 12
+fe=(13)
++16 3
+fi=(6)
+-17 3
++1 15
+fe=(13)
++17 32
++5 18
+cfi=(12)
+cfn=(50)
+calls=9 -54 
+* 36
++1 45
+-5 7
++2 21
+-2 7
++1 14
++1 7
+cfi=(7)
+cfn=(16)
+calls=7 -51 
+* 84
+* 7
+-4 15
+
+fl=(15)
+fn=(64) sccp
+9 5
+fi=(6)
++47 5
+fe=(15)
+-47 5
+fi=(6)
++48 5
+fe=(15)
+-48 5
+fi=(6)
++49 5
+fe=(15)
+-49 5
+fi=(6)
++50 5
+fe=(15)
+-48 5
+
+fn=(62)
+19 5
+cfn=(64)
+calls=5 -10 
+* 45
+
+fl=(141) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sync/once.rs
+fn=(552) std::sync::once::Once::call_once_force::{{closure}}
+219 1
+fi=(154) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/mem/mod.rs
+900 2
++1 1
+fi=(67) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/option.rs
+1014 2
+fi=(142) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/io/stdio.rs
+729 1
+fi=(155) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/mem/maybe_uninit.rs
+564 6
+fe=(141)
+219 1
+
+fn=(542) std::sync::once::Once::call_once::{{closure}}
+159 5
+fi=(154)
+900 1
++1 1
+fi=(67)
+1014 2
+fi=(142)
+727 1
+fi=(33) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/sync/atomic.rs
+4028 1
+fi=(32) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/sync/once/futex.rs
+82 1
+fi=(143) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sync/once_lock.rs
++74 1
+fi=(33)
+4027 1
+fi=(20)
+202 1
+cfn=(560) std::sys::pal::unix::stack_overflow::imp::drop_handler
+calls=1 +82 
+* 293
+fe=(141)
+-43 4
+fi=(67)
+0 1
+fi=(143)
+410 1
+cfi=(33)
+cfn=(548) std::sync::once_lock::OnceLock<T>::initialize
+calls=1 4028 
+* 85
+fi=(142)
+733 3
+fe=(141)
+
+fl=(139) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/process.rs
+fn=(536) std::process::exit
+2465 5
++1 1
+cfi=(33)
+cfn=(538) std::rt::cleanup
+calls=1 4028 
+* 468
++1 2
+cfi=(147) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/pal/unix/os.rs
+cfn=(584) std::sys::pal::unix::os::exit
+calls=1 536 
+* 106
+
+fl=(8) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/thread/x86_64/__set_thread_area.s
+fn=(30) 0x000000000089c0bd
+7 1
++1 1
++1 1
++1 1
++1 1
+
+fl=(35) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs
+fn=(112) core::ops::function::FnOnce::call_once
+250 8
+fi=(33)
+4027 2
+fi=(45) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/args/unix.rs
+145 2
+fi=(33)
+4027 2
+fi=(156) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/intrinsics/mod.rs
+458 3
+fi=(36) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs
+-14 2
+0 3
+fi=(48) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/alloc/unix.rs
+14 2
+cfi=(37)
+cfn=(118)
+calls=1 115 
+* 1292
+fi=(36)
+453 2
+fi=(43) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/vec/mod.rs
+967 3
+fi=(45)
+0 10
+fi=(21) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/ptr/mod.rs
+1910 15
+fi=(45)
+0 5
+fi=(25) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/cmp.rs
+1908 15
+fi=(44) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/iter/range.rs
+772 5
+0 5
+fi=(21)
+1710 5
+fi=(45)
+42 10
+-42 5
+fi=(47) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/ffi/c_str.rs
+756 10
+cfi=(46) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/string/strlen.c
+cfn=(148) strlen
+calls=5 16 
+* 273
+* 5
+fi=(36)
+444 10
+fi=(48)
+14 10
+cfi=(37)
+cfn=(118)
+calls=5 115 
+* 1740
+* 5
+fi=(36)
+453 10
+fi=(21)
++94 20
+cfi=(7)
+cfn=(16)
+calls=5 7 
+* 113
+fi=(43)
+1033 15
+fe=(35)
+250 9
+0 1
+fi=(45)
+61 2
+fi=(28) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/ptr/mut_ptr.rs
+961 4
+fi=(73) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/non_null.rs
+1692 1
+fi=(50) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/into_iter.rs
+224 1
+0 1
+fi=(53) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs
+1710 1
+fi=(57) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/spec_from_iter_nested.rs
+24 3
+fe=(35)
+-24 1
+fi=(57)
+26 2
+fi=(79) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/const_ptr.rs
+729 5
+fi=(108) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/cmp.rs
+1030 3
+fi=(51) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/intrinsics/mod.rs
+458 3
+0 2
+fi=(52) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs
+444 4
+0 1
+fi=(48)
+14 1
+cfi=(37)
+cfn=(118)
+calls=1 115 
+* 129
+fi=(52)
+453 2
+0 6
+fi=(53)
+1910 3
+fi=(57)
+36 3
+fi=(73)
+1692 1
+fi=(50)
+224 1
+fi=(54) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs
+3905 4
+0 2
+fi=(53)
+1710 1
+fi=(54)
+3905 2
+0 6
+fi=(53)
+1710 3
+fi=(54)
+3905 14
++2 8
+fi=(53)
+1910 12
+fi=(54)
+3916 4
+2106 4
+fi=(50)
+224 4
+fi=(73)
+1692 8
+fi=(50)
+224 5
+fi=(54)
+0 2
+fi=(53)
+805 2
+fi=(52)
+617 2
+fi=(48)
+48 2
+cfi=(55) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/free.c
+cfn=(170) free
+calls=1 -43 
+* 160
+fi=(57)
+-6 5
++1 1
+fe=(35)
+
+fl=(20)
+fn=(74)
+250 8
+fi=(33)
+4028 1
+fe=(20)
+251 2
++4 2
+fi=(21)
+709 5
+fe=(20)
+264 2
+cfi=(22) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/signal/sigaltstack.c
+cfn=(78) sigaltstack
+calls=1 6 
+* 13
++2 2
++44 2
+cfi=(23) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/misc/getauxval.c
+cfn=(82) getauxval
+calls=1 6 
+* 169
+fi=(25)
+1029 3
+fi=(33)
+4027 1
+fe=(20)
+229 1
+-2 6
+cfi=(26) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/mman/mmap.c
+cfn=(88) mmap
+calls=1 15 
+* 29
++8 2
+0 1
+238 4
+cfi=(27) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/mman/mprotect.c
+cfn=(92) mprotect
+calls=1 6 
+* 17
++1 2
+fi=(28)
+961 1
+fe=(20)
+269 4
++1 2
+cfi=(22)
+cfn=(78)
+calls=1 6 
+* 20
++2 1
++4 9
+
+fn=(560)
+284 7
++1 2
+0 1
+310 2
+cfi=(23)
+cfn=(82)
+calls=1 6 
+* 169
+fi=(25)
+1029 3
+fi=(33)
+4027 1
+fe=(20)
+288 4
++10 2
+cfi=(22)
+cfn=(78)
+calls=1 6 
+* 18
+fi=(28)
+1072 1
+fe=(20)
+301 4
+cfi=(144) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/mman/munmap.c
+cfn=(566) munmap
+calls=1 8 
+* 32
+fi=(145) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/pal/unix/stack_overflow/thread_info.rs
+126 1
+cfi=(24) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/arch/x86_64/pthread_arch.h
+cfn=(84) __errno_location
+calls=1 4 
+* 3
+* 2
+fi=(33)
+4112 2
+fi=(157) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/sync/mutex/futex.rs
+32 1
+fi=(33)
+4027 1
+fi=(146) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/panicking.rs
+464 3
+0 1
+fi=(33)
+4027 2
+fi=(158) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sync/poison.rs
+123 3
+0 3
+fi=(33)
+4112 2
+fi=(145)
+96 1
+fi=(67)
+767 3
+fi=(48)
+0 1
+fi=(33)
+4013 1
+fi=(158)
+123 1
+fi=(21)
+805 5
+0 1
+805 3
+fe=(20)
+305 7
+
+fl=(87) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/thread_local/destructors/linux_like.rs
+fn=(268) std::sys::thread_local::destructors::linux_like::register
+15 9
++25 2
+fi=(58) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/cell.rs
+2043 2
+fi=(88) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/thread_local/destructors/list.rs
+10 1
+fi=(154)
+901 1
+fi=(88)
+13 1
+cfi=(89) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/thread_local/guard/key.rs
+cfn=(274) std::sys::thread_local::guard::key::enable
+calls=1 -4 
+* 314
+fi=(43)
+1030 1
++3 2
+fi=(88)
+0 2
+fi=(43)
+1034 1
+cfi=(36)
+cfn=(310) alloc::raw_vec::RawVec<T,A>::grow_one
+calls=1 186 
+* 216
+fi=(36)
+597 1
+fi=(28)
+961 2
+fi=(21)
+1910 2
+fi=(43)
+1039 2
+fi=(154)
+901 1
+fe=(87)
+55 7
+
+fl=(27)
+fn=(92)
+6 2
++4 1
+fi=(6)
++19 1
+fe=(27)
+-20 1
+-1 1
++1 1
++1 1
+fi=(6)
++19 2
+fe=(27)
+-19 1
+cfi=(12)
+cfn=(50)
+calls=1 -4 
+* 4
++1 2
+
+fl=(151) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/stdio/__stdio_exit.c
+fn=(598) __stdio_exit
+17 1
++2 1
+cfi=(152) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/stdio/ofl.c
+cfn=(600) __ofl_lock
+calls=1 -9 
+* 10
+* 3
++1 2
+cfn=(604) close_file
+calls=1 -10 
+* 3
++1 2
+cfn=(604)
+calls=1 -11 
+* 3
++1 1
++1 1
+-1 1
+cfn=(604)
+calls=1 -12 
+* 16
+
+fn=(604)
+10 6
+-1 1
++2 4
++1 3
++1 4
++1 4
+
+fl=(76) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/string/memcmp.c
+fn=(234) memcmp
+6 153
++1 28
++1 14
+-1 4
+
+fl=(19)
+fn=(72)
+29 3
+176 8
++3 2
++2 9
++16 2
++35 4
+
+fl=(22)
+fn=(78)
+6 3
++1 6
++1 8
++4 4
+fi=(6)
++9 9
+fe=(22)
+-4 3
+cfi=(12)
+cfn=(50)
+calls=3 -11 
+* 12
++1 6
+
+fl=(24)
+fn=(304) pthread_setspecific
+4 1
+fi=(98) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/thread/pthread_setspecific.c
++3 5
++1 1
++1 1
++3 2
+fe=(24)
+
+fn=(84)
+4 4
+fi=(159) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/errno/__errno_location.c
++2 4
++1 4
+fe=(24)
+
+fl=(148) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/exit_guard.rs
+fn=(586) std::sys::exit_guard::unique_thread_exit
+23 4
++14 1
+cfi=(24)
+cfn=(84)
+calls=1 -33 
+* 3
+* 1
+fi=(33)
+4112 2
+fe=(148)
+38 1
++20 4
+
+fl=(68) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/str/converts.rs
+fn=(216) core::str::converts::from_utf8
+89 8
+fi=(69) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/str/validations.rs
++44 6
++12 4
+0 14
+145 2
++19 3
++1 6
+fi=(65) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/num/uint_macros.rs
+2413 6
+fi=(69)
+222 6
++23 2
+-21 4
++17 4
+0 2
+241 6
++1 3
+-1 8
+fe=(68)
+94 8
+-94 2
+98 8
+
+fl=(26)
+fn=(88)
+15 9
++2 6
++4 15
++4 6
++6 6
+fi=(6)
++26 3
++2 12
+fe=(26)
+-25 6
++3 9
+-1 3
+cfi=(12)
+cfn=(50)
+calls=3 -30 
+* 12
+-14 4
++4 1
+cfi=(41) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/thread/vmlock.c
+cfn=(136) __vm_wait
+calls=1 -18 
+* 12
+* 5
+
+fl=(31) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sync/once.rs
+fn=(108) std::sync::once::Once::call_once_force::{{closure}}
+219 5
+fi=(100) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/mem/mod.rs
+900 1
++1 1
+fi=(59) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/option.rs
+1014 2
+fi=(34) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sync/lazy_lock.rs
+252 2
+0 1
+fi=(35)
+250 1
+cfn=(112)
+calls=1 * 
+* 4048
+fi=(34)
++10 4
+fe=(31)
+-41 4
+
+fl=(96) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/signal/block.c
+fn=(292) __block_app_sigs
+37 2
+fi=(6)
++1 4
+fe=(96)
++1 1
+
+fn=(302) __restore_sigs
+42 1
+fi=(6)
+-5 1
++1 4
+fe=(96)
++6 1
+
+fl=(37)
+fn=(118)
+115 17
+cfi=(38) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/meta.h
+cfn=(120) __libc_malloc_impl
+calls=17 242 
+* 5495
+
+fl=(11) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/fcntl/fcntl.c
+fn=(46) fcntl
+8 3
++4 6
+-1 3
+-3 3
++3 12
++3 6
++1 6
++1 6
++7 6
+fi=(6)
++6 12
+fe=(11)
++17 3
+cfi=(12)
+cfn=(50)
+calls=3 -40 
+* 12
++2 6
+fi=(6)
+-19 6
+fe=(11)
+
+fl=(92) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/thread/pthread_rwlock_wrlock.c
+fn=(280) pthread_rwlock_wrlock
+5 6
+cfi=(93)
+cfn=(282)
+calls=3 -1 
+* 57
+
+fl=(91) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/thread/pthread_key_create.c
+fn=(290) pthread_key_delete
+57 4
+fi=(24)
+-53 1
+fe=(91)
++53 1
++4 3
+cfi=(96)
+cfn=(292)
+calls=1 -24 
+* 7
++1 2
+cfi=(92)
+cfn=(280)
+calls=1 -57 
+* 21
++2 1
+cfi=(97) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/thread/pthread_create.c
+cfn=(294) __tl_lock
+calls=1 -40 
+* 18
++1 1
+-6 1
++6 2
++1 3
++1 1
+cfi=(97)
+cfn=(298) __tl_unlock
+calls=1 -30 
+* 9
++2 1
++2 1
+-2 1
++2 1
+cfi=(94) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/thread/pthread_rwlock_unlock.c
+cfn=(286) pthread_rwlock_unlock
+calls=1 -66 
+* 21
++1 2
+cfi=(96)
+cfn=(302)
+calls=1 -30 
+* 7
++3 6
+
+fn=(278) pthread_key_create
+32 8
+fi=(24)
+-28 2
+fe=(91)
++28 2
++5 4
++3 4
++2 2
+-2 2
++2 2
+cfi=(92)
+cfn=(280)
+calls=2 -37 
+* 42
++1 6
++2 9
++5 4
+-13 3
++9 2
++1 2
+-1 4
++1 2
+cfi=(94)
+cfn=(286)
+calls=2 -42 
+* 42
++1 2
++6 8
+
+fl=(126) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/io/error.rs
+fn=(462) std::io::error::Error::kind
+1005 3
+fi=(127) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/io/error/repr_bitpacked.rs
+249 6
++2 1
+fi=(128) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/io/error/unix.rs
+103 3
+0 1
+103 3
+fe=(126)
+0 1
+1012 2
+
+fl=(106) /home/callen/work/coreutils-startup-factorial/aggressive/src/uucore/src/lib/lib.rs
+fn=(340) uucore::disable_rust_signal_handlers
+193 3
+fi=(104) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.31.3/src/sys/signal.rs
+863 1
+506 1
+cfi=(107) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/signal/sigfillset.c
+cfn=(342) sigfillset
+calls=1 14 
+* 4
+863 4
++70 2
+cfi=(13)
+cfn=(52)
+calls=1 64 
+* 95
+fi=(108)
+1870 1
+fi=(105) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.31.3/src/errno.rs
+132 1
+fi=(104)
+863 1
+506 1
+cfi=(107)
+cfn=(342)
+calls=1 14 
+* 4
+863 4
++70 2
+cfi=(13)
+cfn=(52)
+calls=1 64 
+* 95
+fi=(108)
+1870 1
+fi=(105)
+132 1
+0 1
+fe=(106)
+207 3
+
+fl=(123) /home/callen/work/coreutils-startup-factorial/aggressive/src/uucore/src/lib/features/fs.rs
+fn=(450) uucore::features::fs::replace_link
+1107 13
++81 3
++1 1
+fi=(135) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rustix-1.1.5/src/fs/at.rs
+337 4
+fi=(124) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rustix-1.1.5/src/path/arg.rs
+959 2
+0 1
+fi=(53)
+547 4
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 30
+1910 1
+fi=(124)
+981 1
+fi=(115) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/slice/memchr.rs
+27 2
+-27 2
+40 16
++4 7
+-5 14
+fi=(47)
+354 2
+fi=(124)
+959 2
+0 1
+fi=(53)
+547 4
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 30
+1910 1
+fi=(124)
+981 1
+fi=(115)
+27 2
+-27 2
+40 16
++4 7
+-5 14
+fi=(47)
+354 2
+0 2
+fi=(125) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rustix-1.1.5/src/backend/linux_raw/arch/x86_64.rs
+133 4
+fe=(123)
+0 3
+1121 2
+0 1
+fi=(70) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/result.rs
+966 3
+fe=(123)
+1122 2
+cfi=(126)
+cfn=(462)
+calls=1 1005 
+* 20
+* 2
+fi=(60) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/path.rs
+304 2
+fi=(61) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/path/unix.rs
+7 3
+fi=(60)
+3156 7
+2594 1
+cfn=(196) <std::path::Components as core::iter::traits::double_ended::DoubleEndedIterator>::next_back
+calls=1 951 
+* 165
+fi=(67)
+1545 4
+0 1
+fi=(60)
+2597 1
+cfn=(474) std::path::Components::as_path
+calls=1 703 
+* 51
+* 1
+fi=(59)
+1583 6
+1065 3
+fi=(60)
+304 2
+fi=(61)
+7 3
+fi=(60)
+3156 7
+2660 1
+cfn=(196)
+calls=1 951 
+* 165
+* 1
+fi=(67)
+1545 2
+0 1
+fi=(59)
+1367 1
+fe=(123)
+0 2
+fi=(160) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rustix-1.1.5/src/backend/linux_raw/fs/types.rs
+170 1
+69 1
+fe=(123)
+1135 2
+fi=(135)
+90 5
+fi=(124)
+959 2
+0 1
+fi=(53)
+547 4
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 12
+1910 1
+fi=(124)
+981 1
+fi=(115)
+27 2
+-27 2
+40 4
++4 1
+-5 2
+fi=(47)
+354 2
+0 1
+fi=(125)
+178 6
+fi=(161) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rustix-1.1.5/src/backend/linux_raw/reg.rs
++10 1
+fi=(162) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rustix-1.1.5/src/backend/linux_raw/io/errno.rs
+-3 1
+fi=(106)
+0 1
+fi=(163) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/niche_types.rs
+37 1
+fi=(129) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rustix-1.1.5/src/backend/linux_raw/conv.rs
+1015 3
+fi=(70)
+2173 2
+fi=(124)
+820 1
+fe=(123)
+1135 2
+fi=(164) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/fs.rs
+1692 3
+fi=(165) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/fs/unix.rs
+1245 2
+fi=(21)
+547 2
+1910 1
+fi=(115)
+40 12
+-40 1
+40 2
+-40 3
+fi=(119) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/fs/unix.rs
+1346 2
+cfn=(482) std::sys::fs::unix::File::open_c
+calls=1 +3 
+* 114
+fi=(99) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/result.rs
+835 2
++1 14
+fe=(123)
+1144 2
++1 2
+fi=(131) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/io/mod.rs
+1045 4
+cfn=(494) std::io::default_read_exact
+calls=1 572 
+* 67
+fi=(70)
+2173 2
+fe=(123)
+1147 2
++1 14
+fi=(53)
+1710 2
+fe=(123)
+1148 12
+fi=(53)
+1710 2
+fe=(123)
+1148 12
+fi=(53)
+1710 2
+fe=(123)
+1148 23
+fi=(53)
+1710 2
+fe=(123)
+1148 10
++40 2
++1 2
+fi=(135)
+337 8
+fi=(124)
+959 1
+fi=(53)
+547 4
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 30
+1910 2
+fi=(115)
+27 1
+-27 1
+40 16
++4 7
+-5 14
+fi=(47)
+354 2
+fi=(53)
+547 2
+1910 1
+fi=(115)
+40 6
+fi=(134) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/fd/owned.rs
+285 1
+fi=(125)
+133 5
+fe=(123)
+1152 2
+0 4
+fi=(70)
+0 1
+fe=(123)
+1154 2
+fi=(135)
+276 6
+fi=(124)
+820 3
+cfn=(508) rustix::path::arg::with_c_str
+calls=1 948 
+* 126
+* 5
+cfn=(508)
+calls=1 948 
+* 19
+fi=(70)
+966 2
+fe=(123)
+0 2
+fi=(134)
+216 1
+cfi=(136) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/unistd/close.c
+cfn=(522) close
+calls=1 14 
+* 36
+fe=(123)
+1168 1
+fi=(134)
+216 1
+cfi=(136)
+cfn=(522)
+calls=1 14 
+* 36
+fi=(106)
+0 1
+fe=(123)
+1181 9
+
+fl=(5)
+fn=(14) __copy_tls
+40 7
++20 1
++1 1
++3 1
+-4 1
++1 2
++3 4
++1 2
++1 2
+-1 1
++1 4
+cfi=(7)
+cfn=(16)
+calls=1 -59 
+* 97
+-2 2
++5 2
++3 1
+-2 1
++2 6
+
+fn=(10)
+83 1
++7 2
+-3 1
+-1 1
++16 1
+-12 2
++6 19
+-6 42
++2 30
++2 23
++1 3
++3 16
++1 2
+-1 2
++7 2
++2 1
+-1 1
++5 1
+-3 1
+-2 1
++1 1
++2 1
++1 1
+-1 1
++2 1
++3 1
++1 2
+-1 1
++1 1
+-1 2
++7 1
++2 2
++8 1
+-6 1
++20 1
+-14 1
+-5 1
++7 2
+fi=(6)
+-77 1
++2 1
++1 2
+-2 1
++2 2
+fe=(5)
++78 1
++12 1
+cfn=(14)
+calls=1 40 
+* 135
+* 2
+cfn=(28) __init_tp
+calls=1 15 
+* 29
+* 2
++2 2
+
+fn=(28)
+15 2
++2 1
++1 1
+cfi=(8)
+cfn=(30)
+calls=1 -11 
+* 5
++1 2
++1 2
++1 1
+fi=(6)
+-7 3
+fe=(5)
++8 1
++1 2
++1 2
++1 1
++1 2
+-1 1
++2 1
++1 2
+
+fl=(12)
+fn=(50)
+6 56
++4 28
++1 28
+
+fl=(74) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/iter/traits/iterator.rs
+fn=(352) core::iter::traits::iterator::Iterator::collect
+2022 8
+fi=(166) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/iter/traits/collect.rs
+320 6
+fi=(110) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/iter/adapters/chain.rs
+183 2
+fi=(79)
+729 5
+fi=(110)
+183 2
+fi=(79)
+729 4
+fi=(167) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/uint_macros.rs
+2220 1
+0 1
+fi=(51)
+458 2
+0 3
+fi=(52)
+444 4
+fi=(48)
+14 4
+cfi=(37)
+cfn=(118)
+calls=1 115 
+* 129
+* 5
+fi=(52)
+453 2
+fi=(54)
+967 3
+fi=(110)
+183 2
+fi=(79)
+729 5
+fi=(110)
+183 2
+fi=(79)
+729 4
+fi=(167)
+2220 1
+fi=(52)
+736 1
+-80 1
+0 2
+fi=(110)
+183 1
+-63 1
+fi=(73)
+1692 1
+fi=(50)
+323 4
+0 1
+fi=(53)
+1910 2
+fi=(73)
+660 1
+fi=(53)
+1910 2
+fi=(168) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/set_len_on_drop.rs
+19 1
+fi=(73)
+1692 2
+fi=(50)
+323 1
+fi=(52)
+617 2
+0 1
+fi=(48)
+48 4
+cfi=(55)
+cfn=(170)
+calls=1 -43 
+* 595
+* 3
+fi=(110)
+183 1
+-60 1
+fi=(73)
+1692 1
+fi=(109) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/iter/macros.rs
+25 1
+fi=(79)
+729 6
+fi=(109)
+276 9
+fi=(53)
+547 16
+cfi=(7)
+cfn=(16)
+calls=4 7 
+* 90
+* 4
+1910 12
+fi=(109)
+284 20
+-5 8
+fi=(52)
+444 8
+fi=(48)
+14 8
+cfi=(37)
+cfn=(118)
+calls=4 115 
+* 516
+* 4
+fi=(52)
+453 8
+fi=(110)
+0 4
+fi=(57)
+61 5
+fe=(74)
+2036 8
+
+fl=(36)
+fn=(310)
+186 2
+476 2
+cfn=(312) alloc::raw_vec::RawVecInner<A>::grow_amortized
+calls=1 +10 
+* 207
+* 3
+189 2
+
+fn=(314) alloc::raw_vec::RawVecInner<A>::finish_grow
+527 7
+fi=(65)
+2970 7
+fi=(156)
+458 3
+fe=(36)
+617 2
+-69 4
+fi=(48)
+14 2
+cfi=(37)
+cfn=(118)
+calls=1 115 
+* 142
+fe=(36)
+547 2
+0 2
+551 6
+
+fn=(312)
+486 6
+fi=(65)
+688 1
+fe=(36)
+506 2
+fi=(25)
+1029 5
+fe=(36)
+512 5
+cfn=(314)
+calls=1 +15 
+* 177
+fi=(99)
+2173 2
++1 1
+fe=(36)
+745 1
++1 2
+517 5
+
+fl=(17)
+fn=(68)
+5 4
++1 8
++1 4
+-1 38
++1 2
+-1 2
++1 2
+cfi=(13)
+cfn=(52)
+calls=2 +57 
+* 190
++2 6
++1 4
+
+fl=(60)
+fn=(400) std::path::Path::is_dir
+3522 9
+fi=(114) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/helpers/small_c_string.rs
+25 2
+-25 1
+fi=(21)
+547 3
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 30
+1910 1
+fi=(114)
+47 1
+fi=(115)
+-20 2
+-27 2
+40 16
++4 7
+-5 14
+fi=(47)
+354 2
+fi=(21)
+709 12
+fi=(119)
+2167 1
+cfi=(116) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/stat/stat.c
+cfn=(410) stat
+calls=1 5 
+* 91
+fi=(118) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/pal/unix/mod.rs
+235 1
++10 1
+fi=(119)
+2168 2
+fi=(120) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/profiling.rs
+29 2
+cfi=(7)
+cfn=(16)
+calls=1 -22 
+* 29
+* 1
+fi=(99)
+835 3
+0 1
+fi=(119)
+803 1
+-4 2
+fe=(60)
+3524 7
+
+fn=(198) std::path::Components::parse_next_component_back
+768 6
+fi=(25)
+511 3
+fe=(60)
+672 3
++44 6
++55 2
+fi=(64) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/slice/index.rs
+568 2
+fe=(60)
+0 2
+771 2
+fi=(64)
+89 2
+fi=(169) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/ptr/const_ptr.rs
+729 4
+fi=(62) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/slice/iter/macros.rs
+405 6
+0 2
+fi=(63) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/ptr/non_null.rs
+1692 2
+fi=(62)
+25 2
+fe=(60)
+771 1
+fi=(64)
+89 1
+fi=(169)
+729 2
+fi=(62)
+405 3
+0 1
+fi=(63)
+1692 1
+fi=(62)
+25 1
+fi=(63)
+1692 16
+fi=(62)
+25 16
+-25 17
+406 17
+fi=(61)
+7 17
+fi=(62)
+407 34
+fe=(60)
+773 1
+fi=(64)
+568 2
+89 2
+-89 1
+fe=(60)
+744 2
+fi=(64)
+0 2
+fe=(60)
+744 16
+-1 2
+-11 2
++2 4
+0 2
+734 4
+0 3
+776 15
++1 6
+-44 4
+
+fn=(474)
+703 7
+593 2
+fi=(67)
+2225 3
+fe=(60)
+593 1
+375 2
+593 12
+705 2
++3 2
+0 4
+712 9
+0 3
+734 2
++59 2
+
+fn=(196)
+951 33
+680 3
+994 24
+0 3
+680 33
+0 6
+680 2
+0 1
+953 5
+0 1
+954 1
+0 1
+955 4
+cfn=(198)
+calls=1 768 
+* 61
+* 1
++1 1
+-1 7
++1 1
+fi=(65)
+842 1
+0 3
+fe=(60)
+956 2
+fi=(67)
+636 2
+fe=(60)
+957 2
+680 4
+0 2
+953 10
+0 2
+734 8
+-1 4
+0 2
+954 4
+0 2
+955 6
+cfn=(198)
+calls=2 768 
+* 178
+* 6
++1 2
+-1 14
++1 2
+fi=(65)
+842 2
+0 2
+fe=(60)
+956 4
+fi=(67)
+636 4
+fe=(60)
+957 4
+
+fn=(192) coreutils::common::validation::name
+304 2
+fi=(61)
+7 3
+-7 3
+fe=(60)
+3156 7
+2660 1
+cfn=(196)
+calls=1 951 
+* 130
+* 1
+fi=(67)
+1545 4
+1164 1
+fe=(60)
+2820 1
+fi=(170) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/slice/mod.rs
+851 2
+fi=(66) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/array/equality.rs
+157 1
+fe=(60)
+309 1
+fi=(59)
+0 3
+fi=(63)
+1692 2
+fi=(62)
+25 1
+fi=(59)
+-25 2
+fi=(63)
+1692 4
+fi=(62)
+25 2
+406 2
+fe=(60)
+-89 2
+fi=(62)
++90 2
+fe=(60)
+0 2
+fi=(67)
+1625 2
+fi=(59)
+2726 2
+fi=(67)
+1625 3
+fi=(171) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/os_str/bytes.rs
+306 1
+cfi=(68)
+cfn=(216)
+calls=1 89 
+* 54
+fi=(70)
+713 2
+0 3
+fi=(82) /home/callen/work/coreutils-startup-factorial/aggressive/src/common/validation.rs
+149 3
+fe=(60)
+
+fn=(428) std::path::Path::is_symlink
+3555 18
+fi=(114)
+25 4
+-25 2
+fi=(21)
+547 6
+cfi=(7)
+cfn=(16)
+calls=2 7 
+* 60
+1910 2
+fi=(114)
+47 2
+fi=(115)
+-20 4
+-27 4
+40 32
++4 14
+-5 28
+fi=(47)
+354 4
+fi=(21)
+709 24
+fi=(119)
+2184 2
+cfi=(121) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/stat/futimens.c
+cfn=(438) lstat
+calls=2 5 
+* 178
+fi=(118)
+235 2
++10 2
+fi=(119)
+2185 4
+fi=(120)
+29 4
+cfi=(7)
+cfn=(16)
+calls=2 -22 
+* 58
+* 2
+fi=(99)
+835 6
+0 2
+fi=(119)
+803 2
+-4 4
+fe=(60)
+3557 14
+
+fl=(117) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/stat/fstatat.c
+fn=(412) fstatat
+140 21
+-59 6
++16 12
++4 2
+fi=(6)
+-80 4
+fe=(117)
++81 2
+fi=(6)
+-81 8
+fe=(117)
++77 4
++6 3
++2 6
++2 69
++27 3
+-27 87
++43 3
+cfi=(12)
+cfn=(50)
+calls=3 6 
+* 12
++1 12
+
+fl=(147)
+fn=(584)
+536 5
++1 1
+cfi=(148)
+cfn=(586)
+calls=1 23 
+* 16
++1 2
+cfi=(149) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/exit/exit.c
+cfn=(588) exit
+calls=1 28 
+* 82
+
+fl=(32)
+fn=(104) std::sys::sync::once::futex::Once::call
+141 22
+fi=(33)
+4028 8
+0 3
+fe=(32)
+154 1
+fi=(33)
+4180 1
+fe=(32)
+155 1
+-11 2
++1 2
++1 3
++28 2
+-2 5
++6 1
+cfi=(31)
+cfn=(108)
+calls=1 +41 
+* 4069
+-6 5
++6 1
+cfi=(141)
+cfn=(542)
+calls=1 -19 
+* 402
+fi=(58)
+555 2
+fi=(33)
+4045 2
+fe=(32)
+62 4
+205 16
+0 2
+154 2
+fi=(33)
+4180 2
+fe=(32)
+155 1
+-11 2
++1 2
++1 4
+
+fn=(105) std::sys::sync::once::futex::Once::call'2
+141 11
+fi=(33)
+4028 4
+0 3
+fe=(32)
+154 1
+fi=(33)
+4180 1
+fe=(32)
+155 1
+-11 2
++1 2
++1 3
++28 2
+-2 5
++6 1
+cfi=(141)
+cfn=(552)
+calls=1 +41 
+* 14
+fi=(58)
+555 1
+fi=(33)
+4045 1
+fe=(32)
+62 2
+205 8
+
+fl=(124)
+fn=(508)
+948 7
+fi=(53)
+547 1
+1910 1
+fi=(115)
+40 6
+fe=(124)
+985 7
+0 1
+982 4
+fi=(135)
+277 5
+fe=(124)
+959 2
+0 1
+fi=(53)
+547 3
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 30
+1910 1
+fe=(124)
+981 1
+fi=(115)
+27 2
+-27 2
+40 16
++4 7
+-5 14
+fi=(47)
+354 2
+fi=(135)
+-75 1
+fi=(134)
++6 1
+fi=(135)
+-4 1
+fi=(134)
++4 3
+fi=(125)
+178 3
+fi=(79)
+38 4
+fe=(124)
+948 3
+fi=(53)
+547 1
+1910 1
+fi=(115)
+40 6
+fi=(129)
+175 2
+fi=(125)
+-42 3
+fe=(124)
+985 3
+
+fl=(144)
+fn=(566)
+8 5
++1 1
+cfi=(41)
+cfn=(136)
+calls=1 -1 
+* 12
+fi=(6)
++12 5
+fe=(144)
+-11 1
+cfi=(12)
+cfn=(50)
+calls=1 -4 
+* 4
++1 4
+
+fl=(130) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/fcntl/open.c
+fn=(484) open
+6 4
++3 1
+-3 1
++3 6
++7 10
+cfi=(15)
+cfn=(62)
+calls=1 +3 
+* 10
++1 7
+fi=(6)
++12 4
+fe=(130)
+-9 1
+cfi=(12)
+cfn=(50)
+calls=1 -14 
+* 4
++1 3
+
+fl=(131)
+fn=(494)
+572 8
++1 2
+0 6
+fi=(132) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/fd/unix.rs
+112 4
+cfi=(133) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/unistd/read.c
+cfn=(498) read
+calls=1 5 
+* 27
+fi=(118)
+245 4
+fi=(113) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/index.rs
+580 3
+101 2
+fe=(131)
+573 2
+0 1
+584 8
+
+fl=(133)
+fn=(498)
+5 3
++1 7
+cfi=(15)
+cfn=(62)
+calls=1 +13 
+* 10
++1 1
+-1 2
+cfi=(12)
+cfn=(50)
+calls=1 * 
+* 4
+
+fl=(18)
+fn=(284)
+4 9
+fi=(172) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/thread/pthread_rwlock_trywrlock.c
++1 9
++2 3
+fe=(18)
+
+fl=(46)
+fn=(148)
+16 119
++1 96
++3 48
++1 5
++1 5
+
+fl=(75) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/string/bcmp.c
+fn=(232) bcmp
+7 16
+cfi=(76)
+cfn=(234)
+calls=16 -1 
+* 199
+
+fl=(89)
+fn=(274)
+9 4
+fi=(33)
+4028 1
+fi=(90) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/thread_local/key/racy.rs
+39 2
++16 1
+fi=(95) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/thread_local/key/unix.rs
+-28 2
++1 1
+cfi=(91)
+cfn=(278)
+calls=1 +4 
+* 74
+* 2
++3 1
+fi=(90)
++25 2
++3 1
+fi=(95)
+-32 2
++1 1
+cfi=(91)
+cfn=(278)
+calls=1 +4 
+* 78
+* 2
++3 1
++17 2
+cfi=(91)
+cfn=(290)
+calls=1 +9 
+* 115
+fi=(90)
++17 3
+fi=(33)
+4124 2
+fi=(90)
+66 1
+fi=(95)
+-30 2
+cfi=(24)
+cfn=(304)
+calls=1 -32 
+* 10
+fe=(89)
+-5 4
+
+fl=(107)
+fn=(342)
+14 4
++4 4
+
+fl=(103) /home/callen/work/coreutils-startup-factorial/aggressive/src/uu/ln/src/ln.rs
+fn=(394) uu_ln::exec
+356 10
++2 2
+fi=(71) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/mod.rs
+241 4
+fe=(103)
+366 5
+0 2
+370 2
+0 1
+373 4
+fi=(52)
+597 1
+fi=(54)
+1753 1
+fe=(103)
+370 2
+0 1
+370 5
+cfi=(60)
+cfn=(400)
+calls=1 3522 
+* 244
+* 5
+fi=(52)
+597 1
+fi=(54)
+1753 1
+fi=(52)
+597 1
+fi=(54)
+1753 1
+fe=(103)
+374 10
+cfn=(424) uu_ln::link
+calls=1 484 
+* 1986
+
+fn=(334) uu_ln::uumain
+105 9
+fi=(138) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/sync/atomic.rs
+4028 1
+729 1
+fe=(103)
+105 1
+fi=(104)
+0 3
+cfi=(17)
+cfn=(68)
+calls=1 5 
+0 130
+fi=(105)
+132 2
+fe=(103)
+-27 1
+cfi=(106)
+cfn=(340)
+calls=1 +88 
+* 225
+fi=(70)
+1183 2
+0 1
+fe=(103)
+109 2
+cfi=(74)
+cfn=(352)
+calls=1 2022 
+* 1551
+fi=(52)
+597 1
+fi=(54)
+1753 1
+fe=(103)
+173 2
+fi=(173) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mut_ptr.rs
+961 12
+0 2
+fi=(51)
+458 2
+fi=(73)
+1692 4
+fi=(109)
+180 4
+fi=(111) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/iter/adapters/skip.rs
+0 4
+fi=(52)
+597 4
+fi=(54)
+1753 4
+fi=(111)
+0 12
+fe=(103)
+178 12
++2 4
+fi=(71)
+2624 4
+fi=(72) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/cmp.rs
+160 4
+fi=(112) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/array/equality.rs
+-3 4
+fe=(103)
++21 2
+0 4
+180 12
+0 5
+194 1
+fi=(73)
+1692 2
+fi=(109)
+180 1
+fe=(103)
++2 14
+0 1
+191 2
++3 1
+fi=(73)
+1692 2
+fi=(109)
+180 1
+0 6
+fi=(51)
+458 4
+fi=(79)
+729 4
+fi=(109)
+230 1
+fi=(111)
+0 5
+fe=(103)
+197 8
++3 2
++1 8
+fi=(51)
+458 4
+fe=(103)
+204 2
++3 2
++1 5
++10 2
+-9 1
+-99 12
+fi=(113)
+278 3
+fi=(100)
+900 4
++1 3
+fi=(174) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/try_trait.rs
+449 2
+fi=(175) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/array/mod.rs
+908 2
+fi=(176) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/mem/maybe_uninit.rs
+564 2
+fi=(113)
+278 3
+fi=(100)
+900 4
++1 3
+fi=(174)
+449 2
+fi=(176)
+564 2
+fi=(175)
+158 13
+fe=(103)
+-46 2
+cfn=(394)
+calls=1 356 
+* 2289
+fi=(70)
+2173 3
+0 1
+fi=(52)
+617 2
+fi=(53)
+805 1
+fi=(48)
+48 1
+cfi=(55)
+cfn=(170)
+calls=1 -43 
+* 167
+fi=(52)
+617 2
+fi=(53)
+805 1
+fi=(48)
+48 1
+cfi=(55)
+cfn=(170)
+calls=1 -43 
+* 131
+-48 1
+fi=(53)
+805 1
+0 1
+fi=(52)
+617 3
+fi=(53)
+805 15
+fi=(52)
+617 10
+fi=(53)
+805 3
+fi=(48)
+48 3
+cfi=(55)
+cfn=(170)
+calls=3 -43 
+* 393
+* 3
+fi=(52)
+617 2
+0 1
+fi=(48)
+48 1
+cfi=(55)
+cfn=(170)
+calls=1 -43 
+* 124
+fe=(103)
++57 2
+fi=(138)
+4029 1
+fe=(103)
+105 9
+
+fn=(424)
+484 13
++4 9
+fi=(48)
+0 2
+fe=(103)
+494 3
+cfi=(60)
+cfn=(428)
+calls=1 3555 
+* 242
+* 4
++1 2
+fi=(122) /home/callen/work/coreutils-startup-factorial/aggressive/src/uucore/src/lib/features/backup_control.rs
+-65 3
++1 2
+fe=(103)
++64 5
++7 2
++8 6
+0 1
+520 3
+cfi=(60)
+cfn=(428)
+calls=1 3555 
+* 242
+* 4
+0 2
+520 1
++13 3
++16 2
++1 8
+cfi=(123)
+cfn=(450)
+calls=1 1107 
+* 1394
+* 1
+fi=(70)
+966 2
+0 6
+fe=(103)
+592 2
++12 3
+fi=(53)
+805 3
+fi=(48)
+0 1
+fi=(53)
+805 4
+fe=(103)
+605 11
+
+fl=(119)
+fn=(482)
+1349 10
+-77 8
++45 7
+0 1
+1353 1
+-3 6
+0 1
+1358 5
+cfi=(130)
+cfn=(484)
+calls=1 6 
+* 51
+fi=(118)
+235 1
++10 1
+fi=(99)
+0 1
+fe=(119)
+1359 3
+-59 4
+0 1
+1300 4
+0 1
+1360 8
+
+fl=(149)
+fn=(592) libc_exit_fini
+18 3
++1 2
++1 4
++1 3
+cfi=(1)
+cfn=(594)
+calls=1 -21 
+* 8
+* 1
++2 1
+-1 1
++1 2
+-1 1
+cob=(2)
+cfi=(9)
+cfn=(596) 0x00000000009a63c7
+calls=1 -22 
+* 3
+
+fn=(588)
+28 2
++1 1
+cfi=(150) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/exit/assert.c
+cfn=(590) dummy
+calls=1 -22 
+* 1
++1 1
+cfn=(592)
+calls=1 -12 
+* 29
++1 2
+cfi=(151)
+cfn=(598)
+calls=1 -14 
+* 44
++1 2
+
+fl=(94)
+fn=(286)
+5 6
++6 3
+fi=(18)
+-7 6
+fe=(94)
++8 6
+-4 3
++2 3
+-1 6
++2 6
++3 18
++4 6
+
+fl=(29)
+fn=(98)
+162 2
+fi=(35)
++88 1
+cfi=(30) /home/callen/work/coreutils-startup-factorial/aggressive/src/bin/coreutils.rs
+cfn=(100) coreutils::main
+calls=1 52 
+* 14113
+fe=(29)
+
+fl=(2)
+fn=(2)
+22 1
++7 1
+-7 1
++7 132
++1 3
++2 152
++1 113
++1 67
++32 169
++1 98
++1 48
++36 1
++1 3
++23 1
++1 1
+-1 2
++2 1
+-24 1
++1 1
++1 1
++1 15
++1 10
+-1 8
++2 3
++19 4
++6 1
++1 1
+-1 2
++2 130295
++1 104232
++2 130290
++3 1
++1 1
+-1 2
++3 5
++14 1
++1 2
++1 1
+-1 1
+cfi=(3)
+cfn=(4)
+calls=1 13 
+* 17287
+
+fl=(7)
+fn=(16)
+7 38
++1 38
++1 38
++1 20
++1 20
++5 38
++1 38
++1 210
++2 38
++1 38
++1 92
++1 92
++1 92
++1 38
+
+fl=(38)
+fn=(120)
+242 17
+fi=(40) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/malloc.c
++58 119
+fe=(38)
+-58 51
+fi=(40)
++66 34
+fe=(38)
+-77 51
++1 68
+fi=(39) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/glue.h
+70 51
+fi=(40)
+338 34
++6 76
++1 9
++3 3
+-3 3
++3 12
++2 1
++1 6
++1 3
++5 23
++1 26
++1 39
++2 13
+fi=(49) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/internal/atomic.h
+-96 52
+fi=(40)
++96 13
+fi=(49)
+-96 52
+fi=(39)
+78 26
+cfi=(42)
+cfn=(140)
+calls=13 -21 
+* 52
+* 8
+cfi=(42)
+cfn=(140)
+calls=4 -21 
+* 16
+fe=(38)
++99 34
+fi=(40)
+369 12
+cfn=(126) alloc_slot
+calls=4 -82 
+* 3286
+* 4
++1 8
++4 20
+fe=(38)
+180 119
++20 17
+-1 17
++1 17
++4 17
+-5 34
++1 17
+-1 34
++5 17
+-3 17
++3 17
++1 34
++1 51
++2 112
++1 14
++1 84
++1 42
++2 34
++3 3
++2 6
+-1 3
++1 3
++3 3
++2 9
++1 3
+-1 9
+-37 6
++1 6
++36 42
++1 14
+-1 42
+-37 28
++1 96
++1 34
++1 11
++1 33
++3 33
+fi=(40)
+380 99
+fe=(38)
+193 18
+fi=(40)
+380 78
+fe=(38)
+
+fl=(33)
+fn=(538)
+4028 1
+fi=(32)
+82 1
+fi=(141)
++72 1
+fi=(140) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/rt.rs
+-7 3
+fi=(141)
++11 2
++1 7
+cfi=(32)
+cfn=(104)
+calls=1 -18 
+* 450
+* 2
+fi=(140)
+-12 1
+fe=(33)
+
+fn=(548)
+4028 1
+fi=(32)
+82 1
+fi=(141)
+214 1
+fi=(143)
+557 4
+fi=(141)
+218 6
++1 7
+cfi=(32)
+cfn=(105)
+calls=1 -78 
+* 62
+* 2
+fi=(143)
+557 1
+fe=(33)
+
+fl=(40)
+fn=(126)
+287 4
+116 4
+287 16
+116 4
+287 16
+116 4
++2 8
++58 12
++3 4
+cfn=(128) __malloc_alloc_meta
+calls=4 43 
+* 367
+-3 4
++3 4
+-3 4
++4 8
++4 4
+-3 4
++3 12
++1 60
+297 32
+-97 4
++6 8
++4 20
++65 4
+-1 4
++1 8
++2 4
++3 4
+-1 4
+-4 4
++5 8
+-5 4
++5 8
+-5 4
++5 4
+-5 4
++1 24
++2 4
++1 20
++1 4
++14 4
+-14 8
++14 4
+fi=(38)
+77 4
+fe=(40)
+280 4
++14 4
+fi=(38)
+77 4
++1 8
++1 16
+231 4
+fe=(40)
++29 4
+fi=(38)
+-29 4
++1 8
++1 4
+fi=(49)
++89 4
++1 4
+-1 4
++1 8
++1 12
++1 12
++3 4
+-63 24
+fi=(38)
+-31 4
++1 24
++1 16
+fe=(40)
++25 16
+cfn=(127) alloc_slot'2
+calls=4 +26 
+* 1690
++1 20
++4 4
++1 4
+-1 4
++1 20
+fi=(38)
+-90 8
++3 24
++19 4
++1 4
++4 4
+-5 8
++1 8
+-1 8
++1 4
++4 4
+-3 4
++3 4
++1 8
++1 12
++2 32
++1 4
++1 24
++1 12
++2 8
++10 8
++1 8
+-1 12
++1 4
+-38 8
++1 8
++6 20
+fe=(40)
++75 4
++1 16
++1 8
++1 8
+-1 65
++1 114
+-1 114
++2 12
+fi=(38)
+85 4
+fe=(40)
+296 4
+fi=(38)
+85 4
++1 8
+fe=(40)
+
+fn=(127)
+287 8
+116 8
+287 32
+116 8
+287 32
+116 8
++2 16
++1 5
++1 10
++2 8
+fi=(38)
+-30 4
++7 4
+fe=(40)
++25 2
++1 6
+fi=(38)
+-28 4
+fe=(40)
++79 15
++3 5
+cfn=(128)
+calls=5 43 
+* 130
+-3 5
++3 5
+-3 5
++4 10
++4 5
+-3 5
++3 15
+-17 9
++1 6
+289 6
+fi=(49)
+-24 21
+fe=(40)
++32 64
+192 20
++3 160
++1 50
++4 25
++6 10
++4 27
+fi=(38)
++75 7
+-18 2
++18 1
+-18 1
++18 2
+-17 3
+fe=(40)
+-62 30
+fi=(38)
++45 2
++4 2
+fe=(40)
+-34 2
++6 4
++7 1
++1 1
+-1 1
++1 3
++5 4
++2 1
++1 1
+-1 3
++1 4
+-14 4
++1 2
++1 2
++18 8
+cfi=(26)
+cfn=(88)
+calls=1 15 
+* 29
++1 2
+-1 1
++1 1
++4 2
++2 3
+-2 2
++2 2
+-2 1
++1 2
++1 1
++1 4
++18 1
+-1 1
++1 2
++2 1
++3 1
+-1 1
+-4 1
++5 2
+-5 1
++5 2
+-5 1
++5 1
+-5 1
++1 6
++2 1
++1 5
++1 1
++14 1
+-14 2
++14 1
+fi=(38)
+77 1
+fe=(40)
+280 1
++14 1
+fi=(38)
+77 1
+fe=(40)
+275 4
+-1 4
++1 8
++2 4
++3 4
+-1 4
+-4 4
++5 8
+-5 4
++5 8
+-5 4
++5 4
+-5 4
++1 24
++2 4
++1 20
++1 4
++14 4
+-14 8
++14 4
+fi=(38)
+77 4
+fe=(40)
+280 4
++14 4
+fi=(38)
+77 4
++1 10
++1 20
+231 4
+fe=(40)
++29 4
+fi=(38)
+-29 4
++1 8
++1 4
+fi=(49)
++89 4
++1 4
+-1 4
++1 8
++1 12
++1 12
++3 4
+-63 24
+fi=(38)
+-31 4
++1 24
++1 16
+fe=(40)
++25 16
+cfn=(127)
+calls=4 +26 
+* 734
++1 20
++4 4
++1 4
+-1 4
++1 20
+fi=(38)
+-90 8
++3 24
++19 4
++1 4
++4 4
+-5 8
++1 8
+-1 8
++1 4
++4 4
+-3 4
++3 4
++1 8
++1 12
++2 32
++1 4
++1 24
++1 12
++2 8
++10 8
++1 8
+-1 12
++1 4
+-38 8
++1 8
++6 20
+fe=(40)
++75 4
++1 16
++1 8
++1 8
+-1 16
++1 16
+-1 16
++2 12
+fi=(38)
+85 5
+fe=(40)
+296 5
+fi=(38)
+85 5
++1 10
+fe=(40)
+
+fn=(128)
+43 36
++3 27
+fi=(38)
++58 9
++1 18
+fi=(39)
+-59 2
++1 1
+-1 2
++1 1
++2 5
+cfi=(7)
+cfn=(16)
+calls=1 -42 
+* 12
+* 2
+-2 3
++2 21
+-2 66
++1 45
+fe=(40)
++3 1
+fi=(39)
+-1 3
+fe=(40)
++8 5
++3 2
+fi=(6)
+-47 4
+fe=(40)
++52 4
+fi=(6)
+-52 1
+fe=(40)
++53 1
+-1 1
+fi=(6)
+-52 2
+fe=(40)
++55 2
++3 8
+cfi=(26)
+cfn=(88)
+calls=1 -57 
+* 51
++2 1
++2 2
++24 2
+-44 43
++52 8
++1 16
++1 16
++2 48
+-4 1
++1 2
++1 2
++2 6
+-16 1
+-1 1
++1 1
++1 3
++6 1
+-1 1
++1 1
++1 1
++1 1
++1 4
+
+fl=(82)
+fn=(256) coreutils::common::validation::setup_localization_or_exit
+73 8
+fi=(72)
++79 3
+0 1
+152 3
+fi=(84) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/cell.rs
+555 2
+fi=(85) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/thread_local/native/eager.rs
+35 3
+fi=(83) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/thread/local.rs
+-35 1
+fi=(72)
+160 1
+fi=(102) /home/callen/work/coreutils-startup-factorial/aggressive/src/uucore/src/lib/mods/locale.rs
+615 1
+fe=(82)
+85 6
+fi=(86) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/thread_local/native/mod.rs
+-17 2
+fi=(85)
+-19 2
+cfi=(87)
+cfn=(268)
+calls=1 -34 
+* 567
+fi=(100)
+901 1
+fi=(84)
+2043 2
+fi=(100)
+901 1
+fi=(48)
+14 2
+cfi=(37)
+cfn=(118)
+calls=1 115 
+* 129
+fi=(52)
+453 2
+fi=(101) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/slice.rs
+0 1
+fi=(53)
+547 4
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 15
+fi=(102)
++70 1
+fi=(53)
+805 3
+0 1
+805 1
+fi=(102)
+617 5
+fi=(100)
+901 2
+fe=(82)
+
+fn=(534) coreutils::common::validation::exit
+30 2
++9 1
+cfi=(139)
+cfn=(536)
+calls=1 2465 
+* 582
+
+fl=(136)
+fn=(522)
+14 2
++1 2
+cfi=(137) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/stdio/__stdio_close.c
+cfn=(524) dummy
+calls=2 -10 
+* 4
++1 18
+cfi=(15)
+cfn=(62)
+calls=2 +3 
+* 20
++1 10
++1 4
+cfi=(12)
+cfn=(50)
+calls=2 -12 
+* 8
++1 4
+
+fl=(137)
+fn=(524)
+5 2
++2 2
+
+fl=(116)
+fn=(410)
+5 1
++1 4
+cfi=(117)
+cfn=(412)
+calls=1 140 
+* 86
+
+fl=(97)
+fn=(298)
+37 3
+fi=(18)
++51 2
+fe=(97)
+-46 3
++1 1
+
+fn=(294)
+24 3
+fi=(24)
+-20 1
+fe=(97)
++20 1
++1 1
++1 1
++1 2
+fi=(18)
+-23 3
+fe=(97)
++27 2
++2 4
+
+fl=(55)
+fn=(170)
+5 8
+cfi=(56) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/free.c
+cfn=(172) __libc_free
+calls=8 +98 
+* 1562
+
+fl=(56)
+fn=(172)
+103 16
+-1 40
+fi=(38)
++29 16
+-5 8
++6 8
+-6 24
++8 16
++5 40
++1 8
+-1 16
++2 16
++1 32
++1 24
++1 24
++1 8
++1 8
+-1 8
++1 16
++1 48
++1 56
++1 32
++4 24
+fe=(56)
+-16 10
+fi=(39)
+-63 9
+fe=(56)
++70 9
+cfn=(178) nontrivial_free
+calls=3 -71 
+* 522
+fi=(39)
+-66 3
+fe=(56)
++66 6
+fi=(39)
+-66 3
+cfi=(42)
+cfn=(140)
+calls=3 -21 
+* 12
+fe=(56)
++68 6
+fi=(38)
+-20 40
++54 56
+fe=(56)
+-72 8
+fi=(38)
++53 8
+fe=(56)
+-53 8
++1 16
+fi=(38)
++52 8
++1 16
++1 10
++1 5
++1 10
++1 10
++2 32
++1 32
++2 16
+fe=(56)
+-60 16
++4 8
+-4 24
++1 8
++3 8
+-4 16
++20 8
++1 8
++1 8
++1 16
++1 31
++1 20
++15 48
+
+fn=(178)
+73 6
++1 6
++4 3
+-2 3
+-2 3
++2 3
+-1 3
++3 6
+-2 3
++2 6
+-3 3
++3 6
+-3 3
++3 12
++11 4
+fi=(18)
+-41 2
+fe=(56)
++50 4
++1 6
+-57 3
++3 5
+fi=(38)
+177 2
+fe=(56)
+-96 2
+-62 4
++26 1
++6 2
+fi=(38)
++46 2
+fe=(56)
+-12 3
+fi=(38)
++36 4
+fe=(56)
+-94 1
+fi=(38)
+131 2
+-5 1
++6 1
+-6 3
++8 2
++5 6
++1 1
+-1 1
++2 2
++1 4
++1 3
++1 3
++1 1
++1 1
+-1 1
++1 2
++1 6
++1 7
++1 4
++4 3
+fe=(56)
+30 1
+fi=(38)
++96 1
+fe=(56)
+-96 1
+fi=(38)
++96 1
+fe=(56)
+-94 1
+cfn=(179) nontrivial_free'2
+calls=1 +41 
+* 322
+* 1
++51 2
+fi=(38)
++9 2
++7 2
+fe=(56)
+-14 2
+-68 3
++1 2
++3 2
+fi=(38)
++90 4
+-32 3
++2 1
++1 2
++1 4
+fe=(56)
+
+fn=(179)
+73 6
++1 6
++4 3
+-2 3
+-2 3
++2 3
+-1 3
++3 6
+-2 3
++2 6
+-3 3
++3 6
+-3 3
++3 12
++11 2
++1 2
++3 4
+fi=(18)
+-45 1
+fe=(56)
++50 2
++1 6
+-57 6
++3 10
+fi=(38)
+177 4
+fe=(56)
+-96 4
+-62 8
++26 2
++6 4
+fi=(38)
++46 4
+fe=(56)
+-12 6
+fi=(38)
++36 8
+fe=(56)
+-94 2
+fi=(38)
+131 4
+-5 2
++6 2
+-6 6
++8 4
++5 12
++1 2
+-1 2
++2 4
++1 8
++1 6
++1 6
++1 2
++1 2
+-1 2
++1 4
++1 12
++1 14
++1 8
++4 6
++1 6
+fe=(56)
+30 2
+fi=(38)
++96 2
+fe=(56)
+-96 2
+fi=(38)
++96 2
+fe=(56)
+-94 2
+cfn=(179)
+calls=2 +41 
+* 215
+* 2
+fi=(38)
++53 2
++1 1
+fe=(56)
+-51 1
++48 4
+fi=(38)
++9 4
++7 4
+fe=(56)
+-14 4
+-68 6
++1 4
++3 4
+fi=(38)
++90 8
+-32 6
++2 1
++1 2
++1 4
+fe=(56)
+
+fl=(150)
+fn=(590)
+7 1
+
+fl=(30)
+fn=(100)
+52 8
+fi=(138)
+4028 1
+fi=(177) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/sync/once/futex.rs
+82 1
+fi=(31)
+214 1
++4 3
++1 7
+cfi=(32)
+cfn=(104)
+calls=1 -78 
+* 4117
+fi=(54)
+1753 1
+fi=(73)
+-61 1
+fi=(109)
+180 1
+fe=(30)
+0 1
+fi=(59)
+2107 1
+fi=(52)
+444 2
+fe=(30)
+0 1
+fi=(59)
+2107 1
+fi=(48)
+14 2
+cfi=(37)
+cfn=(118)
+calls=1 115 
+* 142
+fi=(52)
+453 2
+fe=(30)
+0 1
+fi=(53)
+547 4
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 23
+fi=(59)
+1014 3
+fe=(30)
+57 3
+cfi=(60)
+cfn=(192)
+calls=1 304 
+* 249
+* 2
+fi=(59)
+1065 2
+fi=(71)
+2655 6
+fi=(72)
+0 46
+fi=(73)
+1692 41
+fi=(109)
+180 41
+fi=(73)
+660 42
+fe=(30)
+66 42
+fi=(71)
+2655 126
+fi=(74)
+0 7
+fe=(30)
+66 7
+fi=(113)
++23 7
+fi=(72)
++71 28
+cfi=(75)
+cfn=(232)
+calls=7 7 
+* 92
+* 35
+fe=(30)
+-94 7
+fi=(73)
+1692 1
+fi=(109)
+180 1
+fi=(36)
+0 2
+fi=(73)
+1692 128
+fi=(109)
+180 64
+fe=(30)
+66 64
+fi=(71)
+2655 192
+0 24
+fe=(30)
+66 8
+fi=(113)
++23 8
+fi=(72)
++71 16
+cfi=(75)
+cfn=(232)
+calls=8 7 
+* 103
+* 8
+fe=(30)
+-94 8
+-66 24
+66 8
+fi=(59)
+2726 2
+fe=(30)
+69 3
+fi=(51)
+458 1
+0 2
+fi=(52)
+444 1
+fi=(77) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/alloc.rs
+95 4
+cfi=(1)
+cfn=(242)
+calls=1 -95 
+* 138
+fi=(52)
+453 2
+0 2
+fi=(53)
+547 5
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 15
+0 1
+fi=(171)
+306 4
+cfi=(68)
+cfn=(216)
+calls=1 89 
+* 48
+fi=(70)
+713 2
+fe=(30)
+0 6
+fi=(70)
+714 2
+fi=(72)
+152 4
+fe=(30)
+0 3
+fi=(80) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/siphasher-1.0.3/src/sip128.rs
+332 2
+fi=(167)
+2376 1
+fi=(51)
+2027 3
+fi=(167)
+2376 1
+fi=(78) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/siphasher-1.0.3/src/common.rs
+11 2
+fi=(167)
+2376 1
+fi=(51)
+2027 1
+fi=(78)
+7 2
++4 1
+fi=(51)
+2027 1
+fi=(80)
+334 1
+555 4
++3 2
+fi=(78)
+48 2
+fi=(53)
+-48 2
+fi=(78)
+52 4
+fi=(79)
+863 1
+fi=(53)
+547 1
+fi=(78)
+53 3
++1 1
++2 2
+fi=(80)
+370 4
+fi=(167)
+2376 1
+fi=(51)
+2027 1
+fi=(80)
+370 1
+fi=(78)
+7 1
+fi=(51)
+2027 1
+fi=(80)
+372 1
+fi=(167)
+2376 1
+fi=(51)
+2027 1
+fi=(78)
+11 1
+fi=(167)
+2376 1
+fi=(51)
+2027 1
+fi=(167)
+2376 1
+fi=(51)
+2027 1
+fi=(78)
+7 1
++4 1
+fi=(51)
+2027 1
+fi=(80)
+374 1
+fi=(167)
+2376 1
+fi=(51)
+2027 1
+fi=(78)
+7 1
+fi=(51)
+2027 1
+fi=(80)
+376 1
+fi=(167)
+2376 1
+fi=(51)
+2027 1
+fi=(78)
+11 1
+fi=(167)
+2376 1
+fi=(51)
+2027 1
+fi=(167)
+2376 1
+fi=(51)
+2027 1
+fi=(78)
+11 1
+fi=(51)
+2027 1
+fi=(78)
+7 1
+fi=(167)
+2376 1
+fi=(51)
+2027 1
+fi=(78)
+7 1
+fi=(51)
+2027 1
+fi=(167)
+2376 1
+fi=(51)
+2027 1
+fi=(78)
+11 1
+fi=(167)
+2376 1
+fi=(51)
+2027 1
+fi=(167)
+2376 1
+fi=(51)
+2027 1
+fi=(78)
+11 1
+fi=(51)
+2027 1
+fi=(78)
+7 1
+fi=(167)
+2376 1
+fi=(51)
+2027 1
+fi=(78)
+7 1
+fi=(51)
+2027 1
+fi=(167)
+2376 1
+fi=(51)
+2027 1
+fi=(78)
+11 1
+fi=(167)
+2376 1
+fi=(51)
+2027 1
+fi=(167)
+2376 1
+fi=(51)
+2027 1
+fi=(78)
+11 1
+fi=(51)
+2027 1
+fi=(80)
+378 3
+fi=(78)
+7 1
+fi=(80)
+380 1
+fi=(167)
+2376 1
+fi=(51)
+2027 1
+fi=(78)
+7 1
+fi=(51)
+2027 1
+fi=(167)
+2376 1
+fi=(51)
+2027 1
+fi=(78)
+11 1
+fi=(167)
+2376 1
+fi=(51)
+2027 1
+fi=(167)
+2376 1
+fi=(51)
+2027 1
+fi=(78)
+11 1
+fi=(51)
+2027 1
+fi=(78)
+7 1
+fi=(167)
+2376 1
+fi=(51)
+2027 1
+fi=(78)
+7 1
+fi=(51)
+2027 1
+fi=(167)
+2376 1
+fi=(51)
+2027 1
+fi=(78)
+11 1
+fi=(167)
+2376 1
+fi=(51)
+2027 1
+fi=(167)
+2376 1
+fi=(51)
+2027 1
+fi=(78)
+11 1
+fi=(51)
+2027 1
+fi=(78)
+7 1
+fi=(167)
+2376 1
+fi=(51)
+2027 1
+fi=(167)
+2376 1
+fi=(51)
+2027 1
+fi=(78)
+11 1
+fi=(51)
+2027 1
+fi=(78)
+7 1
+fi=(167)
+2376 1
+fi=(51)
+2027 3
+fi=(80)
+382 2
+fi=(178) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/phf_shared-0.14.0/src/lib.rs
+51 2
++13 7
+fi=(167)
+2452 1
+-76 1
+fi=(80)
+382 1
+fi=(167)
+2376 1
+fi=(178)
+65 6
+fi=(81) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/phf-0.14.0/src/ordered_map.rs
+188 3
++1 2
+0 1
+189 2
+fi=(72)
+-37 2
+fi=(81)
+0 1
+191 1
+fi=(72)
+-31 2
+cfi=(75)
+cfn=(232)
+calls=1 7 
+* 20
+* 1
+fi=(81)
++31 1
++1 5
+fi=(72)
+-32 2
+fe=(30)
+-57 1
+0 5
+fi=(59)
+1164 2
++1 1
+fe=(30)
+116 1
++6 3
+cfi=(82)
+cfn=(256)
+calls=1 -49 
+* 770
+fi=(48)
+14 2
+cfi=(37)
+cfn=(118)
+calls=1 115 
+* 1164
+fi=(77)
+489 2
+0 1
+fe=(30)
+123 3
+fi=(173)
+961 2
+fi=(110)
+37 8
+fe=(30)
++86 1
+cfi=(103)
+cfn=(334)
+calls=1 -18 
+* 5340
+* 2
+cfi=(82)
+cfn=(534)
+calls=1 -93 
+* 585
+
+fl=(41)
+fn=(136)
+8 6
++3 2
+-3 2
++2 6
++2 8
+
+fl=(23)
+fn=(82)
+6 2
++2 4
+-1 2
++2 138
++1 88
+-1 88
++2 2
+cfi=(24)
+cfn=(84)
+calls=2 -7 
+* 6
+* 2
++2 6
+
+fl=(152)
+fn=(600)
+10 1
++1 2
+cfi=(42)
+cfn=(602)
+calls=1 +10 
+* 4
++2 3
+
+fl=(10)
+fn=(44)
+665 77
+fi=(138)
+4043 77
+fe=(10)
+671 154
++28 80
+-21 5
+cfi=(11)
+cfn=(46)
+calls=1 8 
+* 30
+* 2
+fi=(138)
+4012 1
+fe=(10)
+682 4
+cfi=(11)
+cfn=(46)
+calls=1 8 
+* 30
++4 4
+cfi=(11)
+cfn=(46)
+calls=1 8 
+* 30
+* 2
+fi=(138)
+4012 2
+fe=(10)
+694 3
+cfi=(13)
+cfn=(52)
+calls=1 64 
+* 68
+* 2
++2 2
+fi=(138)
+4013 4
+fe=(10)
+699 1
+
+fl=(121)
+fn=(438)
+5 2
+fi=(179) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/stat/lstat.c
++1 8
+cfi=(117)
+cfn=(412)
+calls=2 140 
+* 168
+fe=(121)
+
+ob=(2)
+fl=(9)
+fn=(40)
+0 3
+
+fn=(596)
+0 3
+
+totals: 382964

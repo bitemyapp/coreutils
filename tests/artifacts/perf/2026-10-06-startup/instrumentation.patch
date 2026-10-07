@@ -1,0 +1,72 @@
+--- /home/callen/work/coreutils-startup-8cf2e4f4/artifacts/original-src_bin_coreutils.rs	2026-10-06 21:05:52.699199631 -0500
++++ /home/callen/work/coreutils-startup-8cf2e4f4/source/src/bin/coreutils.rs	2026-10-06 21:05:52.731390867 -0500
+@@ -50,6 +50,8 @@
+ 
+ #[allow(clippy::cognitive_complexity)]
+ fn main() {
++    let startup_profile = std::env::var_os("UUTILS_STARTUP_PROFILE").is_some();
++    let startup_begin = std::time::Instant::now();
+     let utils = util_map();
+     let mut args = uucore::args_os();
+ 
+@@ -119,8 +121,18 @@
+             // binary to avoid the load of the flt
+             // Could be something like:
+             // #[cfg(not(feature = "only_english"))]
++            let dispatch_done = std::time::Instant::now();
+             validation::setup_localization_or_exit(util);
+-            exit(uumain(vec![util_os].into_iter().chain(args)));
++            let locale_done = std::time::Instant::now();
++            let code = uumain(vec![util_os].into_iter().chain(args));
++            let utility_done = std::time::Instant::now();
++            if startup_profile {
++                eprintln!("STARTUP dispatch_ns={} localization_ns={} utility_ns={}",
++                    dispatch_done.duration_since(startup_begin).as_nanos(),
++                    locale_done.duration_since(dispatch_done).as_nanos(),
++                    utility_done.duration_since(locale_done).as_nanos());
++            }
++            exit(code);
+         }
+         // GNU coreutils --help string shows help for coreutils
+         if util == "--help" || util == "-h" {
+--- /home/callen/work/coreutils-startup-8cf2e4f4/artifacts/original-src_uucore_src_lib_lib.rs	2026-10-06 21:05:52.731709079 -0500
++++ /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/lib.rs	2026-10-06 21:05:52.732192873 -0500
+@@ -222,6 +222,8 @@
+ macro_rules! bin_inner {
+     ($util:ident, $post:expr) => {
+         pub fn main() {
++            let startup_profile = std::env::var_os("UUTILS_STARTUP_PROFILE").is_some();
++            let startup_begin = std::time::Instant::now();
+             use std::io::Write;
+             use uucore::locale;
+ 
+@@ -230,6 +232,7 @@
+ 
+             // suppress extraneous error output for SIGPIPE failures/panics
+             uucore::panic::mute_sigpipe_panic();
++            let dispatch_done = std::time::Instant::now();
+             locale::setup_localization(uucore::get_canonical_util_name(stringify!($util)))
+                 .unwrap_or_else(|err| {
+                     match err {
+@@ -242,10 +245,19 @@
+                     std::process::exit(99)
+                 });
+ 
+-            // execute utility code
++            // Measurement only; retain the utility's normal work and exit.
++            let locale_done = std::time::Instant::now();
+             let code = $util::uumain(uucore::args_os());
++            let utility_done = std::time::Instant::now();
+             $post
+-
++            let flush_done = std::time::Instant::now();
++            if startup_profile {
++                eprintln!("STARTUP dispatch_ns={} localization_ns={} utility_ns={} flush_ns={}",
++                    dispatch_done.duration_since(startup_begin).as_nanos(),
++                    locale_done.duration_since(dispatch_done).as_nanos(),
++                    utility_done.duration_since(locale_done).as_nanos(),
++                    flush_done.duration_since(utility_done).as_nanos());
++            }
+             std::process::exit(code);
+         }
+     };

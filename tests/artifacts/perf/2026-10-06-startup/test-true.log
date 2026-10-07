@@ -1,0 +1,215 @@
+ Downloading crates ...
+  Downloaded unindent v0.2.4
+  Downloaded rstest v0.27.0
+  Downloaded rstest_macros v0.27.0
+  Downloaded relative-path v1.9.3
+  Downloaded rstest_reuse v0.7.0
+  Downloaded diff v0.1.13
+  Downloaded pretty_assertions v1.4.1
+   Compiling proc-macro2 v1.0.107
+   Compiling unicode-ident v1.0.26
+   Compiling quote v1.0.47
+   Compiling cfg-if v1.0.5
+   Compiling libc v0.2.190
+   Compiling stable_deref_trait v1.2.1
+   Compiling bitflags v2.13.2
+   Compiling rustix v1.1.5
+   Compiling linux-raw-sys v0.12.1
+   Compiling memchr v2.8.3
+   Compiling thiserror v2.0.21
+   Compiling zerocopy v0.8.57
+   Compiling utf8parse v0.2.2
+   Compiling smallvec v1.16.1
+   Compiling rustc-hash v2.1.3
+   Compiling cfg_aliases v0.2.2
+   Compiling is_terminal_polyfill v1.70.2
+   Compiling colorchoice v1.0.5
+   Compiling anstyle v1.0.14
+   Compiling writeable v0.6.4
+   Compiling siphasher v1.0.3
+   Compiling anstyle-query v1.1.5
+   Compiling clap_lex v1.1.1
+   Compiling equivalent v1.0.2
+   Compiling time-core v0.1.9
+   Compiling num-conv v0.2.2
+   Compiling strsim v0.11.1
+   Compiling self_cell v1.3.0
+   Compiling unicode-width v0.2.2
+   Compiling jiff-core v0.1.1
+   Compiling deranged v0.5.8
+   Compiling num_threads v0.1.7
+   Compiling uucore v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore)
+   Compiling regex-syntax v0.8.11
+   Compiling litemap v0.8.3
+   Compiling icu_locale_fallback_data v2.3.0
+   Compiling powerfmt v0.2.0
+   Compiling autocfg v1.5.1
+   Compiling fastrand v2.5.0
+   Compiling dunce v1.0.5
+   Compiling icu_segmenter_data v2.3.0
+   Compiling rand_core v0.10.1
+   Compiling semver v1.0.28
+   Compiling winnow v1.0.4
+   Compiling getrandom v0.4.3
+   Compiling typenum v1.20.1
+   Compiling utf8_iter v1.0.4
+   Compiling hashbrown v0.17.1
+   Compiling radium v0.7.0
+   Compiling either v1.18.0
+   Compiling cpufeatures v0.3.1
+   Compiling toml_datetime v1.1.1+spec-1.1.0
+   Compiling foldhash v0.2.0
+   Compiling allocator-api2 v0.2.21
+   Compiling smawk v0.3.3
+   Compiling tap v1.0.1
+   Compiling once_cell v1.21.4
+   Compiling pin-project-lite v0.2.17
+   Compiling diff v0.1.13
+   Compiling funty v2.0.0
+   Compiling link-section v0.19.3
+   Compiling yansi v1.0.1
+   Compiling glob v0.3.4
+   Compiling linktime-proc-macro v0.2.3
+   Compiling futures-core v0.3.34
+   Compiling relative-path v1.9.3
+   Compiling futures-task v0.3.34
+   Compiling same-file v1.0.6
+   Compiling futures-timer v3.0.4
+   Compiling bytecount v0.6.9
+   Compiling unindent v0.2.4
+   Compiling hex-literal v1.1.0
+   Compiling nix v0.31.3
+   Compiling anstyle-parse v1.0.0
+   Compiling type-map v0.5.1
+   Compiling phf_shared v0.14.0
+   Compiling anstream v1.0.0
+   Compiling itertools v0.15.0
+   Compiling rustc_version v0.4.1
+   Compiling chacha20 v0.10.2
+   Compiling futures-util v0.3.34
+   Compiling time-macros v0.2.32
+   Compiling os_display v0.1.4
+   Compiling wyz v0.5.1
+   Compiling walkdir v2.5.0
+   Compiling aho-corasick v1.1.5
+   Compiling hashbrown v0.16.1
+   Compiling pretty_assertions v1.4.1
+   Compiling num-traits v0.2.19
+   Compiling phf_generator v0.14.0
+   Compiling phf v0.14.0
+   Compiling rstest_macros v0.27.0
+   Compiling bitvec v1.1.1
+   Compiling phf_codegen v0.14.0
+   Compiling ctor v1.0.13
+   Compiling coreutils v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source)
+   Compiling indexmap v2.14.2
+   Compiling syn v3.0.6
+   Compiling syn v2.0.119
+   Compiling lru v0.16.4
+   Compiling uucore_procs v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore_procs)
+   Compiling jiff v0.2.37
+   Compiling hybrid-array v0.4.15
+   Compiling num-integer v0.1.47
+   Compiling getrandom v0.2.17
+   Compiling toml_parser v1.1.3+spec-1.1.0
+   Compiling rand_core v0.6.4
+   Compiling crypto-common v0.2.2
+   Compiling block-buffer v0.12.1
+   Compiling toml_edit v0.25.15+spec-1.1.0
+   Compiling regex-automata v0.4.18
+   Compiling socket2 v0.6.5
+   Compiling time v0.3.55
+   Compiling filetime v0.2.29
+   Compiling rand v0.10.3
+   Compiling digest v0.11.3
+   Compiling dns-lookup v4.0.2
+   Compiling sha1 v0.11.0
+   Compiling proc-macro-crate v3.5.0
+   Compiling synstructure v0.14.0
+   Compiling zerovec-derive v0.11.6
+   Compiling displaydoc v0.2.7
+   Compiling thiserror-impl v2.0.21
+   Compiling zerofrom-derive v0.1.8
+   Compiling yoke-derive v0.8.4
+   Compiling ppv-lite86 v0.2.21
+   Compiling zerotrie v0.2.5
+   Compiling zerofrom v0.1.8
+   Compiling rand_chacha v0.3.1
+   Compiling regex v1.13.1
+   Compiling yoke v0.8.3
+   Compiling rand v0.8.8
+   Compiling zerovec v0.11.8
+   Compiling fluent-syntax v0.12.0
+   Compiling num-bigint v0.4.8
+   Compiling rstest_reuse v0.7.0
+   Compiling terminal_size v0.4.4
+   Compiling xattr v1.6.1
+   Compiling tempfile v3.27.0
+   Compiling clap_builder v4.6.7
+   Compiling tinystr v0.8.4
+   Compiling potential_utf v0.1.6
+   Compiling icu_collections v2.3.0
+   Compiling unic-langid-impl v0.9.6
+   Compiling icu_locale_core v2.3.0
+   Compiling unic-langid v0.9.6
+   Compiling intl_pluralrules v7.0.2
+   Compiling intl-memoizer v0.5.3
+   Compiling fluent-langneg v0.13.1
+   Compiling fluent-bundle v0.16.0
+   Compiling num-modular v0.6.1
+   Compiling fluent v0.17.0
+   Compiling num-prime v0.6.1
+   Compiling icu_provider v2.3.1
+   Compiling rstest v0.27.0
+   Compiling icu_locale_fallback v2.3.0
+   Compiling icu_segmenter v2.3.0
+   Compiling clap v4.6.7
+   Compiling textwrap v0.16.4
+   Compiling uu_ln v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/ln)
+   Compiling uu_true v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/true)
+   Compiling uutests v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/tests/uutests)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 5.13s
+     Running unittests src/lib.rs (target/debug/deps/coreutils-b16edc18a472fe09)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 2 filtered out; finished in 0.00s
+
+     Running unittests src/bin/coreutils.rs (target/debug/deps/coreutils-5838ff79ee7a73dd)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/test_localization_and_colors.rs (target/debug/deps/test_localization_and_colors-4d7d513e9ea6e1ad)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 5 filtered out; finished in 0.00s
+
+     Running tests/test_util_name.rs (target/debug/deps/test_util_name-904a35e0c97b6a61)
+Setting UUTESTS_BINARY_PATH=/home/callen/work/coreutils-startup-8cf2e4f4/source/target/debug/coreutils
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 7 filtered out; finished in 0.00s
+
+     Running tests/test_uudoc.rs (target/debug/deps/test_uudoc-36b033c038b9ed12)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/tests.rs (target/debug/deps/tests-08215115de8eafcb)
+
+running 7 tests
+test test_true::test_conflict ... ok
+test test_true::test_no_args ... ok
+test test_true::test_help ... ok
+test test_true::test_version ... ok
+test test_true::test_extra_args ... ok
+test test_true::test_short_options ... ok
+test test_true::test_full ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 60 filtered out; finished in 0.00s
+

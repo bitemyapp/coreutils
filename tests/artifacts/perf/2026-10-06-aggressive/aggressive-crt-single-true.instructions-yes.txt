@@ -1,0 +1,33 @@
+--------------------------------------------------------------------------------
+Profile data file '/home/callen/work/coreutils-startup-factorial/artifacts-aggressive/aggressive-crt-single-true.callgrind' (creator: callgrind-3.22.0)
+--------------------------------------------------------------------------------
+I1 cache: 
+D1 cache: 
+LL cache: 
+Timerange: Basic block 0 - 4671
+Trigger: Program termination
+Profiled target:  /home/callen/work/coreutils-startup-factorial/bin/aggressive-crt/single/true (PID 2110746, part 1)
+Events recorded:  Ir
+Events shown:     Ir
+Event sort order: Ir
+Thresholds:       99
+Include dirs:     
+User annotated:   
+Auto-annotation:  off
+
+--------------------------------------------------------------------------------
+Ir              
+--------------------------------------------------------------------------------
+20,482 (100.0%)  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+Ir               file:function
+--------------------------------------------------------------------------------
+20,482 (100.0%)  ???:0x0000000000010889 [/home/callen/work/coreutils-startup-factorial/bin/aggressive-crt/single/true]
+20,477 (99.98%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/crt/../ldso/dlstart.c:_start_c [/home/callen/work/coreutils-startup-factorial/bin/aggressive-crt/single/true]
+ 1,375 ( 6.71%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/crt/rcrt1.c:__dls2 [/home/callen/work/coreutils-startup-factorial/bin/aggressive-crt/single/true]
+ 1,368 ( 6.68%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/env/__libc_start_main.c:(below main) [/home/callen/work/coreutils-startup-factorial/bin/aggressive-crt/single/true]
+ 1,214 ( 5.93%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/env/__libc_start_main.c:__init_libc [/home/callen/work/coreutils-startup-factorial/bin/aggressive-crt/single/true]
+   352 ( 1.72%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/env/__init_tls.c:__init_tls [/home/callen/work/coreutils-startup-factorial/bin/aggressive-crt/single/true]
+   136 ( 0.66%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/env/__libc_start_main.c:libc_start_main_stage2 [/home/callen/work/coreutils-startup-factorial/bin/aggressive-crt/single/true]
+

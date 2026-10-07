@@ -1,0 +1,26 @@
+Benchmark 1: gnu-true
+  Time (mean ± σ):     990.1 ms ±  10.9 ms    [User: 717.0 ms, System: 256.1 ms]
+  Range (min … max):   974.7 ms … 1004.8 ms    8 runs
+ 
+Benchmark 2: baseline-single-true
+  Time (mean ± σ):      1.716 s ±  0.008 s    [User: 1.179 s, System: 0.516 s]
+  Range (min … max):    1.702 s …  1.726 s    8 runs
+ 
+Benchmark 3: lazy-musl-single-true
+  Time (mean ± σ):     577.2 ms ±  12.3 ms    [User: 390.1 ms, System: 165.8 ms]
+  Range (min … max):   561.7 ms … 591.7 ms    8 runs
+ 
+Benchmark 4: aggressive-crt-single-true
+  Time (mean ± σ):     467.4 ms ±  13.1 ms    [User: 306.2 ms, System: 143.2 ms]
+  Range (min … max):   448.7 ms … 487.0 ms    8 runs
+ 
+Benchmark 5: aggressive-single-true
+  Time (mean ± σ):     410.7 ms ±  10.7 ms    [User: 250.9 ms, System: 139.8 ms]
+  Range (min … max):   400.5 ms … 431.2 ms    8 runs
+ 
+Summary
+  aggressive-single-true ran
+    1.14 ± 0.04 times faster than aggressive-crt-single-true
+    1.41 ± 0.05 times faster than lazy-musl-single-true
+    2.41 ± 0.07 times faster than gnu-true
+    4.18 ± 0.11 times faster than baseline-single-true

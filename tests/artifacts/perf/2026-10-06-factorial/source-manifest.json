@@ -1,0 +1,42 @@
+{
+  "baseline": {
+    "branch": "codex/startup-baseline",
+    "commit": "261369bc76d4b57c58c8bede4b6e8cd3536218f9",
+    "worktree": "/home/callen/work/coreutils-startup-factorial/baseline",
+    "binaries": {
+      "bin/baseline/single/true": "31781d9ea889808e37cb260347bf53064a95d6d5be433e1635080ed18391a589",
+      "bin/baseline/single/ln": "bbdc4acbf00172ddbc624b0a8c9679c771e95caa9340dabdc30018a776ef99f4",
+      "bin/baseline/multi/coreutils": "84e768080a47cbab189174c586e6447a771822dbcaff2b0cdcea42ae85a45169"
+    }
+  },
+  "lazy": {
+    "branch": "codex/startup-lazy",
+    "commit": "21dc2c2500a73521cd5d0814cc006205e5b3b69c",
+    "worktree": "/home/callen/work/coreutils-startup-factorial/lazy",
+    "binaries": {
+      "bin/lazy/single/true": "bf7d8d501990c5bb1ce401511e4e7d9737817ae4a9a7799f6b8d9fc10ba0d75d",
+      "bin/lazy/single/ln": "82ec95a5faae7cc393c33eefee9359bee417c473f40540bd219263539863de57",
+      "bin/lazy/multi/coreutils": "0424a10c7f1efad8f9e3d1318fb9e7e2191d1e70fefff481b2ebabbd8e3b078e"
+    }
+  },
+  "musl": {
+    "branch": "codex/startup-musl",
+    "commit": "20e6a629c565bd591d84ecf298bbdb7b657f81ca",
+    "worktree": "/home/callen/work/coreutils-startup-factorial/musl",
+    "binaries": {
+      "bin/musl/single/true": "ba02b169ede78b5004998086d9dc83b3b78c3ee99d5c48405626bd8976f625e5",
+      "bin/musl/single/ln": "c4b8484cfad57b704f8b08966e7670673527a62ce7a292f968b1c494ac85eab9",
+      "bin/musl/multi/coreutils": "9b7548d162bda062e1d1df054187782c0b7a537702cce0695d70d832f5eae5e9"
+    }
+  },
+  "lazy-musl": {
+    "branch": "codex/startup-lazy-musl",
+    "commit": "0cbf0f97940c1f17285f1c4e73e8d423fbe111ec",
+    "worktree": "/home/callen/work/coreutils-startup-factorial/lazy-musl",
+    "binaries": {
+      "bin/lazy-musl/single/true": "3bd2d38444413b25369cb797956c6c8546bb07166df9e44174f65e6b163211a5",
+      "bin/lazy-musl/single/ln": "288244757d9d9159d1050fb596b75a23a29552691df1b43ac641a6378668c3d1",
+      "bin/lazy-musl/multi/coreutils": "aaca1b3724e163bdda6ebcc35713b98e3476573a8a43c8b76a8d9860d289af79"
+    }
+  }
+}

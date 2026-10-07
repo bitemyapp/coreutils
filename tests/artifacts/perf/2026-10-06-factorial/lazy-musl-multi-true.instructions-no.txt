@@ -1,0 +1,50 @@
+--------------------------------------------------------------------------------
+Profile data file '/home/callen/work/coreutils-startup-factorial/artifacts/lazy-musl-multi-true.callgrind' (creator: callgrind-3.22.0)
+--------------------------------------------------------------------------------
+I1 cache: 
+D1 cache: 
+LL cache: 
+Timerange: Basic block 0 - 81625
+Trigger: Program termination
+Profiled target:  /home/callen/work/coreutils-startup-factorial/bin/lazy-musl/multi/true (PID 1534894, part 1)
+Events recorded:  Ir
+Events shown:     Ir
+Event sort order: Ir
+Thresholds:       99
+Include dirs:     
+User annotated:   
+Auto-annotation:  off
+
+--------------------------------------------------------------------------------
+Ir               
+--------------------------------------------------------------------------------
+378,574 (100.0%)  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+Ir                file:function
+--------------------------------------------------------------------------------
+365,658 (96.59%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/crt/../ldso/dlstart.c:_start_c [/home/callen/work/coreutils-startup-factorial/bin/lazy-musl/multi/coreutils]
+    980 ( 0.26%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/malloc.c:alloc_slot [/home/callen/work/coreutils-startup-factorial/bin/lazy-musl/multi/coreutils]
+    899 ( 0.24%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/malloc.c:alloc_slot'2 [/home/callen/work/coreutils-startup-factorial/bin/lazy-musl/multi/coreutils]
+    825 ( 0.22%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/env/__libc_start_main.c:__init_libc [/home/callen/work/coreutils-startup-factorial/bin/lazy-musl/multi/coreutils]
+    630 ( 0.17%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/string/memcmp.c:memcmp [/home/callen/work/coreutils-startup-factorial/bin/lazy-musl/multi/coreutils]
+    607 ( 0.16%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/meta.h:__libc_malloc_impl [/home/callen/work/coreutils-startup-factorial/bin/lazy-musl/multi/coreutils]
+    530 ( 0.14%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/cmp.rs:coreutils::main
+    458 ( 0.12%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/meta.h:alloc_slot
+    402 ( 0.11%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/env/__libc_start_main.c:libc_start_init [/home/callen/work/coreutils-startup-factorial/bin/lazy-musl/multi/coreutils]
+    354 ( 0.09%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/malloc.c:__libc_malloc_impl
+    351 ( 0.09%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/meta.h:alloc_slot'2
+    342 ( 0.09%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/mod.rs:coreutils::main
+    336 ( 0.09%)  /home/callen/work/coreutils-startup-factorial/lazy-musl/src/uucore/src/lib/features/signals.rs:uucore::features::signals::capture_startup_state [/home/callen/work/coreutils-startup-factorial/bin/lazy-musl/multi/coreutils]
+    332 ( 0.09%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/misc/getauxval.c:getauxval [/home/callen/work/coreutils-startup-factorial/bin/lazy-musl/multi/coreutils]
+    309 ( 0.08%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/string/x86_64/memcpy.s:0x0000000000894cbd [/home/callen/work/coreutils-startup-factorial/bin/lazy-musl/multi/coreutils]
+    276 ( 0.07%)  /home/callen/work/coreutils-startup-factorial/lazy-musl/src/bin/coreutils.rs:coreutils::main [/home/callen/work/coreutils-startup-factorial/bin/lazy-musl/multi/coreutils]
+    261 ( 0.07%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/signal/sigaction.c:__libc_sigaction [/home/callen/work/coreutils-startup-factorial/bin/lazy-musl/multi/coreutils]
+    247 ( 0.07%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/meta.h:__libc_free
+    241 ( 0.06%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/malloc.c:__malloc_alloc_meta [/home/callen/work/coreutils-startup-factorial/bin/lazy-musl/multi/coreutils]
+    213 ( 0.06%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/non_null.rs:coreutils::main
+    182 ( 0.05%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/env/__init_tls.c:__init_tls [/home/callen/work/coreutils-startup-factorial/bin/lazy-musl/multi/coreutils]
+    156 ( 0.04%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/meta.h:nontrivial_free
+    151 ( 0.04%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/glue.h:__malloc_alloc_meta
+    150 ( 0.04%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/free.c:nontrivial_free [/home/callen/work/coreutils-startup-factorial/bin/lazy-musl/multi/coreutils]
+

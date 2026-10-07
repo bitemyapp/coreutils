@@ -1,0 +1,29 @@
+Benchmark 1: empty-c
+  Time (mean ± σ):     182.1 µs ±  36.6 µs    [User: 128.4 µs, System: 17.0 µs]
+  Range (min … max):   157.4 µs … 893.9 µs    2000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 2: empty-rust
+  Time (mean ± σ):     262.3 µs ±  25.3 µs    [User: 182.3 µs, System: 36.2 µs]
+  Range (min … max):   242.8 µs … 457.7 µs    2000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 3: gnu-true
+  Time (mean ± σ):     182.1 µs ±  24.9 µs    [User: 130.6 µs, System: 16.7 µs]
+  Range (min … max):   165.4 µs … 417.9 µs    2000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 4: rust-single-true
+  Time (mean ± σ):     324.9 µs ±  23.3 µs    [User: 218.9 µs, System: 58.1 µs]
+  Range (min … max):   307.6 µs … 499.4 µs    2000 runs
+ 
+  Warning: The first benchmarking run for this command was significantly slower than the rest (476.0 µs). This could be caused by (filesystem) caches that were not filled until after the first run. You are already using the '--warmup' option which helps to fill these caches before the actual benchmark. You can either try to increase the warmup count further or re-run this benchmark on a quiet system in case it was a random outlier. Alternatively, consider using the '--prepare' option to clear the caches before each timing run.
+ 
+Summary
+  gnu-true ran
+    1.00 ± 0.24 times faster than empty-c
+    1.44 ± 0.24 times faster than empty-rust
+    1.78 ± 0.28 times faster than rust-single-true

@@ -1,0 +1,53 @@
+execve("/home/callen/work/coreutils-startup-factorial/bin/musl/single/true", ["/home/callen/work/coreutils-star"...], 0x7ffcbeabbf20 /* 21 vars */) = 0 <0.000082>
+mmap(NULL, 912, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x744deafa1000 <0.000002>
+arch_prctl(ARCH_SET_FS, 0x744deafa12c8) = 0 <0.000002>
+set_tid_address(0x744deb0b43d8)         = 1534826 <0.000001>
+poll([{fd=0, events=0}, {fd=1, events=0}, {fd=2, events=0}], 3, 0) = 1 ([{fd=0, revents=POLLHUP}]) <0.000002>
+rt_sigaction(SIGPIPE, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x744deb04d331}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000001>
+rt_sigaction(SIGSEGV, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000001>
+sigaltstack(NULL, {ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=0}) = 0 <0.000001>
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x744deaf9e000 <0.000002>
+mprotect(0x744deaf9e000, 4096, PROT_NONE) = 0 <0.000003>
+sigaltstack({ss_sp=0x744deaf9f000, ss_flags=0, ss_size=8192}, NULL) = 0 <0.000002>
+rt_sigprocmask(SIG_UNBLOCK, [RT_1 RT_2], NULL, 8) = 0 <0.000001>
+rt_sigaction(SIGSEGV, {sa_handler=0x744deb01f9a0, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_SIGINFO, sa_restorer=0x744deb04d331}, NULL, 8) = 0 <0.000001>
+rt_sigaction(SIGBUS, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000001>
+rt_sigaction(SIGBUS, {sa_handler=0x744deb01f9a0, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_SIGINFO, sa_restorer=0x744deb04d331}, NULL, 8) = 0 <0.000001>
+brk(NULL)                               = 0x55556179a000 <0.000001>
+brk(0x55556179c000)                     = 0x55556179c000 <0.000003>
+mmap(0x55556179a000, 4096, PROT_NONE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x55556179a000 <0.000003>
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x744deaf9d000 <0.000002>
+rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1 RT_2], [], 8) = 0 <0.000001>
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0 <0.000001>
+readlink("/proc/self/exe", "/home/callen/work/coreutils-star"..., 256) = 66 <0.000011>
+stat("/home/callen/work/coreutils-startup-factorial/bin/musl/single/locales/true", 0x7ffc745b3d90) = -1 ENOENT (No such file or directory) <0.000002>
+stat("/home/callen/work/coreutils-startup-factorial/bin/musl/share/locales/true", 0x7ffc745b3d90) = -1 ENOENT (No such file or directory) <0.000002>
+stat("/home/callen/work/coreutils-startup-factorial/bin/musl/single/true", {st_mode=S_IFREG|0775, st_size=5014840, ...}) = 0 <0.000002>
+mmap(NULL, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x744deaf99000 <0.000002>
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x744deaf98000 <0.000002>
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x744deaf97000 <0.000002>
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x744deaf96000 <0.000002>
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x744deaf94000 <0.000002>
+munmap(0x744deaf97000, 4096)            = 0 <0.000004>
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x744deaf97000 <0.000002>
+munmap(0x744deaf94000, 8192)            = 0 <0.000002>
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x744deaf95000 <0.000002>
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x744deaf94000 <0.000002>
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x744deaf93000 <0.000002>
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x744deaf92000 <0.000002>
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x744deaf91000 <0.000002>
+mmap(NULL, 28672, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x744deaf8a000 <0.000002>
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x744deaf89000 <0.000002>
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x744deaf88000 <0.000002>
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x744deaf86000 <0.000002>
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x744deaf84000 <0.000002>
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x744deaf83000 <0.000002>
+munmap(0x744deaf84000, 8192)            = 0 <0.000002>
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x744deaf84000 <0.000002>
+munmap(0x744deaf83000, 4096)            = 0 <0.000002>
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x744deaf83000 <0.000002>
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x744deaf82000 <0.000002>
+munmap(0x744deaf82000, 4096)            = 0 <0.000002>
+sigaltstack({ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=8192}, NULL) = 0 <0.000001>
+munmap(0x744deaf9e000, 12288)           = 0 <0.000003>
+exit_group(0)                           = ?

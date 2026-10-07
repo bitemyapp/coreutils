@@ -1,0 +1,410 @@
+# callgrind format
+version: 1
+creator: callgrind-3.22.0
+pid: 2110746
+cmd:  /home/callen/work/coreutils-startup-factorial/bin/aggressive-crt/single/true
+part: 1
+
+
+desc: I1 cache: 
+desc: D1 cache: 
+desc: LL cache: 
+
+desc: Timerange: Basic block 0 - 4671
+desc: Trigger: Program termination
+
+positions: line
+events: Ir
+summary: 20482
+
+
+ob=(2) ???
+fl=(10) ???
+fn=(54) 0x00000000001afed1
+0 3
+
+fn=(40) 0x0000000000110000
+0 3
+
+ob=(1) /home/callen/work/coreutils-startup-factorial/bin/aggressive-crt/single/true
+fl=(7) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/string/strnlen.c
+fn=(16) 0x00000000000a612b
+7 1
+fi=(8) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/string/x86_64/memcpy.s
++1 1
++1 1
++1 1
++1 1
++5 1
++1 1
++1 86
++2 1
++1 1
++4 1
+fe=(7)
+
+fl=(2) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/crt/../ldso/dlstart.c
+fn=(2) _start_c
+22 1
++7 1
+-7 1
++7 132
++1 3
++2 152
++1 113
++1 67
++32 169
++1 98
++1 48
++36 1
++1 3
++23 1
++1 1
+-1 2
++2 1
+-24 1
++1 1
++1 1
++1 15
++1 10
+-1 8
++2 3
++19 4
++6 1
++1 1
+-1 2
++2 6520
++1 5212
++2 6515
++3 1
++1 1
+-1 2
++3 5
++14 1
++1 2
++1 1
+-1 1
+cfi=(3) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/crt/rcrt1.c
+cfn=(4) __dls2
+calls=1 13 
+* 1375
+
+fl=(13) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/exit/assert.c
+fn=(48) dummy
+7 1
+
+fl=(9) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/thread/x86_64/__set_thread_area.s
+fn=(30) 0x00000000000a7a2a
+7 1
++1 1
++1 1
++1 1
++1 1
+
+fl=(11) /home/callen/work/coreutils-startup-factorial/aggressive/src/uu/true/src/main.rs
+fn=(44) __wrap_main
+29 4
++1 2
++13 5
+
+fl=(3)
+fn=(4)
+13 7
+cfi=(4) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/env/__libc_start_main.c
+cfn=(6) (below main)
+calls=1 +61 
+* 1368
+
+fl=(1) ???
+fn=(42) __do_init
+0 6
+
+fn=(52) __do_fini
+0 8
+
+fn=(0) 0x0000000000010889
+0 5
+cfi=(2)
+cfn=(2)
+calls=1 22 
+0 20477
+
+fl=(15) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/stdio/ofl.c
+fn=(58) __ofl_lock
+10 1
++1 2
+cfi=(16) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/thread/__lock.c
+cfn=(60) __lock
+calls=1 +10 
+* 4
++2 3
+
+fl=(4)
+fn=(6)
+74 4
++1 1
+-1 2
++6 1
+-6 1
++6 1
+cfn=(8) __init_libc
+calls=1 -56 
+* 1214
++6 3
+-1 1
++2 3
+-1 1
+cfn=(36) libc_start_main_stage2
+calls=1 +4 
+* 136
+
+fn=(8)
+24 2
++1 43
++1 2
++1 106
++1 1
++1 202
++1 2
++1 3
++1 2
++2 2
++2 5
++1 1
+-3 76
++3 399
++2 2
+cfi=(5) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/env/__init_tls.c
+cfn=(10) __init_tls
+calls=1 +44 
+* 352
++1 2
+cfn=(34) dummy1
+calls=1 -25 
+* 1
++2 6
++1 3
++14 2
+
+fn=(36)
+90 3
++1 1
+-1 6
++2 1
+cfn=(38) libc_start_init
+calls=1 -32 
+* 26
++3 4
+cfi=(11)
+cfn=(44)
+calls=1 -66 
+* 11
+* 2
+cfi=(12) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/exit/exit.c
+cfn=(46) exit
+calls=1 -67 
+* 82
+
+fn=(38)
+60 3
++1 1
+cob=(2)
+cfi=(10)
+cfn=(40)
+calls=1 -61 
+* 3
++1 2
++1 4
++1 1
+cfi=(1)
+cfn=(42)
+calls=1 -64 
+* 6
+-1 2
++2 4
+
+fn=(34)
+15 1
+
+fl=(5)
+fn=(14) __copy_tls
+40 7
++20 1
++1 1
++3 1
+-4 1
++1 2
++3 4
++1 2
++1 2
+-1 1
++1 4
+cfi=(7)
+cfn=(16)
+calls=1 -59 
+* 96
+-2 2
++5 2
++3 1
+-2 1
++2 6
+
+fn=(28) __init_tp
+15 2
++2 1
++1 1
+cfi=(9)
+cfn=(30)
+calls=1 -11 
+* 5
++1 2
++1 2
++1 1
+fi=(6) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/arch/x86_64/syscall_arch.h
+-7 3
+fe=(5)
++8 1
++1 2
++1 2
++1 1
++1 2
+-1 1
++2 1
++1 2
+
+fn=(10)
+83 1
++7 2
+-3 1
+-1 1
++16 1
+-12 2
++6 19
+-6 42
++2 30
++2 23
++1 3
++3 16
++1 2
+-1 2
++7 2
++2 1
+-1 1
++5 1
+-3 1
+-2 1
++1 1
++2 1
++1 1
+-1 1
++2 1
++3 1
++1 2
+-1 1
++1 1
+-1 2
++7 1
++2 2
++8 1
+-6 1
++20 1
+-14 1
+-5 1
++7 2
+fi=(6)
+-77 1
++2 1
++1 2
+-2 1
++2 2
+fe=(5)
++78 1
++12 1
+cfn=(14)
+calls=1 40 
+* 134
+* 2
+cfn=(28)
+calls=1 15 
+* 29
+* 2
++2 2
+
+fl=(14) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/stdio/__stdio_exit.c
+fn=(56) __stdio_exit
+17 1
++2 1
+cfi=(15)
+cfn=(58)
+calls=1 -9 
+* 10
+* 3
++1 2
+cfn=(62) close_file
+calls=1 -10 
+* 3
++1 2
+cfn=(62)
+calls=1 -11 
+* 3
++1 1
++1 1
+-1 1
+cfn=(62)
+calls=1 -12 
+* 16
+
+fn=(62)
+10 6
+-1 1
++2 4
++1 3
++1 4
++1 4
+
+fl=(16)
+fn=(60)
+21 1
++1 2
++30 1
+
+fl=(12)
+fn=(50) libc_exit_fini
+18 3
++1 2
++1 4
++1 3
+cfi=(1)
+cfn=(52)
+calls=1 -21 
+* 8
+* 1
++2 1
+-1 1
++1 2
+-1 1
+cob=(2)
+cfi=(10)
+cfn=(54)
+calls=1 -22 
+* 3
+
+fn=(46)
+28 2
++1 1
+cfi=(13)
+cfn=(48)
+calls=1 -22 
+* 1
++1 1
+cfn=(50)
+calls=1 -12 
+* 29
++1 2
+cfi=(14)
+cfn=(56)
+calls=1 -14 
+* 44
++1 2
+
+totals: 20482

@@ -1,0 +1,1 @@
+PASS: all six commands exit 0 with no output; ln creates and replaces the requested symlink.

@@ -1,0 +1,82 @@
+{
+  "baseline/true/quiet": {
+    "code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "baseline/true/help": {
+    "code": 0,
+    "stdout": "Returns true, a successful exit status.\n\nImmediately returns with the exit status 0, except when invoked with one of the recognized\noptions. In those cases it will try to write the help or version text. Any IO error during this\noperation causes the program to return 1 instead.\n\nUsage: true\n\nOptions:\n      --help     Print help information\n      --version  Print version information\n",
+    "stderr": ""
+  },
+  "baseline/ln/quiet": {
+    "code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "baseline/ln/help": {
+    "code": 0,
+    "stdout": "Make links between files.\n\nUsage: ln [OPTION]... [-T] TARGET LINK_NAME\n       ln [OPTION]... TARGET\n       ln [OPTION]... TARGET... DIRECTORY\n       ln [OPTION]... -t DIRECTORY TARGET...\n\nArguments:\n  <files>...  \n\nOptions:\n      --backup[=<CONTROL>]            make a backup of each existing destination file\n  -b                                  like --backup but does not accept an argument\n  -f, --force                         remove existing destination files\n  -i, --interactive                   prompt whether to remove existing destination files\n  -n, --no-dereference                treat LINK_NAME as a normal file if it is a\n                                      symbolic link to a directory\n  -L, --logical                       follow TARGETs that are symbolic links\n  -P, --physical                      make hard links directly to symbolic links\n  -s, --symbolic                      make symbolic links instead of hard links\n  -S, --suffix <SUFFIX>               override the usual backup suffix\n  -t, --target-directory <DIRECTORY>  specify the DIRECTORY in which to create the links\n  -T, --no-target-directory           treat LINK_NAME as a normal file always\n  -r, --relative                      create symbolic links relative to link location\n  -v, --verbose                       print name of each linked file\n  -h, --help                          Print help\n  -V, --version                       Print version\n\nIn the 1st form, create a link to TARGET with the name LINK_NAME.\nIn the 2nd form, create a link to TARGET in the current directory.\nIn the 3rd and 4th forms, create links to each TARGET in DIRECTORY.\nCreate hard links by default, symbolic links with --symbolic.\nBy default, each destination (name of new link) should not already exist.\nWhen creating hard links, each TARGET must exist. Symbolic links\ncan hold arbitrary text; if later resolved, a relative link is\ninterpreted in relation to its parent directory.\n\nThe backup suffix is '~', unless set with --suffix or SIMPLE_BACKUP_SUFFIX.\nThe version control method may be selected via the --backup option or through\nthe VERSION_CONTROL environment variable.  Here are the values:\n\n  none, off       never make backups (even if --backup is given)\n  numbered, t     make numbered backups\n  existing, nil   numbered if numbered backups exist, simple otherwise\n  simple, never   always make simple backups\n",
+    "stderr": ""
+  },
+  "lazy/true/quiet": {
+    "code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "lazy/true/help": {
+    "code": 0,
+    "stdout": "Returns true, a successful exit status.\n\nImmediately returns with the exit status 0, except when invoked with one of the recognized\noptions. In those cases it will try to write the help or version text. Any IO error during this\noperation causes the program to return 1 instead.\n\nUsage: true\n\nOptions:\n      --help     Print help information\n      --version  Print version information\n",
+    "stderr": ""
+  },
+  "lazy/ln/quiet": {
+    "code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "lazy/ln/help": {
+    "code": 0,
+    "stdout": "Make links between files.\n\nUsage: ln [OPTION]... [-T] TARGET LINK_NAME\n       ln [OPTION]... TARGET\n       ln [OPTION]... TARGET... DIRECTORY\n       ln [OPTION]... -t DIRECTORY TARGET...\n\nArguments:\n  <files>...  \n\nOptions:\n      --backup[=<CONTROL>]            make a backup of each existing destination file\n  -b                                  like --backup but does not accept an argument\n  -f, --force                         remove existing destination files\n  -i, --interactive                   prompt whether to remove existing destination files\n  -n, --no-dereference                treat LINK_NAME as a normal file if it is a\n                                      symbolic link to a directory\n  -L, --logical                       follow TARGETs that are symbolic links\n  -P, --physical                      make hard links directly to symbolic links\n  -s, --symbolic                      make symbolic links instead of hard links\n  -S, --suffix <SUFFIX>               override the usual backup suffix\n  -t, --target-directory <DIRECTORY>  specify the DIRECTORY in which to create the links\n  -T, --no-target-directory           treat LINK_NAME as a normal file always\n  -r, --relative                      create symbolic links relative to link location\n  -v, --verbose                       print name of each linked file\n  -h, --help                          Print help\n  -V, --version                       Print version\n\nIn the 1st form, create a link to TARGET with the name LINK_NAME.\nIn the 2nd form, create a link to TARGET in the current directory.\nIn the 3rd and 4th forms, create links to each TARGET in DIRECTORY.\nCreate hard links by default, symbolic links with --symbolic.\nBy default, each destination (name of new link) should not already exist.\nWhen creating hard links, each TARGET must exist. Symbolic links\ncan hold arbitrary text; if later resolved, a relative link is\ninterpreted in relation to its parent directory.\n\nThe backup suffix is '~', unless set with --suffix or SIMPLE_BACKUP_SUFFIX.\nThe version control method may be selected via the --backup option or through\nthe VERSION_CONTROL environment variable.  Here are the values:\n\n  none, off       never make backups (even if --backup is given)\n  numbered, t     make numbered backups\n  existing, nil   numbered if numbered backups exist, simple otherwise\n  simple, never   always make simple backups\n",
+    "stderr": ""
+  },
+  "musl/true/quiet": {
+    "code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "musl/true/help": {
+    "code": 0,
+    "stdout": "Returns true, a successful exit status.\n\nImmediately returns with the exit status 0, except when invoked with one of the recognized\noptions. In those cases it will try to write the help or version text. Any IO error during this\noperation causes the program to return 1 instead.\n\nUsage: true\n\nOptions:\n      --help     Print help information\n      --version  Print version information\n",
+    "stderr": ""
+  },
+  "musl/ln/quiet": {
+    "code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "musl/ln/help": {
+    "code": 0,
+    "stdout": "Make links between files.\n\nUsage: ln [OPTION]... [-T] TARGET LINK_NAME\n       ln [OPTION]... TARGET\n       ln [OPTION]... TARGET... DIRECTORY\n       ln [OPTION]... -t DIRECTORY TARGET...\n\nArguments:\n  <files>...  \n\nOptions:\n      --backup[=<CONTROL>]            make a backup of each existing destination file\n  -b                                  like --backup but does not accept an argument\n  -f, --force                         remove existing destination files\n  -i, --interactive                   prompt whether to remove existing destination files\n  -n, --no-dereference                treat LINK_NAME as a normal file if it is a\n                                      symbolic link to a directory\n  -L, --logical                       follow TARGETs that are symbolic links\n  -P, --physical                      make hard links directly to symbolic links\n  -s, --symbolic                      make symbolic links instead of hard links\n  -S, --suffix <SUFFIX>               override the usual backup suffix\n  -t, --target-directory <DIRECTORY>  specify the DIRECTORY in which to create the links\n  -T, --no-target-directory           treat LINK_NAME as a normal file always\n  -r, --relative                      create symbolic links relative to link location\n  -v, --verbose                       print name of each linked file\n  -h, --help                          Print help\n  -V, --version                       Print version\n\nIn the 1st form, create a link to TARGET with the name LINK_NAME.\nIn the 2nd form, create a link to TARGET in the current directory.\nIn the 3rd and 4th forms, create links to each TARGET in DIRECTORY.\nCreate hard links by default, symbolic links with --symbolic.\nBy default, each destination (name of new link) should not already exist.\nWhen creating hard links, each TARGET must exist. Symbolic links\ncan hold arbitrary text; if later resolved, a relative link is\ninterpreted in relation to its parent directory.\n\nThe backup suffix is '~', unless set with --suffix or SIMPLE_BACKUP_SUFFIX.\nThe version control method may be selected via the --backup option or through\nthe VERSION_CONTROL environment variable.  Here are the values:\n\n  none, off       never make backups (even if --backup is given)\n  numbered, t     make numbered backups\n  existing, nil   numbered if numbered backups exist, simple otherwise\n  simple, never   always make simple backups\n",
+    "stderr": ""
+  },
+  "lazy-musl/true/quiet": {
+    "code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "lazy-musl/true/help": {
+    "code": 0,
+    "stdout": "Returns true, a successful exit status.\n\nImmediately returns with the exit status 0, except when invoked with one of the recognized\noptions. In those cases it will try to write the help or version text. Any IO error during this\noperation causes the program to return 1 instead.\n\nUsage: true\n\nOptions:\n      --help     Print help information\n      --version  Print version information\n",
+    "stderr": ""
+  },
+  "lazy-musl/ln/quiet": {
+    "code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "lazy-musl/ln/help": {
+    "code": 0,
+    "stdout": "Make links between files.\n\nUsage: ln [OPTION]... [-T] TARGET LINK_NAME\n       ln [OPTION]... TARGET\n       ln [OPTION]... TARGET... DIRECTORY\n       ln [OPTION]... -t DIRECTORY TARGET...\n\nArguments:\n  <files>...  \n\nOptions:\n      --backup[=<CONTROL>]            make a backup of each existing destination file\n  -b                                  like --backup but does not accept an argument\n  -f, --force                         remove existing destination files\n  -i, --interactive                   prompt whether to remove existing destination files\n  -n, --no-dereference                treat LINK_NAME as a normal file if it is a\n                                      symbolic link to a directory\n  -L, --logical                       follow TARGETs that are symbolic links\n  -P, --physical                      make hard links directly to symbolic links\n  -s, --symbolic                      make symbolic links instead of hard links\n  -S, --suffix <SUFFIX>               override the usual backup suffix\n  -t, --target-directory <DIRECTORY>  specify the DIRECTORY in which to create the links\n  -T, --no-target-directory           treat LINK_NAME as a normal file always\n  -r, --relative                      create symbolic links relative to link location\n  -v, --verbose                       print name of each linked file\n  -h, --help                          Print help\n  -V, --version                       Print version\n\nIn the 1st form, create a link to TARGET with the name LINK_NAME.\nIn the 2nd form, create a link to TARGET in the current directory.\nIn the 3rd and 4th forms, create links to each TARGET in DIRECTORY.\nCreate hard links by default, symbolic links with --symbolic.\nBy default, each destination (name of new link) should not already exist.\nWhen creating hard links, each TARGET must exist. Symbolic links\ncan hold arbitrary text; if later resolved, a relative link is\ninterpreted in relation to its parent directory.\n\nThe backup suffix is '~', unless set with --suffix or SIMPLE_BACKUP_SUFFIX.\nThe version control method may be selected via the --backup option or through\nthe VERSION_CONTROL environment variable.  Here are the values:\n\n  none, off       never make backups (even if --backup is given)\n  numbered, t     make numbered backups\n  existing, nil   numbered if numbered backups exist, simple otherwise\n  simple, never   always make simple backups\n",
+    "stderr": ""
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "gnu-true": [
+    "/usr/bin/true"
+  ],
+  "baseline-single-true": [
+    "/home/callen/work/coreutils-startup-factorial/bin/baseline/single/true"
+  ],
+  "baseline-multi-true": [
+    "/home/callen/work/coreutils-startup-factorial/bin/baseline/multi/true"
+  ],
+  "lazy-musl-single-true": [
+    "/home/callen/work/coreutils-startup-factorial/bin/lazy-musl/single/true"
+  ],
+  "lazy-musl-multi-true": [
+    "/home/callen/work/coreutils-startup-factorial/bin/lazy-musl/multi/true"
+  ],
+  "aggressive-relr-single-true": [
+    "/home/callen/work/coreutils-startup-factorial/bin/aggressive-relr/single/true"
+  ],
+  "aggressive-relr-multi-true": [
+    "/home/callen/work/coreutils-startup-factorial/bin/aggressive-relr/multi/true"
+  ],
+  "aggressive-parser-single-true": [
+    "/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/single/true"
+  ],
+  "aggressive-parser-multi-true": [
+    "/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/multi/true"
+  ],
+  "aggressive-crt-single-true": [
+    "/home/callen/work/coreutils-startup-factorial/bin/aggressive-crt/single/true"
+  ],
+  "aggressive-crt-multi-true": [
+    "/home/callen/work/coreutils-startup-factorial/bin/aggressive-crt/multi/true"
+  ],
+  "aggressive-single-true": [
+    "/home/callen/work/coreutils-startup-factorial/bin/aggressive/single/true"
+  ],
+  "aggressive-multi-true": [
+    "/home/callen/work/coreutils-startup-factorial/bin/aggressive/multi/true"
+  ],
+  "gnu-ln": [
+    "/usr/bin/ln",
+    "-s",
+    "-f",
+    "src.txt",
+    "dst.txt"
+  ],
+  "baseline-single-ln": [
+    "/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln",
+    "-s",
+    "-f",
+    "src.txt",
+    "dst.txt"
+  ],
+  "baseline-multi-ln": [
+    "/home/callen/work/coreutils-startup-factorial/bin/baseline/multi/ln",
+    "-s",
+    "-f",
+    "src.txt",
+    "dst.txt"
+  ],
+  "lazy-musl-single-ln": [
+    "/home/callen/work/coreutils-startup-factorial/bin/lazy-musl/single/ln",
+    "-s",
+    "-f",
+    "src.txt",
+    "dst.txt"
+  ],
+  "lazy-musl-multi-ln": [
+    "/home/callen/work/coreutils-startup-factorial/bin/lazy-musl/multi/ln",
+    "-s",
+    "-f",
+    "src.txt",
+    "dst.txt"
+  ],
+  "aggressive-relr-single-ln": [
+    "/home/callen/work/coreutils-startup-factorial/bin/aggressive-relr/single/ln",
+    "-s",
+    "-f",
+    "src.txt",
+    "dst.txt"
+  ],
+  "aggressive-relr-multi-ln": [
+    "/home/callen/work/coreutils-startup-factorial/bin/aggressive-relr/multi/ln",
+    "-s",
+    "-f",
+    "src.txt",
+    "dst.txt"
+  ],
+  "aggressive-parser-single-ln": [
+    "/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/single/ln",
+    "-s",
+    "-f",
+    "src.txt",
+    "dst.txt"
+  ],
+  "aggressive-parser-multi-ln": [
+    "/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/multi/ln",
+    "-s",
+    "-f",
+    "src.txt",
+    "dst.txt"
+  ],
+  "aggressive-crt-single-ln": [
+    "/home/callen/work/coreutils-startup-factorial/bin/aggressive-crt/single/ln",
+    "-s",
+    "-f",
+    "src.txt",
+    "dst.txt"
+  ],
+  "aggressive-crt-multi-ln": [
+    "/home/callen/work/coreutils-startup-factorial/bin/aggressive-crt/multi/ln",
+    "-s",
+    "-f",
+    "src.txt",
+    "dst.txt"
+  ],
+  "aggressive-single-ln": [
+    "/home/callen/work/coreutils-startup-factorial/bin/aggressive/single/ln",
+    "-s",
+    "-f",
+    "src.txt",
+    "dst.txt"
+  ],
+  "aggressive-multi-ln": [
+    "/home/callen/work/coreutils-startup-factorial/bin/aggressive/multi/ln",
+    "-s",
+    "-f",
+    "src.txt",
+    "dst.txt"
+  ]
+}

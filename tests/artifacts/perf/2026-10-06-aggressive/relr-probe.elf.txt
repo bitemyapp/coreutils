@@ -1,0 +1,25 @@
+
+Dynamic section at offset 0x686a0 contains 22 entries:
+  Tag        Type                         Name/Value
+ 0x000000000000000c (INIT)               0x1000
+ 0x000000000000000d (FINI)               0x52cd0
+ 0x0000000000000019 (INIT_ARRAY)         0x67ad8
+ 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)
+ 0x000000000000001a (FINI_ARRAY)         0x67ae0
+ 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)
+ 0x000000006ffffef5 (GNU_HASH)           0x298
+ 0x0000000000000005 (STRTAB)             0x2d0
+ 0x0000000000000006 (SYMTAB)             0x2b8
+ 0x000000000000000a (STRSZ)              1 (bytes)
+ 0x000000000000000b (SYMENT)             24 (bytes)
+ 0x0000000000000015 (DEBUG)              0x0
+ 0x0000000000000003 (PLTGOT)             0x69850
+ 0x0000000000000007 (RELA)               0x0
+ 0x0000000000000008 (RELASZ)             0 (bytes)
+ 0x0000000000000009 (RELAENT)            24 (bytes)
+ 0x000000000000001e (FLAGS)              BIND_NOW
+ 0x000000006ffffffb (FLAGS_1)            Flags: NOW PIE
+ 0x0000000000000024 (RELR)               0x2d8
+ 0x0000000000000023 (RELRSZ)             176 (bytes)
+ 0x0000000000000025 (RELRENT)            8 (bytes)
+ 0x0000000000000000 (NULL)               0x0

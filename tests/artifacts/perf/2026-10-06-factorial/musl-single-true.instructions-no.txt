@@ -1,0 +1,340 @@
+--------------------------------------------------------------------------------
+Profile data file '/home/callen/work/coreutils-startup-factorial/artifacts/musl-single-true.callgrind' (creator: callgrind-3.22.0)
+--------------------------------------------------------------------------------
+I1 cache: 
+D1 cache: 
+LL cache: 
+Timerange: Basic block 0 - 47151
+Trigger: Program termination
+Profiled target:  /home/callen/work/coreutils-startup-factorial/bin/musl/single/true (PID 1534837, part 1)
+Events recorded:  Ir
+Events shown:     Ir
+Event sort order: Ir
+Thresholds:       99
+Include dirs:     
+User annotated:   
+Auto-annotation:  off
+
+--------------------------------------------------------------------------------
+Ir               
+--------------------------------------------------------------------------------
+239,023 (100.0%)  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+Ir               file:function
+--------------------------------------------------------------------------------
+19,088 ( 7.99%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/crt/../ldso/dlstart.c:_start_c [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+18,038 ( 7.55%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/meta.h:__libc_malloc_impl [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+16,729 ( 7.00%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/core.rs:fluent_syntax::parser::core::Parser<S>::get_identifier [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+11,493 ( 4.81%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/pattern.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+10,414 ( 4.36%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/malloc.c:alloc_slot [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+ 7,266 ( 3.04%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/malloc.c:__libc_malloc_impl
+ 6,489 ( 2.71%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/mod.rs:fluent_syntax::parser::core::Parser<S>::get_identifier
+ 5,387 ( 2.25%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/string/x86_64/memcpy.s:0x00000000000a5c7b
+ 4,912 ( 2.06%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/malloc.c:alloc_slot'2 [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+ 4,734 ( 1.98%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+ 4,548 ( 1.90%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/meta.h:alloc_slot
+ 4,090 ( 1.71%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/index.rs:fluent_syntax::parser::core::Parser<S>::get_identifier
+ 3,992 ( 1.67%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/meta.h:__libc_free
+ 3,667 ( 1.53%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/macros.rs:fluent_bundle::resource::FluentResource::try_new
+ 3,299 ( 1.38%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/internal/atomic.h:__libc_malloc_impl
+ 2,870 ( 1.20%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/comment.rs:fluent_bundle::resource::FluentResource::try_new
+ 2,865 ( 1.20%)  /rust/deps/hashbrown-0.16.1/src/raw/mod.rs:hashbrown::raw::RawTable<T,A>::reserve_rehash [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+ 2,580 ( 1.08%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/core.rs:fluent_syntax::parser::core::Parser<S>::get_placeable [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+ 2,547 ( 1.07%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:alloc::raw_vec::RawVecInner<A>::finish_grow [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+ 2,388 ( 1.00%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/meta.h:__libc_realloc
+ 1,972 ( 0.83%)  /rust/deps/hashbrown-0.16.1/src/map.rs:hashbrown::map::HashMap<K,V,S,A>::insert [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+ 1,924 ( 0.80%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/free.c:__libc_free [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+ 1,890 ( 0.79%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:alloc::raw_vec::RawVec<T,A>::grow_one [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+ 1,800 ( 0.75%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/index.rs:fluent_bundle::resource::FluentResource::try_new
+ 1,789 ( 0.75%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/expression.rs:fluent_syntax::parser::core::Parser<S>::get_placeable
+ 1,768 ( 0.74%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/core.rs:fluent_syntax::parser::core::Parser<S>::get_attributes [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+ 1,753 ( 0.73%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/index.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+ 1,666 ( 0.70%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/meta.h:alloc_slot'2
+ 1,625 ( 0.68%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/helper.rs:fluent_bundle::resource::FluentResource::try_new
+ 1,573 ( 0.66%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memchr-2.8.3/src/arch/x86_64/avx2/memchr.rs:memchr::arch::x86_64::memchr::memchr3_raw::find_avx2
+ 1,569 ( 0.66%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/free.c:nontrivial_free [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+ 1,564 ( 0.65%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/result.rs:fluent_bundle::resource::FluentResource::try_new
+ 1,537 ( 0.64%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/malloc.c:__malloc_alloc_meta [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+ 1,534 ( 0.64%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+ 1,486 ( 0.62%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rustc-hash-2.1.3/src/lib.rs:hashbrown::raw::RawTable<T,A>::reserve_rehash
+ 1,473 ( 0.62%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/macros.rs:fluent_syntax::parser::core::Parser<S>::get_placeable
+ 1,406 ( 0.59%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/expression.rs:fluent_syntax::parser::expression::<impl fluent_syntax::parser::core::Parser<S>>::get_inline_expression [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+ 1,355 ( 0.57%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/helper.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+ 1,331 ( 0.56%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memchr-2.8.3/src/arch/x86_64/avx2/memchr.rs:memchr::arch::x86_64::avx2::memchr::Three::find_raw [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+ 1,331 ( 0.56%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memchr-2.8.3/src/arch/x86_64/memchr.rs:memchr::arch::x86_64::memchr::memchr3_raw::find_avx2 [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+ 1,329 ( 0.56%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/meta.h:nontrivial_free
+ 1,204 ( 0.50%)  /rust/deps/hashbrown-0.16.1/src/raw/mod.rs:hashbrown::map::HashMap<K,V,S,A>::insert
+ 1,180 ( 0.49%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/str/mod.rs:fluent_syntax::parser::core::Parser<S>::get_identifier
+ 1,171 ( 0.49%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/index.rs:fluent_syntax::parser::core::Parser<S>::get_placeable
+ 1,152 ( 0.48%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/realloc.c:__libc_realloc [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+ 1,120 ( 0.47%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/macros.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+ 1,097 ( 0.46%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/uint_macros.rs:hashbrown::raw::RawTable<T,A>::reserve_rehash
+ 1,044 ( 0.44%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/x86/avx2.rs:memchr::arch::x86_64::avx2::memchr::Three::find_raw_avx2
+ 1,035 ( 0.43%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/glue.h:__libc_malloc_impl
+ 1,030 ( 0.43%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/string/strncmp.c:strncmp [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+   960 ( 0.40%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/thread/__lock.c:__unlock [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+   920 ( 0.38%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:hashbrown::raw::RawTable<T,A>::reserve_rehash
+   918 ( 0.38%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/result.rs:fluent_syntax::parser::core::Parser<S>::get_placeable
+   912 ( 0.38%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:fluent_bundle::resource::FluentResource::try_new
+   910 ( 0.38%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:fluent_bundle::resource::FluentResource::try_new
+   906 ( 0.38%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/pattern.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2 [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+   905 ( 0.38%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/iter/macros.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+   877 ( 0.37%)  /rust/deps/hashbrown-0.16.1/src/control/bitmask.rs:hashbrown::raw::RawTable<T,A>::reserve_rehash
+   858 ( 0.36%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/bundle.rs:fluent_bundle::bundle::FluentBundle<R,M>::add_resource_overriding [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+   843 ( 0.35%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memchr-2.8.3/src/arch/generic/memchr.rs:memchr::arch::x86_64::avx2::memchr::Three::find_raw_avx2
+   840 ( 0.35%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/const_ptr.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+   836 ( 0.35%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rustc-hash-2.1.3/src/lib.rs:hashbrown::map::HashMap<K,V,S,A>::insert
+   824 ( 0.34%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/core.rs:fluent_bundle::resource::FluentResource::try_new
+   805 ( 0.34%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/uint_macros.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+   801 ( 0.34%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/env/__libc_start_main.c:__init_libc [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+   797 ( 0.33%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/internal/atomic.h:alloc_slot
+   776 ( 0.32%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/free.c:nontrivial_free'2 [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+   774 ( 0.32%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/mod.rs:hashbrown::raw::RawTable<T,A>::reserve_rehash
+   756 ( 0.32%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/result.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+   726 ( 0.30%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/simd.rs:memchr::arch::x86_64::memchr::memchr3_raw::find_avx2
+   696 ( 0.29%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/str/mod.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+   690 ( 0.29%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memchr-2.8.3/src/arch/x86_64/memchr.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+   680 ( 0.28%)  /rust/deps/hashbrown-0.16.1/src/control/tag.rs:hashbrown::map::HashMap<K,V,S,A>::insert
+   669 ( 0.28%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mut_ptr.rs:hashbrown::raw::RawTable<T,A>::reserve_rehash
+   665 ( 0.28%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/os_display-0.1.4/src/unix.rs:os_display::unix::write [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+   636 ( 0.27%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/uint_macros.rs:alloc::raw_vec::RawVecInner<A>::finish_grow
+   624 ( 0.26%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/runtime.rs:fluent_bundle::resource::FluentResource::try_new
+   620 ( 0.26%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/uint_macros.rs:hashbrown::map::HashMap<K,V,S,A>::insert
+   570 ( 0.24%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/meta.h:nontrivial_free'2
+   567 ( 0.24%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mut_ptr.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+   533 ( 0.22%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memchr-2.8.3/src/arch/x86_64/avx2/memchr.rs:memchr::arch::x86_64::avx2::memchr::Three::find_raw_avx2 [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+   516 ( 0.22%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/into_iter.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+   493 ( 0.21%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/cmp.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+   487 ( 0.20%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/intrinsics/mod.rs:hashbrown::map::HashMap<K,V,S,A>::insert
+   480 ( 0.20%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:hashbrown::map::HashMap<K,V,S,A>::insert
+   478 ( 0.20%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:fluent_bundle::bundle::FluentBundle<R,M>::add_resource_overriding
+   477 ( 0.20%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/slice.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+   476 ( 0.20%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:fluent_syntax::parser::core::Parser<S>::get_attributes
+   472 ( 0.20%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/str/traits.rs:fluent_syntax::parser::core::Parser<S>::get_identifier
+   470 ( 0.20%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/mman/mmap.c:mmap [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+   470 ( 0.20%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/index.rs:fluent_syntax::parser::core::Parser<S>::get_attributes
+   450 ( 0.19%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/alloc/layout.rs:alloc::raw_vec::RawVecInner<A>::finish_grow
+   447 ( 0.19%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/internal/atomic.h:alloc_slot'2
+   438 ( 0.18%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/non_null.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+   435 ( 0.18%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/str/traits.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+   433 ( 0.18%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/env/getenv.c:getenv [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+   431 ( 0.18%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/mod.rs:hashbrown::map::HashMap<K,V,S,A>::insert
+   425 ( 0.18%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/meta.h:__malloc_alloc_meta
+   424 ( 0.18%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/x86/sse2.rs:hashbrown::map::HashMap<K,V,S,A>::insert
+   424 ( 0.18%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/str/validations.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+   420 ( 0.18%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2
+   386 ( 0.16%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/macros.rs:fluent_syntax::parser::expression::<impl fluent_syntax::parser::core::Parser<S>>::get_inline_expression
+   372 ( 0.16%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/helper.rs:fluent_syntax::parser::core::Parser<S>::get_placeable
+   366 ( 0.15%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/mod.rs:os_display::unix::write
+   363 ( 0.15%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/intrinsics/mod.rs:alloc::raw_vec::RawVecInner<A>::finish_grow
+   360 ( 0.15%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/core.rs:fluent_syntax::parser::core::Parser<S>::get_placeable'2 [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+   360 ( 0.15%)  /rust/deps/hashbrown-0.16.1/src/control/bitmask.rs:hashbrown::map::HashMap<K,V,S,A>::insert
+   354 ( 0.15%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/macros.rs:fluent_syntax::parser::core::Parser<S>::get_identifier
+   351 ( 0.15%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/intrinsics/mod.rs:hashbrown::raw::RawTable<T,A>::reserve_rehash
+   346 ( 0.14%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:fluent_bundle::bundle::FluentBundle<R,M>::add_resource_overriding
+   342 ( 0.14%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/slice/memchr.rs:std::path::Path::is_dir
+   340 ( 0.14%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/collections/hash/map.rs:fluent_bundle::bundle::FluentBundle<R,M>::add_resource_overriding
+   332 ( 0.14%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/misc/getauxval.c:getauxval [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+   324 ( 0.14%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/alloc/unix.rs:alloc::raw_vec::RawVecInner<A>::finish_grow
+   300 ( 0.13%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/result.rs:fluent_syntax::parser::expression::<impl fluent_syntax::parser::core::Parser<S>>::get_inline_expression
+   287 ( 0.12%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs:alloc::raw_vec::RawVecInner<A>::finish_grow [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+   272 ( 0.11%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/intrinsics/mod.rs:fluent_bundle::bundle::FluentBundle<R,M>::add_resource_overriding
+   270 ( 0.11%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/cmp.rs:alloc::raw_vec::RawVec<T,A>::grow_one
+   270 ( 0.11%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/const_ptr.rs:memchr::arch::x86_64::avx2::memchr::Three::find_raw_avx2
+   270 ( 0.11%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/result.rs:alloc::raw_vec::RawVec<T,A>::grow_one
+   264 ( 0.11%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memchr-2.8.3/src/vector.rs:memchr::arch::x86_64::avx2::memchr::Three::find_raw_avx2
+   258 ( 0.11%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/iter/adapters/enumerate.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+   252 ( 0.11%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/expression.rs:fluent_syntax::parser::core::Parser<S>::get_placeable'2
+   248 ( 0.10%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/const_ptr.rs:memchr::arch::x86_64::avx2::memchr::Three::find_raw
+   246 ( 0.10%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/option.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+   244 ( 0.10%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/str/validations.rs:os_display::unix::write
+   242 ( 0.10%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/alloc.rs:alloc::raw_vec::RawVecInner<A>::finish_grow
+   237 ( 0.10%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+   232 ( 0.10%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/nonzero.rs:hashbrown::raw::RawTable<T,A>::reserve_rehash
+   227 ( 0.09%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/signal/sigaction.c:__libc_sigaction [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+   225 ( 0.09%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/mod.rs:fluent_syntax::parser::expression::<impl fluent_syntax::parser::core::Parser<S>>::get_inline_expression
+   224 ( 0.09%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/fmt/mod.rs:core::fmt::write [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+   221 ( 0.09%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std_detect/src/detect/os/x86.rs:std_detect::detect::cache::detect_and_initialize
+   214 ( 0.09%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs:alloc::raw_vec::RawVecInner<A>::reserve::do_reserve_and_handle [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+   213 ( 0.09%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mut_ptr.rs:hashbrown::map::HashMap<K,V,S,A>::insert
+   204 ( 0.09%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/string.rs:fluent_bundle::bundle::FluentBundle<R,M>::add_resource_overriding
+   204 ( 0.09%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mut_ptr.rs:fluent_bundle::resource::FluentResource::try_new
+   204 ( 0.09%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/path.rs:std::path::Path::_join [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+   203 ( 0.08%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/cmp.rs:uucore::mods::locale::get_embedded_locale
+   198 ( 0.08%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/core.rs:fluent_syntax::parser::expression::<impl fluent_syntax::parser::core::Parser<S>>::get_inline_expression
+   198 ( 0.08%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/helper.rs:fluent_syntax::parser::core::Parser<S>::get_attributes
+   197 ( 0.08%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/string/memcmp.c:memcmp [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+   197 ( 0.08%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/iter/adapters/take.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+   192 ( 0.08%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/cmp.rs:fluent_syntax::parser::core::Parser<S>::get_placeable
+   186 ( 0.08%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/internal/syscall_ret.c:__syscall_ret [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+   185 ( 0.08%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/fmt/mod.rs:alloc::fmt::format::format_inner
+   183 ( 0.08%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/string/x86_64/memset.s:0x00000000000a5cd2 [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+   182 ( 0.08%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/env/__init_tls.c:__init_tls [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+   182 ( 0.08%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/lite_malloc.c:malloc [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+   174 ( 0.07%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/helper.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2
+   172 ( 0.07%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/mod.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+   168 ( 0.07%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/macros.rs:fluent_syntax::parser::core::Parser<S>::get_placeable'2
+   165 ( 0.07%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/glue.h:__libc_free
+   154 ( 0.06%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/sync/once/futex.rs:std::sys::sync::once::futex::Once::call [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+   152 ( 0.06%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:fluent_bundle::resource::FluentResource::try_new
+   151 ( 0.06%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/glue.h:__malloc_alloc_meta
+   146 ( 0.06%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/index.rs:fluent_syntax::parser::expression::<impl fluent_syntax::parser::core::Parser<S>>::get_inline_expression
+   144 ( 0.06%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/index.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2
+   138 ( 0.06%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/non_null.rs:fluent_bundle::bundle::FluentBundle<R,M>::add_resource_overriding
+   137 ( 0.06%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/string/strnlen.c:0x00000000000a5c7b [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+   137 ( 0.06%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.8.4/src/ascii.rs:<unic_langid_impl::LanguageIdentifier as core::str::traits::FromStr>::from_str
+   137 ( 0.06%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/str/validations.rs:core::str::converts::from_utf8
+   136 ( 0.06%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hash/mod.rs:hashbrown::map::HashMap<K,V,S,A>::insert
+   136 ( 0.06%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/option.rs:fluent_bundle::resource::FluentResource::try_new
+   136 ( 0.06%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/slice/iter/macros.rs:std::path::Components::parse_next_component_back
+   136 ( 0.06%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/alloc/unix.rs:fluent_bundle::bundle::FluentBundle<R,M>::add_resource_overriding
+   128 ( 0.05%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/stat/fstatat.c:fstatat [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+   126 ( 0.05%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/x86/sse2.rs:hashbrown::raw::RawTable<T,A>::reserve_rehash
+   126 ( 0.05%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/index.rs:fluent_syntax::parser::core::Parser<S>::get_placeable'2
+   126 ( 0.05%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/path.rs:<std::path::Components as core::iter::traits::double_ended::DoubleEndedIterator>::next_back [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+   122 ( 0.05%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:memchr::arch::x86_64::avx2::memchr::Three::find_raw_avx2
+   120 ( 0.05%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/string/strchrnul.c:strchrnul [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+   120 ( 0.05%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/uint_macros.rs:memchr::arch::x86_64::avx2::memchr::Three::find_raw_avx2
+   120 ( 0.05%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/string.rs:<alloc::string::String as core::fmt::Write>::write_str [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+   120 ( 0.05%)  ???:main [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+   115 ( 0.05%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/arch/x86_64/syscall_arch.h:mmap
+   115 ( 0.05%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/sync/atomic.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+   108 ( 0.05%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2
+   108 ( 0.05%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/result.rs:fluent_syntax::parser::core::Parser<S>::get_placeable'2
+   108 ( 0.05%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/result.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2
+   108 ( 0.05%)  /rust/deps/hashbrown-0.16.1/src/control/tag.rs:hashbrown::raw::RawTable<T,A>::reserve_rehash
+   102 ( 0.04%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/string/strlen.c:strlen [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+   100 ( 0.04%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/path.rs:std::path::Components::as_path [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    97 ( 0.04%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/iter/macros.rs:<unic_langid_impl::LanguageIdentifier as core::str::traits::FromStr>::from_str
+    92 ( 0.04%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/path.rs:std::path::Components::parse_next_component_back [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    90 ( 0.04%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/macros.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2
+    88 ( 0.04%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/slice/memchr.rs:std::env::_var_os
+    87 ( 0.04%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/fmt.rs:alloc::fmt::format::format_inner [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    84 ( 0.04%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/iter/macros.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2
+    84 ( 0.04%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs:std::path::Path::_join
+    83 ( 0.03%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/cmp.rs:fluent_bundle::resource::FluentResource::try_new
+    76 ( 0.03%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/result.rs:uucore::mods::locale::setup_localization
+    75 ( 0.03%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/helper.rs:fluent_syntax::parser::helper::<impl fluent_syntax::parser::core::Parser<S>>::get_number_literal [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    75 ( 0.03%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/fmt/mod.rs:core::fmt::Formatter::pad [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    74 ( 0.03%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/nonzero.rs:hashbrown::map::HashMap<K,V,S,A>::insert
+    72 ( 0.03%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/lib.rs:fluent_bundle::resource::FluentResource::try_new
+    72 ( 0.03%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/macros/mod.rs:hashbrown::map::HashMap<K,V,S,A>::insert
+    70 ( 0.03%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/signal/sigaction.c:sigaction [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    70 ( 0.03%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/iter/macros.rs:fluent_bundle::bundle::FluentBundle<R,M>::add_resource_overriding
+    70 ( 0.03%)  /home/callen/work/coreutils-startup-factorial/musl/src/uucore/src/lib/mods/locale.rs:uucore::mods::locale::setup_localization [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    69 ( 0.03%)  /home/callen/work/coreutils-startup-factorial/target-musl/x86_64-unknown-linux-musl/release/build/uucore-f1402c05d363ff74/out/embedded_locales.rs:uucore::mods::locale::get_embedded_locale [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    68 ( 0.03%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/iter/adapters/enumerate.rs:fluent_bundle::bundle::FluentBundle<R,M>::add_resource_overriding
+    66 ( 0.03%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/mman/munmap.c:munmap [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    66 ( 0.03%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/thread/pthread_key_create.c:pthread_key_create [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    66 ( 0.03%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/macros.rs:fluent_syntax::parser::core::Parser<S>::get_attributes
+    66 ( 0.03%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:fluent_syntax::parser::core::Parser<S>::get_placeable
+    66 ( 0.03%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/cmp.rs:fluent_syntax::parser::core::Parser<S>::get_attributes
+    66 ( 0.03%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:fluent_syntax::parser::core::Parser<S>::get_placeable
+    62 ( 0.03%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/iter/macros.rs:os_display::unix::write
+    62 ( 0.03%)  /home/callen/work/coreutils-startup-factorial/musl/src/uucore/src/lib/mods/locale.rs:uucore::mods::locale::create_english_bundle_from_embedded [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    61 ( 0.03%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/non_null.rs:os_display::unix::write
+    61 ( 0.03%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/unicode/unicode_data.rs:os_display::unix::write
+    60 ( 0.03%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/const_ptr.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2
+    58 ( 0.02%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-langid-impl-0.9.6/src/lib.rs:<unic_langid_impl::LanguageIdentifier as core::str::traits::FromStr>::from_str [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    57 ( 0.02%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/thread/pthread_rwlock_unlock.c:pthread_rwlock_unlock [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    56 ( 0.02%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs:<alloc::string::String as core::fmt::Write>::write_str
+    54 ( 0.02%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/slice.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2
+    54 ( 0.02%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/ptr/mod.rs:std::path::Path::_join
+    54 ( 0.02%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/ptr/mod.rs:std::path::Path::is_dir
+    52 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/x86/avx.rs:memchr::arch::x86_64::avx2::memchr::Three::find_raw_avx2
+    52 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/range.rs:<unic_langid_impl::LanguageIdentifier as core::str::traits::FromStr>::from_str
+    49 ( 0.02%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/num/uint_macros.rs:alloc::raw_vec::RawVecInner<A>::finish_grow
+    48 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/into_iter.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2
+    48 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mut_ptr.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2
+    48 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/non_null.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2
+    48 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/str/mod.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2
+    48 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/str/validations.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2
+    48 ( 0.02%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/path.rs:std::path::Path::is_dir [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    46 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/result.rs:<unic_langid_impl::LanguageIdentifier as core::str::traits::FromStr>::from_str
+    46 ( 0.02%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/../../stdarch/crates/core_arch/src/x86/cpuid.rs:std_detect::detect::cache::detect_and_initialize
+    45 ( 0.02%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/pal/unix/stack_overflow.rs:std::sys::pal::unix::stack_overflow::imp::make_handler [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    44 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/iter.rs:<unic_langid_impl::LanguageIdentifier as core::str::traits::FromStr>::from_str
+    44 ( 0.02%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/cmp.rs:alloc::raw_vec::RawVecInner<A>::reserve::do_reserve_and_handle
+    42 ( 0.02%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resource.rs:fluent_bundle::resource::FluentResource::try_new [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    42 ( 0.02%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/helper.rs:fluent_syntax::parser::core::Parser<S>::get_placeable'2
+    42 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/mod.rs:fluent_syntax::parser::core::Parser<S>::get_placeable
+    42 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/uint_macros.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2
+    42 ( 0.02%)  /home/callen/work/coreutils-startup-factorial/musl/src/uucore/src/lib/mods/locale.rs:uucore::mods::locale::get_locales_dir [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    42 ( 0.02%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/io/buffered/bufwriter.rs:std::io::buffered::bufwriter::BufWriter<W>::flush_buf [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    40 ( 0.02%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.8.4/src/int_ops.rs:unic_langid_impl::subtags::region::Region::from_bytes
+    40 ( 0.02%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/env.rs:std::env::_var_os [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    38 ( 0.02%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/env/__init_tls.c:__copy_tls [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    38 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:core::ptr::drop_in_place<uucore::mods::locale::LocalizationError> [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    36 ( 0.02%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/thread/pthread_rwlock_timedwrlock.c:pthread_rwlock_timedwrlock [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    36 ( 0.02%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memchr-2.8.3/src/arch/x86_64/memchr.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2
+    36 ( 0.02%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.8.4/src/int_ops.rs:<unic_langid_impl::LanguageIdentifier as core::str::traits::FromStr>::from_str
+    36 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/cmp.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2
+    36 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/index.rs:fluent_syntax::parser::helper::<impl fluent_syntax::parser::core::Parser<S>>::get_number_literal
+    36 ( 0.02%)  /home/callen/work/coreutils-startup-factorial/musl/src/uucore/src/lib/mods/locale.rs:uucore::mods::locale::parse_fluent_resource_owned [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    36 ( 0.02%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/ptr/non_null.rs:alloc::fmt::format::format_inner
+    36 ( 0.02%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/thread_local/destructors/linux_like.rs:std::sys::thread_local::destructors::linux_like::register [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    35 ( 0.01%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/signal/signal.c:signal [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    35 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/intrinsics/mod.rs:alloc::raw_vec::RawVecInner<A>::finish_grow
+    34 ( 0.01%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-langid-impl-0.9.6/src/parser/mod.rs:<unic_langid_impl::LanguageIdentifier as core::str::traits::FromStr>::from_str
+    34 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/sync/atomic.rs:std::sys::sync::once::futex::Once::call
+    32 ( 0.01%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-langid-impl-0.9.6/src/subtags/region.rs:unic_langid_impl::subtags::region::Region::from_bytes [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    32 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/vec/mod.rs:<alloc::string::String as core::fmt::Write>::write_str
+    32 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/intrinsics/mod.rs:alloc::raw_vec::RawVecInner<A>::reserve::do_reserve_and_handle
+    32 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/slice/index.rs:std::path::Components::parse_next_component_back
+    31 ( 0.01%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/thread/pthread_key_create.c:pthread_key_delete [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    31 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/path.rs:uucore::mods::locale::get_locales_dir
+    31 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/slice/memchr.rs:std::env::current_exe
+    30 ( 0.01%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/arch/x86_64/syscall_arch.h:munmap
+    30 ( 0.01%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/signal/sigaltstack.c:sigaltstack [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    30 ( 0.01%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-langid-impl-0.9.6/src/lib.rs:<unic_langid_impl::LanguageIdentifier as core::fmt::Display>::fmt [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    30 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/string.rs:<alloc::string::String as core::fmt::Write>::write_str [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    30 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/mod.rs:fluent_syntax::parser::helper::<impl fluent_syntax::parser::core::Parser<S>>::get_number_literal
+    30 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/str/traits.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2
+    30 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/alloc/layout.rs:alloc::raw_vec::RawVecInner<A>::finish_grow
+    30 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/result.rs:alloc::raw_vec::RawVecInner<A>::reserve::do_reserve_and_handle
+    29 ( 0.01%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/expression.rs:fluent_syntax::parser::expression::<impl fluent_syntax::parser::core::Parser<S>>::get_call_arguments [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    28 ( 0.01%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/conf/sysconf.c:sysconf [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    28 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/string.rs:<alloc::string::String as core::fmt::Write>::write_char [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    27 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/collections/btree/map.rs:alloc::collections::btree::map::BTreeMap<K,V,A>::insert [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    27 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/option.rs:uucore::mods::locale::create_english_bundle_from_embedded
+    26 ( 0.01%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/errno/__errno_location.c:__errno_location
+    26 ( 0.01%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memchr-2.8.3/src/arch/x86_64/memchr.rs:memchr::arch::x86_64::memchr::memchr3_raw::detect
+    26 ( 0.01%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.8.4/src/ascii.rs:unic_langid_impl::subtags::region::Region::from_bytes
+    26 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/str/converts.rs:core::str::converts::from_utf8 [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    25 ( 0.01%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/arch/x86_64/atomic_arch.h:__libc_realloc
+    25 ( 0.01%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/realloc.c:realloc [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    25 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:fluent_bundle::bundle::FluentBundle<R,M>::add_resource_overriding
+    24 ( 0.01%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/os_display-0.1.4/src/lib.rs:<os_display::Quoted as core::fmt::Display>::fmt [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    24 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/iter/adapters/enumerate.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2
+    24 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/vec/mod.rs:std::path::Path::_join
+    24 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/ptr/non_null.rs:core::fmt::write
+    24 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/ptr/non_null.rs:std::path::Components::parse_next_component_back
+    24 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/path/unix.rs:std::path::Components::parse_next_component_back
+    23 ( 0.01%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/arch/x86_64/syscall_arch.h:__libc_sigaction
+    23 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:uucore::mods::locale::get_locales_dir
+    23 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/path.rs:uucore::mods::locale::get_locales_dir
+    22 ( 0.01%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/arch/x86_64/atomic_arch.h:alloc_slot
+    22 ( 0.01%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/stdio/__stdio_exit.c:close_file [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    21 ( 0.01%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/env/__init_tls.c:__init_tp [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    21 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/str/mod.rs:fluent_syntax::parser::helper::<impl fluent_syntax::parser::core::Parser<S>>::get_number_literal
+    21 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs:alloc::raw_vec::RawVecInner<A>::grow_amortized [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    21 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/fmt/mod.rs:os_display::unix::write
+    21 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std_detect/src/detect/cache.rs:std_detect::detect::cache::detect_and_initialize [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    20 ( 0.01%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/arch/x86_64/atomic_arch.h:nontrivial_free'2
+    20 ( 0.01%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/free.c:free [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    20 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:alloc::raw_vec::RawVecInner<A>::reserve::do_reserve_and_handle [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    20 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/ptr/mod.rs:core::fmt::write
+    20 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/result.rs:core::fmt::write
+    19 ( 0.01%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/bundle.rs:uucore::mods::locale::create_english_bundle_from_embedded
+    19 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:core::ops::function::FnOnce::call_once [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    19 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:uucore::mods::locale::setup_localization
+    19 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/cmp.rs:uucore::mods::locale::create_english_bundle_from_embedded
+    19 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/memchr.rs:uucore::mods::locale::setup_localization
+    18 ( 0.01%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/arch/x86_64/atomic_arch.h:alloc_slot'2
+    18 ( 0.01%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/env/__libc_start_main.c:(below main) [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    18 ( 0.01%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/exit/exit.c:libc_exit_fini [/home/callen/work/coreutils-startup-factorial/bin/musl/single/true]
+    18 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:uucore::mods::locale::setup_localization
+    18 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/cmp.rs:fluent_syntax::parser::core::Parser<S>::get_placeable'2
+    18 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/iter/adapters/take.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2
+

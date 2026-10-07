@@ -1,0 +1,15 @@
+Benchmark 1: previous-ln
+  Time (mean ± σ):     191.3 µs ±  31.6 µs    [User: 138.9 µs, System: 22.1 µs]
+  Range (min … max):   169.8 µs … 690.4 µs    2000 runs
+ 
+  Warning: The first benchmarking run for this command was significantly slower than the rest (248.9 µs). This could be caused by (filesystem) caches that were not filled until after the first run. You are already using the '--warmup' option which helps to fill these caches before the actual benchmark. You can either try to increase the warmup count further or re-run this benchmark on a quiet system in case it was a random outlier. Alternatively, consider using the '--prepare' option to clear the caches before each timing run.
+ 
+Benchmark 2: parser-ln
+  Time (mean ± σ):     111.8 µs ±  29.3 µs    [User: 81.1 µs, System: 8.0 µs]
+  Range (min … max):    97.6 µs … 394.3 µs    2000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Summary
+  parser-ln ran
+    1.71 ± 0.53 times faster than previous-ln

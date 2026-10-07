@@ -1,0 +1,24 @@
+{
+  "rust-multi-true": {
+    "dispatch_ns": 7.341,
+    "localization_ns": 45.2635,
+    "utility_ns": 0.812
+  },
+  "rust-single-true": {
+    "dispatch_ns": 0.811,
+    "localization_ns": 39.54,
+    "utility_ns": 0.401,
+    "flush_ns": 0.201
+  },
+  "rust-multi-ln": {
+    "dispatch_ns": 6.8955,
+    "localization_ns": 52.109,
+    "utility_ns": 68.103
+  },
+  "rust-single-ln": {
+    "dispatch_ns": 0.801,
+    "localization_ns": 48.2785,
+    "utility_ns": 59.665,
+    "flush_ns": 0.1
+  }
+}

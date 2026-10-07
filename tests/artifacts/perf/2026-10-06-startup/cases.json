@@ -1,0 +1,32 @@
+{
+  "gnu-true": [
+    "/usr/bin/true"
+  ],
+  "rust-multi-true": [
+    "/home/callen/work/coreutils-startup-8cf2e4f4/bin/multi/true"
+  ],
+  "rust-single-true": [
+    "/home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true"
+  ],
+  "gnu-ln": [
+    "/usr/bin/ln",
+    "-s",
+    "-f",
+    "src.txt",
+    "dst.txt"
+  ],
+  "rust-multi-ln": [
+    "/home/callen/work/coreutils-startup-8cf2e4f4/bin/multi/ln",
+    "-s",
+    "-f",
+    "src.txt",
+    "dst.txt"
+  ],
+  "rust-single-ln": [
+    "/home/callen/work/coreutils-startup-8cf2e4f4/bin/single/ln",
+    "-s",
+    "-f",
+    "src.txt",
+    "dst.txt"
+  ]
+}

@@ -1,0 +1,76 @@
+--------------------------------------------------------------------------------
+Profile data file '/home/callen/work/coreutils-startup-factorial/artifacts/musl-multi-true.callgrind' (creator: callgrind-3.22.0)
+--------------------------------------------------------------------------------
+I1 cache: 
+D1 cache: 
+LL cache: 
+Timerange: Basic block 0 - 122763
+Trigger: Program termination
+Profiled target:  /home/callen/work/coreutils-startup-factorial/bin/musl/multi/true (PID 1534856, part 1)
+Events recorded:  Ir
+Events shown:     Ir
+Event sort order: Ir
+Thresholds:       99
+Include dirs:     
+User annotated:   
+Auto-annotation:  off
+
+--------------------------------------------------------------------------------
+Ir               
+--------------------------------------------------------------------------------
+591,111 (100.0%)  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+Ir                file:function
+--------------------------------------------------------------------------------
+591,111 (100.0%)  ???:0x000000000015ff8a [/home/callen/work/coreutils-startup-factorial/bin/musl/multi/coreutils]
+591,106 (100.0%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/crt/../ldso/dlstart.c:_start_c [/home/callen/work/coreutils-startup-factorial/bin/musl/multi/coreutils]
+225,448 (38.14%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/crt/rcrt1.c:__dls2 [/home/callen/work/coreutils-startup-factorial/bin/musl/multi/coreutils]
+225,441 (38.14%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/env/__libc_start_main.c:(below main) [/home/callen/work/coreutils-startup-factorial/bin/musl/multi/coreutils]
+224,280 (37.94%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/env/__libc_start_main.c:libc_start_main_stage2 [/home/callen/work/coreutils-startup-factorial/bin/musl/multi/coreutils]
+223,276 (37.77%)  ???:main [/home/callen/work/coreutils-startup-factorial/bin/musl/multi/coreutils]
+222,331 (37.61%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:std::sys::backtrace::__rust_begin_short_backtrace [/home/callen/work/coreutils-startup-factorial/bin/musl/multi/coreutils]
+222,329 (37.61%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:std::sys::backtrace::__rust_begin_short_backtrace
+222,328 (37.61%)  /home/callen/work/coreutils-startup-factorial/musl/src/bin/coreutils.rs:coreutils::main [/home/callen/work/coreutils-startup-factorial/bin/musl/multi/coreutils]
+214,027 (36.21%)  /home/callen/work/coreutils-startup-factorial/musl/src/common/validation.rs:coreutils::common::validation::setup_localization_or_exit [/home/callen/work/coreutils-startup-factorial/bin/musl/multi/coreutils]
+213,998 (36.20%)  /home/callen/work/coreutils-startup-factorial/musl/src/uucore/src/lib/mods/locale.rs:uucore::mods::locale::setup_localization [/home/callen/work/coreutils-startup-factorial/bin/musl/multi/coreutils]
+188,315 (31.86%)  /home/callen/work/coreutils-startup-factorial/musl/src/uucore/src/lib/mods/locale.rs:uucore::mods::locale::create_english_bundle_from_embedded [/home/callen/work/coreutils-startup-factorial/bin/musl/multi/coreutils]
+147,534 (24.96%)  /home/callen/work/coreutils-startup-factorial/musl/src/uucore/src/lib/mods/locale.rs:uucore::mods::locale::parse_fluent_resource_owned [/home/callen/work/coreutils-startup-factorial/bin/musl/multi/coreutils]
+145,568 (24.63%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resource.rs:fluent_bundle::resource::FluentResource::try_new [/home/callen/work/coreutils-startup-factorial/bin/musl/multi/coreutils]
+124,404 (21.05%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/core.rs:fluent_bundle::resource::FluentResource::try_new
+ 97,248 (16.45%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/pattern.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern [/home/callen/work/coreutils-startup-factorial/bin/musl/multi/coreutils]
+ 57,988 ( 9.81%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/meta.h:__libc_malloc_impl [/home/callen/work/coreutils-startup-factorial/bin/musl/multi/coreutils]
+ 49,142 ( 8.31%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/lite_malloc.c:malloc [/home/callen/work/coreutils-startup-factorial/bin/musl/multi/coreutils]
+ 41,165 ( 6.96%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/alloc/unix.rs:alloc::raw_vec::RawVecInner<A>::finish_grow
+ 39,925 ( 6.75%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:alloc::raw_vec::RawVec<T,A>::grow_one [/home/callen/work/coreutils-startup-factorial/bin/musl/multi/coreutils]
+ 37,664 ( 6.37%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:alloc::raw_vec::RawVecInner<A>::finish_grow [/home/callen/work/coreutils-startup-factorial/bin/musl/multi/coreutils]
+ 35,815 ( 6.06%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/bundle.rs:fluent_bundle::bundle::FluentBundle<R,M>::add_resource_overriding [/home/callen/work/coreutils-startup-factorial/bin/musl/multi/coreutils]
+ 34,883 ( 5.90%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+ 34,662 ( 5.86%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/malloc.c:__libc_malloc_impl
+ 29,314 ( 4.96%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/core.rs:fluent_syntax::parser::core::Parser<S>::get_identifier [/home/callen/work/coreutils-startup-factorial/bin/musl/multi/coreutils]
+ 27,418 ( 4.64%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/malloc.c:alloc_slot [/home/callen/work/coreutils-startup-factorial/bin/musl/multi/coreutils]
+ 24,256 ( 4.10%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/core.rs:fluent_syntax::parser::core::Parser<S>::get_placeable [/home/callen/work/coreutils-startup-factorial/bin/musl/multi/coreutils]
+ 21,077 ( 3.57%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/realloc.c:realloc [/home/callen/work/coreutils-startup-factorial/bin/musl/multi/coreutils]
+ 21,052 ( 3.56%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/realloc.c:__libc_realloc [/home/callen/work/coreutils-startup-factorial/bin/musl/multi/coreutils]
+ 20,656 ( 3.49%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/collections/hash/map.rs:fluent_bundle::bundle::FluentBundle<R,M>::add_resource_overriding
+ 20,316 ( 3.44%)  /rust/deps/hashbrown-0.16.1/src/map.rs:hashbrown::map::HashMap<K,V,S,A>::insert [/home/callen/work/coreutils-startup-factorial/bin/musl/multi/coreutils]
+ 19,866 ( 3.36%)  /home/callen/work/coreutils-startup-factorial/musl/src/uucore/src/lib/mods/locale.rs:uucore::mods::locale::get_locales_dir [/home/callen/work/coreutils-startup-factorial/bin/musl/multi/coreutils]
+ 13,515 ( 2.29%)  /rust/deps/hashbrown-0.16.1/src/raw/mod.rs:hashbrown::map::HashMap<K,V,S,A>::insert
+ 13,501 ( 2.28%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/malloc.c:alloc_slot'2 [/home/callen/work/coreutils-startup-factorial/bin/musl/multi/coreutils]
+ 12,311 ( 2.08%)  /rust/deps/hashbrown-0.16.1/src/raw/mod.rs:hashbrown::raw::RawTable<T,A>::reserve_rehash [/home/callen/work/coreutils-startup-factorial/bin/musl/multi/coreutils]
+ 11,612 ( 1.96%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/free.c:__libc_free [/home/callen/work/coreutils-startup-factorial/bin/musl/multi/coreutils]
+ 11,393 ( 1.93%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/path.rs:uucore::mods::locale::get_locales_dir
+ 11,362 ( 1.92%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/path.rs:std::path::Path::_join [/home/callen/work/coreutils-startup-factorial/bin/musl/multi/coreutils]
+ 10,844 ( 1.83%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/alloc/unix.rs:fluent_bundle::bundle::FluentBundle<R,M>::add_resource_overriding
+  9,312 ( 1.58%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/expression.rs:fluent_syntax::parser::core::Parser<S>::get_placeable
+  9,077 ( 1.54%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memchr-2.8.3/src/arch/x86_64/memchr.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+  8,486 ( 1.44%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memchr-2.8.3/src/arch/x86_64/memchr.rs:memchr::arch::x86_64::memchr::memchr3_raw::find_avx2 [/home/callen/work/coreutils-startup-factorial/bin/musl/multi/coreutils]
+  8,447 ( 1.43%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/expression.rs:fluent_syntax::parser::expression::<impl fluent_syntax::parser::core::Parser<S>>::get_inline_expression [/home/callen/work/coreutils-startup-factorial/bin/musl/multi/coreutils]
+  8,301 ( 1.40%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs:alloc::raw_vec::RawVecInner<A>::reserve::do_reserve_and_handle [/home/callen/work/coreutils-startup-factorial/bin/musl/multi/coreutils]
+  8,148 ( 1.38%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs:alloc::raw_vec::RawVecInner<A>::finish_grow [/home/callen/work/coreutils-startup-factorial/bin/musl/multi/coreutils]
+  6,789 ( 1.15%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/pattern.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2 [/home/callen/work/coreutils-startup-factorial/bin/musl/multi/coreutils]
+  6,489 ( 1.10%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/mod.rs:fluent_syntax::parser::core::Parser<S>::get_identifier
+  6,470 ( 1.09%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/fmt.rs:alloc::fmt::format::format_inner [/home/callen/work/coreutils-startup-factorial/bin/musl/multi/coreutils]
+  6,295 ( 1.06%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs:std::path::Path::_join
+  5,561 ( 0.94%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/string/x86_64/memcpy.s:0x00000000008943fd [/home/callen/work/coreutils-startup-factorial/bin/musl/multi/coreutils]
+

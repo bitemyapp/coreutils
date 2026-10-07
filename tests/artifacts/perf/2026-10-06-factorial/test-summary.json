@@ -1,0 +1,10 @@
+{
+  "tests-baseline-multi": 0,
+  "tests-baseline-single": 0,
+  "tests-lazy-multi": 0,
+  "tests-lazy-single": 0,
+  "tests-musl-multi": 0,
+  "tests-musl-single": 0,
+  "tests-lazy-musl-multi": 0,
+  "tests-lazy-musl-single": 0
+}

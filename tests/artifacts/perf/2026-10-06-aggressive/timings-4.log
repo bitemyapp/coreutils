@@ -1,0 +1,183 @@
+Benchmark 1: aggressive-relr-multi-ln
+  Time (mean ± σ):     318.4 µs ±  20.1 µs    [User: 230.8 µs, System: 59.1 µs]
+  Range (min … max):   298.9 µs … 448.4 µs    1000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 2: aggressive-multi-ln
+  Time (mean ± σ):     242.0 µs ±  31.4 µs    [User: 173.2 µs, System: 43.9 µs]
+  Range (min … max):   215.0 µs … 511.1 µs    1000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 3: aggressive-crt-multi-true
+  Time (mean ± σ):     189.1 µs ±  20.7 µs    [User: 145.2 µs, System: 25.7 µs]
+  Range (min … max):   178.1 µs … 362.8 µs    1000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 4: aggressive-parser-multi-ln
+  Time (mean ± σ):     226.6 µs ±  22.2 µs    [User: 167.8 µs, System: 35.8 µs]
+  Range (min … max):   212.1 µs … 428.7 µs    1000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 5: aggressive-parser-multi-true
+  Time (mean ± σ):     190.4 µs ±  18.8 µs    [User: 145.7 µs, System: 26.7 µs]
+  Range (min … max):   181.1 µs … 357.9 µs    1000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 6: aggressive-parser-single-ln
+  Time (mean ± σ):     112.4 µs ±  30.7 µs    [User: 80.9 µs, System: 8.4 µs]
+  Range (min … max):    98.5 µs … 425.4 µs    1000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 7: lazy-musl-multi-true
+  Time (mean ± σ):     201.7 µs ±  24.7 µs    [User: 153.8 µs, System: 28.4 µs]
+  Range (min … max):   190.7 µs … 519.8 µs    1000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 8: lazy-musl-single-ln
+  Time (mean ± σ):     182.8 µs ±  24.3 µs    [User: 134.6 µs, System: 19.9 µs]
+  Range (min … max):   171.3 µs … 404.2 µs    1000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 9: aggressive-parser-single-true
+  Time (mean ± σ):      73.1 µs ±  36.6 µs    [User: 51.8 µs, System: 3.4 µs]
+  Range (min … max):    61.6 µs … 530.8 µs    1000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 10: aggressive-crt-multi-ln
+  Time (mean ± σ):     225.7 µs ±  28.8 µs    [User: 167.1 µs, System: 35.6 µs]
+  Range (min … max):   211.3 µs … 698.6 µs    1000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 11: baseline-multi-true
+  Time (mean ± σ):     485.7 µs ±  38.6 µs    [User: 297.1 µs, System: 147.9 µs]
+  Range (min … max):   453.0 µs … 669.8 µs    1000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 12: aggressive-relr-multi-true
+  Time (mean ± σ):     213.0 µs ±  20.7 µs    [User: 167.3 µs, System: 27.3 µs]
+  Range (min … max):   197.8 µs … 460.3 µs    1000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 13: lazy-musl-multi-ln
+  Time (mean ± σ):     312.3 µs ±  21.9 µs    [User: 219.2 µs, System: 64.6 µs]
+  Range (min … max):   293.0 µs … 537.5 µs    1000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 14: baseline-single-true
+  Time (mean ± σ):     292.4 µs ±  23.2 µs    [User: 211.3 µs, System: 44.1 µs]
+  Range (min … max):   279.4 µs … 469.8 µs    1000 runs
+ 
+  Warning: The first benchmarking run for this command was significantly slower than the rest (403.2 µs). This could be caused by (filesystem) caches that were not filled until after the first run. You are already using the '--warmup' option which helps to fill these caches before the actual benchmark. You can either try to increase the warmup count further or re-run this benchmark on a quiet system in case it was a random outlier. Alternatively, consider using the '--prepare' option to clear the caches before each timing run.
+ 
+Benchmark 15: aggressive-crt-single-true
+  Time (mean ± σ):      53.8 µs ±  38.1 µs    [User: 36.0 µs, System: 2.1 µs]
+  Range (min … max):    44.4 µs … 649.5 µs    1000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 16: baseline-multi-ln
+  Time (mean ± σ):     561.1 µs ±  33.9 µs    [User: 335.1 µs, System: 183.4 µs]
+  Range (min … max):   541.4 µs … 1159.5 µs    1000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 17: aggressive-relr-single-ln
+  Time (mean ± σ):     181.4 µs ±  24.1 µs    [User: 134.1 µs, System: 18.6 µs]
+  Range (min … max):   170.4 µs … 401.2 µs    1000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 18: aggressive-single-true
+  Time (mean ± σ):      39.7 µs ±  31.9 µs    [User: 24.7 µs, System: 0.7 µs]
+  Range (min … max):    32.5 µs … 747.9 µs    1000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 19: lazy-musl-single-true
+  Time (mean ± σ):      75.2 µs ±  49.8 µs    [User: 52.8 µs, System: 3.7 µs]
+  Range (min … max):    63.6 µs … 843.2 µs    1000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 20: baseline-single-ln
+  Time (mean ± σ):     399.7 µs ±  41.5 µs    [User: 260.2 µs, System: 96.0 µs]
+  Range (min … max):   367.6 µs … 841.7 µs    1000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 21: aggressive-single-ln
+  Time (mean ± σ):     111.8 µs ±  28.9 µs    [User: 80.5 µs, System: 8.4 µs]
+  Range (min … max):    98.8 µs … 427.0 µs    1000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 22: aggressive-multi-true
+  Time (mean ± σ):     189.8 µs ±  22.1 µs    [User: 145.7 µs, System: 25.8 µs]
+  Range (min … max):   178.6 µs … 497.6 µs    1000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 23: gnu-true
+  Time (mean ± σ):     155.4 µs ±  22.4 µs    [User: 115.9 µs, System: 14.8 µs]
+  Range (min … max):   144.1 µs … 380.0 µs    1000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 24: aggressive-relr-single-true
+  Time (mean ± σ):      75.4 µs ±  33.6 µs    [User: 54.3 µs, System: 3.3 µs]
+  Range (min … max):    65.0 µs … 506.6 µs    1000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 25: aggressive-crt-single-ln
+  Time (mean ± σ):     112.5 µs ±  37.1 µs    [User: 79.9 µs, System: 9.2 µs]
+  Range (min … max):    99.6 µs … 591.9 µs    1000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 26: gnu-ln
+  Time (mean ± σ):     209.8 µs ±  24.0 µs    [User: 154.4 µs, System: 25.1 µs]
+  Range (min … max):   197.7 µs … 544.7 µs    1000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Summary
+  aggressive-single-true ran
+    1.36 ± 1.45 times faster than aggressive-crt-single-true
+    1.84 ± 1.74 times faster than aggressive-parser-single-true
+    1.89 ± 1.97 times faster than lazy-musl-single-true
+    1.90 ± 1.74 times faster than aggressive-relr-single-true
+    2.82 ± 2.38 times faster than aggressive-single-ln
+    2.83 ± 2.40 times faster than aggressive-parser-single-ln
+    2.83 ± 2.46 times faster than aggressive-crt-single-ln
+    3.92 ± 3.19 times faster than gnu-true
+    4.57 ± 3.72 times faster than aggressive-relr-single-ln
+    4.61 ± 3.75 times faster than lazy-musl-single-ln
+    4.76 ± 3.86 times faster than aggressive-crt-multi-true
+    4.78 ± 3.88 times faster than aggressive-multi-true
+    4.80 ± 3.88 times faster than aggressive-parser-multi-true
+    5.08 ± 4.13 times faster than lazy-musl-multi-true
+    5.28 ± 4.29 times faster than gnu-ln
+    5.37 ± 4.34 times faster than aggressive-relr-multi-true
+    5.69 ± 4.62 times faster than aggressive-crt-multi-ln
+    5.71 ± 4.62 times faster than aggressive-parser-multi-ln
+    6.10 ± 4.96 times faster than aggressive-multi-ln
+    7.37 ± 5.94 times faster than baseline-single-true
+    7.87 ± 6.34 times faster than lazy-musl-multi-ln
+    8.02 ± 6.46 times faster than aggressive-relr-multi-ln
+   10.07 ± 8.15 times faster than baseline-single-ln
+   12.24 ± 9.87 times faster than baseline-multi-true
+   14.14 ± 11.38 times faster than baseline-multi-ln

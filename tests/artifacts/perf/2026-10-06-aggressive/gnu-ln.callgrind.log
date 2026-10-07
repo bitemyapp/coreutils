@@ -1,0 +1,11 @@
+==2110824== Callgrind, a call-graph generating cache profiler
+==2110824== Copyright (C) 2002-2017, and GNU GPL'd, by Josef Weidendorfer et al.
+==2110824== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==2110824== Command: /usr/bin/ln -s -f src.txt dst.txt
+==2110824== 
+==2110824== For interactive control, run 'callgrind_control -h'.
+==2110824== 
+==2110824== Events    : Ir
+==2110824== Collected : 193094
+==2110824== 
+==2110824== I   refs:      193,094

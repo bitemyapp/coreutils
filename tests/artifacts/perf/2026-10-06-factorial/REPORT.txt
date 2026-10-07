@@ -1,0 +1,153 @@
+STANDALONE STARTUP: FOUR-BUILD EXPERIMENT
+2026-10-06; all builds, tests, timings and profiles on ssh wx-workstation.
+
+RESULT
+Lazy initialization + static musl beats the installed GNU 9.4 binaries on
+both measured standalone workloads. Neither individual change wins both.
+The combined multicall binary is still slower than GNU.
+
+true: combined 72.24 us vs GNU 159.05 us: 54.6% less time (2.20x speedup).
+      vs Rust baseline 295.00 us: 75.5% less time (4.08x speedup).
+ln: combined 181.00 us vs GNU 215.89 us: 16.2% less time (1.19x speedup).
+      vs Rust baseline 386.12 us: 53.1% less time (2.13x speedup).
+
+NATIVE LAUNCH TIMES
+Values are pooled median / p95 in microseconds; 8,000 launches per case.
+Variant             Standalone true    Standalone ln       Multicall true     Multicall ln
+GNU                  159.05 / 186.01    215.89 / 253.67          --                 --
+baseline             295.00 / 373.23    386.12 / 474.36    478.76 / 594.06    569.17 / 674.32
+lazy                 243.66 / 282.36    321.22 / 377.31    416.92 / 522.25    496.73 / 611.04
+musl                 161.04 / 213.92    275.18 / 300.53    291.17 / 342.87    410.17 / 499.68
+lazy-musl             72.24 /  83.14    181.00 / 213.38    196.14 / 226.87    308.50 / 362.01
+
+Both combined standalone results beat GNU in every randomized block.
+Paired differences use each block's medians; intervals are a bootstrap of
+the eight blocks (10,000 resamples), not an assertion that all individual
+launches are independent. They differ slightly from pooled-median gaps.
+true: mean paired difference -88.06 us; 95% interval [-94.40, -82.71] us.
+ln: mean paired difference -31.91 us; 95% interval [-38.84, -24.91] us.
+Static-musl-only true is approximately tied with GNU: its paired interval
+includes zero. Static-musl-only ln remains slower.
+
+5,000 EXTERNAL TRUE INVOCATIONS IN A BASH LOOP
+Mean seconds, eight repetitions, one warmup; explicit executable paths.
+gnu-true                     1.059168 s
+baseline-single-true         1.770226 s
+lazy-single-true             1.485292 s
+musl-single-true             1.057548 s
+lazy-musl-single-true        0.595076 s
+
+WHAT THE PROFILES SHOW
+Callgrind measures user-space instruction counts, not wall-time shares.
+Instruction totals for the same true / ln success workloads:
+gnu                        154,613 /   193,094
+baseline-single            510,930 /   684,744
+lazy-single                317,821 /   422,898
+musl-single                239,023 /   444,664
+lazy-musl-single            28,458 /   157,021
+
+1. Lazy initialization removes the locale-directory probes and Fluent resource
+   parsing from these success paths. /proc/self/exe lookup disappears. ln still
+   uses Clap and its original link/overwrite implementation; only unused help
+   metadata is deferred. Successful parsing does not replay the parser.
+2. Static musl removes the external ELF interpreter/dependency-loading path.
+   readelf confirms no PT_INTERP. The Rust musl runtime also avoids the observed
+   pthread_getattr_np -> /proc/self/maps discovery path. Rust signal handlers,
+   alternate stack, std, and PIE remain. No custom entry point or no_std rewrite.
+3. For standalone true, syscall counts fall from 67 baseline to 25 combined.
+   Minor faults fall 119 -> 40; GNU true has 67. For ln: 141 -> 64 minor faults,
+   versus GNU ln's 74. These resource samples are corroboration, not distributions.
+4. Musl does not make every operation cheaper. With eager initialization, locale
+   setup takes 212,421 instructions for true and 266,708 for ln, versus 183,220
+   and 234,544 on glibc. Allocation-related functions are prominent. Removing
+   this path saves more elapsed time under musl: about 89/94 us for true/ln,
+   versus 51/65 us with glibc. These are whole-program contrasts, not direct
+   timers on the localization function or an isolated allocator experiment.
+5. Static PIE still relocates: combined standalone true has 1,302 relative
+   relocations; combined multicall has 26,057. In combined multicall true,
+   _start_c accounts for 365,658 exclusive instructions (96.6% of user-space
+   instructions), versus 19,088 in standalone true. It also touches many more
+   pages: 255 vs 40 minor faults. This explains the remaining multicall burden.
+   The inclusive __dls2 entry encompasses application execution; do not label
+   its inclusive percentage as loader overhead.
+6. Standalone text/data did not shrink: true baseline is 956,015/41,368 bytes;
+   combined is 1,000,958/80,700. ln baseline is 1,217,054/46,656; combined is
+   1,252,851/97,860. The win comes from less work and fewer touched pages per
+   launch, rather than fewer bytes in the executable.
+
+VALIDATION AND BOUNDARIES
+- 69 true/ln integration tests passed for every variant and both binary forms
+  (552 test executions). The two new ln tests verify help/error parsing cannot
+  create a link. Standalone test adapters dispatch directly to the copied binary;
+  they are used only for tests and never for timing.
+- 42 locale unit tests passed on each of GNU and musl targets. New tests cover
+  no eager bundle creation, first-use initialization, aliases and utility switches.
+- Each experimental variant exactly matches baseline in 528 golden cases:
+  status, stdout, stderr and filesystem snapshot. Same argv[0], embedded/external
+  assets, C/French/invalid locale, invalid UTF-8 filenames, abbreviated/invalid
+  options, backups, interactive prompts, help/version, and failures. French output
+  was verified to be French, not a shared fallback to English. Baseline SHA passes.
+- 16 additional damaged-locale invocations match baseline. The existing code
+  already falls back to embedded English for the malformed external resource tested.
+- fmt passes. Targeted clippy completes; the installed toolchain emits the
+  pre-existing unknown clippy::assert_is_empty lint warning. Musl builds also
+  emit upstream libc::time_t deprecation warnings in unrelated multicall utilities.
+- Deferred localization observes locale environment/files later. Concurrent asset
+  changes and fatal initialization errors can therefore differ in timing. Scope is
+  deliberately true/ln; no claim of full-suite or all-platform conformance.
+- This is a warm-cache short-command result against installed GNU 9.4, not a
+  cold-boot result or evidence that musl wins long-running libc-heavy workloads.
+  Multicall numbers remain recorded; the requested focus is standalone.
+- This experiment changes both libc/linkage and Rust target startup behavior.
+  It does not independently assign microseconds to libc choice vs static linking.
+
+METHOD
+AMD Threadripper PRO 9985WX, Ubuntu 24.04.4, kernel 6.17.0-1032-oem.
+CPU 4 affinity; sibling 68. Existing performance governor; no tuning or cache
+drops. Shared host, no reservation; all our builds/tests completed before timing.
+Rust 1.94.1, locked dependencies; upstream release opt3/fat LTO/one codegen unit/
+panic abort, debug=1, force-frame-pointers=yes; no PGO. Same settings across Rust
+variants. Standalones compiled in separate Cargo invocations. Identical multicall
+feature set feat_os_unix_musl excludes stdbuf. Linux GNU target vs static musl.
+All are PIE. English build locale; LANG=LC_ALL=C during benchmarks.
+hyperfine 1.20, -N (no shell), 8 randomized blocks, 1,000 launches/case/block,
+20 warmups. GNU true and ln are in each block. ln repeatedly replaces one symlink
+with -s -f src.txt dst.txt on the same ext4 filesystem. No filesystem flushes.
+Callgrind, strace and /usr/bin/time were run separately after native timings.
+perf_event_paranoid=4 still blocks unprivileged hardware profiling; no elevated
+permissions or source annotation was used. GNU source was never read/copied.
+The fast static commands sometimes report max RSS as zero via time; this is
+not interpreted as zero memory use. Minor-fault counts and ELF data are retained.
+
+WORKTREES / BRANCHES
+Base revision: 8cf2e4f4ab613947b955f442c750df9d53d17b08.
+Main source checkout remains unchanged. Four clean branches contain recipes;
+lazy branches also contain the source change and tests.
+codex/startup-baseline
+  local: /Users/callen/.codex/worktrees/startup-baseline/coreutils
+  remote: /home/callen/work/coreutils-startup-factorial/baseline
+codex/startup-lazy
+  local: /Users/callen/.codex/worktrees/startup-lazy/coreutils
+  remote: /home/callen/work/coreutils-startup-factorial/lazy
+codex/startup-musl
+  local: /Users/callen/.codex/worktrees/startup-musl/coreutils
+  remote: /home/callen/work/coreutils-startup-factorial/musl
+codex/startup-lazy-musl
+  local: /Users/callen/.codex/worktrees/startup-lazy-musl/coreutils
+  remote: /home/callen/work/coreutils-startup-factorial/lazy-musl
+
+Copied executables: /home/callen/work/coreutils-startup-factorial/bin/<variant>/
+                   single/{true,ln}, multi/coreutils (+ true/ln symlinks).
+Recipe: experiments/startup/build.sh. Scripts and README are in every branch.
+Raw logs/timings/traces: /home/callen/work/coreutils-startup-factorial/artifacts/
+Local copy: /Users/callen/work/coreutils/tests/artifacts/perf/2026-10-06-factorial/
+Important files: timing-summary.json, paired-differences.json, loops-5000.json,
+profile-summary.json, golden.log, test-summary.json, fingerprint.txt, and the
+per-case .callgrind/.strace/.elf.txt files. Source manifest records branch heads
+and executable hashes. Tested source was byte-compared to the recorded commits.
+
+DECISION
+The combined approach meets the goal for both tested standalone commands.
+It is worth developing beyond a prototype. Retain this four-way harness while
+extending lazy initialization to other utilities, and measure throughput and
+packaging/locale behavior before adopting musl for the entire suite.

@@ -1,0 +1,5 @@
+execve("/home/callen/work/coreutils-startup-factorial/bin/aggressive/single/true", ["/home/callen/work/coreutils-star"...], 0x7ffc1be00fa8 /* 20 vars */) = 0
+mmap(NULL, 960, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x74d6344f1000
+arch_prctl(ARCH_SET_FS, 0x74d6344f12f8) = 0
+set_tid_address(0x74d6346043d8)         = 1627239
+exit_group(0)                           = ?

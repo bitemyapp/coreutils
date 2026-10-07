@@ -1,0 +1,441 @@
+   Compiling proc-macro2 v1.0.107
+   Compiling unicode-ident v1.0.26
+   Compiling quote v1.0.47
+   Compiling rustix v1.1.5
+   Compiling bitflags v2.13.2
+   Compiling thiserror v2.0.21
+   Compiling linux-raw-sys v0.12.1
+   Compiling utf8parse v0.2.2
+   Compiling rustc-hash v2.1.3
+   Compiling is_terminal_polyfill v1.70.2
+   Compiling anstyle v1.0.14
+   Compiling cfg_aliases v0.2.2
+   Compiling colorchoice v1.0.5
+   Compiling libc v0.2.190
+   Compiling memchr v2.8.3
+   Compiling anstyle-query v1.1.5
+   Compiling clap_lex v1.1.1
+   Compiling strsim v0.11.1
+   Compiling self_cell v1.3.0
+   Compiling smallvec v1.16.1
+   Compiling cfg-if v1.0.5
+   Compiling unicode-width v0.2.2
+   Compiling uucore v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uucore)
+   Compiling anstyle-parse v1.0.0
+   Compiling nix v0.31.3
+   Compiling type-map v0.5.1
+   Compiling anstream v1.0.0
+   Compiling os_display v0.1.4
+   Compiling syn v3.0.6
+   Compiling uucore_procs v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uucore_procs)
+   Compiling terminal_size v0.4.4
+   Compiling clap_builder v4.6.7
+   Compiling displaydoc v0.2.7
+   Compiling thiserror-impl v2.0.21
+   Compiling tinystr v0.8.4
+   Compiling unic-langid-impl v0.9.6
+   Compiling unic-langid v0.9.6
+   Compiling fluent-langneg v0.13.1
+   Compiling intl_pluralrules v7.0.2
+   Compiling intl-memoizer v0.5.3
+   Compiling clap v4.6.7
+   Compiling fluent-syntax v0.12.0
+   Compiling fluent-bundle v0.16.0
+   Compiling fluent v0.17.0
+   Compiling uu_true v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/true)
+    Finished `release` profile [optimized + debuginfo] target(s) in 7.67s
+   Compiling rustix v1.1.5
+   Compiling uucore v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uucore)
+   Compiling dunce v1.0.5
+   Compiling terminal_size v0.4.4
+   Compiling clap_builder v4.6.7
+   Compiling clap v4.6.7
+   Compiling uu_ln v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/ln)
+    Finished `release` profile [optimized + debuginfo] target(s) in 9.35s
+   Compiling stable_deref_trait v1.2.1
+   Compiling either v1.18.0
+   Compiling litemap v0.8.3
+   Compiling typenum v1.20.1
+   Compiling icu_locale_fallback_data v2.3.0
+   Compiling smallvec v1.16.1
+   Compiling zerocopy v0.8.57
+   Compiling autocfg v1.5.1
+   Compiling rustix v1.1.5
+   Compiling linux-raw-sys v0.12.1
+   Compiling libm v0.2.16
+   Compiling utf8_iter v1.0.4
+   Compiling version_check v0.9.5
+   Compiling icu_calendar_data v2.3.0
+   Compiling icu_time_data v2.3.0
+   Compiling cpufeatures v0.3.1
+   Compiling icu_normalizer_data v2.3.0
+   Compiling icu_plurals_data v2.3.0
+   Compiling icu_decimal_data v2.3.0
+   Compiling shlex v2.0.1
+   Compiling find-msvc-tools v0.1.13
+   Compiling syn v3.0.6
+   Compiling syn v2.0.119
+   Compiling getrandom v0.2.17
+   Compiling nix v0.31.3
+   Compiling icu_locale_data v2.3.0
+   Compiling rustversion v1.0.23
+   Compiling writeable v0.6.4
+   Compiling icu_datetime_data v2.3.0
+   Compiling jiff-core v0.1.1
+   Compiling icu_collator_data v2.3.0
+   Compiling cc v1.4.7
+   Compiling rand_core v0.6.4
+   Compiling keccak v0.2.2
+   Compiling same-file v1.0.6
+   Compiling write16 v1.0.0
+   Compiling data-encoding v2.11.1
+   Compiling utf16_iter v1.0.5
+   Compiling crc-catalog v2.5.0
+   Compiling hex v0.4.3
+   Compiling constant_time_eq v0.4.2
+   Compiling procfs v0.18.0
+   Compiling sponge-cursor v0.1.0
+   Compiling arrayvec v0.7.8
+   Compiling generic-array v0.14.7
+   Compiling num-conv v0.2.2
+   Compiling time-core v0.1.9
+   Compiling crc v3.3.0
+   Compiling walkdir v2.5.0
+   Compiling socket2 v0.6.5
+   Compiling powerfmt v0.2.0
+   Compiling num-traits v0.2.19
+   Compiling bigdecimal v0.4.11
+   Compiling vsimd v0.8.0
+   Compiling outref v0.5.2
+   Compiling time-macros v0.2.32
+   Compiling procfs-core v0.18.0
+   Compiling yansi v1.0.1
+   Compiling deranged v0.5.8
+   Compiling num_threads v0.1.7
+   Compiling unit-prefix v0.5.2
+   Compiling uucore v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uucore)
+   Compiling spin v0.10.1
+   Compiling ariadne v0.6.0
+   Compiling dns-lookup v4.0.2
+   Compiling hybrid-array v0.4.15
+   Compiling base64-simd v0.8.0
+   Compiling blake2b_simd v1.0.5
+   Compiling itertools v0.15.0
+   Compiling bstr v1.13.1
+   Compiling z85 v3.0.7
+   Compiling glob v0.3.4
+   Compiling aho-corasick v1.1.5
+   Compiling rand_core v0.10.1
+   Compiling regex-syntax v0.8.11
+   Compiling getrandom v0.4.3
+   Compiling foldhash v0.2.0
+   Compiling core_maths v0.1.1
+   Compiling num-integer v0.1.47
+   Compiling crypto-common v0.2.2
+   Compiling block-buffer v0.12.1
+   Compiling jiff v0.2.37
+   Compiling crypto-common v0.1.7
+   Compiling crossbeam-utils v0.8.23
+   Compiling digest v0.10.7
+   Compiling portable-atomic v1.15.0
+   Compiling equivalent v1.0.2
+   Compiling crossbeam-epoch v0.9.21
+   Compiling crc-fast v1.9.0
+   Compiling log v0.4.34
+   Compiling allocator-api2 v0.2.21
+   Compiling chacha20 v0.10.2
+   Compiling mio v1.2.4
+   Compiling errno v0.3.14
+   Compiling parking_lot_core v0.9.12
+   Compiling radium v0.7.0
+   Compiling signal-hook v0.3.18
+   Compiling blake3 v1.8.7
+   Compiling siphasher v1.0.3
+   Compiling unicode-width v0.1.14
+   Compiling inotify-sys v0.1.8
+   Compiling crossbeam-deque v0.8.8
+   Compiling time v0.3.55
+   Compiling digest v0.11.3
+   Compiling rand v0.10.3
+   Compiling phf_shared v0.14.0
+   Compiling ansi-width v0.1.0
+   Compiling md-5 v0.11.0
+   Compiling shake v0.1.0
+   Compiling sm3 v0.5.0
+   Compiling sha2 v0.11.0
+   Compiling sha3 v0.12.0
+   Compiling sha1 v0.11.0
+   Compiling synstructure v0.14.0
+   Compiling signal-hook-registry v1.4.8
+   Compiling console v0.16.6
+   Compiling hostname v0.4.2
+   Compiling scopeguard v1.2.0
+   Compiling fastrand v2.5.0
+   Compiling rayon-core v1.13.0
+   Compiling once_cell v1.21.4
+   Compiling tap v1.0.1
+   Compiling nu-ansi-term v0.50.3
+   Compiling icu_segmenter_data v2.3.0
+   Compiling wyz v0.5.1
+   Compiling lock_api v0.4.14
+   Compiling phf_generator v0.14.0
+   Compiling uutils_term_grid v0.8.0
+   Compiling indicatif v0.18.6
+   Compiling hashbrown v0.16.1
+   Compiling lscolors v0.21.0
+   Compiling litrs v1.0.0
+   Compiling bit-vec v0.8.0
+   Compiling funty v2.0.0
+   Compiling winnow v1.0.4
+   Compiling signal-hook-mio v0.2.5
+   Compiling parking_lot v0.12.5
+   Compiling inotify v0.11.5
+   Compiling phf_codegen v0.14.0
+   Compiling regex-automata v0.4.18
+   Compiling bit-set v0.8.0
+   Compiling bitvec v1.1.1
+   Compiling filetime v0.2.29
+   Compiling document-features v0.2.12
+   Compiling platform-info v2.2.0
+   Compiling zerofrom-derive v0.1.8
+   Compiling yoke-derive v0.8.4
+   Compiling displaydoc v0.2.7
+   Compiling zerovec-derive v0.11.6
+   Compiling thiserror-impl v2.0.21
+   Compiling data-encoding-macro-internal v0.1.19
+   Compiling uu_stty v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/stty)
+   Compiling lru v0.16.4
+   Compiling notify-types v2.1.0
+   Compiling itoa v1.0.18
+   Compiling bytecount v0.6.9
+   Compiling data-encoding-macro v0.1.21
+   Compiling notify v8.2.0
+   Compiling rayon v1.12.0
+   Compiling coreutils v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive)
+   Compiling ctrlc v3.5.2
+   Compiling hashbrown v0.17.1
+   Compiling memmap2 v0.9.11
+   Compiling nom v8.0.0
+   Compiling smawk v0.3.3
+   Compiling zerocopy-derive v0.8.57
+   Compiling calendrical_calculations v0.2.4
+   Compiling fixed_decimal v0.7.2
+   Compiling zerofrom v0.1.8
+   Compiling phf v0.14.0
+   Compiling yoke v0.8.3
+   Compiling terminal_size v0.4.4
+   Compiling xattr v1.6.1
+   Compiling clap_builder v4.6.7
+   Compiling tempfile v3.27.0
+   Compiling zerovec v0.11.8
+   Compiling zerotrie v0.2.5
+   Compiling crossterm v0.29.0
+   Compiling thiserror v2.0.21
+   Compiling parse_datetime v0.16.0
+   Compiling fluent-syntax v0.12.0
+   Compiling tinystr v0.8.4
+   Compiling potential_utf v0.1.6
+   Compiling icu_pattern v0.5.0
+   Compiling icu_collections v2.3.0
+   Compiling icu_locale_core v2.3.0
+   Compiling unic-langid-impl v0.9.6
+   Compiling unic-langid v0.9.6
+   Compiling fluent-langneg v0.13.1
+   Compiling intl_pluralrules v7.0.2
+   Compiling intl-memoizer v0.5.3
+   Compiling fluent-bundle v0.16.0
+   Compiling regex v1.13.1
+   Compiling fancy-regex v0.19.2
+   Compiling fluent v0.17.0
+   Compiling icu_provider v2.3.1
+   Compiling clap v4.6.7
+   Compiling icu_locale_fallback v2.3.0
+   Compiling icu_normalizer v2.3.0
+   Compiling icu_properties v2.3.0
+   Compiling icu_calendar v2.3.0
+   Compiling icu_plurals v2.3.0
+   Compiling icu_decimal v2.3.0
+   Compiling icu_locale v2.3.1
+   Compiling icu_segmenter v2.3.0
+   Compiling icu_collator v2.3.1
+   Compiling textwrap v0.16.4
+   Compiling icu_time v2.3.0
+   Compiling icu_datetime v2.3.0
+   Compiling jiff-icu v0.2.2
+   Compiling ppv-lite86 v0.2.21
+   Compiling half v2.7.1
+   Compiling rand_chacha v0.3.1
+   Compiling rand_chacha v0.10.0
+   Compiling rand v0.8.8
+   Compiling num-bigint v0.4.8
+   Compiling num-modular v0.6.1
+   Compiling num-prime v0.6.1
+warning: use of deprecated type alias `libc::time_t`: This type is changed to 64-bit in musl 1.2.0, we'll follow that change in the future release. See #1848 for more info.
+  --> src/uucore/src/lib/features/uptime/mod.rs:25:11
+   |
+25 | use libc::time_t;
+   |           ^^^^^^
+   |
+   = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated type alias `libc::time_t`: This type is changed to 64-bit in musl 1.2.0, we'll follow that change in the future release. See #1848 for more info.
+   --> src/uucore/src/lib/features/uptime/mod.rs:122:23
+    |
+122 |     boot_time: Option<time_t>,
+    |                       ^^^^^^
+
+warning: use of deprecated type alias `libc::time_t`: This type is changed to 64-bit in musl 1.2.0, we'll follow that change in the future release. See #1848 for more info.
+  --> src/uucore/src/lib/features/uptime/unix.rs:14:11
+   |
+14 | use libc::time_t;
+   |           ^^^^^^
+
+warning: use of deprecated type alias `libc::time_t`: This type is changed to 64-bit in musl 1.2.0, we'll follow that change in the future release. See #1848 for more info.
+  --> src/uucore/src/lib/features/uptime/unix.rs:74:38
+   |
+74 | pub fn get_uptime(_boot_time: Option<time_t>) -> UResult<i64> {
+   |                                      ^^^^^^
+
+   Compiling uu_checksum_common v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/checksum_common)
+   Compiling uu_base32 v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/base32)
+   Compiling uu_ls v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/ls)
+   Compiling uu_link v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/link)
+   Compiling uu_seq v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/seq)
+   Compiling uu_tac v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/tac)
+   Compiling uu_sum v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/sum)
+   Compiling uu_tsort v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/tsort)
+   Compiling uu_groups v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/groups)
+   Compiling uu_shuf v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/shuf)
+   Compiling uu_pwd v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/pwd)
+   Compiling uu_readlink v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/readlink)
+   Compiling uu_expand v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/expand)
+   Compiling uu_uniq v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/uniq)
+   Compiling uu_true v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/true)
+   Compiling uu_date v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/date)
+   Compiling uu_shred v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/shred)
+   Compiling uu_ln v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/ln)
+   Compiling uu_expr v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/expr)
+   Compiling uu_sleep v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/sleep)
+   Compiling uu_more v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/more)
+   Compiling uu_chmod v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/chmod)
+   Compiling uu_join v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/join)
+   Compiling uu_sha512sum v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/sha512sum)
+   Compiling uu_b2sum v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/b2sum)
+   Compiling uu_sha384sum v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/sha384sum)
+   Compiling uu_base64 v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/base64)
+   Compiling uu_basenc v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/basenc)
+   Compiling uu_cksum v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/cksum)
+   Compiling uu_md5sum v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/md5sum)
+   Compiling uu_sha1sum v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/sha1sum)
+   Compiling uu_sha256sum v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/sha256sum)
+   Compiling uu_sha224sum v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/sha224sum)
+   Compiling uu_csplit v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/csplit)
+   Compiling uu_basename v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/basename)
+   Compiling uu_uname v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/uname)
+   Compiling uu_dircolors v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/dircolors)
+   Compiling uu_dirname v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/dirname)
+   Compiling uu_dd v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/dd)
+   Compiling uu_truncate v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/truncate)
+   Compiling uu_hostname v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/hostname)
+   Compiling uu_cut v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/cut)
+   Compiling uu_printf v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/printf)
+   Compiling uu_install v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/install)
+   Compiling uu_yes v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/yes)
+   Compiling uu_sort v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/sort)
+   Compiling uu_mv v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/mv)
+   Compiling uu_split v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/split)
+   Compiling uu_hostid v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/hostid)
+   Compiling uu_logname v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/logname)
+   Compiling uu_vdir v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/vdir)
+   Compiling uu_dir v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/dir)
+   Compiling uu_nohup v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/nohup)
+   Compiling uu_chroot v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/chroot)
+   Compiling uu_paste v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/paste)
+   Compiling uu_chown v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/chown)
+   Compiling uu_pathchk v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/pathchk)
+   Compiling uu_false v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/false)
+   Compiling uu_tee v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/tee)
+   Compiling uu_users v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/users)
+   Compiling uu_du v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/du)
+   Compiling uu_kill v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/kill)
+   Compiling uu_nproc v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/nproc)
+   Compiling uu_df v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/df)
+   Compiling uu_id v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/id)
+   Compiling uu_realpath v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/realpath)
+   Compiling uu_comm v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/comm)
+   Compiling uu_env v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/env)
+   Compiling uu_nl v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/nl)
+   Compiling uu_numfmt v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/numfmt)
+   Compiling uu_pr v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/pr)
+   Compiling uu_od v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/od)
+   Compiling uu_chgrp v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/chgrp)
+   Compiling uu_mkfifo v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/mkfifo)
+   Compiling uu_mknod v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/mknod)
+   Compiling uu_tr v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/tr)
+   Compiling uu_factor v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/factor)
+   Compiling uu_cat v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/cat)
+   Compiling uu_unlink v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/unlink)
+   Compiling uu_fmt v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/fmt)
+   Compiling uu_arch v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/arch)
+   Compiling uu_head v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/head)
+   Compiling uu_pinky v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/pinky)
+   Compiling uu_rmdir v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/rmdir)
+   Compiling uu_uptime v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/uptime)
+warning: use of deprecated type alias `uucore::libc::time_t`: This type is changed to 64-bit in musl 1.2.0, we'll follow that change in the future release. See #1848 for more info.
+  --> src/uu/uptime/src/uptime.rs:16:19
+   |
+16 | use uucore::libc::time_t;
+   |                   ^^^^^^
+   |
+   = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated type alias `uucore::libc::time_t`: This type is changed to 64-bit in musl 1.2.0, we'll follow that change in the future release. See #1848 for more info.
+   --> src/uu/uptime/src/uptime.rs:143:35
+    |
+143 | fn print_uptime(boot_time: Option<time_t>) -> UResult<()> {
+    |                                   ^^^^^^
+
+warning: use of deprecated type alias `uucore::libc::time_t`: This type is changed to 64-bit in musl 1.2.0, we'll follow that change in the future release. See #1848 for more info.
+  --> src/uu/uptime/src/platform/unix.rs:17:19
+   |
+17 | use uucore::libc::time_t;
+   |                   ^^^^^^
+
+warning: use of deprecated type alias `uucore::libc::time_t`: This type is changed to 64-bit in musl 1.2.0, we'll follow that change in the future release. See #1848 for more info.
+   --> src/uu/uptime/src/platform/unix.rs:160:54
+    |
+160 | fn process_utmpx(file: Option<&OsString>) -> (Option<time_t>, usize) {
+    |                                                      ^^^^^^
+
+warning: use of deprecated type alias `uucore::libc::time_t`: This type is changed to 64-bit in musl 1.2.0, we'll follow that change in the future release. See #1848 for more info.
+   --> src/uu/uptime/src/platform/unix.rs:175:61
+    |
+175 |                     boot_time = Some(dt.unix_timestamp() as time_t);
+    |                                                             ^^^^^^
+
+   Compiling uu_cp v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/cp)
+   Compiling uu_unexpand v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/unexpand)
+   Compiling uu_rm v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/rm)
+   Compiling uu_test v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/test)
+   Compiling uu_timeout v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/timeout)
+   Compiling uu_wc v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/wc)
+warning: `uu_uptime` (lib) generated 5 warnings
+   Compiling uu_whoami v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/whoami)
+   Compiling uu_tty v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/tty)
+   Compiling uu_who v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/who)
+   Compiling uu_sync v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/sync)
+   Compiling uu_fold v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/fold)
+   Compiling uu_stat v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/stat)
+   Compiling uu_echo v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/echo)
+   Compiling uu_mktemp v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/mktemp)
+   Compiling uu_nice v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/nice)
+   Compiling uu_mkdir v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/mkdir)
+   Compiling uu_ptx v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/ptx)
+   Compiling uu_touch v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/touch)
+   Compiling uu_printenv v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/printenv)
+   Compiling uu_tail v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/tail)
+warning: `uucore` (lib) generated 4 warnings
+    Finished `release` profile [optimized + debuginfo] target(s) in 1m 11s
+e72d355189ddb4a081ab3f6ad74ae0604838947c4a6d21c32b383a1efbccf478  /home/callen/work/coreutils-startup-factorial/bin/aggressive-relr/single/ln
+2fda266a729f5d028504ef7c1e3e8834ec43f46bc1229ee2c7115515972044b6  /home/callen/work/coreutils-startup-factorial/bin/aggressive-relr/single/true
+c03867140c38062cf270393fb909eb9fb5018998364412dbf73d5a83d6db8e5a  /home/callen/work/coreutils-startup-factorial/bin/aggressive-relr/multi/coreutils

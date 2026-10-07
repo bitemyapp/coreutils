@@ -1,0 +1,15 @@
+2026-10-06T21:11:14-05:00
+ 21:11:14 up 25 days,  7:35, 23 users,  load average: 3.16, 3.57, 2.04
+    PID PSR %CPU COMMAND
+1033924  93  100 rustc
+ 924201 119 25.8 nix-daemon
+ 924167  49 21.6 nix
+ 988285 103  6.3 cargo
+2879522  67  4.2 .qemu-system-x8
+ 924197   0  2.6 nix-daemon
+   2543  57  1.2 warp-svc
+1555934   3  0.6 omp
+   3850 107  0.6 dockerd
+   3185  16  0.5 containerd
+   5178  76  0.3 gitea
+performance

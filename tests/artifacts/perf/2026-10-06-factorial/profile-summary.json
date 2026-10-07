@@ -1,0 +1,200 @@
+{
+  "gnu-true": {
+    "instructions": 154613,
+    "minor_faults": 67,
+    "proc_maps": false,
+    "exe_lookup": false,
+    "interp": true,
+    "relative_relocations": 3,
+    "text": 18383,
+    "data": 900,
+    "bss": 16
+  },
+  "baseline-single-true": {
+    "instructions": 510930,
+    "minor_faults": 119,
+    "proc_maps": true,
+    "exe_lookup": true,
+    "interp": true,
+    "relative_relocations": 1242,
+    "text": 956015,
+    "data": 41368,
+    "bss": 4232
+  },
+  "lazy-single-true": {
+    "instructions": 317821,
+    "minor_faults": 98,
+    "proc_maps": true,
+    "exe_lookup": false,
+    "interp": true,
+    "relative_relocations": 1242,
+    "text": 957263,
+    "data": 41416,
+    "bss": 2936
+  },
+  "musl-single-true": {
+    "instructions": 239023,
+    "minor_faults": 72,
+    "proc_maps": false,
+    "exe_lookup": true,
+    "interp": false,
+    "relative_relocations": 1302,
+    "text": 999854,
+    "data": 80500,
+    "bss": 6264
+  },
+  "lazy-musl-single-true": {
+    "instructions": 28458,
+    "minor_faults": 40,
+    "proc_maps": false,
+    "exe_lookup": false,
+    "interp": false,
+    "relative_relocations": 1302,
+    "text": 1000958,
+    "data": 80700,
+    "bss": 6264
+  },
+  "baseline-multi-true": {
+    "instructions": 1014628,
+    "minor_faults": 355,
+    "proc_maps": true,
+    "exe_lookup": true,
+    "interp": true,
+    "relative_relocations": 25832,
+    "text": 11884961,
+    "data": 1295976,
+    "bss": 6068
+  },
+  "lazy-multi-true": {
+    "instructions": 817119,
+    "minor_faults": 322,
+    "proc_maps": true,
+    "exe_lookup": false,
+    "interp": true,
+    "relative_relocations": 25832,
+    "text": 11887481,
+    "data": 1296024,
+    "bss": 3524
+  },
+  "musl-multi-true": {
+    "instructions": 591111,
+    "minor_faults": 297,
+    "proc_maps": false,
+    "exe_lookup": true,
+    "interp": false,
+    "relative_relocations": 26057,
+    "text": 11682852,
+    "data": 1651048,
+    "bss": 8928
+  },
+  "lazy-musl-multi-true": {
+    "instructions": 378574,
+    "minor_faults": 255,
+    "proc_maps": false,
+    "exe_lookup": false,
+    "interp": false,
+    "relative_relocations": 26057,
+    "text": 11685180,
+    "data": 1651288,
+    "bss": 8928
+  },
+  "gnu-ln": {
+    "instructions": 193094,
+    "minor_faults": 74,
+    "proc_maps": false,
+    "exe_lookup": false,
+    "interp": true,
+    "relative_relocations": 28,
+    "text": 47623,
+    "data": 1952,
+    "bss": 392
+  },
+  "baseline-single-ln": {
+    "instructions": 684744,
+    "minor_faults": 141,
+    "proc_maps": true,
+    "exe_lookup": true,
+    "interp": true,
+    "relative_relocations": 1562,
+    "text": 1217054,
+    "data": 46656,
+    "bss": 4202
+  },
+  "lazy-single-ln": {
+    "instructions": 422898,
+    "minor_faults": 114,
+    "proc_maps": true,
+    "exe_lookup": false,
+    "interp": true,
+    "relative_relocations": 1562,
+    "text": 1220726,
+    "data": 46704,
+    "bss": 474
+  },
+  "musl-single-ln": {
+    "instructions": 444664,
+    "minor_faults": 97,
+    "proc_maps": false,
+    "exe_lookup": true,
+    "interp": false,
+    "relative_relocations": 1626,
+    "text": 1249395,
+    "data": 97572,
+    "bss": 6296
+  },
+  "lazy-musl-single-ln": {
+    "instructions": 157021,
+    "minor_faults": 64,
+    "proc_maps": false,
+    "exe_lookup": false,
+    "interp": false,
+    "relative_relocations": 1626,
+    "text": 1252851,
+    "data": 97860,
+    "bss": 6296
+  },
+  "baseline-multi-ln": {
+    "instructions": 1177814,
+    "minor_faults": 380,
+    "proc_maps": true,
+    "exe_lookup": true,
+    "interp": true,
+    "relative_relocations": 25832,
+    "text": 11884961,
+    "data": 1295976,
+    "bss": 6068
+  },
+  "lazy-multi-ln": {
+    "instructions": 911395,
+    "minor_faults": 345,
+    "proc_maps": true,
+    "exe_lookup": false,
+    "interp": true,
+    "relative_relocations": 25832,
+    "text": 11887481,
+    "data": 1296024,
+    "bss": 3524
+  },
+  "musl-multi-ln": {
+    "instructions": 788859,
+    "minor_faults": 332,
+    "proc_maps": false,
+    "exe_lookup": true,
+    "interp": false,
+    "relative_relocations": 26057,
+    "text": 11682852,
+    "data": 1651048,
+    "bss": 8928
+  },
+  "lazy-musl-multi-ln": {
+    "instructions": 504757,
+    "minor_faults": 287,
+    "proc_maps": false,
+    "exe_lookup": false,
+    "interp": false,
+    "relative_relocations": 26057,
+    "text": 11685180,
+    "data": 1651288,
+    "bss": 8928
+  }
+}

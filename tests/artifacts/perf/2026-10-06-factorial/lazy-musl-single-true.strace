@@ -1,0 +1,26 @@
+execve("/home/callen/work/coreutils-startup-factorial/bin/lazy-musl/single/true", ["/home/callen/work/coreutils-star"...], 0x7ffc6e5d35a0 /* 21 vars */) = 0 <0.000072>
+mmap(NULL, 960, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7b6ee3aa9000 <0.000002>
+arch_prctl(ARCH_SET_FS, 0x7b6ee3aa92f8) = 0 <0.000001>
+set_tid_address(0x7b6ee3bbc3d8)         = 1534864 <0.000001>
+poll([{fd=0, events=0}, {fd=1, events=0}, {fd=2, events=0}], 3, 0) = 1 ([{fd=0, revents=POLLHUP}]) <0.000002>
+rt_sigaction(SIGPIPE, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7b6ee3b55761}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000001>
+rt_sigaction(SIGSEGV, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000001>
+sigaltstack(NULL, {ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=0}) = 0 <0.000001>
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7b6ee3aa6000 <0.000002>
+mprotect(0x7b6ee3aa6000, 4096, PROT_NONE) = 0 <0.000003>
+sigaltstack({ss_sp=0x7b6ee3aa7000, ss_flags=0, ss_size=8192}, NULL) = 0 <0.000001>
+rt_sigprocmask(SIG_UNBLOCK, [RT_1 RT_2], NULL, 8) = 0 <0.000001>
+rt_sigaction(SIGSEGV, {sa_handler=0x7b6ee3b27aa0, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_SIGINFO, sa_restorer=0x7b6ee3b55761}, NULL, 8) = 0 <0.000001>
+rt_sigaction(SIGBUS, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000001>
+rt_sigaction(SIGBUS, {sa_handler=0x7b6ee3b27aa0, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_SIGINFO, sa_restorer=0x7b6ee3b55761}, NULL, 8) = 0 <0.000001>
+brk(NULL)                               = 0x555581032000 <0.000001>
+brk(0x555581034000)                     = 0x555581034000 <0.000003>
+mmap(0x555581032000, 4096, PROT_NONE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x555581032000 <0.000003>
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7b6ee3aa5000 <0.000002>
+rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1 RT_2], [], 8) = 0 <0.000001>
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0 <0.000001>
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7b6ee3aa4000 <0.000002>
+munmap(0x7b6ee3aa4000, 4096)            = 0 <0.000003>
+sigaltstack({ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=8192}, NULL) = 0 <0.000001>
+munmap(0x7b6ee3aa6000, 12288)           = 0 <0.000003>
+exit_group(0)                           = ?

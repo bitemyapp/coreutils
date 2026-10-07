@@ -1,0 +1,69 @@
+   Compiling uu_true v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/true)
+    Finished `release` profile [optimized + debuginfo] target(s) in 3.94s
+    Finished `release` profile [optimized + debuginfo] target(s) in 0.06s
+   Compiling uu_true v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/true)
+   Compiling coreutils v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive)
+warning: use of deprecated type alias `libc::time_t`: This type is changed to 64-bit in musl 1.2.0, we'll follow that change in the future release. See #1848 for more info.
+  --> src/uucore/src/lib/features/uptime/mod.rs:25:11
+   |
+25 | use libc::time_t;
+   |           ^^^^^^
+   |
+   = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated type alias `libc::time_t`: This type is changed to 64-bit in musl 1.2.0, we'll follow that change in the future release. See #1848 for more info.
+   --> src/uucore/src/lib/features/uptime/mod.rs:122:23
+    |
+122 |     boot_time: Option<time_t>,
+    |                       ^^^^^^
+
+warning: use of deprecated type alias `libc::time_t`: This type is changed to 64-bit in musl 1.2.0, we'll follow that change in the future release. See #1848 for more info.
+  --> src/uucore/src/lib/features/uptime/unix.rs:14:11
+   |
+14 | use libc::time_t;
+   |           ^^^^^^
+
+warning: use of deprecated type alias `libc::time_t`: This type is changed to 64-bit in musl 1.2.0, we'll follow that change in the future release. See #1848 for more info.
+  --> src/uucore/src/lib/features/uptime/unix.rs:74:38
+   |
+74 | pub fn get_uptime(_boot_time: Option<time_t>) -> UResult<i64> {
+   |                                      ^^^^^^
+
+warning: `uucore` (lib) generated 4 warnings
+warning: use of deprecated type alias `uucore::libc::time_t`: This type is changed to 64-bit in musl 1.2.0, we'll follow that change in the future release. See #1848 for more info.
+  --> src/uu/uptime/src/uptime.rs:16:19
+   |
+16 | use uucore::libc::time_t;
+   |                   ^^^^^^
+   |
+   = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated type alias `uucore::libc::time_t`: This type is changed to 64-bit in musl 1.2.0, we'll follow that change in the future release. See #1848 for more info.
+   --> src/uu/uptime/src/uptime.rs:143:35
+    |
+143 | fn print_uptime(boot_time: Option<time_t>) -> UResult<()> {
+    |                                   ^^^^^^
+
+warning: use of deprecated type alias `uucore::libc::time_t`: This type is changed to 64-bit in musl 1.2.0, we'll follow that change in the future release. See #1848 for more info.
+  --> src/uu/uptime/src/platform/unix.rs:17:19
+   |
+17 | use uucore::libc::time_t;
+   |                   ^^^^^^
+
+warning: use of deprecated type alias `uucore::libc::time_t`: This type is changed to 64-bit in musl 1.2.0, we'll follow that change in the future release. See #1848 for more info.
+   --> src/uu/uptime/src/platform/unix.rs:160:54
+    |
+160 | fn process_utmpx(file: Option<&OsString>) -> (Option<time_t>, usize) {
+    |                                                      ^^^^^^
+
+warning: use of deprecated type alias `uucore::libc::time_t`: This type is changed to 64-bit in musl 1.2.0, we'll follow that change in the future release. See #1848 for more info.
+   --> src/uu/uptime/src/platform/unix.rs:175:61
+    |
+175 |                     boot_time = Some(dt.unix_timestamp() as time_t);
+    |                                                             ^^^^^^
+
+warning: `uu_uptime` (lib) generated 5 warnings
+    Finished `release` profile [optimized + debuginfo] target(s) in 57.65s
+a4c0dbcbb29e3bd2f5806e028c8c610ab84f4fd48d3157f52859688ad78aef53  /home/callen/work/coreutils-startup-factorial/bin/aggressive/single/ln
+84c971b7afa82777cc74ae9343d331c223aa4be983a14039c9a512b3708a6147  /home/callen/work/coreutils-startup-factorial/bin/aggressive/single/true
+1141dee7fa8076a612619450bfbdd756cbb4fc8c782139a3e7a428ff74bec7c1  /home/callen/work/coreutils-startup-factorial/bin/aggressive/multi/coreutils

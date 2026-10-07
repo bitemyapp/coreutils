@@ -1,0 +1,45 @@
+--------------------------------------------------------------------------------
+Profile data file '/home/callen/work/coreutils-startup-factorial/artifacts-aggressive/aggressive-multi-ln.callgrind' (creator: callgrind-3.22.0)
+--------------------------------------------------------------------------------
+I1 cache: 
+D1 cache: 
+LL cache: 
+Timerange: Basic block 0 - 82701
+Trigger: Program termination
+Profiled target:  /home/callen/work/coreutils-startup-factorial/bin/aggressive/multi/ln -s -f src.txt dst.txt (PID 2111110, part 1)
+Events recorded:  Ir
+Events shown:     Ir
+Event sort order: Ir
+Thresholds:       99
+Include dirs:     
+User annotated:   
+Auto-annotation:  off
+
+--------------------------------------------------------------------------------
+Ir               
+--------------------------------------------------------------------------------
+382,919 (100.0%)  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+Ir                file:function
+--------------------------------------------------------------------------------
+382,919 (100.0%)  ???:0x00000000001636da [/home/callen/work/coreutils-startup-factorial/bin/aggressive/multi/coreutils]
+382,914 (100.0%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/crt/../ldso/dlstart.c:_start_c [/home/callen/work/coreutils-startup-factorial/bin/aggressive/multi/coreutils]
+ 17,242 ( 4.50%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/crt/rcrt1.c:__dls2 [/home/callen/work/coreutils-startup-factorial/bin/aggressive/multi/coreutils]
+ 17,235 ( 4.50%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/env/__libc_start_main.c:(below main) [/home/callen/work/coreutils-startup-factorial/bin/aggressive/multi/coreutils]
+ 16,044 ( 4.19%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/env/__libc_start_main.c:libc_start_main_stage2 [/home/callen/work/coreutils-startup-factorial/bin/aggressive/multi/coreutils]
+ 15,040 ( 3.93%)  ???:main [/home/callen/work/coreutils-startup-factorial/bin/aggressive/multi/coreutils]
+ 14,095 ( 3.68%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:std::sys::backtrace::__rust_begin_short_backtrace [/home/callen/work/coreutils-startup-factorial/bin/aggressive/multi/coreutils]
+ 14,093 ( 3.68%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:std::sys::backtrace::__rust_begin_short_backtrace
+ 14,092 ( 3.68%)  /home/callen/work/coreutils-startup-factorial/aggressive/src/bin/coreutils.rs:coreutils::main [/home/callen/work/coreutils-startup-factorial/bin/aggressive/multi/coreutils]
+  5,512 ( 1.44%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/lite_malloc.c:malloc [/home/callen/work/coreutils-startup-factorial/bin/aggressive/multi/coreutils]
+  5,495 ( 1.44%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/meta.h:__libc_malloc_impl [/home/callen/work/coreutils-startup-factorial/bin/aggressive/multi/coreutils]
+  5,340 ( 1.39%)  /home/callen/work/coreutils-startup-factorial/aggressive/src/uu/ln/src/ln.rs:uu_ln::uumain [/home/callen/work/coreutils-startup-factorial/bin/aggressive/multi/coreutils]
+  4,542 ( 1.19%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/sync/once/futex.rs:std::sys::sync::once::futex::Once::call [/home/callen/work/coreutils-startup-factorial/bin/aggressive/multi/coreutils]
+  4,103 ( 1.07%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sync/once.rs:coreutils::main
+  4,044 ( 1.06%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sync/once.rs:std::sync::once::Once::call_once_force::{{closure}} [/home/callen/work/coreutils-startup-factorial/bin/aggressive/multi/coreutils]
+  4,024 ( 1.05%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:std::sync::once::Once::call_once_force::{{closure}}
+  4,023 ( 1.05%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:core::ops::function::FnOnce::call_once [/home/callen/work/coreutils-startup-factorial/bin/aggressive/multi/coreutils]
+  3,913 ( 1.02%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/malloc.c:__libc_malloc_impl
+  3,341 ( 0.87%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/alloc/unix.rs:core::ops::function::FnOnce::call_once
+

@@ -1,0 +1,35 @@
+Completed timing block 1
+Completed timing block 2
+Completed timing block 3
+Completed timing block 4
+Completed timing block 5
+Completed timing block 6
+Completed timing block 7
+Completed timing block 8
+gnu-true                    p50=  152.12 p95=  161.84 us
+baseline-single-true        p50=  289.32 p95=  341.41 us
+baseline-multi-true         p50=  464.45 p95=  545.03 us
+lazy-musl-single-true       p50=   69.81 p95=   79.38 us
+lazy-musl-multi-true        p50=  197.14 p95=  227.85 us
+aggressive-relr-single-true p50=   72.31 p95=   86.18 us
+aggressive-relr-multi-true  p50=  208.99 p95=  242.20 us
+aggressive-parser-single-true p50=   68.58 p95=   78.78 us
+aggressive-parser-multi-true p50=  186.63 p95=  212.89 us
+aggressive-crt-single-true  p50=   50.15 p95=   59.81 us
+aggressive-crt-multi-true   p50=  185.97 p95=  217.28 us
+aggressive-single-true      p50=   36.95 p95=   45.40 us
+aggressive-multi-true       p50=  185.68 p95=  193.93 us
+gnu-ln                      p50=  206.57 p95=  239.31 us
+baseline-single-ln          p50=  377.74 p95=  456.39 us
+baseline-multi-ln           p50=  555.95 p95=  635.12 us
+lazy-musl-single-ln         p50=  178.74 p95=  190.60 us
+lazy-musl-multi-ln          p50=  309.70 p95=  358.71 us
+aggressive-relr-single-ln   p50=  177.41 p95=  191.24 us
+aggressive-relr-multi-ln    p50=  315.81 p95=  330.21 us
+aggressive-parser-single-ln p50=  106.98 p95=  117.38 us
+aggressive-parser-multi-ln  p50=  222.32 p95=  261.95 us
+aggressive-crt-single-ln    p50=  106.70 p95=  116.24 us
+aggressive-crt-multi-ln     p50=  221.22 p95=  250.67 us
+aggressive-single-ln        p50=  107.05 p95=  117.56 us
+aggressive-multi-ln         p50=  222.06 p95=  257.39 us
+MEASUREMENTS COMPLETE

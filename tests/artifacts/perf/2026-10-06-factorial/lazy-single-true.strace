@@ -1,0 +1,63 @@
+execve("/home/callen/work/coreutils-startup-factorial/bin/lazy/single/true", ["/home/callen/work/coreutils-star"...], 0x7ffc42e754c0 /* 21 vars */) = 0 <0.000118>
+brk(NULL)                               = 0x55eea91c3000 <0.000002>
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73ae5676a000 <0.000004>
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory) <0.000002>
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3 <0.000003>
+fstat(3, {st_mode=S_IFREG|0644, st_size=123511, ...}) = 0 <0.000002>
+mmap(NULL, 123511, PROT_READ, MAP_PRIVATE, 3, 0) = 0x73ae5674b000 <0.000003>
+close(3)                                = 0 <0.000002>
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 3 <0.000003>
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832 <0.000003>
+fstat(3, {st_mode=S_IFREG|0644, st_size=183024, ...}) = 0 <0.000002>
+mmap(NULL, 185256, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x73ae5671d000 <0.000004>
+mmap(0x73ae56721000, 147456, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000) = 0x73ae56721000 <0.000006>
+mmap(0x73ae56745000, 16384, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x73ae56745000 <0.000004>
+mmap(0x73ae56749000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2b000) = 0x73ae56749000 <0.000003>
+close(3)                                = 0 <0.000002>
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3 <0.000002>
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\220\243\2\0\0\0\0\0"..., 832) = 832 <0.000002>
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784 <0.000002>
+fstat(3, {st_mode=S_IFREG|0755, st_size=2129424, ...}) = 0 <0.000002>
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784 <0.000002>
+mmap(NULL, 2174352, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x73ae56400000 <0.000003>
+mmap(0x73ae56428000, 1609728, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x73ae56428000 <0.000006>
+mmap(0x73ae565b1000, 323584, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1b1000) = 0x73ae565b1000 <0.000003>
+mmap(0x73ae56600000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1ff000) = 0x73ae56600000 <0.000003>
+mmap(0x73ae56606000, 52624, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x73ae56606000 <0.000003>
+close(3)                                = 0 <0.000002>
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x73ae5671a000 <0.000002>
+arch_prctl(ARCH_SET_FS, 0x73ae5671aa00) = 0 <0.000002>
+set_tid_address(0x73ae5671acd0)         = 1534786 <0.000001>
+set_robust_list(0x73ae5671ace0, 24)     = 0 <0.000001>
+rseq(0x73ae5671b320, 0x20, 0, 0x53053053) = 0 <0.000002>
+mprotect(0x73ae56600000, 16384, PROT_READ) = 0 <0.000004>
+mprotect(0x73ae56749000, 4096, PROT_READ) = 0 <0.000003>
+mprotect(0x55ee9a04c000, 45056, PROT_READ) = 0 <0.000003>
+mprotect(0x73ae567aa000, 8192, PROT_READ) = 0 <0.000005>
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0 <0.000002>
+munmap(0x73ae5674b000, 123511)          = 0 <0.000006>
+poll([{fd=0, events=0}, {fd=1, events=0}, {fd=2, events=0}], 3, 0) = 1 ([{fd=0, revents=POLLHUP}]) <0.000002>
+rt_sigaction(SIGPIPE, {sa_handler=SIG_IGN, sa_mask=[PIPE], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x73ae56445330}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000002>
+getrandom("\x90\x32\x58\x6d\x3c\x0f\x0b\x4d", 8, GRND_NONBLOCK) = 8 <0.000002>
+brk(NULL)                               = 0x55eea91c3000 <0.000002>
+brk(0x55eea91e4000)                     = 0x55eea91e4000 <0.000003>
+openat(AT_FDCWD, "/proc/self/maps", O_RDONLY|O_CLOEXEC) = 3 <0.000012>
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0 <0.000002>
+fstat(3, {st_mode=S_IFREG|0444, st_size=0, ...}) = 0 <0.000002>
+read(3, "55ee99f61000-55ee99fbd000 r--p 0"..., 1024) = 1024 <0.000010>
+read(3, "                /usr/lib/x86_64-"..., 1024) = 1024 <0.000004>
+read(3, "  [vvar_vclock]\n73ae56772000-73a"..., 1024) = 861 <0.000004>
+close(3)                                = 0 <0.000003>
+sched_getaffinity(1534786, 32, [4])     = 16 <0.000002>
+rt_sigaction(SIGSEGV, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000002>
+sigaltstack(NULL, {ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=0}) = 0 <0.000002>
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x73ae56767000 <0.000003>
+mprotect(0x73ae56767000, 4096, PROT_NONE) = 0 <0.000004>
+sigaltstack({ss_sp=0x73ae56768000, ss_flags=0, ss_size=8192}, NULL) = 0 <0.000002>
+gettid()                                = 1534786 <0.000001>
+rt_sigaction(SIGSEGV, {sa_handler=0x55ee9a029a00, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_SIGINFO, sa_restorer=0x73ae56445330}, NULL, 8) = 0 <0.000002>
+rt_sigaction(SIGBUS, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000002>
+rt_sigaction(SIGBUS, {sa_handler=0x55ee9a029a00, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_SIGINFO, sa_restorer=0x73ae56445330}, NULL, 8) = 0 <0.000001>
+sigaltstack({ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=8192}, NULL) = 0 <0.000002>
+munmap(0x73ae56767000, 12288)           = 0 <0.000003>
+exit_group(0)                           = ?

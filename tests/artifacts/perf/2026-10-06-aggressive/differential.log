@@ -1,0 +1,5 @@
+single 1700 ln comparisons complete
+multi 1700 ln comparisons complete
+ln: 3400 cases, 0 mismatches
+true: 318 cases, 0 mismatches
+fd/signal: 40 cases, 0 mismatches

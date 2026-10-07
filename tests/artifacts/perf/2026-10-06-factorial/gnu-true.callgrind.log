@@ -1,0 +1,11 @@
+==1534691== Callgrind, a call-graph generating cache profiler
+==1534691== Copyright (C) 2002-2017, and GNU GPL'd, by Josef Weidendorfer et al.
+==1534691== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==1534691== Command: /usr/bin/true
+==1534691== 
+==1534691== For interactive control, run 'callgrind_control -h'.
+==1534691== 
+==1534691== Events    : Ir
+==1534691== Collected : 154613
+==1534691== 
+==1534691== I   refs:      154,613

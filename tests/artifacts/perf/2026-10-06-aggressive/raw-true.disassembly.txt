@@ -1,0 +1,54 @@
+
+/home/callen/work/coreutils-startup-factorial/bin/aggressive/single/true:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+Disassembly of section .plt:
+
+Disassembly of section .plt.got:
+
+Disassembly of section .text:
+
+0000000000010b50 <uutils_true_start>:
+   10b50:	f3 0f 1e fa          	endbr64
+   10b54:	48 83 3c 24 02       	cmpq   $0x2,(%rsp)
+   10b59:	75 6f                	jne    10bca <uutils_true_start+0x7a>
+   10b5b:	4c 8b 54 24 10       	mov    0x10(%rsp),%r10
+   10b60:	41 80 3a 2d          	cmpb   $0x2d,(%r10)
+   10b64:	75 64                	jne    10bca <uutils_true_start+0x7a>
+   10b66:	41 80 7a 01 2d       	cmpb   $0x2d,0x1(%r10)
+   10b6b:	75 5d                	jne    10bca <uutils_true_start+0x7a>
+   10b6d:	41 80 7a 02 68       	cmpb   $0x68,0x2(%r10)
+   10b72:	74 3a                	je     10bae <uutils_true_start+0x5e>
+   10b74:	41 80 7a 02 76       	cmpb   $0x76,0x2(%r10)
+   10b79:	75 4f                	jne    10bca <uutils_true_start+0x7a>
+   10b7b:	41 80 7a 03 65       	cmpb   $0x65,0x3(%r10)
+   10b80:	75 48                	jne    10bca <uutils_true_start+0x7a>
+   10b82:	41 80 7a 04 72       	cmpb   $0x72,0x4(%r10)
+   10b87:	75 41                	jne    10bca <uutils_true_start+0x7a>
+   10b89:	41 80 7a 05 73       	cmpb   $0x73,0x5(%r10)
+   10b8e:	75 3a                	jne    10bca <uutils_true_start+0x7a>
+   10b90:	41 80 7a 06 69       	cmpb   $0x69,0x6(%r10)
+   10b95:	75 33                	jne    10bca <uutils_true_start+0x7a>
+   10b97:	41 80 7a 07 6f       	cmpb   $0x6f,0x7(%r10)
+   10b9c:	75 2c                	jne    10bca <uutils_true_start+0x7a>
+   10b9e:	41 80 7a 08 6e       	cmpb   $0x6e,0x8(%r10)
+   10ba3:	75 25                	jne    10bca <uutils_true_start+0x7a>
+   10ba5:	41 80 7a 09 00       	cmpb   $0x0,0x9(%r10)
+   10baa:	74 27                	je     10bd3 <uutils_true_start+0x83>
+   10bac:	eb 1c                	jmp    10bca <uutils_true_start+0x7a>
+   10bae:	41 80 7a 03 65       	cmpb   $0x65,0x3(%r10)
+   10bb3:	75 15                	jne    10bca <uutils_true_start+0x7a>
+   10bb5:	41 80 7a 04 6c       	cmpb   $0x6c,0x4(%r10)
+   10bba:	75 0e                	jne    10bca <uutils_true_start+0x7a>
+   10bbc:	41 80 7a 05 70       	cmpb   $0x70,0x5(%r10)
+   10bc1:	75 07                	jne    10bca <uutils_true_start+0x7a>
+   10bc3:	41 80 7a 06 00       	cmpb   $0x0,0x6(%r10)
+   10bc8:	74 09                	je     10bd3 <uutils_true_start+0x83>
+   10bca:	31 ff                	xor    %edi,%edi
+   10bcc:	b8 e7 00 00 00       	mov    $0xe7,%eax
+   10bd1:	0f 05                	syscall
+   10bd3:	e9 b1 fc ff ff       	jmp    10889 <_start>
+
+Disassembly of section .fini:

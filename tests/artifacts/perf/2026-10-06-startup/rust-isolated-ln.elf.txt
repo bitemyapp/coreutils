@@ -1,0 +1,34 @@
+/home/callen/work/coreutils-startup-8cf2e4f4/bin/single-isolated/ln 6793520 bytes
+   text	   data	    bss	    dec	    hex	filename
+1217031	  46656	   4218	1267905	 1358c1	/home/callen/work/coreutils-startup-8cf2e4f4/bin/single-isolated/ln
+
+Dynamic section at offset 0x133c90 contains 28 entries:
+  Tag        Type                         Name/Value
+ 0x0000000000000001 (NEEDED)             Shared library: [libgcc_s.so.1]
+ 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]
+ 0x000000000000001e (FLAGS)              BIND_NOW
+ 0x000000006ffffffb (FLAGS_1)            Flags: NOW PIE
+ 0x0000000000000015 (DEBUG)              0x0
+ 0x0000000000000007 (RELA)               0x1020
+ 0x0000000000000008 (RELASZ)             39216 (bytes)
+ 0x0000000000000009 (RELAENT)            24 (bytes)
+ 0x000000006ffffff9 (RELACOUNT)          1562
+ 0x0000000000000017 (JMPREL)             0xa950
+ 0x0000000000000002 (PLTRELSZ)           48 (bytes)
+ 0x0000000000000003 (PLTGOT)             0x136090
+ 0x0000000000000014 (PLTREL)             RELA
+ 0x0000000000000006 (SYMTAB)             0x340
+ 0x000000000000000b (SYMENT)             24 (bytes)
+ 0x0000000000000005 (STRTAB)             0xc04
+ 0x000000000000000a (STRSZ)              1049 (bytes)
+ 0x000000006ffffef5 (GNU_HASH)           0xbe8
+ 0x0000000000000019 (INIT_ARRAY)         0x12b780
+ 0x000000000000001b (INIT_ARRAYSZ)       24 (bytes)
+ 0x000000000000001a (FINI_ARRAY)         0x12b778
+ 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)
+ 0x000000000000000c (INIT)               0x12a498
+ 0x000000000000000d (FINI)               0x12a4b4
+ 0x000000006ffffff0 (VERSYM)             0xa30
+ 0x000000006ffffffe (VERNEED)            0xac4
+ 0x000000006fffffff (VERNEEDNUM)         2
+ 0x0000000000000000 (NULL)               0x0

@@ -1,0 +1,165 @@
+Aggressive startup experiment — 2026-10-06
+Branch: codex/startup-aggressive
+Source result: 932b6a7c0 (later commits only record experiment scripts/results)
+Parent: codex/startup-lazy-musl at 0cbf0f97940c1f17285f1c4e73e8d423fbe111ec
+Original upstream: 8cf2e4f4ab613947b955f442c750df9d53d17b08
+
+The final standalone true takes 36.95 us versus GNU's 152.12 us (4.12x as fast).
+The final standalone ln -s -f takes 107.05 us versus GNU's 206.57 us (1.93x).
+Compared with the previous lazy+musl winner, these reduce median latency by
+47.1% and 40.1%, respectively. These are warm-cache launch-and-exit measurements
+on this host, including process launch, not measurements of Rust code alone.
+
+Standalone results (microseconds; 8,000 launches per case)
+                              true p50 true p95   ln p50   ln p95
+GNU 9.4                         152.12   161.84   206.57   239.31
+Rust original glibc             289.32   341.41   377.74   456.39
+Previous lazy + musl             69.81    79.38   178.74   190.60
+Packed RELR (rejected)           72.31    86.18   177.41   191.24
+Direct ln parser                 68.58    78.78   106.98   117.38
+Parser + true C-main return      50.15    59.81   106.70   116.24
+Parser + true ELF entry          36.95    45.40   107.05   117.56
+
+Multicall results (microseconds; same protocol, invocation through symlinks)
+                              true p50 true p95   ln p50   ln p95
+Rust original glibc             464.45   545.03   555.95   635.12
+Previous lazy + musl            197.14   227.85   309.70   358.71
+Packed RELR (rejected)          208.99   242.20   315.81   330.21
+Direct ln parser                186.63   212.89   222.32   261.95
+Parser + true C-main return     185.97   217.28   221.22   250.67
+Selected final                  185.68   193.93   222.06   257.39
+
+Multicall still loses to GNU: selected true 185.68 us, ln 222.06 us. The custom
+true entries apply only to standalone true. The smaller multicall true timing
+shift occurs already in the parser stage, with essentially unchanged executed
+instruction counts; do not attribute that shift to the custom true entry.
+Binary layout/cache behavior is a possible explanation, not established here.
+
+Mean paired block-median differences from GNU (negative means faster):
+  true: -115.16 us; 95% interval [-115.73, -114.54] us.
+  ln: -99.55 us; 95% interval [-100.82, -98.41] us.
+Eight randomized blocks and 10,000 bootstrap resamples of block differences.
+These intervals quantify this session's block variation, not cross-host effects.
+
+5,000 external true invocations in a Bash loop (8 measured repetitions):
+  gnu-true                       0.9878 s median; 0.9901 +/- 0.0109 s mean/SD
+  baseline-single-true           1.7153 s median; 1.7161 +/- 0.0078 s mean/SD
+  lazy-musl-single-true          0.5796 s median; 0.5772 +/- 0.0123 s mean/SD
+  aggressive-crt-single-true     0.4661 s median; 0.4674 +/- 0.0131 s mean/SD
+  aggressive-single-true         0.4067 s median; 0.4107 +/- 0.0107 s mean/SD
+The absolute binary path is executed every iteration; no shell true builtin.
+The loop includes Bash/fork overhead and is a separate end-to-end measurement.
+
+What changed and where the savings came from
+
+1. ln avoids constructing and destroying a Clap command for simple two-operand
+   invocations using only -s/-f/-n/-T. It handles clusters, interspersed flags,
+   and --; all other forms fall back to the complete existing parser before
+   filesystem side effects. Operand paths move out of the captured argv.
+   The original exec/link/replace_link operations, including atomic replacement,
+   remain intact. Help, errors, backups and interactive paths use the full code.
+   Callgrind instructions drop from 157,021 to 39,283 in the final ln profile,
+   about 75%. The reduction removes parser construction and its allocation/free
+   work. Final musl _start_c accounts for 23,638 instructions (60.17% of user-space
+   instructions); this is not a statement that 60% of wall time is relocations.
+
+2. true first received a C-main wrapper that returns before Rust runtime startup
+   for silent invocations. This takes 50.15 us. Its remaining 20,482 instructions
+   include 19,102 in musl _start_c (93.26%), motivating the next step.
+
+3. The selected true has a small custom Linux/x86-64/musl ELF entry, before even
+   musl startup. Silent invocations call exit_group(0) directly. Exactly one
+   --help or --version argument jumps into the original _start; the full existing
+   implementation remains in the same executable, without a second exec.
+   No-argument execution takes six machine instructions including the exit
+   syscall, verified from this binary's disassembly. Strace records only execve
+   and exit_group. Callgrind reports 3 instructions because the terminating
+   syscall block is not fully counted; do not interpret that as a literal total.
+   Sample minor faults drop 41 -> 33 -> 17 across previous/CRT-return/raw-entry.
+   No absolute pointers, relocations, heap, TLS or Rust runtime are needed on
+   the quiet path. Original stack and rdx are preserved for the normal fallback.
+   PIE/ASLR and non-executable stack are retained. This is explicitly an optional
+   platform-specific startup experiment: quiet invocations skip constructors,
+   runtime initialization and destructors. Instrumentation that depends on those
+   hooks would need explicit treatment. It is not a general Rust runtime design.
+
+4. Packed RELR was tested and rejected. Multicall true rises from 197.14 to
+   208.99 us; Callgrind instructions rise 378,574 -> 455,370. The packed table
+   shrinks relocation metadata, but decoding it executes more startup work on
+   this toolchain. The final build keeps ordinary RELA.
+
+Final multicall true still spends 365,672 of 378,604 instructions in _start_c,
+with 26,058 relative relocations. Final multicall ln has the same 365,672 startup
+instructions, of 382,919 total. This explains why avoiding parser work helps ln
+but does not remove the large multicall startup floor.
+
+GNU binary profiles also show dynamic-loader lookup/relocation work dominating
+these tiny commands. GNU true has 154,613 user-space instructions; GNU ln 193,094.
+Original Rust glibc standalones have 510,930 and 684,744, respectively, including
+loader work and eager localization. No GNU implementation source was read or
+copied; symbol-level profiles use callgrind_annotate --auto=no.
+
+Files remain large: final true is 5,025,336 bytes and ln 6,890,672 bytes, including
+level-1 debug information. Previous true was 5,025,280 bytes. Removing executed
+startup work mattered far more here than total on-disk size. Cold-cache, memory
+pressure and long-running musl throughput were not measured in this experiment.
+
+Validation
+- All 528 baseline golden observations match in the final build; intermediate
+  RELR/parser/CRT stages also match. Checks cover exit status, stdout, stderr,
+  filesystem content/type/mode/link counts/targets, locales, embedded/external
+  assets, invalid UTF-8, backups, prompts, help/version and parse errors.
+- 3,400 generated ln comparisons and 318 true comparisons match the previous
+  winner, across standalone and multicall forms.
+- 40 true descriptor/signal cases match (broken pipe, /dev/full, closed stdio,
+  quiet/help/version/extra-argument cases, inherited/default SIGPIPE settings).
+- 74 integration tests pass for each final standalone/multicall build, and for
+  previous-winner and CRT controls. Five added tests cover argument parsing,
+  exact/partial options and invalid UTF-8. Existing filesystem logic is reused.
+- Targeted Clippy for both startup feature variants and cargo fmt checks pass;
+  the existing unknown clippy::assert_is_empty warning remains.
+- Source diff and entry-point disassembly reviewed. The earlier four-way run's
+  localization unit tests were not rerun because localization code is unchanged.
+
+Measurement controls and limits
+Everything was built, tested, benchmarked and profiled on ssh wx-workstation:
+AMD Threadripper PRO 9985WX, Ubuntu 24.04.4, Linux 6.17.0-1032-oem; rustc 1.94.1,
+LLVM 21.1.8; installed GNU coreutils 9.4; hyperfine 1.20.0. CPU affinity 4,
+performance governor, warm cache, LANG=LC_ALL=C. Shared host, no isolation or
+system tuning. No builds/tests/profiles ran during native timing. Each case
+runs in 8 shuffled blocks of 1,000 launches with 20 warmups via hyperfine -N.
+ln repeatedly replaces a symlink on ext4/NVMe; it includes real filesystem work.
+All outliers are retained in the raw data (including two ~43 ms scheduler stalls
+in intermediate builds). Pooled p95 is reported separately from the median.
+
+Rust release opt-level 3, fat LTO, one codegen unit, panic=abort, debug=1,
+force-frame-pointers=yes. Standalones use separate Cargo invocations. Multicall
+uses feat_os_unix_musl across controls (no stdbuf). No PGO or CPU-native tuning.
+Static musl CRT/runtime comes from Rust's target; native dependency compilation
+uses the private tools/musl-gcc wrapper. Perf is unavailable (paranoid=4), so
+Callgrind/strace/resource snapshots are separate explanatory profiles, not
+substitutes for native timings or native cycle counts. RSS snapshots sometimes
+report zero for very short processes; they are not reliable memory-use estimates.
+
+Reproduction and artifacts
+Local worktree: /Users/callen/.codex/worktrees/startup-aggressive/coreutils
+Remote worktree: /home/callen/work/coreutils-startup-factorial/aggressive
+Binary snapshots: /home/callen/work/coreutils-startup-factorial/bin/<stage>/
+Remote evidence: /home/callen/work/coreutils-startup-factorial/artifacts-aggressive/
+Local evidence: /Users/callen/work/coreutils/tests/artifacts/perf/2026-10-06-aggressive/
+
+Build recipes and compatibility notes: experiments/startup/AGGRESSIVE.txt.
+Scripts: experiments/startup/build-aggressive.sh and startup/aggressive/*.py.
+Stage source revisions (parent supplies static musl and lazy localization):
+  8c8fc9ad9  RELR ablation, with STARTUP_RELR=1; rejected
+  f37da8be8  direct ln parser; ordinary Rust entry
+  92b28ef92  parser plus optional true C-main wrapper
+  932b6a7c0  parser plus optional true raw ELF entry
+Intermediate stages and prior four branches remain available. No production
+installation or GitHub publication was performed. Source and report are committed
+on the isolated branch; binary hashes and exact branch head are in source-manifest.json.
+
+Key evidence: timing-summary.json, paired-differences.json, timings-*.json,
+loops-5000.json, *.callgrind, *.instructions-*.txt, *.strace, *.elf.txt,
+raw-true.disassembly.txt, golden-final.log, differential-*.json,
+fd-signal-comparison.json, tests-final-*.log and fingerprint.txt.

@@ -1,0 +1,82 @@
+--------------------------------------------------------------------------------
+Profile data file '/home/callen/work/coreutils-startup-factorial/artifacts-aggressive/aggressive-parser-single-true.callgrind' (creator: callgrind-3.22.0)
+--------------------------------------------------------------------------------
+I1 cache: 
+D1 cache: 
+LL cache: 
+Timerange: Basic block 0 - 6361
+Trigger: Program termination
+Profiled target:  /home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/single/true (PID 2110708, part 1)
+Events recorded:  Ir
+Events shown:     Ir
+Event sort order: Ir
+Thresholds:       99
+Include dirs:     
+User annotated:   
+Auto-annotation:  off
+
+--------------------------------------------------------------------------------
+Ir              
+--------------------------------------------------------------------------------
+28,502 (100.0%)  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+Ir               file:function
+--------------------------------------------------------------------------------
+28,502 (100.0%)  ???:0x0000000000010889 [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/single/true]
+28,497 (99.98%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/crt/../ldso/dlstart.c:_start_c [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/single/true]
+ 9,409 (33.01%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/crt/rcrt1.c:__dls2 [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/single/true]
+ 9,402 (32.99%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/env/__libc_start_main.c:(below main) [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/single/true]
+ 8,152 (28.60%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/env/__libc_start_main.c:libc_start_main_stage2 [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/single/true]
+ 8,111 (28.46%)  ???:main [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/single/true]
+ 7,172 (25.16%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:std::sys::backtrace::__rust_begin_short_backtrace [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/single/true]
+ 7,170 (25.16%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:std::sys::backtrace::__rust_begin_short_backtrace
+ 7,169 (25.15%)  /home/callen/work/coreutils-startup-factorial/aggressive/src/uucore/src/lib/lib.rs:true::main [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/single/true]
+ 4,141 (14.53%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/lite_malloc.c:malloc [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/single/true]
+ 4,134 (14.50%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/meta.h:__libc_malloc_impl [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/single/true]
+ 3,482 (12.22%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/malloc.c:__libc_malloc_impl
+ 3,193 (11.20%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/malloc.c:alloc_slot [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/single/true]
+ 2,544 ( 8.93%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/alloc/unix.rs:true::main
+ 2,432 ( 8.53%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/sync/once/futex.rs:std::sys::sync::once::futex::Once::call [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/single/true]
+ 2,286 ( 8.02%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/malloc.c:alloc_slot'2 [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/single/true]
+ 1,243 ( 4.36%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sync/once.rs:true::main
+ 1,232 ( 4.32%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/env/__libc_start_main.c:__init_libc [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/single/true]
+ 1,184 ( 4.15%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sync/once.rs:std::sync::once::Once::call_once_force::{{closure}} [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/single/true]
+ 1,164 ( 4.08%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:std::sync::once::Once::call_once_force::{{closure}}
+ 1,163 ( 4.08%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:core::ops::function::FnOnce::call_once [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/single/true]
+ 1,009 ( 3.54%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/env.rs:true::main
+ 1,004 ( 3.52%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/env.rs:std::env::_var_os [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/single/true]
+   877 ( 3.08%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/alloc/unix.rs:core::ops::function::FnOnce::call_once
+   868 ( 3.05%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/env/unix.rs:std::env::_var_os
+   865 ( 3.03%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/env/getenv.c:getenv [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/single/true]
+   857 ( 3.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/thread_local/native/eager.rs:true::main
+   852 ( 2.99%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/thread_local/destructors/linux_like.rs:std::sys::thread_local::destructors::linux_like::register [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/single/true]
+   828 ( 2.91%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/process.rs:std::process::exit [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/single/true]
+   714 ( 2.51%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/sync/atomic.rs:std::rt::cleanup [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/single/true]
+   708 ( 2.48%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sync/once.rs:std::rt::cleanup
+   648 ( 2.27%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sync/once.rs:std::sync::once::Once::call_once::{{closure}} [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/single/true]
+   550 ( 1.93%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/string/strncmp.c:strncmp [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/single/true]
+   541 ( 1.90%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/vec/mod.rs:std::sys::thread_local::destructors::linux_like::register
+   535 ( 1.88%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs:alloc::raw_vec::RawVec<T,A>::grow_one [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/single/true]
+   528 ( 1.85%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sync/once_lock.rs:true::main
+   526 ( 1.85%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs:alloc::raw_vec::RawVecInner<A>::grow_amortized [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/single/true]
+   526 ( 1.85%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/sync/atomic.rs:std::sync::once_lock::OnceLock<T>::initialize [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/single/true]
+   520 ( 1.82%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sync/once.rs:std::sync::once_lock::OnceLock<T>::initialize
+   496 ( 1.74%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs:alloc::raw_vec::RawVecInner<A>::finish_grow [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/single/true]
+   486 ( 1.71%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/malloc.c:__malloc_alloc_meta [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/single/true]
+   463 ( 1.62%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/alloc/unix.rs:alloc::raw_vec::RawVecInner<A>::finish_grow
+   456 ( 1.60%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sync/once.rs:std::sync::once::Once::call_once_force::{{closure}} [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/single/true]
+   436 ( 1.53%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/free.c:free [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/single/true]
+   434 ( 1.52%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/free.c:__libc_free [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/single/true]
+   434 ( 1.52%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/alloc/unix.rs:std::sync::once::Once::call_once_force::{{closure}}
+   425 ( 1.49%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/signal/sigaction.c:sigaction [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/single/true]
+   396 ( 1.39%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/meta.h:alloc_slot
+   355 ( 1.25%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/signal/sigaction.c:__libc_sigaction [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/single/true]
+   352 ( 1.24%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/env/__init_tls.c:__init_tls [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/single/true]
+   338 ( 1.19%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/misc/getauxval.c:getauxval [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/single/true]
+   334 ( 1.17%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/io/stdio.rs:std::sync::once::Once::call_once::{{closure}}
+   325 ( 1.14%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/ptr/mod.rs:core::ptr::drop_in_place<std::io::buffered::linewriter::LineWriter<std::io::stdio::StdoutRaw>> [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/single/true]
+   311 ( 1.09%)  /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/meta.h:alloc_slot'2
+   304 ( 1.07%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/pal/unix/stack_overflow.rs:std::sys::pal::unix::stack_overflow::imp::make_handler [/home/callen/work/coreutils-startup-factorial/bin/aggressive-parser/single/true]
+   284 ( 1.00%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/alloc/unix.rs:core::ptr::drop_in_place<std::io::buffered::linewriter::LineWriter<std::io::stdio::StdoutRaw>>
+

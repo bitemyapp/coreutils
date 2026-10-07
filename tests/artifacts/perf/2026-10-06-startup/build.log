@@ -1,0 +1,514 @@
+    Updating crates.io index
+ Downloading crates ...
+  Downloaded core_maths v0.1.1
+  Downloaded cfg_aliases v0.2.2
+  Downloaded num_threads v0.1.7
+  Downloaded notify-types v2.1.0
+  Downloaded intl-memoizer v0.5.3
+  Downloaded clap v4.6.7
+  Downloaded block-buffer v0.12.1
+  Downloaded defmt-parser v1.0.0
+  Downloaded ctrlc v3.5.2
+  Downloaded chacha20 v0.10.2
+  Downloaded crc-fast v1.9.0
+  Downloaded aho-corasick v1.1.5
+  Downloaded fancy-regex v0.19.2
+  Downloaded crypto-common v0.2.2
+  Downloaded ansi-width v0.1.0
+  Downloaded crc v3.3.0
+  Downloaded crossbeam-epoch v0.9.21
+  Downloaded num-integer v0.1.47
+  Downloaded base64-simd v0.8.0
+  Downloaded crossbeam-utils v0.8.23
+  Downloaded icu_time v2.3.0
+  Downloaded icu_locale_fallback v2.3.0
+  Downloaded crossbeam-deque v0.8.8
+  Downloaded jiff-icu v0.2.2
+  Downloaded icu_calendar_data v2.3.0
+  Downloaded fluent-syntax v0.12.0
+  Downloaded num-modular v0.6.1
+  Downloaded data-encoding v2.11.1
+  Downloaded md-5 v0.11.0
+  Downloaded icu_pattern v0.5.0
+  Downloaded litemap v0.8.3
+  Downloaded num-conv v0.2.2
+  Downloaded icu_locale v2.3.1
+  Downloaded icu_calendar v2.3.0
+  Downloaded notify v8.2.0
+  Downloaded indicatif v0.18.6
+  Downloaded bitvec v1.1.1
+  Downloaded hostname v0.4.2
+  Downloaded intl_pluralrules v7.0.2
+  Downloaded icu_time_data v2.3.0
+  Downloaded icu_locale_fallback_data v2.3.0
+  Downloaded icu_decimal v2.3.0
+  Downloaded displaydoc v0.2.7
+  Downloaded clap_builder v4.6.7
+  Downloaded mio v1.2.4
+  Downloaded blake2b_simd v1.0.5
+  Downloaded icu_collator_data v2.3.0
+  Downloaded num-prime v0.6.1
+  Downloaded jiff v0.2.37
+  Downloaded potential_utf v0.1.6
+  Downloaded libc v0.2.190
+  Downloaded icu_datetime v2.3.0
+  Downloaded icu_properties_data v2.3.0
+  Downloaded zerofrom-derive v0.1.8
+  Downloaded icu_provider v2.3.1
+  Downloaded console v0.16.6
+  Downloaded terminal_size v0.4.4
+  Downloaded outref v0.5.2
+  Downloaded keccak v0.2.2
+  Downloaded icu_datetime_data v2.3.0
+  Downloaded writeable v0.6.4
+  Downloaded os_display v0.1.4
+  Downloaded rand_chacha v0.10.0
+  Downloaded platform-info v2.2.0
+  Downloaded nom v8.0.0
+  Downloaded jiff-static v0.2.37
+  Downloaded icu_normalizer v2.3.0
+  Downloaded z85 v3.0.7
+  Downloaded bytecount v0.6.9
+  Downloaded ctor v1.0.13
+  Downloaded rustversion v1.0.23
+  Downloaded fluent v0.17.0
+  Downloaded rustc-hash v2.1.3
+  Downloaded sm3 v0.5.0
+  Downloaded link-section v0.19.3
+  Downloaded icu_segmenter_data v2.3.0
+  Downloaded sha2 v0.11.0
+  Downloaded phf v0.14.0
+  Downloaded ariadne v0.6.0
+  Downloaded clap_lex v1.1.1
+  Downloaded sha1 v0.11.0
+  Downloaded num-bigint v0.4.8
+  Downloaded yoke v0.8.3
+  Downloaded nix v0.31.3
+  Downloaded icu_segmenter v2.3.0
+  Downloaded write16 v1.0.0
+  Downloaded parse_datetime v0.16.0
+  Downloaded icu_locale_core v2.3.0
+  Downloaded dns-lookup v4.0.2
+  Downloaded calendrical_calculations v0.2.4
+  Downloaded icu_plurals_data v2.3.0
+  Downloaded icu_locale_data v2.3.0
+  Downloaded yoke-derive v0.8.4
+  Downloaded siphasher v1.0.3
+  Downloaded log v0.4.34
+  Downloaded inotify v0.11.5
+  Downloaded xattr v1.6.1
+  Downloaded uutils_term_grid v0.8.0
+  Downloaded utf16_iter v1.0.5
+  Downloaded defmt v1.1.1
+  Downloaded zerotrie v0.2.5
+  Downloaded procfs-core v0.18.0
+  Downloaded phf_generator v0.14.0
+  Downloaded hybrid-array v0.4.15
+  Downloaded tinystr v0.8.4
+  Downloaded smawk v0.3.3
+  Downloaded itertools v0.15.0
+  Downloaded zerovec-derive v0.11.6
+  Downloaded zerovec v0.11.8
+  Downloaded icu_normalizer_data v2.3.0
+  Downloaded icu_collator v2.3.1
+  Downloaded procfs v0.18.0
+  Downloaded sha3 v0.12.0
+  Downloaded regex v1.13.1
+  Downloaded unic-langid v0.9.6
+  Downloaded time-core v0.1.9
+  Downloaded thiserror-impl v2.0.21
+  Downloaded synstructure v0.14.0
+  Downloaded sponge-cursor v0.1.0
+  Downloaded smallvec v1.16.1
+  Downloaded icu_decimal_data v2.3.0
+  Downloaded zerocopy-derive v0.8.57
+  Downloaded time v0.3.55
+  Downloaded unicode-width v0.2.2
+  Downloaded zerocopy v0.8.57
+  Downloaded shake v0.1.0
+  Downloaded rustix v1.1.5
+  Downloaded icu_collections v2.3.0
+  Downloaded unit-prefix v0.5.2
+  Downloaded type-map v0.5.1
+  Downloaded thiserror v2.0.21
+  Downloaded spin v0.10.1
+  Downloaded self_cell v1.3.0
+  Downloaded phf_shared v0.14.0
+  Downloaded linktime-proc-macro v0.2.3
+  Downloaded icu_properties v2.3.0
+  Downloaded fixed_decimal v0.7.2
+  Downloaded data-encoding-macro v0.1.21
+  Downloaded jiff-core v0.1.1
+  Downloaded data-encoding-macro-internal v0.1.19
+  Downloaded find-msvc-tools v0.1.13
+  Downloaded lscolors v0.21.0
+  Downloaded fluent-bundle v0.16.0
+  Downloaded icu_plurals v2.3.0
+  Downloaded cc v1.4.7
+  Downloaded filedescriptor v0.8.3
+  Downloaded inotify-sys v0.1.8
+  Downloaded glob v0.3.4
+  Downloaded fluent-langneg v0.13.1
+  Downloaded defmt-macros v1.1.1
+  Downloaded bigdecimal v0.4.11
+  Downloaded phf_codegen v0.14.0
+  Downloaded rand v0.10.3
+  Downloaded time-macros v0.2.32
+  Downloaded socket2 v0.6.5
+  Downloaded zerofrom v0.1.8
+  Downloaded vsimd v0.8.0
+  Downloaded textwrap v0.16.4
+  Downloaded unic-langid-impl v0.9.6
+   Compiling proc-macro2 v1.0.107
+   Compiling quote v1.0.47
+   Compiling unicode-ident v1.0.26
+   Compiling libc v0.2.190
+   Compiling stable_deref_trait v1.2.1
+   Compiling cfg-if v1.0.5
+   Compiling either v1.18.0
+   Compiling bitflags v2.13.2
+   Compiling litemap v0.8.3
+   Compiling typenum v1.20.1
+   Compiling smallvec v1.16.1
+   Compiling icu_locale_fallback_data v2.3.0
+   Compiling zerocopy v0.8.57
+   Compiling autocfg v1.5.1
+   Compiling memchr v2.8.3
+   Compiling rustix v1.1.5
+   Compiling libm v0.2.16
+   Compiling linux-raw-sys v0.12.1
+   Compiling utf8_iter v1.0.4
+   Compiling version_check v0.9.5
+   Compiling cfg_aliases v0.2.2
+   Compiling icu_calendar_data v2.3.0
+   Compiling thiserror v2.0.21
+   Compiling unicode-width v0.2.2
+   Compiling icu_time_data v2.3.0
+   Compiling cpufeatures v0.3.1
+   Compiling find-msvc-tools v0.1.13
+   Compiling icu_normalizer_data v2.3.0
+   Compiling rustc-hash v2.1.3
+   Compiling shlex v2.0.1
+   Compiling utf8parse v0.2.2
+   Compiling icu_decimal_data v2.3.0
+   Compiling icu_plurals_data v2.3.0
+   Compiling icu_datetime_data v2.3.0
+   Compiling colorchoice v1.0.5
+   Compiling anstyle v1.0.14
+   Compiling icu_collator_data v2.3.0
+   Compiling rustversion v1.0.23
+   Compiling icu_locale_data v2.3.0
+   Compiling is_terminal_polyfill v1.70.2
+   Compiling jiff-core v0.1.1
+   Compiling anstyle-query v1.1.5
+   Compiling self_cell v1.3.0
+   Compiling write16 v1.0.0
+   Compiling constant_time_eq v0.4.2
+   Compiling num-conv v0.2.2
+   Compiling arrayvec v0.7.8
+   Compiling crc-catalog v2.5.0
+   Compiling utf16_iter v1.0.5
+   Compiling same-file v1.0.6
+   Compiling data-encoding v2.11.1
+   Compiling hex v0.4.3
+   Compiling clap_lex v1.1.1
+   Compiling strsim v0.11.1
+   Compiling sponge-cursor v0.1.0
+   Compiling procfs v0.18.0
+   Compiling time-core v0.1.9
+   Compiling num_threads v0.1.7
+   Compiling unit-prefix v0.5.2
+   Compiling outref v0.5.2
+   Compiling vsimd v0.8.0
+   Compiling uucore v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore)
+   Compiling spin v0.10.1
+   Compiling deranged v0.5.8
+   Compiling powerfmt v0.2.0
+   Compiling yansi v1.0.1
+   Compiling glob v0.3.4
+   Compiling z85 v3.0.7
+   Compiling dunce v1.0.5
+   Compiling rand_core v0.10.1
+   Compiling getrandom v0.4.3
+   Compiling regex-syntax v0.8.11
+   Compiling crossbeam-utils v0.8.23
+   Compiling foldhash v0.2.0
+   Compiling equivalent v1.0.2
+   Compiling log v0.4.34
+   Compiling crossbeam-epoch v0.9.21
+   Compiling portable-atomic v1.15.0
+   Compiling allocator-api2 v0.2.21
+   Compiling siphasher v1.0.3
+   Compiling inotify-sys v0.1.8
+   Compiling radium v0.7.0
+   Compiling once_cell v1.21.4
+   Compiling unicode-width v0.1.14
+   Compiling fastrand v2.5.0
+   Compiling crossbeam-deque v0.8.8
+   Compiling parking_lot_core v0.9.12
+   Compiling signal-hook v0.3.18
+   Compiling rayon-core v1.13.0
+   Compiling scopeguard v1.2.0
+   Compiling nu-ansi-term v0.50.3
+   Compiling tap v1.0.1
+   Compiling icu_segmenter_data v2.3.0
+   Compiling funty v2.0.0
+   Compiling link-section v0.19.3
+   Compiling linktime-proc-macro v0.2.3
+   Compiling winnow v1.0.4
+   Compiling bit-vec v0.8.0
+   Compiling litrs v1.0.0
+   Compiling uu_stdbuf_libstdbuf v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/stdbuf/src/libstdbuf)
+   Compiling uu_stdbuf v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/stdbuf)
+   Compiling itoa v1.0.18
+   Compiling bytecount v0.6.9
+   Compiling smawk v0.3.3
+   Compiling keccak v0.2.2
+   Compiling notify-types v2.1.0
+   Compiling writeable v0.6.4
+   Compiling itertools v0.15.0
+   Compiling nix v0.31.3
+   Compiling anstyle-parse v1.0.0
+   Compiling walkdir v2.5.0
+   Compiling ansi-width v0.1.0
+   Compiling uu_stty v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/stty)
+   Compiling num-traits v0.2.19
+   Compiling generic-array v0.14.7
+   Compiling bigdecimal v0.4.11
+   Compiling os_display v0.1.4
+   Compiling wyz v0.5.1
+   Compiling time-macros v0.2.32
+   Compiling lock_api v0.4.14
+   Compiling bit-set v0.8.0
+   Compiling type-map v0.5.1
+   Compiling bstr v1.13.1
+   Compiling aho-corasick v1.1.5
+   Compiling phf_shared v0.14.0
+   Compiling nom v8.0.0
+   Compiling chacha20 v0.10.2
+   Compiling cc v1.4.7
+   Compiling procfs-core v0.18.0
+   Compiling ariadne v0.6.0
+   Compiling blake2b_simd v1.0.5
+   Compiling hybrid-array v0.4.15
+   Compiling hashbrown v0.16.1
+   Compiling document-features v0.2.12
+   Compiling hashbrown v0.17.1
+   Compiling uutils_term_grid v0.8.0
+   Compiling ctor v1.0.13
+   Compiling crc v3.3.0
+   Compiling base64-simd v0.8.0
+   Compiling phf_generator v0.14.0
+   Compiling phf v0.14.0
+   Compiling crypto-common v0.2.2
+   Compiling block-buffer v0.12.1
+   Compiling anstream v1.0.0
+   Compiling bitvec v1.1.1
+   Compiling phf_codegen v0.14.0
+   Compiling syn v3.0.6
+   Compiling syn v2.0.119
+   Compiling coreutils v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source)
+   Compiling uucore_procs v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore_procs)
+   Compiling jiff v0.2.37
+   Compiling crypto-common v0.1.7
+   Compiling lru v0.16.4
+   Compiling digest v0.10.7
+   Compiling blake3 v1.8.7
+   Compiling digest v0.11.3
+   Compiling num-integer v0.1.47
+   Compiling crc-fast v1.9.0
+   Compiling core_maths v0.1.1
+   Compiling lscolors v0.21.0
+   Compiling sha1 v0.11.0
+   Compiling sm3 v0.5.0
+   Compiling shake v0.1.0
+   Compiling md-5 v0.11.0
+   Compiling sha3 v0.12.0
+   Compiling sha2 v0.11.0
+   Compiling regex-automata v0.4.18
+   Compiling getrandom v0.2.17
+   Compiling socket2 v0.6.5
+   Compiling time v0.3.55
+   Compiling errno v0.3.14
+   Compiling mio v1.2.4
+   Compiling console v0.16.6
+   Compiling hostname v0.4.2
+   Compiling platform-info v2.2.0
+   Compiling filetime v0.2.29
+   Compiling memmap2 v0.9.11
+   Compiling rayon v1.12.0
+   Compiling signal-hook-registry v1.4.8
+   Compiling inotify v0.11.5
+   Compiling rand_core v0.6.4
+   Compiling rand v0.10.3
+   Compiling parking_lot v0.12.5
+   Compiling dns-lookup v4.0.2
+   Compiling notify v8.2.0
+   Compiling indicatif v0.18.6
+   Compiling signal-hook-mio v0.2.5
+   Compiling synstructure v0.14.0
+   Compiling displaydoc v0.2.7
+   Compiling zerovec-derive v0.11.6
+   Compiling thiserror-impl v2.0.21
+   Compiling data-encoding-macro-internal v0.1.19
+   Compiling zerofrom-derive v0.1.8
+   Compiling yoke-derive v0.8.4
+   Compiling zerocopy-derive v0.8.57
+   Compiling data-encoding-macro v0.1.21
+   Compiling calendrical_calculations v0.2.4
+   Compiling fixed_decimal v0.7.2
+   Compiling zerofrom v0.1.8
+   Compiling yoke v0.8.3
+   Compiling zerovec v0.11.8
+   Compiling zerotrie v0.2.5
+   Compiling fluent-syntax v0.12.0
+   Compiling terminal_size v0.4.4
+   Compiling xattr v1.6.1
+   Compiling tempfile v3.27.0
+   Compiling crossterm v0.29.0
+   Compiling ctrlc v3.5.2
+   Compiling clap_builder v4.6.7
+   Compiling parse_datetime v0.16.0
+   Compiling regex v1.13.1
+   Compiling fancy-regex v0.19.2
+   Compiling tinystr v0.8.4
+   Compiling potential_utf v0.1.6
+   Compiling icu_pattern v0.5.0
+   Compiling icu_collections v2.3.0
+   Compiling icu_locale_core v2.3.0
+   Compiling unic-langid-impl v0.9.6
+   Compiling unic-langid v0.9.6
+   Compiling fluent-langneg v0.13.1
+   Compiling intl-memoizer v0.5.3
+   Compiling intl_pluralrules v7.0.2
+   Compiling fluent-bundle v0.16.0
+   Compiling fluent v0.17.0
+   Compiling icu_provider v2.3.1
+   Compiling clap v4.6.7
+   Compiling icu_locale_fallback v2.3.0
+   Compiling icu_properties v2.3.0
+   Compiling icu_normalizer v2.3.0
+   Compiling icu_calendar v2.3.0
+   Compiling icu_decimal v2.3.0
+   Compiling icu_plurals v2.3.0
+   Compiling icu_locale v2.3.1
+   Compiling icu_segmenter v2.3.0
+   Compiling textwrap v0.16.4
+   Compiling icu_collator v2.3.1
+   Compiling ppv-lite86 v0.2.21
+   Compiling half v2.7.1
+   Compiling icu_time v2.3.0
+   Compiling rand_chacha v0.3.1
+   Compiling rand_chacha v0.10.0
+   Compiling rand v0.8.8
+   Compiling icu_datetime v2.3.0
+   Compiling jiff-icu v0.2.2
+   Compiling num-bigint v0.4.8
+   Compiling num-modular v0.6.1
+   Compiling num-prime v0.6.1
+   Compiling uu_checksum_common v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/checksum_common)
+   Compiling uu_base32 v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/base32)
+   Compiling uu_ls v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/ls)
+   Compiling uu_ln v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/ln)
+   Compiling uu_true v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/true)
+   Compiling uu_fold v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/fold)
+   Compiling uu_arch v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/arch)
+   Compiling uu_rmdir v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/rmdir)
+   Compiling uu_echo v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/echo)
+   Compiling uu_unlink v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/unlink)
+   Compiling uu_cut v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/cut)
+   Compiling uu_cp v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/cp)
+   Compiling uu_mktemp v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/mktemp)
+   Compiling uu_pinky v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/pinky)
+   Compiling uu_shred v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/shred)
+   Compiling uu_sum v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/sum)
+   Compiling uu_install v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/install)
+   Compiling uu_dirname v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/dirname)
+   Compiling uu_date v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/date)
+   Compiling uu_nl v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/nl)
+   Compiling uu_numfmt v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/numfmt)
+   Compiling uu_false v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/false)
+   Compiling uu_chmod v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/chmod)
+   Compiling uu_fmt v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/fmt)
+   Compiling uu_nohup v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/nohup)
+   Compiling uu_hostname v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/hostname)
+   Compiling uu_more v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/more)
+   Compiling uu_du v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/du)
+   Compiling uu_od v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/od)
+   Compiling uu_test v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/test)
+   Compiling uu_ptx v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/ptx)
+   Compiling uu_rm v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/rm)
+   Compiling uu_paste v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/paste)
+   Compiling uu_users v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/users)
+   Compiling uu_cat v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/cat)
+   Compiling uu_factor v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/factor)
+   Compiling uu_dd v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/dd)
+   Compiling uu_uname v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/uname)
+   Compiling uu_stat v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/stat)
+   Compiling uu_sort v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/sort)
+   Compiling uu_tr v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/tr)
+   Compiling uu_chown v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/chown)
+   Compiling uu_printf v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/printf)
+   Compiling uu_tail v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/tail)
+   Compiling uu_shuf v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/shuf)
+   Compiling uu_pwd v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/pwd)
+   Compiling uu_mkfifo v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/mkfifo)
+   Compiling uu_nproc v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/nproc)
+   Compiling uu_uptime v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/uptime)
+   Compiling uu_who v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/who)
+   Compiling uu_mkdir v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/mkdir)
+   Compiling uu_truncate v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/truncate)
+   Compiling uu_expr v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/expr)
+   Compiling uu_basename v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/basename)
+   Compiling uu_dircolors v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/dircolors)
+   Compiling uu_head v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/head)
+   Compiling uu_chroot v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/chroot)
+   Compiling uu_seq v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/seq)
+   Compiling uu_hostid v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/hostid)
+   Compiling uu_readlink v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/readlink)
+   Compiling uu_sync v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/sync)
+   Compiling uu_timeout v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/timeout)
+   Compiling uu_tsort v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/tsort)
+   Compiling uu_unexpand v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/unexpand)
+   Compiling uu_comm v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/comm)
+   Compiling uu_kill v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/kill)
+   Compiling uu_mknod v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/mknod)
+   Compiling uu_yes v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/yes)
+   Compiling uu_df v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/df)
+   Compiling uu_split v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/split)
+   Compiling uu_tee v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/tee)
+   Compiling uu_touch v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/touch)
+   Compiling uu_uniq v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/uniq)
+   Compiling uu_pathchk v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/pathchk)
+   Compiling uu_pr v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/pr)
+   Compiling uu_tty v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/tty)
+   Compiling uu_env v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/env)
+   Compiling uu_mv v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/mv)
+   Compiling uu_tac v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/tac)
+   Compiling uu_wc v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/wc)
+   Compiling uu_realpath v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/realpath)
+   Compiling uu_chgrp v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/chgrp)
+   Compiling uu_nice v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/nice)
+   Compiling uu_link v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/link)
+   Compiling uu_csplit v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/csplit)
+   Compiling uu_whoami v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/whoami)
+   Compiling uu_expand v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/expand)
+   Compiling uu_logname v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/logname)
+   Compiling uu_printenv v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/printenv)
+   Compiling uu_sleep v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/sleep)
+   Compiling uu_join v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/join)
+   Compiling uu_groups v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/groups)
+   Compiling uu_id v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/id)
+   Compiling uu_cksum v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/cksum)
+   Compiling uu_sha256sum v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/sha256sum)
+   Compiling uu_sha1sum v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/sha1sum)
+   Compiling uu_md5sum v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/md5sum)
+   Compiling uu_sha512sum v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/sha512sum)
+   Compiling uu_b2sum v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/b2sum)
+   Compiling uu_sha224sum v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/sha224sum)
+   Compiling uu_sha384sum v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/sha384sum)
+   Compiling uu_basenc v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/basenc)
+   Compiling uu_base64 v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/base64)
+   Compiling uu_dir v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/dir)
+   Compiling uu_vdir v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/vdir)
+    Finished `release` profile [optimized + debuginfo] target(s) in 1m 13s

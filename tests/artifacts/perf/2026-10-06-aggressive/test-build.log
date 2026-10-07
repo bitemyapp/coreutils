@@ -1,0 +1,7 @@
+   Compiling uucore v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uucore)
+   Compiling uucore_procs v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uucore_procs)
+   Compiling uu_true v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/true)
+   Compiling coreutils v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive)
+   Compiling uu_ln v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/ln)
+   Compiling uutests v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/tests/uutests)
+    Finished `test` profile [unoptimized] target(s) in 1.49s

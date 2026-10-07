@@ -1,0 +1,15 @@
+Benchmark 1: previous-true
+  Time (mean ± σ):      76.1 µs ±  23.8 µs    [User: 54.6 µs, System: 4.0 µs]
+  Range (min … max):    62.6 µs … 596.5 µs    2000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 2: crt-true
+  Time (mean ± σ):      53.1 µs ±  41.2 µs    [User: 35.1 µs, System: 3.3 µs]
+  Range (min … max):    44.5 µs … 657.5 µs    2000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Summary
+  crt-true ran
+    1.43 ± 1.20 times faster than previous-true

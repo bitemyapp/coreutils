@@ -1,0 +1,97 @@
+   Compiling proc-macro2 v1.0.107
+   Compiling quote v1.0.47
+   Compiling unicode-ident v1.0.26
+   Compiling rustix v1.1.5
+   Compiling bitflags v2.13.2
+   Compiling thiserror v2.0.21
+   Compiling linux-raw-sys v0.12.1
+   Compiling libc v0.2.190
+   Compiling rustc-hash v2.1.3
+   Compiling utf8parse v0.2.2
+   Compiling anstyle-query v1.1.5
+   Compiling getrandom v0.4.3
+   Compiling colorchoice v1.0.5
+   Compiling anstyle v1.0.14
+   Compiling memchr v2.8.3
+   Compiling is_terminal_polyfill v1.70.2
+   Compiling type-map v0.5.1
+   Compiling anstyle-parse v1.0.0
+   Compiling cfg-if v1.0.5
+   Compiling cfg_aliases v0.2.2
+   Compiling strsim v0.11.1
+   Compiling clap_lex v1.1.1
+   Compiling nix v0.31.3
+   Compiling smallvec v1.16.1
+   Compiling self_cell v1.3.0
+   Compiling fastrand v2.5.0
+   Compiling anstream v1.0.0
+   Compiling unicode-width v0.2.2
+   Compiling once_cell v1.21.4
+   Compiling uucore v0.13.0 (/home/callen/work/coreutils-startup-factorial/lazy/src/uucore)
+   Compiling os_display v0.1.4
+   Compiling syn v3.0.6
+   Compiling uucore_procs v0.13.0 (/home/callen/work/coreutils-startup-factorial/lazy/src/uucore_procs)
+   Compiling terminal_size v0.4.4
+   Compiling tempfile v3.27.0
+   Compiling clap_builder v4.6.7
+   Compiling displaydoc v0.2.7
+   Compiling thiserror-impl v2.0.21
+   Compiling tinystr v0.8.4
+   Compiling unic-langid-impl v0.9.6
+   Compiling unic-langid v0.9.6
+   Compiling fluent-langneg v0.13.1
+   Compiling intl-memoizer v0.5.3
+   Compiling intl_pluralrules v7.0.2
+   Compiling fluent-syntax v0.12.0
+   Compiling fluent-bundle v0.16.0
+   Compiling fluent v0.17.0
+   Compiling clap v4.6.7
+    Finished `test` profile [unoptimized] target(s) in 2.49s
+     Running unittests src/lib/lib.rs (/home/callen/work/coreutils-startup-factorial/target-validation/debug/deps/uucore-1379f583348d8596)
+
+running 42 tests
+test mods::locale::tests::embedded_locales_are_escaped_not_raw ... ok
+test mods::locale::tests::integers_beyond_f64_precision_stay_exact ... ok
+test mods::locale::tests::test_arabic_localization ... ok
+test mods::locale::tests::test_arabic_localization_with_macro ... ok
+test mods::locale::tests::test_bundles_reuse_cached_resources ... ok
+test mods::locale::tests::test_clap_localization_fallbacks ... ok
+test mods::locale::tests::test_create_bundle_file_not_found ... ok
+test mods::locale::tests::test_create_bundle_invalid_syntax ... ok
+test mods::locale::tests::test_create_bundle_returns_err_when_util_locale_missing ... ok
+test mods::locale::tests::test_create_bundle_success ... ok
+test mods::locale::tests::test_deferred_localization_preserves_alias_and_switching ... ok
+test mods::locale::tests::test_detect_system_locale_from_lang_env ... ok
+test mods::locale::tests::test_detect_system_locale_no_lang_env ... ok
+test mods::locale::tests::test_error_display ... ok
+test mods::locale::tests::test_find_uucore_locales_dir_installed_layout ... ok
+test mods::locale::tests::test_get_message ... ok
+test mods::locale::tests::test_get_message_not_initialized ... ok
+test mods::locale::tests::test_get_message_with_args ... ok
+test mods::locale::tests::test_get_message_with_args_pluralization ... ok
+test mods::locale::tests::test_init_localization_english_only ... ok
+test mods::locale::tests::test_init_localization_invalid_locale_falls_back_to_english ... ok
+test mods::locale::tests::test_init_localization_twice_replaces_localizer ... ok
+test mods::locale::tests::test_init_localization_with_fallback ... ok
+test mods::locale::tests::test_japanese_localization ... ok
+test mods::locale::tests::test_lazy_error_resources_follow_runtime_locale ... ok
+test mods::locale::tests::test_localization_error_from_io_error ... ok
+test mods::locale::tests::test_localization_error_uerror_impl ... ok
+test mods::locale::tests::test_localizer_fallback_to_english ... ok
+test mods::locale::tests::test_localizer_format_message_not_found ... ok
+test mods::locale::tests::test_localizer_format_primary_bundle ... ok
+test mods::locale::tests::test_localizer_format_with_args ... ok
+test mods::locale::tests::test_mixed_script_fallback ... ok
+test mods::locale::tests::test_parse_resource_error_includes_snippet ... ok
+test mods::locale::tests::test_setup_localization_fallback_to_embedded ... ok
+test mods::locale::tests::test_setup_localization_falls_back_to_english ... ok
+test mods::locale::tests::test_setup_localization_keeps_util_for_name_without_strings ... ok
+test mods::locale::tests::test_setup_localization_second_util_on_same_thread ... ok
+test mods::locale::tests::test_setup_localization_success ... ok
+test mods::locale::tests::test_startup_localization_waits_for_a_message ... ok
+test mods::locale::tests::test_thread_local_isolation ... ok
+test mods::locale::tests::test_unicode_directional_isolation_disabled ... ok
+test mods::locale::tests::test_uucore_locale_directory_in_development ... ok
+
+test result: ok. 42 passed; 0 failed; 0 ignored; 0 measured; 40 filtered out; finished in 0.01s
+

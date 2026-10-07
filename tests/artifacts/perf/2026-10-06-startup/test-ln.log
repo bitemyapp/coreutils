@@ -1,0 +1,99 @@
+   Compiling coreutils v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.35s
+     Running unittests src/lib.rs (target/debug/deps/coreutils-b16edc18a472fe09)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 2 filtered out; finished in 0.00s
+
+     Running unittests src/bin/coreutils.rs (target/debug/deps/coreutils-5838ff79ee7a73dd)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/test_localization_and_colors.rs (target/debug/deps/test_localization_and_colors-4d7d513e9ea6e1ad)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 5 filtered out; finished in 0.00s
+
+     Running tests/test_util_name.rs (target/debug/deps/test_util_name-904a35e0c97b6a61)
+Setting UUTESTS_BINARY_PATH=/home/callen/work/coreutils-startup-8cf2e4f4/source/target/debug/coreutils
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 7 filtered out; finished in 0.00s
+
+     Running tests/test_uudoc.rs (target/debug/deps/test_uudoc-36b033c038b9ed12)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/tests.rs (target/debug/deps/tests-08215115de8eafcb)
+
+running 60 tests
+test test_ln::test_hard_logical ... ok
+test test_ln::test_backup_existing_hard_linked_under_different_name ... ok
+test test_ln::test_hard_link_force_failed_link_keeps_destination ... ok
+test test_ln::test_invalid_arg ... ok
+test test_ln::test_ln_backup_nonexistent_rollback ... ok
+test test_ln::test_force_same_file_detected_after_canonicalization ... ok
+test test_ln::test_hard_logical_non_exit_fail ... ok
+test test_ln::test_force_replace_hard_link_in_symlinked_directory ... ok
+test test_ln::test_force_replace_in_symlinked_directory ... ok
+test test_ln::test_backup_existing_hard_linked_target_is_fifo ... ok
+test test_ln::test_backup_same_file ... ok
+test test_ln::test_symlink_backup_numbering ... ok
+test test_ln::test_hard_logical_dir_fail ... ok
+test test_ln::test_symlink_dangling_file ... ok
+test test_ln::test_symlink_to_dir_2args ... ok
+test test_ln::test_relative_target_with_no_parent ... ok
+test test_ln::test_symlink_custom_backup_suffix_hyphen_value ... ok
+test test_ln::test_ln_hard_link_dir ... ok
+test test_ln::test_ln_non_utf8_paths ... ok
+test test_ln::test_force_replace_same_inode_leaves_no_temp_file ... ok
+test test_ln::test_symlink_existing_file ... ok
+test test_ln::test_symlink_do_not_overwrite ... ok
+test test_ln::test_force_ln_existing_hard_link_entry ... ok
+test test_ln::test_ln_backup_no_path_traversal ... ok
+test test_ln::test_symlink_overwrite_dir_fail ... ok
+test test_ln::test_backup_force ... ok
+test test_ln::test_symlink_dangling_directory ... ok
+test test_ln::test_symlink_target_dir_from_dir ... ok
+test test_ln::test_symlink_target_dir_non_utf8_source_name ... ok
+test test_ln::test_ln_no_dereference_symbolic ... ok
+test test_ln::test_symlink_overwrite_force ... ok
+test test_ln::test_symlink_relative ... ok
+test test_ln::test_symlink_error_includes_destination ... ok
+test test_ln::test_symlink_relative_dir ... ok
+test test_ln::test_ln_seen_file ... ok
+test test_ln::test_symlink_existing_directory ... ok
+test test_ln::test_relative_dst_already_symlink ... ok
+test test_ln::test_symlink_errors ... ok
+test test_ln::test_relative_src_already_symlink ... ok
+test test_ln::test_symlink_custom_backup_suffix ... ok
+test test_ln::test_symlink_simple_backup ... ok
+test test_ln::test_symlink_relative_path ... ok
+test test_ln::test_symlink_verbose ... ok
+test test_ln::test_symlink_target_only ... ok
+test test_ln::test_symlink_suffix_without_backup_option ... ok
+test test_ln::test_symlink_overwrite_force_overrides_interactive ... ok
+test test_ln::test_symlink_remove_existing_same_src_and_dest ... ok
+test test_ln::test_relative_requires_symbolic ... ok
+test test_ln::test_symlink_existing_backup ... ok
+test test_ln::test_symlink_implicit_target_dir ... ok
+test test_ln::test_relative_recursive ... ok
+test test_ln::test_symlink_target_dir ... ok
+test test_ln::test_symlink_circular ... ok
+test test_ln::test_symlink_missing_destination ... ok
+test test_ln::test_symlink_interactive ... ok
+test test_ln::test_symlink_interactive_overrides_force ... ok
+test test_ln::test_symlink_no_deref_file ... ok
+test test_ln::test_symlink_no_deref_dir ... ok
+test test_ln::test_symlink_no_deref_file_in_destination_dir ... ok
+test test_ln::test_force_replace_never_leaves_the_destination_name_free ... ok
+
+test result: ok. 60 passed; 0 failed; 0 ignored; 0 measured; 7 filtered out; finished in 0.38s
+

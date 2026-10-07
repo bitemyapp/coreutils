@@ -1,0 +1,9 @@
+heaptrack output will be written to "/home/callen/work/coreutils-startup-8cf2e4f4/artifacts/rust-multi-ln.heap.zst"
+starting application, this might take some time...
+heaptrack stats:
+	allocations:          	476
+	leaked allocations:   	118
+	temporary allocations:	42
+Heaptrack finished! Now run the following to investigate the data:
+
+  heaptrack --analyze "/home/callen/work/coreutils-startup-8cf2e4f4/artifacts/rust-multi-ln.heap.zst"

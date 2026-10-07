@@ -1,0 +1,235 @@
+--------------------------------------------------------------------------------
+Profile data file '/home/callen/work/coreutils-startup-factorial/artifacts/lazy-single-true.callgrind' (creator: callgrind-3.22.0)
+--------------------------------------------------------------------------------
+I1 cache: 
+D1 cache: 
+LL cache: 
+Timerange: Basic block 0 - 65836
+Trigger: Program termination
+Profiled target:  /home/callen/work/coreutils-startup-factorial/bin/lazy/single/true (PID 1534797, part 1)
+Events recorded:  Ir
+Events shown:     Ir
+Event sort order: Ir
+Thresholds:       99
+Include dirs:     
+User annotated:   
+Auto-annotation:  off
+
+--------------------------------------------------------------------------------
+Ir               
+--------------------------------------------------------------------------------
+317,821 (100.0%)  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+Ir               file:function
+--------------------------------------------------------------------------------
+47,694 (15.01%)  ./elf/./elf/dl-lookup.c:do_lookup_x [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+46,738 (14.71%)  ./stdio-common/./stdio-common/vfscanf-internal.c:__vfscanf_internal [/usr/lib/x86_64-linux-gnu/libc.so.6]
+22,610 ( 7.11%)  ./stdlib/../stdlib/strtol_l.c:____strtoul_l_internal [/usr/lib/x86_64-linux-gnu/libc.so.6]
+19,277 ( 6.07%)  ./elf/./elf/dl-reloc.c:_dl_relocate_object [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+16,191 ( 5.09%)  ./elf/../sysdeps/x86_64/dl-machine.h:_dl_relocate_object
+16,131 ( 5.08%)  ./elf/./elf/dl-lookup.c:_dl_lookup_symbol_x [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+15,402 ( 4.85%)  ./string/../sysdeps/x86_64/multiarch/../multiarch/strcmp-sse2.S:strcmp [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+14,406 ( 4.53%)  ./elf/../sysdeps/generic/dl-new-hash.h:_dl_lookup_symbol_x
+14,264 ( 4.49%)  ./elf/./elf/do-rel.h:_dl_relocate_object
+13,766 ( 4.33%)  ./elf/./elf/dl-tunables.c:__GI___tunables_init [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+ 9,937 ( 3.13%)  ./elf/./elf/dl-lookup.c:check_match [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+ 7,434 ( 2.34%)  ./elf/./elf/dl-version.c:_dl_check_map_versions [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+ 3,784 ( 1.19%)  ./libio/./libio/genops.c:_IO_sputbackc [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 3,303 ( 1.04%)  ./libio/./libio/iogetdelim.c:getdelim [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 3,096 ( 0.97%)  ./elf/../sysdeps/x86/dl-cacheinfo.h:intel_check_word.constprop.0 [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+ 2,339 ( 0.74%)  ./elf/./elf/dl-load.c:_dl_map_object_from_fd [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+ 2,306 ( 0.73%)  ./malloc/./malloc/malloc.c:_int_malloc [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 2,268 ( 0.71%)  ./elf/../bits/stdlib-bsearch.h:intel_check_word.constprop.0
+ 1,939 ( 0.61%)  ./string/../sysdeps/x86_64/multiarch/memchr-avx2.S:__memchr_avx2 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 1,808 ( 0.57%)  ./elf/./elf/dl-cache.c:_dl_cache_libcmp [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+ 1,720 ( 0.54%)  ./libio/./libio/strops.c:_IO_str_init_static_internal [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 1,634 ( 0.51%)  ./stdio-common/./stdio-common/isoc23_sscanf.c:__isoc23_sscanf [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 1,539 ( 0.48%)  ./string/../sysdeps/x86_64/multiarch/strlen-avx2.S:__strlen_avx2 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 1,426 ( 0.45%)  ./elf/./elf/dl-deps.c:_dl_map_object_deps [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+ 1,310 ( 0.41%)  ./libio/./libio/genops.c:_IO_setb [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 1,255 ( 0.39%)  ./elf/./elf/dl-tunables.h:__GI___tunables_init
+ 1,199 ( 0.38%)  ./nptl/./nptl/pthread_getattr_np.c:pthread_getattr_np@@GLIBC_2.32 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 1,193 ( 0.38%)  ./elf/./elf/rtld.c:dl_main [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+ 1,093 ( 0.34%)  ./elf/./elf/dl-misc.c:_dl_name_match_p [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+ 1,064 ( 0.33%)  ./string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:__memcpy_avx_unaligned_erms [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 1,063 ( 0.33%)  ./libio/./libio/genops.c:_IO_no_init [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 1,014 ( 0.32%)  ./libio/./libio/genops.c:_IO_old_init [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 1,000 ( 0.31%)  ./elf/./elf/get-dynamic-info.h:_dl_map_object_from_fd
+   977 ( 0.31%)  ./elf/./elf/dl-load.c:_dl_map_object [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   946 ( 0.30%)  ./stdio-common/../include/scratch_buffer.h:__vfscanf_internal
+   924 ( 0.29%)  ./elf/./elf/dl-minimal-malloc.c:__minimal_malloc [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   862 ( 0.27%)  ./elf/./elf/dl-tunables.c:__tunable_get_val [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   785 ( 0.25%)  ./elf/../sysdeps/generic/ldsodefs.h:do_lookup_x
+   771 ( 0.24%)  ./malloc/./malloc/malloc.c:ptmalloc_init.part.0
+   752 ( 0.24%)  ./elf/./elf/dl-object.c:_dl_new_object [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   651 ( 0.20%)  ./elf/./elf/dl-cache.c:_dl_load_cache_lookup [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   648 ( 0.20%)  ./malloc/./malloc/malloc.c:_int_free [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   645 ( 0.20%)  ./stdio-common/../libio/strfile.h:__isoc23_sscanf
+   628 ( 0.20%)  ./elf/../sysdeps/generic/dl-protected.h:do_lookup_x
+   611 ( 0.19%)  ./nptl/./nptl/libc-cleanup.c:__libc_cleanup_push_defer [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   588 ( 0.19%)  ./string/../sysdeps/x86_64/multiarch/../multiarch/strlen-sse2.S:strlen [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   587 ( 0.18%)  ./malloc/./malloc/malloc.c:malloc [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   570 ( 0.18%)  ./string/../sysdeps/x86_64/multiarch/../multiarch/strchr-sse2.S:index [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   553 ( 0.17%)  ./elf/../sysdeps/generic/ldsodefs.h:_dl_relocate_object
+   544 ( 0.17%)  ./elf/./elf/dl-hwcaps_split.c:_dl_hwcaps_split_masked [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   516 ( 0.16%)  ./elf/../sysdeps/x86/dl-cacheinfo.h:handle_intel.constprop.0 [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   516 ( 0.16%)  ./stdio-common/./stdio-common/printf-parse.h:__vfscanf_internal
+   470 ( 0.15%)  ./string/../sysdeps/x86_64/multiarch/../multiarch/memset-vec-unaligned-erms.S:memset [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   464 ( 0.15%)  ./string/../string/strcspn.c:strcspn [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   430 ( 0.14%)  ./stdlib/../stdlib/strtol.c:__strtoul_internal [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   424 ( 0.13%)  ./elf/./elf/dl-load.c:open_path [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   423 ( 0.13%)  ./nptl/./nptl/libc-cleanup.c:__libc_cleanup_pop_restore [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   415 ( 0.13%)  ./elf/./dl-map-segments.h:_dl_map_object_from_fd
+   415 ( 0.13%)  ./string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:mempcpy [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   398 ( 0.13%)  ./misc/../sysdeps/unix/sysv/linux/mmap64.c:mmap [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   396 ( 0.12%)  ./elf/./elf/dl-load.c:open_verify.constprop.0 [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   395 ( 0.12%)  ./elf/./elf/dl-sort-maps.c:dfs_traversal.part.0 [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   379 ( 0.12%)  ./elf/./get-dynamic-info.h:dl_main
+   364 ( 0.11%)  ???:__cpu_indicator_init [/usr/lib/x86_64-linux-gnu/libgcc_s.so.1]
+   340 ( 0.11%)  ./elf/../elf/dl-tls.c:_dl_allocate_tls_storage [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   322 ( 0.10%)  ./string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:memcpy [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   318 ( 0.10%)  ./elf/./elf/dl-load.c:_dl_init_paths [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   315 ( 0.10%)  ./elf/./dl-find_object.h:_dl_find_object_from_map [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   314 ( 0.10%)  ./elf/./elf/dl-sort-maps.c:_dl_sort_maps [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   308 ( 0.10%)  ./malloc/./malloc/malloc.c:free [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   292 ( 0.09%)  ./misc/./misc/getauxval.c:getauxval [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   280 ( 0.09%)  ./elf/./elf/dl-tunables.c:__GI___tunable_set_val [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   274 ( 0.09%)  ./elf/./elf/dl-lookup-direct.c:_dl_lookup_direct [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   268 ( 0.08%)  ./elf/./get-dynamic-info.h:_dl_start
+   262 ( 0.08%)  ./libio/./libio/fileops.c:_IO_file_underflow@@GLIBC_2.2.5 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   252 ( 0.08%)  ./elf/./elf/dl-catch.c:_dl_catch_exception [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   248 ( 0.08%)  ./elf/./elf/dl-minimal.c:strsep [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   247 ( 0.08%)  ./elf/./elf/rtld.c:_dl_start [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   246 ( 0.08%)  ./elf/./elf/dl-init.c:call_init.part.0 [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   243 ( 0.08%)  ./elf/./elf/dl-fini.c:_dl_fini [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   231 ( 0.07%)  ./elf/../sysdeps/x86/dl-cacheinfo.h:init_cpu_features.constprop.0
+   223 ( 0.07%)  ./elf/../sysdeps/x86/dl-cacheinfo.h:get_common_cache_info.constprop.0 [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   222 ( 0.07%)  ./elf/./elf/dl-hwcaps.c:_dl_important_hwcaps [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   210 ( 0.07%)  ./elf/./elf/dl-find_object.c:_dlfo_process_initial [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   209 ( 0.07%)  ./elf/../elf/dl-tls.c:_dl_allocate_tls_init [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   203 ( 0.06%)  ./elf/../sysdeps/unix/sysv/linux/dl-parse_auxv.h:_dl_sysdep_parse_arguments
+   199 ( 0.06%)  ./io/../sysdeps/unix/sysv/linux/open64_nocancel.c:__open_nocancel [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   188 ( 0.06%)  ./libio/../string/bits/string_fortified.h:getdelim
+   186 ( 0.06%)  ./signal/../sysdeps/unix/sysv/linux/libc_sigaction.c:__libc_sigaction [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   183 ( 0.06%)  ./elf/./elf/dl-object.c:_dl_add_to_namespace_list [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   182 ( 0.06%)  ./elf/./elf/dl-environ.c:_dl_next_ld_env_entry [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   181 ( 0.06%)  ./stdlib/./stdlib/getenv.c:getenv [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   176 ( 0.06%)  ./elf/../sysdeps/x86/cpu-features.c:update_active.constprop.0 [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   175 ( 0.06%)  ./elf/../sysdeps/x86/cpu-features.c:init_cpu_features.constprop.0 [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   175 ( 0.06%)  ???:main [/home/callen/work/coreutils-startup-factorial/bin/lazy/single/true]
+   174 ( 0.05%)  ./stdlib/./stdlib/cxa_finalize.c:__cxa_finalize [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   172 ( 0.05%)  ./libio/./libio/libioP.h:getdelim
+   172 ( 0.05%)  ./stdio-common/./stdio-common/getline.c:getline [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   168 ( 0.05%)  ./elf/./elf/dl-call_fini.c:_dl_call_fini [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   166 ( 0.05%)  ./elf/../sysdeps/unix/sysv/linux/dl-sysdep.c:_dl_sysdep_parse_arguments [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   166 ( 0.05%)  ./setjmp/../sysdeps/x86_64/setjmp.S:__sigsetjmp [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   159 ( 0.05%)  ./libio/./libio/genops.c:_IO_flush_all [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   159 ( 0.05%)  ./libio/./libio/genops.c:__underflow [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   152 ( 0.05%)  ./elf/./elf/dl-minimal.c:lookup_malloc_symbol [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   151 ( 0.05%)  ./libio/./libio/genops.c:_IO_cleanup [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   148 ( 0.05%)  ./elf/./elf/dl-load.c:_dl_process_pt_gnu_property [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   147 ( 0.05%)  ./elf/../elf/dl-tls.c:_dl_determine_tlsoffset [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   141 ( 0.04%)  ./malloc/./malloc/malloc.c:calloc [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   138 ( 0.04%)  ./elf/./elf/dl-load.c:fillin_rpath.isra.0 [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   135 ( 0.04%)  ./elf/./elf/dl-setup_hash.c:_dl_setup_hash [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   130 ( 0.04%)  ./libio/./libio/genops.c:_IO_switch_to_get_mode [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   128 ( 0.04%)  ./elf/./elf/dl-find_object.c:_dlfo_sort_mappings [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   126 ( 0.04%)  ./elf/./elf/dl-init.c:_dl_init [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   125 ( 0.04%)  ./malloc/./malloc/malloc.c:realloc [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   116 ( 0.04%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/sync/once/futex.rs:std::sys::sync::once::futex::Once::call [/home/callen/work/coreutils-startup-factorial/bin/lazy/single/true]
+   115 ( 0.04%)  ./elf/./elf/dl-load.c:_dl_dst_count [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   110 ( 0.03%)  ./elf/./elf/dl-deps.c:openaux [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   100 ( 0.03%)  ./elf/./elf/dl-minimal-malloc.c:__minimal_calloc [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    98 ( 0.03%)  ./libio/./libio/fileops.c:_IO_file_fopen@@GLIBC_2.2.5 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    98 ( 0.03%)  ???:0x00000000048b66b0 [???]
+    96 ( 0.03%)  ./signal/../string/bits/string_fortified.h:__libc_sigaction
+    94 ( 0.03%)  ???:0x00000000048b6480 [???]
+    88 ( 0.03%)  ./elf/../sysdeps/x86/dl-prop.h:dl_main
+    88 ( 0.03%)  ./libio/./libio/genops.c:_IO_link_in [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    88 ( 0.03%)  ./malloc/../string/bits/string_fortified.h:tcache_init.part.0
+    88 ( 0.03%)  ./nptl/./nptl/pthread_mutex_lock.c:pthread_mutex_lock@@GLIBC_2.2.5 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    88 ( 0.03%)  ???:0x00000000048b6500 [???]
+    85 ( 0.03%)  ./elf/./elf/dl-version.c:_dl_check_all_versions [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    84 ( 0.03%)  ./elf/../elf/dl-tls.c:_dl_add_to_slotinfo [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    81 ( 0.03%)  ./csu/../csu/libc-start.c:__libc_start_main@@GLIBC_2.34 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    79 ( 0.02%)  ./elf/./elf/rtld.c:init_tls [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    79 ( 0.02%)  ./stdlib/./stdlib/exit.c:__run_exit_handlers [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    75 ( 0.02%)  ./malloc/./malloc/scratch_buffer_set_array_size.c:__libc_scratch_buffer_set_array_size [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    72 ( 0.02%)  ./malloc/./malloc/arena.c:ptmalloc_init.part.0 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    72 ( 0.02%)  ./malloc/./malloc/malloc.c:_int_realloc [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    71 ( 0.02%)  ./elf/./elf/rtld.c:handle_preload_list [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    70 ( 0.02%)  ./elf/../sysdeps/x86/dl-prop.h:_dl_process_pt_gnu_property
+    68 ( 0.02%)  ./nptl/./nptl/pthread_mutex_unlock.c:pthread_mutex_unlock@@GLIBC_2.2.5 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    68 ( 0.02%)  ./string/./string/strdup.c:strdup [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    65 ( 0.02%)  ./elf/../sysdeps/generic/dl-hash.h:__rtld_malloc_init_real
+    64 ( 0.02%)  ./libio/./libio/genops.c:__GI__IO_un_link.part.0 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    64 ( 0.02%)  ./malloc/./malloc/malloc.c:alloc_perturb [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    64 ( 0.02%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/slice/memchr.rs:std::env::_var_os
+    63 ( 0.02%)  ./elf/../sysdeps/x86/cpu-features.c:get_common_indices.constprop.0 [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    63 ( 0.02%)  ./string/../sysdeps/x86_64/multiarch/ifunc-memcmp.h:bcmp
+    59 ( 0.02%)  ./elf/../sysdeps/x86_64/dl-machine.h:_dl_start
+    59 ( 0.02%)  ./misc/./misc/sbrk.c:sbrk [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    58 ( 0.02%)  ./elf/./dl-load.h:_dl_map_object_from_fd
+    57 ( 0.02%)  ./posix/./posix/register-atfork.c:__unregister_atfork [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    56 ( 0.02%)  ./elf/./elf/do-rel.h:_dl_start
+    51 ( 0.02%)  ./libio/./libio/fileops.c:_IO_file_close_it@@GLIBC_2.2.5 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    48 ( 0.02%)  ./elf/../sysdeps/posix/dl-fileid.h:_dl_map_object_from_fd
+    48 ( 0.02%)  ./elf/./elf/dl-load.c:expand_dynamic_string_token [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    48 ( 0.02%)  ./io/../sysdeps/unix/sysv/linux/read_nocancel.c:__read_nocancel [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    48 ( 0.02%)  ./stdlib/./stdlib/cxa_thread_atexit_impl.c:__cxa_thread_atexit_impl [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    47 ( 0.01%)  ./elf/../sysdeps/nptl/dl-mutex.c:__rtld_mutex_init [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    47 ( 0.01%)  ./libio/./libio/filedoalloc.c:_IO_file_doallocate [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    46 ( 0.01%)  ./elf/./elf/dl-minimal.c:__rtld_malloc_init_real [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    46 ( 0.01%)  ./string/../sysdeps/x86_64/multiarch/ifunc-memset.h:memset
+    45 ( 0.01%)  ./elf/./elf/dl-misc.c:_dl_sysdep_read_whole_file [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    45 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/pal/unix/stack_overflow.rs:std::sys::pal::unix::stack_overflow::imp::make_handler [/home/callen/work/coreutils-startup-factorial/bin/lazy/single/true]
+    44 ( 0.01%)  ./elf/../sysdeps/x86/get-isa-level.h:update_active.constprop.0
+    44 ( 0.01%)  ./string/../sysdeps/x86_64/multiarch/ifunc-avx2.h:strlen
+    44 ( 0.01%)  ./string/../sysdeps/x86_64/multiarch/ifunc-avx2.h:strnlen
+    44 ( 0.01%)  ./wcsmbs/../sysdeps/x86_64/multiarch/ifunc-avx2.h:wcschr
+    43 ( 0.01%)  ./libio/./libio/iofopen.c:fopen@@GLIBC_2.2.5 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    43 ( 0.01%)  ./stdio-common/../string/bits/string_fortified.h:__vfscanf_internal
+    42 ( 0.01%)  ./elf/../sysdeps/x86/get-isa-level.h:_dl_hwcaps_subdirs_active
+    42 ( 0.01%)  ./string/../sysdeps/x86_64/multiarch/ifunc-memmove.h:memcpy@@GLIBC_2.14
+    42 ( 0.01%)  ./string/../sysdeps/x86_64/multiarch/ifunc-memmove.h:memmove
+    42 ( 0.01%)  ./wcsmbs/../sysdeps/x86_64/multiarch/ifunc-evex.h:wmemchr
+    42 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/io/buffered/bufwriter.rs:std::io::buffered::bufwriter::BufWriter<W>::flush_buf [/home/callen/work/coreutils-startup-factorial/bin/lazy/single/true]
+    40 ( 0.01%)  ./elf/../elf/dl-tls.c:_dl_tls_static_surplus_init [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    40 ( 0.01%)  ./elf/./dl-hwcaps.h:_dl_important_hwcaps
+    40 ( 0.01%)  ???:0x00000000048b6720 [???]
+    39 ( 0.01%)  ./libio/./libio/fileops.c:_IO_file_open [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    39 ( 0.01%)  ./nptl/../sysdeps/unix/sysv/linux/x86/elision-conf.c:__lll_elision_init [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    39 ( 0.01%)  ./stdlib/./stdlib/cxa_atexit.c:__cxa_atexit [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    38 ( 0.01%)  ./elf/./elf/dl-find_object.c:_dl_find_object_init [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    37 ( 0.01%)  ./string/../sysdeps/x86_64/multiarch/memset-vec-unaligned-erms.S:__memset_avx2_unaligned_erms [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    36 ( 0.01%)  ./elf/../sysdeps/nptl/dl-tls_init_tp.c:__tls_init_tp [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    36 ( 0.01%)  ./elf/../sysdeps/unix/sysv/linux/dl-sysdep.c:_dl_sysdep_start [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    36 ( 0.01%)  ./libio/./libio/iofclose.c:fclose@@GLIBC_2.2.5 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    36 ( 0.01%)  ./misc/../sysdeps/unix/syscall-template.S:mprotect [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    36 ( 0.01%)  ./nptl/./nptl/pthread_attr_setaffinity.c:pthread_attr_setaffinity_np@@GLIBC_2.32 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    36 ( 0.01%)  ./string/../string/strstr.c:__GI_strstr [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    35 ( 0.01%)  ./signal/./signal/sigaction.c:sigaction [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    35 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/collections/btree/remove.rs:alloc::collections::btree::remove::<impl alloc::collections::btree::node::Handle<alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Mut,K,V,alloc::collections::btree::node::marker::Leaf>,alloc::collections::btree::node::marker::KV>>::remove_leaf_kv [/home/callen/work/coreutils-startup-factorial/bin/lazy/single/true]
+    34 ( 0.01%)  ./elf/./elf/dl-debug.c:_dl_debug_initialize [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    34 ( 0.01%)  ./string/../sysdeps/x86_64/multiarch/strrchr-avx2.S:__strrchr_avx2 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    33 ( 0.01%)  ./elf/../sysdeps/x86_64/dl-cet.c:_dl_cet_check [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    33 ( 0.01%)  ./elf/./elf/dl-audit.c:_dl_audit_activity_nsid [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    33 ( 0.01%)  ./malloc/./malloc/arena.c:free
+    33 ( 0.01%)  ./stdlib/./stdlib/cxa_atexit.c:__new_exitfn [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    32 ( 0.01%)  ./misc/../sysdeps/unix/sysv/linux/setvmaname.c:__set_vma_name [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    32 ( 0.01%)  ./string/../sysdeps/x86_64/multiarch/../multiarch/strcmp-sse2.S:strncmp [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    32 ( 0.01%)  ???:0x00000000000048f0 [/usr/lib/x86_64-linux-gnu/libgcc_s.so.1]
+    31 ( 0.01%)  ./elf/./elf/dl-open.c:_dl_find_dso_for_object [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    31 ( 0.01%)  ./signal/../sysdeps/posix/signal.c:signal [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    30 ( 0.01%)  ./elf/../sysdeps/nptl/dl-tls_init_tp.c:rtld_mutex_dummy [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    30 ( 0.01%)  ./io/../sysdeps/unix/sysv/linux/fstat64.c:fstat [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    30 ( 0.01%)  ./libio/./libio/libioP.h:_IO_file_underflow@@GLIBC_2.2.5
+    28 ( 0.01%)  ./elf/./elf/dl-debug.c:_dl_debug_update [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    28 ( 0.01%)  ./io/../sysdeps/unix/sysv/linux/fstatat64.c:fstatat [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    28 ( 0.01%)  ./libio/./libio/libioP.h:fclose@@GLIBC_2.2.5
+    28 ( 0.01%)  ./stdlib/./stdlib/cxa_thread_atexit_impl.c:__call_tls_dtors [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    27 ( 0.01%)  ./nptl/./nptl/pthread_mutex_conf.c:__pthread_tunables_init [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    27 ( 0.01%)  ./string/../sysdeps/x86/cacheinfo.h:__x86_cacheinfo
+    26 ( 0.01%)  ./csu/../sysdeps/nptl/libc_start_call_main.h:(below main) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+

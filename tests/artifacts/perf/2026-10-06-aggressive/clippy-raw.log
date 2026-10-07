@@ -1,0 +1,17 @@
+warning[E0602]: unknown lint: `clippy::assert_is_empty`
+  |
+  = help: did you mean: `clippy::const_is_empty`
+  = note: requested on the command line with `-A clippy::assert_is_empty`
+  = note: `#[warn(unknown_lints)]` on by default
+
+For more information about this error, try `rustc --explain E0602`.
+   Compiling uu_true v0.13.0 (/home/callen/work/coreutils-startup-factorial/aggressive/src/uu/true)
+warning: `uucore` (build script) generated 1 warning
+warning: `uucore_procs` (lib) generated 1 warning (1 duplicate)
+warning: `uucore` (lib) generated 1 warning (1 duplicate)
+warning: `uu_ln` (lib) generated 1 warning (1 duplicate)
+warning: `uu_ln` (bin "ln") generated 1 warning (1 duplicate)
+warning: `uu_true` (build script) generated 1 warning (1 duplicate)
+warning: `uu_true` (lib) generated 1 warning (1 duplicate)
+warning: `uu_true` (bin "true") generated 1 warning (1 duplicate)
+    Finished `dev` profile [unoptimized] target(s) in 0.29s

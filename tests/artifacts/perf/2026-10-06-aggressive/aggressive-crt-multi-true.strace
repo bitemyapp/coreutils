@@ -1,0 +1,28 @@
+execve("/home/callen/work/coreutils-startup-factorial/bin/aggressive-crt/multi/true", ["/home/callen/work/coreutils-star"...], 0x7fffc7379f40 /* 21 vars */) = 0 <0.000068>
+mmap(NULL, 2480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7ec4b1e02000 <0.000003>
+arch_prctl(ARCH_SET_FS, 0x7ec4b1e028e8) = 0 <0.000001>
+set_tid_address(0x7ec4b1cbc078)         = 2110754 <0.000001>
+fcntl(0, F_GETFD)                       = 0 <0.000001>
+fcntl(1, F_GETFD)                       = 0 <0.000001>
+fcntl(2, F_GETFD)                       = 0 <0.000001>
+rt_sigaction(SIGPIPE, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000001>
+poll([{fd=0, events=0}, {fd=1, events=0}, {fd=2, events=0}], 3, 0) = 1 ([{fd=0, revents=POLLHUP}]) <0.000002>
+rt_sigaction(SIGPIPE, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7ec4b1891410}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000001>
+rt_sigaction(SIGSEGV, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000001>
+sigaltstack(NULL, {ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=0}) = 0 <0.000002>
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7ec4b1dff000 <0.000002>
+mprotect(0x7ec4b1dff000, 4096, PROT_NONE) = 0 <0.000003>
+sigaltstack({ss_sp=0x7ec4b1e00000, ss_flags=0, ss_size=8192}, NULL) = 0 <0.000001>
+rt_sigprocmask(SIG_UNBLOCK, [RT_1 RT_2], NULL, 8) = 0 <0.000001>
+rt_sigaction(SIGSEGV, {sa_handler=0x7ec4b1505b30, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_SIGINFO, sa_restorer=0x7ec4b1891410}, NULL, 8) = 0 <0.000001>
+rt_sigaction(SIGBUS, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000001>
+rt_sigaction(SIGBUS, {sa_handler=0x7ec4b1505b30, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_SIGINFO, sa_restorer=0x7ec4b1891410}, NULL, 8) = 0 <0.000001>
+brk(NULL)                               = 0x555573a90000 <0.000001>
+brk(0x555573a92000)                     = 0x555573a92000 <0.000003>
+mmap(0x555573a90000, 4096, PROT_NONE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x555573a90000 <0.000003>
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7ec4b1dfe000 <0.000002>
+rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1 RT_2], [], 8) = 0 <0.000001>
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0 <0.000001>
+sigaltstack({ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=8192}, NULL) = 0 <0.000001>
+munmap(0x7ec4b1dff000, 12288)           = 0 <0.000005>
+exit_group(0)                           = ?

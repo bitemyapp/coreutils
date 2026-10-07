@@ -1,0 +1,15600 @@
+# callgrind format
+version: 1
+creator: callgrind-3.22.0
+pid: 1535096
+cmd:  /home/callen/work/coreutils-startup-factorial/bin/musl/multi/ln -s -f src.txt dst.txt
+part: 1
+
+
+desc: I1 cache: 
+desc: D1 cache: 
+desc: LL cache: 
+
+desc: Timerange: Basic block 0 - 165261
+desc: Trigger: Program termination
+
+positions: line
+events: Ir
+summary: 788859
+
+
+ob=(1) /home/callen/work/coreutils-startup-factorial/bin/musl/multi/coreutils
+fl=(132) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/env/getenv.c
+fn=(506) getenv
+6 6
++1 6
+-1 18
++1 6
+cfi=(133) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/string/strchrnul.c
+cfn=(508) strchrnul
+calls=6 +4 
+* 402
++1 54
++4 5
++1 24
+-4 586
++1 429
+cfi=(134) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/string/strncmp.c
+cfn=(510) strncmp
+calls=143 -4 
+* 3300
+* 289
++1 2
+
+fl=(52) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs
+fn=(588) alloc::raw_vec::RawVecInner<A>::reserve::do_reserve_and_handle
+644 50
+fi=(136) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/uint_macros.rs
++44 10
+fi=(51) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/intrinsics/mod.rs
+458 10
+0 30
+fe=(52)
+506 20
+fi=(161) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/cmp.rs
+1030 20
+fe=(52)
+159 40
+fi=(161)
+1030 20
+fe=(52)
+512 50
+cfn=(592) alloc::raw_vec::RawVecInner<A>::finish_grow
+calls=10 +15 
+* 2843
+fi=(70) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/result.rs
+2173 20
++1 10
+fe=(52)
+745 10
++1 10
+-92 50
+-10 5
+fi=(136)
++44 1
+fi=(51)
+458 1
+0 1
+fe=(52)
+506 2
+fi=(161)
+1030 5
+fe=(52)
+512 6
+cfn=(592)
+calls=1 +15 
+* 169
+fi=(70)
+2173 2
++1 1
+fe=(52)
+745 1
++1 1
+-92 5
+-10 65
+fi=(136)
++44 13
+fi=(51)
+458 13
+0 39
+fe=(52)
+506 26
+fi=(161)
+1030 26
+fe=(52)
+159 52
+fi=(161)
+1030 26
+fe=(52)
+512 65
+cfn=(592)
+calls=13 +15 
+* 7954
+fi=(70)
+2173 26
++1 13
+fe=(52)
+745 13
++1 13
+-92 65
+
+fn=(592)
+527 780
+fi=(289) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/alloc/layout.rs
+306 390
+fi=(136)
+2970 546
+fi=(51)
+458 234
+0 78
+fe=(52)
+617 156
+fi=(77) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/alloc.rs
+135 7
+fi=(48) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/alloc/unix.rs
+-82 7
+fi=(77)
+186 142
+-91 71
+fi=(48)
+-82 71
++41 21
+cfi=(106) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/realloc.c
+cfn=(344) realloc
+calls=7 -49 
+* 6402
+fe=(52)
+547 14
++1 312
+fi=(48)
+14 142
+cfi=(37) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/lite_malloc.c
+cfn=(118) malloc
+calls=71 115 
+* 15999
+fe=(52)
+547 142
+0 156
+551 624
+-24 1200
+fi=(289)
+306 600
+fi=(136)
+2970 840
+fi=(51)
+458 360
+0 120
+fe=(52)
+617 240
+fi=(77)
+135 23
+fi=(48)
+-82 23
+fi=(77)
+186 194
+-91 97
+fi=(48)
+-82 97
++41 69
+cfi=(106)
+cfn=(344)
+calls=23 -49 
+* 17790
+fe=(52)
+547 46
++1 480
+fi=(48)
+14 194
+cfi=(37)
+cfn=(118)
+calls=97 115 
+* 23852
+fe=(52)
+547 194
+0 240
+551 960
+-24 10
+fi=(136)
+2970 6
+fi=(51)
+458 3
+fe=(52)
+617 2
+fi=(77)
+186 2
+fi=(48)
+14 2
+cfi=(37)
+cfn=(118)
+calls=1 115 
+* 129
+fe=(52)
+547 2
++1 3
+0 2
+551 8
+-24 10
+fi=(289)
+306 5
+fi=(136)
+2970 7
+fi=(51)
+458 3
+0 1
+fe=(52)
+617 2
+fi=(77)
+186 2
+-91 1
+fi=(48)
+-82 1
+fe=(52)
+548 4
+fi=(48)
+14 2
+cfi=(37)
+cfn=(118)
+calls=1 115 
+* 154
+fe=(52)
+547 2
+0 2
+551 8
+-24 140
+fi=(289)
+306 70
+fi=(136)
+2970 98
+fi=(51)
+458 42
+0 14
+fe=(52)
+617 28
+fi=(77)
+135 9
+fi=(48)
+-82 9
+fi=(77)
+186 10
+-91 5
+fi=(48)
+-82 5
++41 27
+cfi=(106)
+cfn=(344)
+calls=9 -49 
+* 6681
+fe=(52)
+547 18
++1 56
+fi=(48)
+14 10
+cfi=(37)
+cfn=(118)
+calls=5 115 
+* 761
+fe=(52)
+547 10
+0 28
+551 112
+
+fn=(718) alloc::raw_vec::RawVec<T,A>::grow_one
+186 84
+476 14
++30 14
+fi=(161)
+1030 42
+fe=(52)
+512 84
+cfn=(592)
+calls=14 +15 
+* 3099
+fi=(70)
+2173 28
++1 14
+fe=(52)
+745 14
++1 14
+189 70
+-3 138
+476 23
++30 23
+fi=(161)
+1030 69
+fe=(52)
+512 138
+cfn=(592)
+calls=23 +15 
+* 6314
+fi=(70)
+2173 46
++1 23
+fe=(52)
+745 23
++1 23
+189 115
+-3 18
+476 3
++30 3
+fi=(161)
+1030 9
+fe=(52)
+512 18
+cfn=(592)
+calls=3 +15 
+* 2620
+fi=(70)
+2173 6
++1 3
+fe=(52)
+745 3
++1 3
+189 15
+-3 84
+476 14
++30 14
+fi=(161)
+1030 42
+fe=(52)
+512 84
+cfn=(592)
+calls=14 +15 
+* 5057
+fi=(70)
+2173 28
++1 14
+fe=(52)
+745 14
++1 14
+189 70
+-3 66
+476 11
++30 11
+fi=(161)
+1030 33
+fe=(52)
+512 66
+cfn=(592)
+calls=11 +15 
+* 4487
+fi=(70)
+2173 22
++1 11
+fe=(52)
+745 11
++1 11
+189 55
+-3 18
+476 3
++30 3
+fi=(161)
+1030 9
+fe=(52)
+512 18
+cfn=(592)
+calls=3 +15 
+* 1874
+fi=(70)
+2173 6
++1 3
+fe=(52)
+745 3
++1 3
+189 15
+-3 42
+476 7
++30 7
+fi=(161)
+1030 21
+fe=(52)
+512 42
+cfn=(592)
+calls=7 +15 
+* 7449
+fi=(70)
+2173 14
++1 7
+fe=(52)
+745 7
++1 7
+189 35
+-3 678
+476 113
++30 113
+fi=(161)
+1030 339
+fe=(52)
+512 678
+cfn=(592)
+calls=113 +15 
+* 40170
+fi=(70)
+2173 226
++1 113
+fe=(52)
+745 113
++1 113
+189 565
+-3 6
+476 1
++30 1
+fi=(161)
+1030 3
+fe=(52)
+512 6
+cfn=(592)
+calls=1 +15 
+* 204
+fi=(70)
+2173 2
++1 1
+fe=(52)
+745 1
++1 1
+189 5
+-3 6
+476 1
++30 1
+fi=(161)
+1030 3
+fe=(52)
+512 6
+cfn=(592)
+calls=1 +15 
+* 179
+fi=(70)
+2173 2
++1 1
+fe=(52)
+745 1
++1 1
+189 5
+
+fl=(206) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/signal/sigfillset.c
+fn=(1002) sigfillset
+14 4
++4 4
+
+fl=(1) ???
+fn=(1956) __do_fini
+0 8
+
+fn=(42) __do_init
+0 6
+
+fn=(58) main
+0 34
+cfi=(14) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/sched/sched_yield.c
+cfn=(60) poll
+calls=1 7 
+0 27
+0 5
+cfi=(17) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/signal/signal.c
+cfn=(68) signal
+calls=1 5 
+0 130
+0 4
+cfi=(19) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/conf/sysconf.c
+cfn=(72) sysconf
+calls=1 29 
+0 28
+0 17
+cfi=(13) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/signal/sigaction.c
+cfn=(52) sigaction
+calls=1 64 
+0 68
+0 8
+cfi=(20) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/pal/unix/stack_overflow.rs
+cfn=(74) std::sys::pal::unix::stack_overflow::imp::make_handler
+calls=1 250 
+0 309
+0 8
+cfi=(13)
+cfn=(52)
+calls=1 64 
+0 101
+0 4
+cfi=(13)
+cfn=(52)
+calls=1 64 
+0 68
+0 12
+cfi=(13)
+cfn=(52)
+calls=1 64 
+0 93
+0 4
+cfi=(29) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs
+cfn=(98) std::sys::backtrace::__rust_begin_short_backtrace
+calls=1 162 
+0 420091
+0 25
+
+fn=(242) __rustc::__rust_alloc
+0 153
+cfi=(37)
+cfn=(118)
+calls=17 115 
+0 2977
+
+fn=(0) 0x000000000015ff8a
+0 5
+cfi=(2) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/crt/../ldso/dlstart.c
+cfn=(2) _start_c
+calls=1 22 
+0 788854
+
+fl=(46) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/string/strlen.c
+fn=(148) strlen
+16 88
++1 88
++3 68
++1 6
++1 6
+
+fl=(55) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/free.c
+fn=(170) free
+5 202
+cfi=(56) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/free.c
+cfn=(172) __libc_free
+calls=202 +98 
+* 35709
+
+fl=(108) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/pal/unix/os.rs
+fn=(1946) std::sys::pal::unix::os::exit
+536 5
++1 1
+cfi=(283) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/exit_guard.rs
+cfn=(1948) std::sys::exit_guard::unique_thread_exit
+calls=1 23 
+* 16
++1 2
+cfi=(284) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/exit/exit.c
+cfn=(1950) exit
+calls=1 28 
+* 82
+
+fl=(115) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/stat/fstatat.c
+fn=(408) fstatat
+140 42
+-59 12
++16 24
++4 8
+fi=(6) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/arch/x86_64/syscall_arch.h
+-80 16
+fe=(115)
++81 8
+fi=(6)
+-81 8
+fe=(115)
++77 4
++6 6
++2 12
++2 92
++27 4
+-27 116
++43 4
+cfi=(12) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/internal/syscall_ret.c
+cfn=(50) __syscall_ret
+calls=4 6 
+* 16
+* 2
+cfi=(12)
+cfn=(50)
+calls=2 6 
+* 28
++1 24
+
+fl=(221) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/str/lossy.rs
+fn=(1178) <core::str::lossy::Utf8Chunks as core::iter::traits::iterator::Iterator>::next
+203 10
+0 63
+214 126
++5 63
++1 63
++2 126
+fi=(222) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/ptr/const_ptr.rs
+863 1
+fi=(290) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/slice/mod.rs
+2053 1
+fe=(221)
+283 2
+fi=(290)
+2053 1
+fe=(221)
+289 1
+fi=(222)
+863 1
+fe=(221)
+289 5
++5 1
+
+fl=(148) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-langid-impl-0.9.6/src/subtags/region.rs
+fn=(564) unic_langid_impl::subtags::region::Region::from_bytes
+9 10
++3 8
+fi=(142) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.8.4/src/ascii.rs
+173 4
++2 6
+-2 6
++2 4
++22 6
+fi=(149) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.8.4/src/int_ops.rs
+41 4
++3 6
++2 6
+-5 2
++8 4
+151 14
++1 4
+fe=(148)
+19 2
++10 12
+
+fl=(76) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/string/memcmp.c
+fn=(234) memcmp
+6 7354
++1 174
++1 87
+-1 206
+
+fl=(284)
+fn=(1954) libc_exit_fini
+18 3
++1 2
++1 4
++1 3
+cfi=(1)
+cfn=(1956)
+calls=1 -21 
+* 8
+* 1
++2 1
+-1 1
++1 2
+-1 1
+cob=(2) ???
+cfi=(9) ???
+cfn=(1958) 0x00000000009a5747
+calls=1 -22 
+* 3
+
+fn=(1950)
+28 2
++1 1
+cfi=(285) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/exit/assert.c
+cfn=(1952) dummy
+calls=1 -22 
+* 1
++1 1
+cfn=(1954)
+calls=1 -12 
+* 29
++1 2
+cfi=(286) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/stdio/__stdio_exit.c
+cfn=(1960) __stdio_exit
+calls=1 -14 
+* 44
++1 2
+
+fl=(87) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/thread_local/guard/key.rs
+fn=(270) std::sys::thread_local::guard::key::enable
+9 8
+fi=(33) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/sync/atomic.rs
+4028 2
+fi=(88) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/thread_local/key/racy.rs
+39 4
++16 1
+fi=(93) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/thread_local/key/unix.rs
+-28 2
++1 1
+cfi=(89) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/thread/pthread_key_create.c
+cfn=(274) pthread_key_create
+calls=1 +4 
+* 74
+* 2
++3 1
+fi=(88)
++25 2
++3 1
+fi=(93)
+-32 2
++1 1
+cfi=(89)
+cfn=(274)
+calls=1 +4 
+* 78
+* 2
++3 1
++17 2
+cfi=(89)
+cfn=(286) pthread_key_delete
+calls=1 +9 
+* 115
+fi=(88)
++17 3
+fi=(33)
+4124 2
+fi=(88)
+66 1
+fi=(93)
+-30 4
+cfi=(24) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/arch/x86_64/pthread_arch.h
+cfn=(300) pthread_setspecific
+calls=2 -32 
+* 18
+fe=(87)
+-5 8
+
+fl=(208) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resolver/pattern.rs
+fn=(1042) fluent_bundle::resolver::pattern::<impl fluent_bundle::resolver::WriteValue for fluent_syntax::ast::Pattern<&str>>::write
+17 24
+fi=(54) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs
+2933 3
+fi=(73) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/non_null.rs
+1692 3
+fi=(141) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/iter/macros.rs
+180 3
+0 68
+fi=(73)
+1692 14
+fi=(141)
+180 14
+fe=(208)
+30 28
++4 42
++2 56
++3 28
+fi=(52)
+602 14
+fi=(54)
+1451 14
+fi=(136)
+2413 14
+fi=(52)
+736 14
+-80 14
+0 14
+fi=(173) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mut_ptr.rs
+961 14
+fi=(53) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs
+547 28
+cfi=(7) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/string/x86_64/memcpy.s
+cfn=(16) 0x00000000008943fd
+calls=14 7 
+* 559
+fi=(54)
+2822 28
+fe=(208)
+0 42
+fi=(52)
+658 72
+cfn=(588)
+calls=9 -14 
+* 5776
+* 18
+fi=(54)
+2933 18
+0 3
+fe=(208)
+73 27
+
+fl=(38) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/meta.h
+fn=(120) __libc_malloc_impl
+242 465
+fi=(40) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/malloc.c
++58 3255
+fe=(38)
+-58 1395
+fi=(40)
++66 930
+fe=(38)
+-77 1395
++1 1860
++1 150
+fi=(49) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/internal/atomic.h
++89 150
++1 150
+-1 150
++1 300
++1 450
++1 450
++1 450
++2 150
+-63 900
+fe=(38)
+-30 150
+-1 150
++1 900
++1 858
+fi=(39) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/glue.h
+70 1395
+fi=(40)
+338 930
++6 1586
++1 162
++3 54
+-3 54
++3 225
++1 51
++1 23
++1 108
++1 50
++5 541
++1 846
++1 1269
++2 341
+fi=(49)
+-96 1364
+fi=(40)
++96 341
+fi=(49)
+-96 1364
+fi=(39)
+78 682
+cfi=(42) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/thread/__lock.c
+cfn=(140) __unlock
+calls=341 -21 
+* 1364
+* 248
+cfi=(42)
+cfn=(140)
+calls=124 -21 
+* 496
+fe=(38)
++99 936
++1 6
+fi=(40)
+369 372
+cfn=(126) alloc_slot
+calls=124 -82 
+* 40661
+* 124
++1 248
++4 620
+fe=(38)
+180 3241
++20 463
+-1 463
++1 463
++4 463
+-5 926
++1 463
+-1 926
++5 463
+-3 463
++3 463
+-4 2
+-1 2
++1 2
++4 2
+-5 4
++1 2
+-1 4
++5 2
+-3 2
++3 242
++1 930
++1 1395
++2 3296
++1 412
++1 2472
++1 1236
++2 930
++3 127
++2 254
+-1 127
++1 127
++3 127
++2 381
++1 127
+-1 381
+-37 254
++1 254
++36 1014
++1 338
+-1 1014
+-37 676
++1 2500
++1 912
++1 387
++1 1161
++3 1161
+fi=(40)
+380 3483
+fe=(38)
+193 234
+fi=(40)
+380 978
+fe=(38)
+
+fl=(29)
+fn=(98)
+162 2
+fi=(35) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs
++88 1
+cfi=(30) /home/callen/work/coreutils-startup-factorial/musl/src/bin/coreutils.rs
+cfn=(100) coreutils::main
+calls=1 52 
+* 420088
+fe=(29)
+
+fl=(33)
+fn=(1902) std::rt::cleanup
+4028 1
+fi=(32) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/sync/once/futex.rs
+82 1
+fi=(213) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sync/once.rs
++72 1
+fi=(276) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/rt.rs
+-7 3
+fi=(213)
++11 2
++1 7
+cfi=(32)
+cfn=(104) std::sys::sync::once::futex::Once::call
+calls=1 -18 
+* 737
+* 2
+fi=(276)
+-12 1
+fe=(33)
+
+fn=(1090) std::sync::once_lock::OnceLock<T>::initialize
+4028 1
+fi=(32)
+82 1
+fi=(213)
+214 1
+fi=(212) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sync/once_lock.rs
+557 3
+fi=(213)
+218 6
++1 7
+cfi=(32)
+cfn=(104)
+calls=1 -78 
+* 266
+* 2
+fi=(212)
+557 1
+fe=(33)
+
+fl=(7)
+fn=(16)
+7 308
++1 308
++1 308
++1 255
++1 255
++1 107
++1 107
++1 107
++1 107
++1 308
++1 308
++1 8321
++2 308
++1 308
++1 828
++1 828
++1 828
++1 308
+
+fl=(209) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/types/mod.rs
+fn=(1056) fluent_bundle::types::FluentValue::into_string
+263 140
++4 42
++5 126
++1 70
++6 98
+
+fl=(40)
+fn=(126)
+287 124
+116 124
+287 496
+116 124
+287 496
+116 124
++2 248
++1 82
++1 164
++2 328
+fi=(38)
+-30 96
++1 10
++1 15
++1 10
++4 96
+fe=(40)
++25 48
++1 139
+fi=(38)
+-30 15
++2 86
+fe=(40)
++31 68
++7 68
+-4 34
++4 146
+-4 5
++4 20
++10 351
++1 15
+fi=(38)
+-29 117
++1 273
++1 39
++1 39
+fi=(18) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/arch/x86_64/atomic_arch.h
+4 39
+fi=(38)
+120 39
+fi=(18)
+4 39
+fi=(38)
+120 78
++1 117
+fe=(40)
++43 39
++12 255
++3 85
+cfn=(128) __malloc_alloc_meta
+calls=85 43 
+* 2468
+-3 85
++3 85
+-3 85
++4 170
++4 85
+-3 85
++3 255
++1 530
+-34 10
+-1 5
++1 15
++1 5
+-1 5
++1 10
++2 5
++1 15
++1 15
+-2 100
++4 5
++2 5
+-2 10
++2 45
++5 78
+fi=(38)
+279 244
+fe=(40)
+167 117
++1 78
+289 78
+fi=(49)
+-24 273
+fe=(40)
++32 992
+192 196
++3 1102
++1 308
++4 281
++6 170
++4 451
+fi=(38)
++75 140
+-18 40
++18 20
+-18 20
++18 40
+-17 76
++2 14
+fe=(40)
+-64 30
+fi=(38)
++45 40
++4 40
+fe=(40)
+-34 44
++6 62
++7 19
++1 19
+-1 19
++1 57
++5 76
++2 14
++1 14
+-1 42
++1 56
+-22 4
++8 44
++1 8
++1 8
+-2 14
++1 4
++4 1
++1 5
++14 160
+cfi=(26) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/mman/mmap.c
+cfn=(88) mmap
+calls=20 15 
+* 580
++1 40
+-1 20
++1 20
++4 40
++2 60
+-2 40
++2 40
+-2 20
++1 40
++1 20
++1 80
++18 20
+-1 20
++1 40
++2 20
++3 20
+-1 20
+-4 20
++5 40
+-5 20
++5 40
+-5 20
++5 20
+-5 20
++1 120
++2 20
++1 100
++1 20
++14 20
+-14 40
++14 20
+fi=(38)
+77 20
+fe=(40)
+280 20
++14 20
+fi=(38)
+77 20
+fe=(40)
+275 65
+-1 65
++1 130
++2 65
++3 65
+-1 65
+-4 65
++5 130
+-5 65
++5 130
+-5 65
++5 65
+-5 65
++1 390
++2 65
++1 325
++1 65
++14 65
+-14 130
++14 65
+fi=(38)
+77 65
+fe=(40)
+280 65
++14 65
+fi=(38)
+77 65
++1 170
++1 340
+231 65
+fe=(40)
++29 65
+fi=(38)
+-29 65
++1 130
++1 65
+fi=(49)
++89 65
++1 65
+-1 65
++1 130
++1 195
++1 195
++3 65
+-63 390
+fi=(38)
+-31 65
++1 390
++1 260
+fe=(40)
++25 260
+cfn=(127) alloc_slot'2
+calls=65 +26 
+* 10776
++1 325
++4 65
++1 65
+-1 65
++1 325
+fi=(38)
+-90 130
++3 390
++19 65
++1 65
++4 65
+-5 130
++1 130
+-1 130
++1 65
++4 65
+-3 65
++3 113
++1 130
++1 195
++2 520
++1 65
++1 390
++1 195
++2 130
++10 130
++1 130
+-1 195
++1 65
+-38 130
++1 130
++6 325
+fe=(40)
++75 65
++1 260
++1 130
++1 130
+-1 547
++1 834
+-1 834
++2 195
+fi=(38)
+85 85
+fe=(40)
+296 85
+fi=(38)
+85 85
++1 170
+fe=(40)
+
+fn=(127)
+287 79
+116 79
+287 316
+116 79
+287 316
+116 79
++2 158
++1 70
++1 140
++2 120
+fi=(38)
+-30 38
++1 4
++1 6
++1 4
++4 38
+fe=(40)
++25 19
++1 55
+fi=(38)
+-30 6
++2 34
+fe=(40)
++31 22
++7 22
+-4 11
++4 48
+-4 2
++4 8
++10 117
++1 3
+fi=(38)
+-29 39
++1 91
++1 13
++1 13
+fi=(18)
+4 13
+fi=(38)
+120 13
+fi=(18)
+4 13
+fi=(38)
+120 26
++1 39
+fe=(40)
++43 13
++12 78
++3 26
+cfn=(128)
+calls=26 43 
+* 682
+-3 26
++3 26
+-3 26
++4 52
++4 26
+-3 26
++3 78
+-33 2
+-1 1
++1 3
++1 1
+-1 1
++1 2
++2 1
++1 7
++1 7
+-2 40
++4 1
++2 1
+-2 2
++2 9
++5 26
+fi=(38)
+279 104
+fe=(40)
+167 159
++1 106
+289 106
+fi=(49)
+-24 371
+fe=(40)
++32 632
+192 104
++3 772
++1 228
++4 130
++6 52
++4 154
+fi=(38)
++75 84
+-18 24
++18 12
+-18 12
++18 24
+-17 40
++2 7
+fe=(40)
+-64 102
+fi=(38)
++45 24
++4 24
+fe=(40)
+-34 24
++6 32
++7 12
++1 12
+-1 12
++1 36
++5 48
++2 10
++1 10
+-1 30
++1 40
+-14 16
++1 8
++1 8
++18 96
+cfi=(26)
+cfn=(88)
+calls=12 15 
+* 348
++1 24
+-1 12
++1 12
++4 24
++2 36
+-2 24
++2 24
+-2 12
++1 24
++1 12
++1 48
++18 12
+-1 12
++1 24
++2 12
++3 12
+-1 12
+-4 12
++5 24
+-5 12
++5 24
+-5 12
++5 12
+-5 12
++1 72
++2 12
++1 60
++1 12
++14 12
+-14 24
++14 12
+fi=(38)
+77 12
+fe=(40)
+280 12
++14 12
+fi=(38)
+77 12
+fe=(40)
+275 14
+-1 14
++1 28
++2 14
++3 14
+-1 14
+-4 14
++5 28
+-5 14
++5 28
+-5 14
++5 14
+-5 14
++1 84
++2 14
++1 70
++1 14
++14 14
+-14 28
++14 14
+fi=(38)
+77 14
+fe=(40)
+280 14
++14 14
+fi=(38)
+77 14
++1 52
++1 104
+231 14
+fe=(40)
++29 14
+fi=(38)
+-29 14
++1 28
++1 14
+fi=(49)
++89 14
++1 14
+-1 14
++1 28
++1 42
++1 42
++3 14
+-63 84
+fi=(38)
+-31 14
++1 84
++1 56
+fe=(40)
++25 56
+cfn=(127)
+calls=14 +26 
+* 2326
++1 70
++4 14
++1 14
+-1 14
++1 70
+fi=(38)
+-90 28
++3 84
++19 14
++1 14
++4 14
+-5 28
++1 28
+-1 28
++1 14
++4 14
+-3 14
++3 35
++1 28
++1 42
++2 112
++1 14
++1 84
++1 42
++2 28
++10 28
++1 28
+-1 42
++1 14
+-38 28
++1 28
++6 70
+fe=(40)
++75 14
++1 56
++1 28
++1 28
+-1 56
++1 56
+-1 56
++2 42
+fi=(38)
+85 26
+fe=(40)
+296 26
+fi=(38)
+85 26
++1 52
+fe=(40)
+
+fn=(128)
+43 444
++3 333
+fi=(38)
++58 111
++1 222
+-13 90
++1 26
++1 26
++1 65
+fi=(39)
+-49 2
++1 1
+-1 2
++1 1
++2 5
+cfi=(7)
+cfn=(16)
+calls=1 -42 
+* 12
+* 2
+-2 3
++2 21
+-2 66
++1 45
+fe=(40)
++3 1
+fi=(39)
+-1 3
+fi=(38)
++47 34
+fe=(40)
+-39 5
++3 2
+fi=(6)
+-47 4
+fe=(40)
++52 4
+fi=(6)
+-52 1
+fe=(40)
++53 1
+-1 1
+fi=(6)
+-52 2
+fe=(40)
++55 2
++3 8
+cfi=(26)
+cfn=(88)
+calls=1 -57 
+* 51
++2 1
++2 2
++24 2
+-44 403
++52 80
++1 160
++1 160
++2 480
+-4 1
++1 2
++1 2
++2 6
+-2 60
++2 180
+-16 1
+-1 1
++1 1
++1 3
++6 1
+-1 1
++1 1
++1 1
++1 1
++1 4
+
+fl=(275) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/process.rs
+fn=(1900) std::process::exit
+2465 5
++1 1
+cfi=(33)
+cfn=(1902)
+calls=1 4028 
+* 755
++1 2
+cfi=(108)
+cfn=(1946)
+calls=1 536 
+* 106
+
+fl=(268) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/fcntl/open.c
+fn=(1836) open
+6 4
++3 1
+-3 1
++3 6
++7 10
+cfi=(15) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/thread/__syscall_cp.c
+cfn=(62) __syscall_cp
+calls=1 +3 
+* 10
++1 7
+fi=(6)
++12 4
+fe=(268)
+-9 1
+cfi=(12)
+cfn=(50)
+calls=1 -14 
+* 4
++1 3
+
+fl=(154) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/sync/atomic.rs
+fn=(844) std::sync::once_lock::OnceLock<T>::initialize
+4028 1
+fi=(291) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/sync/once/futex.rs
+82 1
+fi=(31) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sync/once.rs
+214 1
+fi=(53)
+805 5
+fi=(31)
+218 2
+fi=(155) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sync/once_lock.rs
+542 2
+fi=(31)
+218 2
++1 6
+cfi=(32)
+cfn=(104)
+calls=1 -78 
+* 56
+fi=(53)
+805 3
+fi=(155)
+557 4
+fe=(154)
+
+fn=(686) memchr::arch::x86_64::memchr::memchr3_raw::detect
+4027 1
+fi=(171) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std_detect/src/detect/cache.rs
+92 2
+fi=(166) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memchr-2.8.3/src/arch/x86_64/memchr.rs
+-92 13
+fi=(171)
+202 1
+cfi=(167) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std_detect/src/detect/cache.rs
+cfn=(690) std_detect::detect::cache::detect_and_initialize
+calls=1 -25 
+* 310
+* 5
+17 1
+fi=(166)
+126 8
+0 1
+fe=(154)
+4012 1
+fi=(166)
+144 4
+cfn=(700) memchr::arch::x86_64::memchr::memchr3_raw::find_avx2
+calls=1 -66 
+* 62
+fe=(154)
+
+fl=(226) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/builder/command.rs
+fn=(1288) clap_builder::builder::command::Command::_build_self
+4397 8
+fi=(233) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/builder/app_settings.rs
+19 1
+fe=(226)
+4399 2
+0 4
+fi=(99) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/mem/mod.rs
+900 1
++1 1
+fe=(226)
+4400 2
+0 1
+fi=(233)
+23 3
+fe=(226)
+3901 6
+0 2
+fi=(59) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/option.rs
+636 1
+fe=(226)
+4419 1
+fi=(233)
+0 2
+fi=(54)
+2933 1
++25 1
+fe=(226)
+4422 1
+fi=(233)
+11 2
+fi=(99)
+900 4
+fe=(226)
+4781 4
+fi=(59)
+745 6
+fi=(54)
+1753 1
+fi=(73)
+-61 1
+fi=(141)
+180 1
+0 7
+fi=(73)
+1692 42
+fi=(141)
+332 14
+0 14
+fi=(73)
+1692 14
+fi=(141)
+180 14
+fi=(234) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/builder/arg_settings.rs
+17 14
+fe=(226)
+5164 28
+fi=(59)
+745 56
+fe=(226)
+5168 28
+fi=(59)
+1065 32
+745 28
+fi=(228) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/builder/arg.rs
+4483 28
+fi=(245) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/builder/value_parser.rs
+261 84
+fi=(59)
+0 2
+fi=(245)
+257 2
+cfi=(235) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/error.rs
+cfn=(1300) core::error::Error::cause
+calls=2 147 
+* 10
+fi=(59)
+1164 6
+0 12
+fi=(245)
+257 12
+cfi=(235)
+cfn=(1300)
+calls=12 147 
+* 60
+fi=(59)
+1164 24
+fi=(228)
+0 42
+fi=(141)
+331 42
+0 28
+fi=(73)
+1692 14
+fi=(141)
+180 14
+fi=(53)
+805 28
+fi=(52)
+617 28
+fi=(141)
+0 3
+fe=(226)
+4809 1
+fi=(233)
+19 1
+fe=(226)
+3901 1
+fi=(233)
+19 2
+fe=(226)
+3901 2
+0 2
+4142 2
+3901 4
+0 2
+fi=(54)
+1789 1
+fi=(73)
+-97 1
+fi=(141)
+180 1
+fi=(54)
+1789 1
+fi=(73)
+-97 1
+fi=(141)
+180 1
+0 14
+fi=(59)
+745 48
+fi=(73)
+1692 16
+fi=(141)
+180 16
+0 16
+fi=(54)
+1753 16
+fi=(73)
+-61 16
+fi=(141)
+180 16
+fi=(54)
+0 16
+fi=(59)
+636 32
+fi=(228)
+4579 16
+fi=(59)
+2389 9
+fi=(228)
+0 15
+fi=(236) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/builder/action.rs
+404 90
+fi=(59)
+636 4
+fe=(226)
+4449 2
++1 3
++1 3
+fi=(59)
+745 9
+fi=(228)
+4594 2
+fi=(236)
+404 6
+0 10
+fi=(228)
+4599 20
+fi=(48)
+14 20
+cfi=(37)
+cfn=(118)
+calls=10 115 
+* 1667
+fi=(77)
+489 20
+fi=(228)
+4600 40
+fi=(52)
+617 20
+fi=(228)
+4600 40
+0 32
+fi=(236)
+418 80
+0 16
+fi=(59)
+636 16
+fi=(228)
+4610 16
+0 56
+4614 4
+fi=(54)
+2933 4
+fi=(59)
+1810 4
+fi=(228)
+4619 8
+fi=(54)
+2933 2
+fi=(59)
+1810 2
+fi=(228)
+4619 4
+fi=(59)
+0 40
+fi=(228)
+4604 20
+fi=(48)
+14 20
+cfi=(37)
+cfn=(118)
+calls=10 115 
+* 1397
+fi=(77)
+489 20
+fi=(228)
+4605 30
+fi=(52)
+617 20
+fi=(228)
+4605 40
+0 30
+4612 40
+fi=(54)
+2933 10
+fi=(59)
+1810 10
+fi=(228)
+4619 20
+0 10
+fi=(59)
+1810 48
+fi=(236)
+390 42
+fi=(59)
+1811 42
+fe=(226)
+4446 32
+fi=(54)
+2933 2
+fi=(52)
+602 1
+fi=(54)
+1451 1
+fi=(136)
+2413 1
+fi=(52)
+736 1
+-80 1
+fi=(141)
+0 10
+fi=(237) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/mkeymap.rs
+166 2
+fi=(54)
+1030 1
++3 2
+0 1
+fi=(52)
+597 1
+fi=(173)
+961 2
+fi=(53)
+1910 3
+fi=(54)
+1039 2
+fi=(238) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/iter/adapters/enumerate.rs
+0 2
+fi=(73)
+1692 1
+fi=(141)
+180 1
+fi=(238)
+0 30
+fi=(73)
+1692 15
+fi=(141)
+180 15
+fi=(237)
+-14 64
++4 60
+fi=(54)
+1030 14
++3 28
+0 14
+fi=(52)
+597 14
+fi=(173)
+961 28
+fi=(53)
+1910 56
+fi=(54)
+1039 28
+fi=(59)
+2225 45
++1 14
+fi=(54)
+1030 14
++3 28
+0 14
+fi=(52)
+597 14
+fi=(173)
+961 28
+fi=(53)
+1910 70
+fi=(54)
+1039 28
+1753 14
+fi=(73)
+-61 14
+fi=(141)
+180 14
+fi=(54)
+1753 1
+fi=(73)
+-61 1
+fi=(141)
+180 1
+fi=(54)
+0 15
+1753 15
+fi=(73)
+-61 15
+fi=(141)
+180 15
+fi=(54)
+0 1
+1034 1
+cfi=(52)
+cfn=(718)
+calls=1 186 
+* 909
+* 3
+fe=(226)
+4817 2
+fi=(217) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/builder/styled_str.rs
+30 4
+fi=(52)
+658 5
+cfn=(588)
+calls=1 -14 
+* 214
+-61 1
+fi=(54)
+2933 2
+fi=(53)
+547 3
+fi=(54)
+2822 1
+fi=(217)
+179 2
+fi=(54)
+1030 1
++3 2
+fi=(52)
+597 1
+fi=(173)
+961 2
+fi=(53)
+1910 55
+fi=(54)
+1039 2
+fi=(233)
+19 1
+fe=(226)
+3901 2
+fi=(217)
+30 4
+fi=(52)
+658 5
+cfn=(588)
+calls=1 -14 
+* 214
+-61 1
+fi=(54)
+2933 2
+fi=(53)
+547 2
+fi=(54)
+2822 1
+fi=(217)
+179 2
+0 1
+fi=(54)
+1030 1
++3 2
+fi=(52)
+597 1
+fi=(173)
+961 2
+fi=(53)
+1910 58
+fi=(54)
+1039 2
+fi=(233)
+19 1
+fe=(226)
+3901 1
+fi=(233)
+19 2
+fe=(226)
+3901 2
+fi=(77)
+0 1
+fi=(52)
+658 4
+cfn=(588)
+calls=1 -14 
+* 846
+fi=(54)
+1753 1
+fi=(73)
+-61 1
+fi=(141)
+180 1
+0 1
+fi=(52)
+597 1
+fi=(54)
+1753 1
+fi=(173)
+961 3
+0 1
+fi=(73)
+1692 1
+fi=(141)
+180 1
+fi=(73)
+1692 24
+fi=(141)
+180 24
+fi=(73)
+660 25
+fi=(74) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/iter/traits/iterator.rs
+2434 25
+fe=(226)
+4463 50
+fi=(74)
+2434 26
+fi=(73)
+1692 1
+fi=(141)
+25 1
+fi=(79) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/const_ptr.rs
+729 1
+fi=(141)
+276 2
+0 1
+276 3
+0 1
+279 1
+fi=(239) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/iter/adapters/filter_map.rs
+39 2
+fe=(226)
+4463 1
+fi=(239)
+39 1
+fi=(141)
+279 1
+fi=(239)
+39 2
+fe=(226)
+4463 1
+fi=(239)
+39 1
+fi=(136)
+763 1
+fi=(141)
+284 3
+-5 1
+fi=(239)
+39 2
+fe=(226)
+4463 1
+fi=(239)
+39 1
+fi=(141)
+279 1
+fi=(239)
+39 2
+fe=(226)
+4463 1
+fi=(239)
+39 1
+fi=(136)
+763 1
+fi=(141)
+284 5
+fi=(239)
+0 1
+fi=(233)
+19 1
+fi=(54)
+1789 1
+fi=(73)
+-97 1
+fi=(141)
+180 1
+0 14
+fi=(73)
+1692 32
+fi=(141)
+180 16
+fe=(226)
+4475 32
++3 32
++3 32
+0 1
+fi=(233)
+11 4
+fe=(226)
+4493 8
+
+fn=(1286) clap_builder::builder::command::Command::_do_parse
+4350 12
++9 3
+cfn=(1288)
+calls=1 +38 
+* 8659
+fi=(240) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/parser/arg_matcher.rs
+24 7
+fi=(241) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/parser/parser.rs
++12 5
+fe=(226)
+4365 3
+cfi=(241)
+cfn=(1330) clap_builder::parser::parser::Parser::get_matches_with
+calls=1 49 
+* 58189
+* 2
+0 1
+fi=(54)
+466 7
+0 1
+fi=(52)
+597 1
+fi=(54)
+1753 1
+fi=(173)
+961 3
+0 2
+fi=(73)
+1692 1
+fi=(141)
+180 1
+fi=(73)
+1692 16
+fi=(141)
+180 16
+fi=(73)
+660 16
+fi=(234)
+17 32
+fi=(141)
+349 16
+fi=(52)
+0 1
+fi=(59)
+745 4
+fi=(52)
+597 1
+fi=(247) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/util/flat_map.rs
+143 8
+fi=(240)
+-93 3
+cfn=(1640) clap_builder::parser::arg_matcher::ArgMatcher::fill_in_global_values
+calls=1 +3 
+* 30
+fi=(52)
+617 2
+fi=(53)
+805 4
+fi=(52)
+617 2
+fe=(226)
+4378 5
+fi=(240)
+44 8
+fi=(53)
+805 2
+fe=(226)
+4378 9
+fi=(52)
+617 2
+fe=(226)
+4379 8
+
+fn=(1552) clap_builder::builder::command::Command::required_graph
+5040 10
+fi=(48)
+14 2
+cfi=(37)
+cfn=(118)
+calls=1 115 
+* 732
+fi=(52)
+453 2
+fi=(251) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/util/graph.rs
+24 4
+fi=(52)
+597 1
+fi=(54)
+1753 1
+fi=(173)
+961 5
+0 3
+fi=(73)
+1692 1
+fi=(141)
+180 1
+fi=(173)
+0 3
+fi=(73)
+1692 1
+fi=(141)
+180 1
+fi=(73)
+1692 15
+fi=(141)
+180 15
+fi=(73)
+660 16
+fi=(234)
+17 32
+fi=(141)
+349 16
+0 2
+fi=(250) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/util/id.rs
+10 4
+fi=(141)
+180 1
+fi=(54)
+1033 2
+fi=(173)
+-72 1
+fi=(53)
+1910 6
+fi=(54)
+1039 2
+fi=(59)
++28 4
+fi=(54)
+1753 1
+fi=(73)
+-61 1
+fi=(141)
+180 1
+fe=(226)
+5054 5
++1 8
+
+fl=(258) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/any.rs
+fn=(1694) <T as core::any::Any>::type_id
+139 24
+788 16
+141 16
+-2 6
+788 4
+141 4
+
+fl=(120) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/fmt/mod.rs
+fn=(550) core::fmt::Formatter::pad
+1909 63
++2 21
+0 91
+cfi=(139) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/string.rs
+cfn=(584) <alloc::string::String as core::fmt::Write>::write_str
+calls=1 3346 
+0 615
+cfi=(121) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/string.rs
+cfn=(446) <alloc::string::String as core::fmt::Write>::write_str
+calls=6 3346 
+0 1638
+
+fn=(440) core::fmt::write
+1630 77
+878 14
+fi=(21) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/ptr/mod.rs
+1710 7
+fe=(120)
+-58 14
+0 35
+fi=(21)
+1710 30
+fe=(120)
+-58 30
+fi=(63) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/ptr/non_null.rs
+660 30
+fe=(120)
+1655 30
++9 28
+cfi=(139)
+cfn=(584)
+calls=1 3346 
+* 48
+cfi=(121)
+cfn=(446)
+calls=6 3346 
+* 1617
+fi=(97) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/result.rs
+2173 14
+fe=(120)
+0 7
+fi=(97)
+2173 7
+fe=(120)
+1665 32
+0 8
+fi=(63)
+660 16
+fe=(120)
+-83 40
+fi=(292) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/fmt/rt.rs
+144 8
++8 16
+cfi=(193) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/fmt/mod.rs
+cfn=(948) <&T as core::fmt::Display>::fmt
+calls=2 2865 
+* 421
+cfi=(139)
+cfn=(548) <alloc::string::String as core::fmt::Display>::fmt
+calls=5 2713 
+* 2063
+cfi=(122) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/os_display-0.1.4/src/lib.rs
+cfn=(454) <os_display::Quoted as core::fmt::Display>::fmt
+calls=1 +42 
+* 2843
+fi=(97)
+2173 16
+fe=(120)
+0 38
+1739 56
+
+fl=(235)
+fn=(1300)
+147 28
++2 42
+
+fl=(30)
+fn=(100)
+52 8
+fi=(154)
+4028 1
+fi=(291)
+82 1
+fi=(31)
+214 1
++4 3
++1 7
+cfi=(32)
+cfn=(104)
+calls=1 -78 
+* 4103
+fi=(54)
+1753 1
+fi=(73)
+-61 1
+fi=(141)
+180 1
+fe=(30)
+0 1
+fi=(59)
+2107 1
+fi=(52)
+444 2
+fe=(30)
+0 1
+fi=(59)
+2107 1
+fi=(48)
+14 2
+cfi=(37)
+cfn=(118)
+calls=1 115 
+* 142
+fi=(52)
+453 2
+fe=(30)
+0 1
+fi=(53)
+547 4
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 39
+fi=(59)
+1014 3
+fe=(30)
+57 3
+cfi=(60) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/path.rs
+cfn=(192) coreutils::common::validation::name
+calls=1 304 
+* 242
+* 2
+fi=(59)
+1065 2
+fi=(71) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/mod.rs
+2655 6
+fi=(72) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/cmp.rs
+0 46
+fi=(73)
+1692 41
+fi=(141)
+180 41
+fi=(73)
+660 42
+fe=(30)
+66 42
+fi=(71)
+2655 126
+fi=(74)
+0 7
+fe=(30)
+66 7
+fi=(157) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/index.rs
++23 7
+fi=(72)
++71 28
+cfi=(75) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/string/bcmp.c
+cfn=(232) bcmp
+calls=7 7 
+* 92
+* 35
+fe=(30)
+-94 7
+fi=(73)
+1692 1
+fi=(141)
+180 1
+fi=(36) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs
+0 2
+fi=(73)
+1692 128
+fi=(141)
+180 64
+fe=(30)
+66 64
+fi=(71)
+2655 192
+0 24
+fe=(30)
+66 8
+fi=(157)
++23 8
+fi=(72)
++71 16
+cfi=(75)
+cfn=(232)
+calls=8 7 
+* 103
+* 8
+fe=(30)
+-94 8
+-66 24
+66 8
+fi=(59)
+2726 2
+fe=(30)
+69 3
+fi=(51)
+458 1
+0 2
+fi=(52)
+444 1
+fi=(77)
+95 4
+cfi=(1)
+cfn=(242)
+calls=1 -95 
+* 138
+fi=(52)
+453 2
+0 2
+fi=(53)
+547 5
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 15
+0 1
+fi=(223) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/os_str/bytes.rs
+306 4
+cfi=(68) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/str/converts.rs
+cfn=(216) core::str::converts::from_utf8
+calls=1 89 
+* 48
+fi=(70)
+713 2
+fe=(30)
+0 6
+fi=(70)
+714 2
+fi=(72)
+152 4
+fe=(30)
+0 3
+fi=(80) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/siphasher-1.0.3/src/sip128.rs
+332 2
+fi=(136)
+2376 1
+fi=(51)
+2027 3
+fi=(136)
+2376 1
+fi=(78) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/siphasher-1.0.3/src/common.rs
+11 2
+fi=(136)
+2376 1
+fi=(51)
+2027 1
+fi=(78)
+7 2
++4 1
+fi=(51)
+2027 1
+fi=(80)
+334 1
+555 4
++3 2
+fi=(78)
+48 2
+fi=(53)
+-48 2
+fi=(78)
+52 4
+fi=(79)
+863 1
+fi=(53)
+547 1
+fi=(78)
+53 3
++1 1
++2 2
+fi=(80)
+370 4
+fi=(136)
+2376 1
+fi=(51)
+2027 1
+fi=(80)
+370 1
+fi=(78)
+7 1
+fi=(51)
+2027 1
+fi=(80)
+372 1
+fi=(136)
+2376 1
+fi=(51)
+2027 1
+fi=(78)
+11 1
+fi=(136)
+2376 1
+fi=(51)
+2027 1
+fi=(136)
+2376 1
+fi=(51)
+2027 1
+fi=(78)
+7 1
++4 1
+fi=(51)
+2027 1
+fi=(80)
+374 1
+fi=(136)
+2376 1
+fi=(51)
+2027 1
+fi=(78)
+7 1
+fi=(51)
+2027 1
+fi=(80)
+376 1
+fi=(136)
+2376 1
+fi=(51)
+2027 1
+fi=(78)
+11 1
+fi=(136)
+2376 1
+fi=(51)
+2027 1
+fi=(136)
+2376 1
+fi=(51)
+2027 1
+fi=(78)
+11 1
+fi=(51)
+2027 1
+fi=(78)
+7 1
+fi=(136)
+2376 1
+fi=(51)
+2027 1
+fi=(78)
+7 1
+fi=(51)
+2027 1
+fi=(136)
+2376 1
+fi=(51)
+2027 1
+fi=(78)
+11 1
+fi=(136)
+2376 1
+fi=(51)
+2027 1
+fi=(136)
+2376 1
+fi=(51)
+2027 1
+fi=(78)
+11 1
+fi=(51)
+2027 1
+fi=(78)
+7 1
+fi=(136)
+2376 1
+fi=(51)
+2027 1
+fi=(78)
+7 1
+fi=(51)
+2027 1
+fi=(136)
+2376 1
+fi=(51)
+2027 1
+fi=(78)
+11 1
+fi=(136)
+2376 1
+fi=(51)
+2027 1
+fi=(136)
+2376 1
+fi=(51)
+2027 1
+fi=(78)
+11 1
+fi=(51)
+2027 1
+fi=(80)
+378 3
+fi=(78)
+7 1
+fi=(80)
+380 1
+fi=(136)
+2376 1
+fi=(51)
+2027 1
+fi=(78)
+7 1
+fi=(51)
+2027 1
+fi=(136)
+2376 1
+fi=(51)
+2027 1
+fi=(78)
+11 1
+fi=(136)
+2376 1
+fi=(51)
+2027 1
+fi=(136)
+2376 1
+fi=(51)
+2027 1
+fi=(78)
+11 1
+fi=(51)
+2027 1
+fi=(78)
+7 1
+fi=(136)
+2376 1
+fi=(51)
+2027 1
+fi=(78)
+7 1
+fi=(51)
+2027 1
+fi=(136)
+2376 1
+fi=(51)
+2027 1
+fi=(78)
+11 1
+fi=(136)
+2376 1
+fi=(51)
+2027 1
+fi=(136)
+2376 1
+fi=(51)
+2027 1
+fi=(78)
+11 1
+fi=(51)
+2027 1
+fi=(78)
+7 1
+fi=(136)
+2376 1
+fi=(51)
+2027 1
+fi=(136)
+2376 1
+fi=(51)
+2027 1
+fi=(78)
+11 1
+fi=(51)
+2027 1
+fi=(78)
+7 1
+fi=(136)
+2376 1
+fi=(51)
+2027 3
+fi=(80)
+382 2
+fi=(293) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/phf_shared-0.14.0/src/lib.rs
+51 2
++13 7
+fi=(136)
+2452 1
+-76 1
+fi=(80)
+382 1
+fi=(136)
+2376 1
+fi=(293)
+65 6
+fi=(81) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/phf-0.14.0/src/ordered_map.rs
+188 3
++1 2
+0 1
+189 2
+fi=(72)
+-37 2
+fi=(81)
+0 1
+191 1
+fi=(72)
+-31 2
+cfi=(75)
+cfn=(232)
+calls=1 7 
+* 20
+* 1
+fi=(81)
++31 1
++1 5
+fi=(72)
+-32 2
+fe=(30)
+-57 1
+0 5
+fi=(59)
+1164 2
++1 1
+fe=(30)
+116 1
++6 3
+cfi=(82) /home/callen/work/coreutils-startup-factorial/musl/src/common/validation.rs
+cfn=(256) coreutils::common::validation::setup_localization_or_exit
+calls=1 -49 
+* 264232
+fi=(48)
+14 2
+cfi=(37)
+cfn=(118)
+calls=1 115 
+* 129
+fi=(77)
+489 2
+0 1
+fe=(30)
+123 3
+fi=(173)
+961 2
+fi=(232) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/iter/adapters/chain.rs
+37 8
+fe=(30)
++86 1
+cfi=(202) /home/callen/work/coreutils-startup-factorial/musl/src/uu/ln/src/ln.rs
+cfn=(994) uu_ln::uumain
+calls=1 -18 
+* 148606
+* 2
+cfi=(82)
+cfn=(1898) coreutils::common::validation::exit
+calls=1 -93 
+* 872
+
+fl=(41) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/thread/vmlock.c
+fn=(136) __vm_wait
+8 45
++3 15
+-3 15
++2 45
++2 60
+
+fl=(274) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/stdio/__stdio_close.c
+fn=(1876) dummy
+5 2
++2 2
+
+fl=(23) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/misc/getauxval.c
+fn=(82) getauxval
+6 2
++2 4
+-1 2
++2 138
++1 88
+-1 88
++2 2
+cfi=(24)
+cfn=(84) __errno_location
+calls=2 -7 
+* 6
+* 2
++2 6
+
+fl=(107) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/malloc/mallocng/realloc.c
+fn=(346) __libc_realloc
+8 408
++1 102
+fi=(38)
+242 204
+131 102
+-5 51
++6 51
+-6 204
++8 102
++5 255
++1 51
+-1 51
++2 102
++1 204
++1 153
++1 153
++1 51
++1 51
+-1 51
++1 102
++1 306
++1 357
++1 204
++4 153
++1 138
+fe=(107)
+10 2
+fi=(38)
+232 2
+-45 8
++1 2
++5 1
+fe=(107)
+25 1
+fi=(38)
+193 3
+fe=(107)
+25 4
++4 98
+fi=(38)
++97 69
++51 46
+-51 84
++54 196
+fe=(107)
+15 112
++1 28
+fi=(38)
+161 84
++1 56
++18 161
+fe=(107)
+15 92
++1 23
+fi=(38)
+161 69
++1 46
++1 90
++1 45
++1 90
++1 90
++2 204
++1 204
++2 102
+fi=(18)
+-63 51
+fe=(107)
+-86 408
+fi=(38)
+231 6
++1 4
+fe=(107)
+23 6
++23 100
+cfi=(38)
+cfn=(120)
+calls=50 242 
+* 17234
+* 50
++1 100
+fi=(38)
+172 50
+fe=(107)
+48 100
+fi=(38)
+172 50
+fe=(107)
+48 150
+cfi=(7)
+cfn=(16)
+calls=50 -41 
+* 4659
++1 100
+cfi=(56)
+cfn=(172)
+calls=50 +54 
+* 10618
++2 459
+
+fl=(285)
+fn=(1952)
+7 1
+
+fl=(92) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/thread/pthread_rwlock_unlock.c
+fn=(282) pthread_rwlock_unlock
+5 6
++6 3
+fi=(18)
+-7 6
+fe=(92)
++8 6
+-4 3
++2 3
+-1 6
++2 6
++3 18
++4 6
+
+fl=(153) /home/callen/work/coreutils-startup-factorial/target-musl/x86_64-unknown-linux-musl/release/build/uucore-c3d82cbba599ee92/out/embedded_locales.rs
+fn=(626) uucore::mods::locale::get_embedded_locale
+6 12
+fi=(72)
+152 6
+0 2
+152 6
+0 1
+160 5
+fe=(153)
+39 1
+-39 1
+fi=(72)
+160 4
+fe=(153)
+47 1
+fi=(72)
+160 5
+fe=(153)
+49 1
+fi=(72)
+160 5
+fe=(153)
+55 1
+fi=(72)
+160 5
+fe=(153)
+-79 1
+fi=(72)
++79 5
+fe=(153)
+-69 1
+fi=(72)
++69 6
+fe=(153)
+13 1
+fi=(72)
+160 4
+fe=(153)
+15 1
+fi=(72)
+160 4
+fe=(153)
+19 1
+-19 1
+fi=(72)
+160 4
+fe=(153)
+33 1
+-33 1
+fi=(72)
+160 4
+fe=(153)
+41 1
+fi=(72)
+160 4
+fe=(153)
+-99 1
+fi=(72)
++99 4
+fe=(153)
+-95 1
+fi=(72)
++95 4
+fe=(153)
+-87 1
+fi=(72)
++87 4
+fe=(153)
+-83 1
+fi=(72)
++83 4
+fe=(153)
+-63 1
+fi=(72)
++63 4
+fe=(153)
+-59 1
+fi=(72)
++59 4
+fe=(153)
+-55 1
+fi=(72)
++55 4
+fe=(153)
+-41 1
+0 1
+fi=(72)
+160 3
+cfi=(75)
+cfn=(232)
+calls=1 7 
+* 12
+* 1
+fe=(153)
+-27 1
+fi=(72)
++27 4
+cfi=(75)
+cfn=(232)
+calls=1 7 
+* 12
+* 1
+fe=(153)
+-13 1
+fi=(72)
++13 4
+cfi=(75)
+cfn=(232)
+calls=1 7 
+* 12
+* 1
+fe=(153)
++13 1
+fi=(72)
+-13 4
+cfi=(75)
+cfn=(232)
+calls=1 7 
+* 19
+* 1
+fe=(153)
++49 1
+fi=(72)
+-49 4
+cfi=(75)
+cfn=(232)
+calls=1 7 
+* 19
+* 1
+fe=(153)
++51 1
+fi=(72)
+-51 4
+cfi=(75)
+cfn=(232)
+calls=1 7 
+* 12
+* 1
+fe=(153)
++59 1
+fi=(72)
+-59 4
+cfi=(75)
+cfn=(232)
+calls=1 7 
+* 118
+* 1
+fe=(153)
++63 1
+0 2
+228 4
+0 2
+228 4
+
+fl=(269) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/io/mod.rs
+fn=(1846) std::io::default_read_exact
+572 8
++1 2
+0 6
+fi=(270) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/fd/unix.rs
+112 4
+cfi=(103) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/unistd/read.c
+cfn=(1850) read
+calls=1 5 
+* 27
+fi=(105) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/pal/unix/mod.rs
+245 4
+fi=(157)
+580 3
+101 2
+fe=(269)
+573 2
+0 1
+584 8
+
+fl=(170) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/../../stdarch/crates/core_arch/src/x86/xsave.rs
+fn=(696) core::core_arch::x86::xsave::_xgetbv
+90 4
++1 1
+
+fl=(280) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/io/buffered/bufwriter.rs
+fn=(1922) std::io::buffered::bufwriter::BufWriter<W>::flush_buf
+195 9
++26 1
++13 1
+0 1
+234 1
++18 8
+
+fl=(10) /home/callen/work/coreutils-startup-factorial/musl/src/uucore/src/lib/features/signals.rs
+fn=(44) uucore::features::signals::capture_startup_state
+665 77
+fi=(154)
+4043 77
+fe=(10)
+671 154
++28 80
+-21 5
+cfi=(11) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/fcntl/fcntl.c
+cfn=(46) fcntl
+calls=1 8 
+* 30
+* 2
+fi=(154)
+4012 1
+fe=(10)
+682 4
+cfi=(11)
+cfn=(46)
+calls=1 8 
+* 30
++4 4
+cfi=(11)
+cfn=(46)
+calls=1 8 
+* 30
+* 2
+fi=(154)
+4012 2
+fe=(10)
+694 3
+cfi=(13)
+cfn=(52)
+calls=1 64 
+* 68
+* 2
++2 2
+fi=(154)
+4013 4
+fe=(10)
+699 1
+
+fl=(95) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/thread/pthread_create.c
+fn=(294) __tl_unlock
+37 3
+fi=(18)
++51 2
+fe=(95)
+-46 3
++1 1
+
+fn=(290) __tl_lock
+24 3
+fi=(24)
+-20 1
+fe=(95)
++20 1
++1 1
++1 1
++1 2
+fi=(18)
+-23 3
+fe=(95)
++27 2
++2 4
+
+fl=(287) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/stdio/ofl.c
+fn=(1962) __ofl_lock
+10 1
++1 2
+cfi=(42)
+cfn=(1964) __lock
+calls=1 +10 
+* 4
++2 3
+
+fl=(3) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/crt/rcrt1.c
+fn=(4) __dls2
+13 7
+cfi=(4) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/env/__libc_start_main.c
+cfn=(6) (below main)
+calls=1 +61 
+* 423189
+
+fl=(106)
+fn=(344)
+5 51
+cfi=(107)
+cfn=(346)
+calls=51 +3 
+* 39763
+
+fl=(165) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/pattern.rs
+fn=(676) fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+45 910
+fi=(54)
+466 273
+fi=(159) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/helper.rs
+100 91
+fi=(158) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/macros.rs
+-91 182
+fi=(157)
+219 182
+0 91
+fi=(159)
+101 364
++1 182
+fi=(157)
+219 364
+fi=(158)
+9 455
+fi=(159)
+-9 182
+fe=(165)
+59 182
+-59 637
+59 1110
+fi=(158)
+-50 311
+fi=(157)
+219 622
+fi=(158)
+9 311
+fi=(161)
+1870 311
+fi=(159)
+67 311
+-67 60
+68 120
+fe=(165)
+-7 540
++3 180
+cfi=(162) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/core.rs
+cfn=(756) fluent_syntax::parser::core::Parser<S>::get_placeable
+calls=60 289 
+* 29746
+fi=(70)
+2173 120
+0 600
+2173 120
++1 240
+fe=(165)
+64 660
+fi=(54)
+1033 120
+fi=(52)
+597 60
+fi=(173)
+961 60
+fi=(53)
+1910 960
+fi=(54)
+1039 300
+fe=(165)
+60 60
+fi=(157)
+219 228
+fe=(165)
+70 114
+fi=(158)
+-61 114
+fe=(165)
+-9 114
+70 114
++4 114
+fi=(159)
++34 36
+0 42
+108 24
+0 251
+fe=(165)
+71 502
+-71 228
+fi=(159)
+101 324
++1 96
+fi=(157)
+219 96
+0 548
+fi=(136)
+842 274
+fi=(157)
+0 26
+fi=(136)
+842 26
+fi=(157)
+0 12
+fi=(136)
+842 24
+0 810
+fi=(158)
+15 162
+fi=(157)
++74 162
+fi=(79)
+863 162
+fi=(154)
+4027 162
+fi=(166)
+153 972
+cfn=(700)
+calls=161 -75 
+* 11590
+cfi=(154)
+cfn=(686)
+calls=1 4027 
+* 409
+fi=(59)
+2726 324
+fi=(79)
+619 324
+fi=(157)
++82 162
+fe=(165)
+176 486
++5 574
+-5 237
+0 46
+88 184
+-88 12
+91 48
+-91 8
+92 32
+-92 102
+75 204
+-75 89
+75 267
+176 249
++24 184
+0 92
+fi=(73)
+1692 46
+fi=(141)
+180 46
+fe=(165)
+0 3
+fi=(73)
+1692 3
+fi=(141)
+180 3
+fe=(165)
+-10 49
+fi=(73)
+660 49
+fi=(141)
+332 49
+0 138
+fe=(165)
+87 138
+-87 4
+91 4
++85 74
++15 464
+0 116
+fi=(73)
+1692 116
+fi=(141)
+180 116
+fi=(73)
+1692 4
+fi=(141)
+180 4
+fe=(165)
+-10 83
+fi=(73)
+660 83
+fi=(141)
+332 83
+0 316
+fe=(165)
+88 316
+fi=(161)
+265 375
+fe=(165)
+99 500
+-99 125
+103 500
+fi=(54)
+1033 250
+fi=(173)
+-72 324
+fi=(53)
+1910 972
+fi=(54)
+1039 324
+fe=(165)
+115 162
+0 1245
+fi=(54)
+1033 74
++1 360
+cfi=(52)
+cfn=(718)
+calls=90 186 
+* 33191
+* 360
+fi=(52)
+597 270
+fi=(54)
+1034 34
+cfi=(52)
+cfn=(718)
+calls=17 186 
+* 8282
+* 34
+fe=(165)
+124 178
++1 273
+fi=(173)
+961 182
+fe=(165)
+127 273
+fi=(294) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/iter/adapters/take.rs
+-33 91
+fi=(53)
+805 182
+fi=(79)
+-76 182
+fi=(53)
++76 182
+0 140
+805 180
+0 364
+fi=(79)
+729 364
+fe=(165)
+150 364
++4 728
+0 728
+130 600
+fi=(50) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/into_iter.rs
+0 120
+fi=(53)
+1910 900
+fi=(238)
+120 120
+fi=(294)
+-30 60
+fi=(50)
+357 60
+0 252
+fi=(53)
+1910 1890
+fi=(238)
+120 252
+fi=(294)
+-30 126
+fi=(50)
+357 126
+fi=(73)
+1692 186
+fi=(50)
+351 186
+fi=(53)
+1710 930
+fe=(165)
+129 372
++5 252
+fi=(59)
+1276 24
+0 12
+fi=(161)
+1069 36
+fi=(59)
+0 12
+fi=(163) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/str/traits.rs
+169 378
+fi=(164) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/str/mod.rs
+366 252
++4 252
+fi=(127) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/mod.rs
+1080 126
+fi=(163)
+170 126
+fi=(164)
+366 252
++4 252
+fi=(127)
+1080 125
+fi=(163)
+171 126
+fi=(79)
+863 126
+fe=(165)
+143 252
+fi=(73)
+1692 68
+fi=(141)
+25 68
+fi=(173)
+961 136
+0 68
+fi=(125) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/str/validations.rs
+84 408
+-84 136
+fi=(174) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/slice.rs
+4 340
+-4 272
+fi=(73)
+1692 68
+fi=(141)
+25 68
+-25 390
+fe=(165)
+124 4
+
+fn=(677) fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2
+45 60
+fi=(54)
+466 18
+fi=(159)
+100 6
+fi=(158)
+-91 12
+fi=(157)
+219 12
+0 6
+fi=(159)
+101 24
++1 12
+fi=(157)
+219 24
+fi=(158)
+9 30
+fi=(159)
+-9 12
+fe=(165)
+59 12
+-59 42
+59 60
+fi=(158)
+-50 18
+fi=(157)
+219 36
+fi=(158)
+9 18
+fi=(161)
+1870 18
+fi=(159)
+67 18
+-67 6
+68 12
+fe=(165)
+-7 54
++3 18
+cfi=(162)
+cfn=(757) fluent_syntax::parser::core::Parser<S>::get_placeable'2
+calls=6 289 
+* 1998
+fi=(70)
+2173 12
+0 60
+2173 12
++1 24
+fe=(165)
+64 66
+fi=(54)
+1033 12
+fi=(52)
+597 6
+fi=(173)
+961 6
+fi=(53)
+1910 96
+fi=(54)
+1039 30
+fe=(165)
+60 6
+fi=(157)
+219 12
+fe=(165)
+70 6
+fi=(158)
+-61 6
+fe=(165)
+-9 6
+70 6
++4 6
+fi=(159)
++34 9
+0 27
+fe=(165)
+71 24
+-71 12
+fi=(159)
+101 30
++1 18
+fi=(157)
+219 18
+0 24
+fi=(136)
+842 12
+0 30
+fi=(158)
+15 6
+fi=(157)
++74 6
+fi=(79)
+863 6
+fi=(154)
+4027 6
+fi=(166)
+153 36
+cfn=(700)
+calls=6 -75 
+* 446
+fi=(59)
+2726 12
+fi=(79)
+619 12
+fi=(157)
++82 6
+fe=(165)
+176 18
++5 24
+-5 18
+0 3
+75 6
+-75 3
+75 9
+191 24
+0 6
+fi=(73)
+1692 6
+fi=(141)
+180 6
+fi=(73)
+1692 6
+fi=(141)
+180 6
+fe=(165)
+-10 12
+fi=(73)
+660 12
+fi=(141)
+332 12
+0 24
+fe=(165)
+88 24
+fi=(161)
+265 18
+fe=(165)
+99 24
+-99 6
+103 24
+fi=(54)
+1033 12
+fi=(173)
+-72 12
+fi=(53)
+1910 36
+fi=(54)
+1039 12
+fe=(165)
+115 6
+0 42
+fi=(54)
+1034 12
+cfi=(52)
+cfn=(718)
+calls=6 186 
+* 1748
+* 12
+fe=(165)
+124 6
++1 18
+fi=(173)
+961 12
+fe=(165)
+127 18
+fi=(294)
+-33 6
+fi=(53)
+805 12
+fi=(79)
+-76 12
+fi=(53)
++76 12
+0 24
+fi=(79)
+729 24
+fe=(165)
+150 24
++4 48
+0 48
+130 60
+fi=(50)
+0 12
+fi=(53)
+1910 90
+fi=(238)
+120 12
+fi=(294)
+-30 6
+fi=(50)
+357 6
+0 12
+fi=(53)
+1910 90
+fi=(238)
+120 12
+fi=(294)
+-30 6
+fi=(50)
+357 6
+fi=(73)
+1692 12
+fi=(50)
+351 12
+fi=(53)
+1710 60
+fe=(165)
+129 24
++5 12
+fi=(163)
++35 18
+fi=(164)
+366 12
++4 12
+fi=(127)
+1080 6
+fi=(163)
+170 6
+fi=(164)
+366 12
++4 12
+fi=(127)
+1080 6
+fi=(163)
+171 6
+fi=(79)
+863 6
+fe=(165)
+143 12
+fi=(73)
+1692 6
+fi=(141)
+25 6
+fi=(173)
+961 12
+0 6
+fi=(125)
+84 36
+-84 12
+fi=(174)
+4 30
+-4 24
+fi=(73)
+1692 6
+fi=(141)
+25 6
+-25 24
+fe=(165)
+79 3
++45 6
+
+fl=(166)
+fn=(700)
+78 672
+fi=(295) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/simd.rs
+-46 1008
+fi=(172) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memchr-2.8.3/src/arch/x86_64/avx2/memchr.rs
+940 2184
+fe=(166)
+85 672
+cfi=(172)
+cfn=(702) memchr::arch::x86_64::avx2::memchr::Three::find_raw
+calls=168 1037 
+* 7058
++1 504
+
+fl=(14)
+fn=(60)
+7 1
+fi=(16) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/select/poll.c
++2 8
+cfi=(15)
+cfn=(62)
+calls=1 +10 
+* 10
+* 2
+cfi=(12)
+cfn=(50)
+calls=1 -3 
+* 4
++11 2
+fe=(14)
+
+fl=(42)
+fn=(140)
+57 1746
++5 582
+
+fn=(1964)
+21 1
++1 2
++30 1
+
+fl=(21)
+fn=(1918) core::ptr::drop_in_place<std::io::buffered::linewriter::LineWriter<std::io::stdio::StdoutRaw>>
+805 9
+fi=(280)
+675 2
++2 2
+cfn=(1922)
+calls=1 195 
+* 21
+0 3
+fe=(21)
+805 1
+fi=(36)
+617 2
+fe=(21)
+805 1
+fi=(48)
+48 8
+cfi=(55)
+cfn=(170)
+calls=1 -43 
+* 293
+fe=(21)
+
+fl=(4)
+fn=(36) libc_start_main_stage2
+90 3
++1 1
+-1 6
++2 1
+cfn=(38) libc_start_init
+calls=1 -32 
+* 989
++3 4
+cfi=(1)
+cfn=(58)
+calls=1 -95 
+* 421036
+
+fn=(38)
+60 3
++1 1
+cob=(2)
+cfi=(9)
+cfn=(40) 0x00000000001a1000
+calls=1 -61 
+* 3
++1 2
++1 158
++1 78
+cfi=(10)
+cfn=(44)
+calls=77 665 
+* 578
+cfi=(1)
+cfn=(42)
+calls=1 -64 
+* 6
+-1 156
++2 4
+
+fn=(8) __init_libc
+24 2
++1 43
++1 2
++1 106
++1 1
++1 202
++1 2
++1 3
++1 2
++2 2
++2 5
++1 1
+-3 63
++3 334
++2 2
+cfi=(5) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/env/__init_tls.c
+cfn=(10) __init_tls
+calls=1 +44 
+* 347
++1 2
+cfn=(34) dummy1
+calls=1 -25 
+* 1
++2 6
++1 3
++14 2
+
+fn=(34)
+15 1
+
+fn=(6)
+74 4
++1 1
+-1 2
++6 1
+-6 1
++6 1
+cfn=(8)
+calls=1 -56 
+* 1131
++6 3
+-1 1
++2 3
+-1 1
+cfn=(36)
+calls=1 +4 
+* 422040
+
+fl=(68)
+fn=(216)
+89 40
+fi=(69) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/str/validations.rs
++44 30
++12 20
+0 70
+145 8
++19 11
++1 22
+fi=(65) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/num/uint_macros.rs
+2413 22
+fi=(69)
+222 22
++23 8
+-7 3
+-14 20
++9 3
++1 9
++7 14
+0 7
+241 56
++1 28
+-1 63
+fe=(68)
+94 40
+-94 10
+98 40
+
+fl=(172)
+fn=(704) memchr::arch::x86_64::avx2::memchr::Three::find_raw_avx2
+1191 332
+fi=(53)
+547 166
+fi=(179) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memchr-2.8.3/src/arch/generic/memchr.rs
+968 166
++1 166
++1 166
+fi=(296) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/x86/avx2.rs
+699 332
+2287 166
+699 166
+2287 166
+2135 166
+fi=(180) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memchr-2.8.3/src/vector.rs
+147 166
+fi=(179)
+972 166
+fi=(136)
+153 124
+fi=(79)
+863 248
+fe=(172)
+1197 332
+fi=(179)
+0 84
+fi=(79)
+863 84
+fi=(179)
+-70 336
+0 40
+fi=(182) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/x86/avx.rs
+1688 80
+fi=(296)
+699 240
+2287 200
+2135 40
+fi=(180)
+147 40
+fi=(179)
+810 40
+fi=(182)
+1688 6
+fi=(296)
+699 18
+2287 15
+2135 3
+fi=(180)
+147 3
+fi=(179)
+810 3
+fi=(79)
++53 3
+fi=(179)
+-69 6
+0 2
+832 4
+0 2
+fi=(53)
+547 2
+fi=(296)
+699 4
+2287 2
+699 2
+2287 2
+2135 2
+fi=(180)
+147 2
+fi=(179)
+972 2
+fi=(79)
+863 1
+fi=(179)
+-31 2
++11 2
+fi=(53)
+547 1
+fi=(296)
+699 2
+2287 1
+699 1
+2287 1
+2135 1
+fi=(180)
+147 1
+fi=(179)
+972 1
+fi=(136)
+153 1
+fi=(79)
+863 4
+fe=(172)
+1197 2
+fi=(180)
+162 120
+-15 40
+fi=(179)
+815 40
+fi=(136)
+153 23
+fi=(179)
+0 69
+fe=(172)
+1197 46
+fi=(136)
+153 1
+fi=(179)
+0 3
+fe=(172)
+1197 2
+0 17
+fi=(180)
+162 68
+fi=(136)
+-9 17
+fi=(79)
+863 51
+fe=(172)
+1197 34
+
+fn=(702)
+1037 336
++5 336
+0 168
+fi=(79)
+619 336
+fe=(172)
+1046 336
++1 4
+0 6
+fi=(179)
+1162 1
+fe=(172)
+1051 2
++27 332
+cfn=(704)
+calls=166 1191 
+* 4847
++1 334
+fi=(53)
+547 1
+fi=(179)
+968 1
++1 1
++1 1
+fi=(190) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/x86/sse2.rs
+-56 4
+-25 1
++25 1
+-25 1
+1563 1
+fi=(180)
+147 1
+fi=(179)
+972 1
+fi=(136)
+153 1
+fi=(79)
+863 3
+fe=(172)
+1079 2
+
+fl=(13)
+fn=(52)
+64 9
++3 9
+-3 9
++3 45
++8 18
++4 9
+cfn=(54) __libc_sigaction
+calls=9 -58 
+* 652
++6 27
+
+fn=(54)
+21 54
++2 18
++1 24
++2 4
+-1 2
++1 4
+-1 6
+fi=(18)
++39 2
+fe=(13)
+-28 10
++1 2
+fi=(6)
++1 1
+fe=(13)
+-1 2
+fi=(6)
++1 2
+fe=(13)
++1 1
++3 6
+fi=(18)
++46 10
+fe=(13)
+-39 2
+-3 2
++6 4
+-3 2
++3 2
++2 2
+-5 2
++1 4
++2 2
+cfi=(7)
+cfn=(16)
+calls=2 -45 
+* 24
+fi=(18)
++36 4
+fe=(13)
+-39 4
+-3 4
++6 8
+-3 4
++3 4
++2 4
+-5 4
++1 8
++2 4
+cfi=(7)
+cfn=(16)
+calls=4 -45 
+* 48
++2 30
+fi=(6)
+-17 6
++1 12
+fe=(13)
++16 3
+fi=(6)
+-17 3
++1 15
+fe=(13)
++17 32
++5 18
+cfi=(12)
+cfn=(50)
+calls=9 -54 
+* 36
++1 45
+-5 7
++2 21
+-2 7
++1 14
++1 7
+cfi=(7)
+cfn=(16)
+calls=7 -51 
+* 84
+* 7
+-4 15
+
+fl=(219) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/str.rs
+fn=(1138) alloc::str::<impl str>::replace
+268 11
+fi=(151) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/char/methods.rs
+1231 2
++13 1
+0 1
+fe=(219)
+275 2
+fi=(151)
+0 1
+fe=(219)
+282 3
+fi=(51)
+458 1
+fe=(219)
+0 2
+fi=(52)
+444 2
+fi=(48)
+14 4
+cfi=(37)
+cfn=(118)
+calls=1 115 
+* 241
+* 5
+fi=(52)
+453 2
+fi=(139)
++32 3
+fi=(151)
+1231 1
+1845 1
+0 3
+1845 1
+fi=(135) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/str/pattern.rs
+572 4
+fe=(219)
+287 10
+0 1
+fi=(138) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/str/iter.rs
+1064 3
+cfi=(135)
+cfn=(526) <core::str::pattern::CharSearcher as core::str::pattern::Searcher>::next_match
+calls=1 432 
+* 186
+* 9
+cfi=(135)
+cfn=(526)
+calls=3 432 
+* 556
+fi=(59)
+1164 8
+0 6
+1165 9
+fi=(79)
+729 3
+fi=(52)
+602 3
+fi=(136)
+2413 6
+fi=(52)
+736 6
+-80 3
+fe=(219)
+288 6
+fi=(173)
+961 3
+fi=(53)
+547 9
+cfi=(7)
+cfn=(16)
+calls=3 7 
+* 110
+fi=(54)
+2822 6
+fi=(136)
+2413 3
+fi=(52)
+736 6
+-80 3
+0 3
+fi=(173)
+961 6
+fi=(53)
+547 6
+cfi=(7)
+cfn=(16)
+calls=3 7 
+* 121
+fi=(54)
+2822 9
+fe=(219)
+287 3
+fi=(54)
+0 1
+fi=(79)
+863 2
+729 1
+fi=(52)
+602 1
+fi=(136)
+2413 1
+fi=(52)
+736 1
+-80 1
+fi=(173)
+961 1
+fi=(53)
+547 3
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 35
+fi=(54)
+2822 2
+fe=(219)
+293 4
++1 1
+fi=(220) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/set_len_on_drop.rs
+0 1
+fi=(52)
+658 7
+cfn=(588)
+calls=1 -14 
+* 991
+* 1
+-61 1
+fi=(54)
+2933 2
+fe=(219)
+294 8
+-26 9
++13 3
+fi=(51)
+458 1
+fi=(36)
+0 4
+fi=(52)
+444 1
+fi=(48)
+14 5
+cfi=(37)
+cfn=(118)
+calls=1 115 
+* 225
+* 5
+fi=(52)
+453 2
+fi=(139)
++32 5
+fi=(135)
+976 4
+cfi=(224) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/str/pattern.rs
+cfn=(1190) core::str::pattern::StrSearcher::new
+calls=1 1085 
+* 147
+* 3
+1171 2
++9 1
+0 2
+1466 1
+0 2
+1180 1
++3 1
+0 1
+1471 1
+fi=(157)
+219 2
+0 4
+219 2
+fi=(135)
+1485 76
+-14 76
+fi=(157)
+219 152
+fi=(135)
+1484 228
+fi=(54)
+0 2
+fi=(79)
+729 1
+fi=(52)
+602 1
+fi=(136)
+2413 1
+fi=(52)
+736 1
+-80 1
+0 3
+fi=(79)
+863 1
+fi=(173)
++98 2
+fi=(53)
+547 1
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 30
+fi=(54)
+2822 2
+fe=(219)
+293 3
++1 8
+
+fl=(252) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/parser/validator.rs
+fn=(1590) clap_builder::parser::validator::Validator::validate_conflicts
+62 9
+fi=(54)
+1753 1
+fi=(73)
+-61 1
+fi=(141)
+180 1
+0 31
+fi=(253) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/iter/traits/accum.rs
+53 8
+fi=(74)
+-53 16
+fi=(73)
+1692 8
+fi=(141)
+180 8
+fi=(253)
+53 3
+fi=(74)
+-53 6
+fi=(73)
+1692 3
+fi=(141)
+180 3
+fi=(73)
+1692 11
+fi=(141)
+180 11
+fi=(59)
+1164 22
+0 18
+fi=(73)
+1692 44
+fi=(141)
+180 22
+fi=(72)
+-28 50
+fi=(249) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/builder/str.rs
+285 5
+fi=(72)
+160 15
+cfi=(75)
+cfn=(232)
+calls=5 7 
+* 175
+* 5
+fi=(141)
+349 5
+0 15
+fe=(252)
+95 2
+-95 59
+fi=(73)
+1692 11
+fi=(141)
+180 11
+fi=(73)
+1692 11
+fi=(141)
+180 11
+0 11
+fi=(59)
+1164 11
+fi=(254) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/iter/adapters/filter.rs
+86 11
+-86 3
+86 15
+-86 22
+fi=(73)
+1692 22
+fi=(141)
+180 22
+fi=(72)
+-28 50
+fi=(249)
+285 5
+fi=(72)
+160 15
+cfi=(75)
+cfn=(232)
+calls=5 7 
+* 175
+* 5
+fi=(141)
+349 5
+fi=(59)
+1589 6
+fi=(141)
+0 27
+fi=(73)
+1692 8
+fi=(141)
+180 8
+fi=(73)
+1692 11
+fi=(141)
+180 11
+0 33
+fi=(73)
+660 22
+fi=(59)
+1164 11
+fi=(254)
+86 11
+-86 3
+fe=(252)
+74 3
+fi=(73)
+1692 3
+fi=(141)
+180 3
+0 27
+fi=(73)
+1692 44
+fi=(141)
+180 22
+fi=(72)
+-28 50
+fi=(249)
+285 5
+fi=(72)
+160 15
+cfi=(75)
+cfn=(232)
+calls=5 7 
+* 175
+* 5
+fi=(141)
+349 5
+0 3
+fe=(252)
+77 18
+cfn=(1606) clap_builder::parser::validator::Conflicts::gather_conflicts
+calls=3 457 
+* 862
+fi=(52)
+597 3
+fi=(54)
+1753 3
+fe=(252)
+130 6
+fi=(52)
+617 6
+fi=(48)
+0 9
+fi=(73)
+1692 3
+fi=(141)
+180 3
+0 1
+fe=(252)
+82 8
+
+fn=(1570) clap_builder::parser::validator::gather_direct_conflicts
+491 36
++1 3
+fi=(73)
+1692 3
+fi=(141)
+180 3
+0 37
+fi=(73)
+1692 22
+fi=(141)
+180 22
+fi=(72)
+-28 50
+fi=(249)
+285 5
+fi=(72)
+160 20
+cfi=(75)
+cfn=(232)
+calls=5 7 
+* 175
+* 5
+fi=(141)
+349 5
+0 6
+fe=(252)
+493 12
++12 3
+fi=(52)
+-61 9
+fe=(252)
+0 3
+fi=(259) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/slice.rs
+440 12
+fi=(73)
+1692 3
+fi=(141)
+180 3
+0 3
+fi=(52)
+597 3
+fi=(54)
+1753 3
+fi=(52)
+602 6
+fi=(136)
+2413 3
+fi=(52)
+736 3
+-80 3
+fi=(73)
+1692 1
+fi=(141)
+25 1
+-25 2
+284 2
+fe=(252)
+0 2
+fi=(52)
+658 8
+cfn=(588)
+calls=2 -14 
+* 428
+-61 2
+fi=(220)
+14 2
+fi=(141)
+284 4
+fi=(73)
+660 2
+fi=(141)
+279 2
+fi=(173)
+961 4
+fi=(53)
+1910 2
+fi=(220)
+19 2
++12 4
+fe=(252)
+521 6
+-19 16
+fi=(220)
+31 2
+fe=(252)
+521 3
+-19 8
+
+fn=(1606)
+457 36
+fi=(54)
++9 9
+fi=(52)
+597 6
+fi=(54)
+1753 3
+fi=(173)
+961 12
+fi=(73)
+1692 3
+fi=(141)
+180 3
+0 12
+fi=(73)
+1692 3
+fi=(238)
+82 3
+fi=(73)
+1692 3
+fi=(141)
+180 3
+fi=(72)
+-28 12
+fi=(161)
+2115 8
+fi=(72)
+160 8
+cfi=(75)
+cfn=(232)
+calls=4 7 
+* 163
+* 4
+fi=(247)
+-62 4
+-98 3
+fi=(54)
+1753 3
+fi=(157)
+272 6
+fi=(52)
+597 3
+fi=(157)
+272 3
+fi=(52)
+597 3
+fi=(54)
+1753 9
+fi=(73)
+-61 3
+fi=(141)
+180 3
+0 42
+fi=(73)
+1692 2
+fi=(141)
+180 2
+0 14
+fi=(73)
+1692 7
+fi=(141)
+180 7
+fi=(73)
+1692 9
+fi=(141)
+180 9
+0 9
+fi=(249)
+285 9
+fi=(72)
+152 18
+fi=(249)
+285 10
+fi=(72)
+160 10
+cfi=(75)
+cfn=(232)
+calls=5 7 
+* 182
+* 5
+fe=(252)
+470 5
+0 18
+fi=(141)
+180 6
+0 12
+fi=(73)
+1692 8
+fi=(141)
+180 4
+fi=(72)
+-28 8
+fi=(141)
+0 8
+fi=(54)
+1753 4
+fi=(73)
+-61 4
+fi=(141)
+180 4
+0 2
+fi=(54)
+1753 2
+fi=(73)
+-61 2
+fi=(141)
+180 2
+0 20
+fi=(73)
+1692 8
+fi=(141)
+180 4
+fi=(72)
+-28 8
+fe=(252)
+0 22
+483 15
++1 30
+
+fl=(247)
+fn=(1410) clap_builder::util::flat_map::Entry<K,V>::or_insert
+156 88
++1 11
+0 22
+157 22
+fi=(54)
+1030 11
++3 22
+fi=(52)
+597 11
+fi=(173)
+961 22
+fi=(53)
+1910 22
+fi=(54)
+1039 22
+-9 11
++3 22
+fi=(52)
+597 11
+fi=(173)
+961 11
+fi=(53)
+1910 154
+fi=(54)
+1039 22
+fi=(71)
+305 11
+fi=(52)
+597 11
+fi=(71)
+305 44
+fe=(247)
+165 99
+fi=(54)
+1034 9
+cfi=(52)
+cfn=(718)
+calls=3 186 
+* 2059
+* 15
+cfi=(52)
+cfn=(718)
+calls=3 186 
+* 1955
+* 6
+fe=(247)
+
+fl=(15)
+fn=(64) sccp
+9 5
+fi=(6)
++47 5
+fe=(15)
+-47 5
+fi=(6)
++48 5
+fe=(15)
+-48 5
+fi=(6)
++49 5
+fe=(15)
+-49 5
+fi=(6)
++50 5
+fe=(15)
+-48 5
+
+fn=(62)
+19 5
+cfn=(64)
+calls=5 -10 
+* 45
+
+fl=(156) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resource.rs
+fn=(646) fluent_bundle::resource::FluentResource::try_new
+82 20
+fi=(48)
+-68 4
+cfi=(37)
+cfn=(118)
+calls=2 115 
+* 929
+fi=(73)
+271 4
+0 2
+fi=(53)
+1910 10
+fi=(297) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/self_cell-1.3.0/src/lib.rs
+495 2
+fi=(162)
+22 6
+fi=(54)
+466 6
+fi=(48)
+14 4
+cfi=(37)
+cfn=(118)
+calls=2 115 
+* 1510
+fi=(52)
+453 4
+fi=(54)
+967 10
+0 2
+fi=(157)
+219 4
+0 4
+fi=(159)
+101 4
+fi=(157)
+219 4
+fi=(158)
+9 12
+fi=(159)
++72 2
+fi=(157)
+219 2
+fi=(176) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/runtime.rs
+23 2
+fi=(159)
+-23 6
+81 105
+fi=(176)
+-58 420
+fi=(157)
+219 315
+fi=(158)
+9 497
+fi=(159)
+-9 273
+fi=(162)
+104 273
+cfn=(664) fluent_syntax::parser::core::Parser<S>::get_identifier
+calls=91 206 
+* 30370
+fi=(70)
+2173 182
+0 273
+fi=(159)
+100 91
+fi=(157)
+219 182
+0 273
+fi=(159)
+101 364
++1 91
+fi=(157)
+219 182
+fi=(160) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/comment.rs
+54 42
++2 912
+-56 912
+55 912
+-55 15
+55 30
+fi=(158)
+-46 2325
+fi=(160)
++49 15
+fi=(157)
+219 30
+fi=(161)
+1870 15
+fi=(160)
+59 15
++1 2
+-6 1
+-54 14
+fi=(176)
+27 14
+fi=(159)
++75 91
+fi=(157)
+219 182
+fi=(158)
+9 91
+fi=(161)
+1870 91
+fi=(159)
+119 91
+0 182
+122 182
+fi=(162)
+-15 273
+cfi=(165)
+cfn=(676)
+calls=91 -62 
+* 127286
+fi=(70)
+2173 91
+0 91
+2173 91
+0 637
+fi=(175) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/lib.rs
+0 91
+fi=(157)
+219 182
+0 178
+fi=(159)
+101 178
+fi=(157)
+219 182
+fi=(158)
+9 534
+fi=(159)
+-9 91
+81 91
+fi=(162)
++30 273
+cfn=(744) fluent_syntax::parser::core::Parser<S>::get_attributes
+calls=91 +48 
+* 4079
+* 91
+0 91
+fi=(59)
+636 182
+fi=(162)
+113 91
+fi=(70)
+2173 364
+fi=(52)
+0 182
+fi=(70)
+2174 364
+fi=(176)
+57 91
+-29 273
+fi=(54)
+1033 455
+fi=(173)
+-72 273
+fi=(53)
+1910 1183
+fi=(54)
+1039 546
+0 4
+fi=(157)
+219 2
+fi=(54)
+0 105
+fi=(157)
+219 210
+0 208
+fi=(159)
+101 208
++1 104
+fi=(157)
+219 212
+fi=(158)
+9 622
+fi=(175)
+-9 7
+fi=(54)
+1034 56
+cfi=(52)
+cfn=(718)
+calls=7 186 
+* 7638
+* 49
+fi=(52)
+597 14
+fi=(162)
+0 2
+fi=(176)
+43 2
++1 4
+-1 2
+fi=(53)
+805 4
+0 6
+fi=(52)
+617 4
+fi=(53)
+1910 6
+fe=(156)
+94 4
+-94 2
+97 16
+
+fl=(20)
+fn=(74)
+250 8
+fi=(33)
+4028 1
+fe=(20)
+251 2
++4 2
+fi=(21)
+709 5
+fe=(20)
+264 2
+cfi=(22) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/signal/sigaltstack.c
+cfn=(78) sigaltstack
+calls=1 6 
+* 13
++2 2
++44 2
+cfi=(23)
+cfn=(82)
+calls=1 6 
+* 169
+fi=(25) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/cmp.rs
+1029 3
+fi=(33)
+4027 1
+fe=(20)
+229 1
+-2 6
+cfi=(26)
+cfn=(88)
+calls=1 15 
+* 29
++8 2
+0 1
+238 4
+cfi=(27) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/mman/mprotect.c
+cfn=(92) mprotect
+calls=1 6 
+* 17
++1 2
+fi=(28) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/ptr/mut_ptr.rs
+961 1
+fe=(20)
+269 4
++1 2
+cfi=(22)
+cfn=(78)
+calls=1 6 
+* 20
++2 1
++4 9
+
+fn=(1926) std::sys::pal::unix::stack_overflow::imp::drop_handler
+284 7
++1 2
+0 1
+310 2
+cfi=(23)
+cfn=(82)
+calls=1 6 
+* 169
+fi=(25)
+1029 3
+fi=(33)
+4027 1
+fe=(20)
+288 4
++10 2
+cfi=(22)
+cfn=(78)
+calls=1 6 
+* 18
+fi=(28)
+1072 1
+fe=(20)
+301 4
+cfi=(178) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/mman/munmap.c
+cfn=(782) munmap
+calls=1 8 
+* 32
+fi=(281) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/pal/unix/stack_overflow/thread_info.rs
+126 1
+cfi=(24)
+cfn=(84)
+calls=1 4 
+* 3
+* 2
+fi=(33)
+4112 2
+fi=(298) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/sync/mutex/futex.rs
+32 1
+fi=(33)
+4027 1
+fi=(282) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/panicking.rs
+464 3
+0 1
+fi=(33)
+4027 2
+fi=(299) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sync/poison.rs
+123 3
+0 3
+fi=(33)
+4112 2
+fi=(281)
+96 1
+fi=(67) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/option.rs
+767 3
+fi=(48)
+0 1
+fi=(33)
+4013 1
+fi=(299)
+123 1
+fi=(21)
+805 5
+0 1
+805 3
+fe=(20)
+305 7
+
+fl=(8) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/thread/x86_64/__set_thread_area.s
+fn=(30) 0x000000000089b43d
+7 1
++1 1
++1 1
++1 1
++1 1
+
+fl=(35)
+fn=(112) core::ops::function::FnOnce::call_once
+250 8
+fi=(154)
+4029 1
+729 1
+fi=(205) /home/callen/work/coreutils-startup-factorial/musl/src/uucore/src/lib/lib.rs
+409 1
+fi=(154)
+4028 1
+fi=(291)
+82 1
+fi=(31)
+214 1
+fi=(157)
++58 2
+0 1
+fi=(52)
+597 2
+fi=(54)
+1753 2
+fi=(223)
+311 1
+cfi=(121)
+cfn=(1176) alloc::string::String::from_utf8_lossy
+calls=1 619 
+* 498
+* 1
+fi=(211) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/borrow.rs
++21 2
++1 2
+fi=(51)
+458 1
+fi=(52)
+0 1
+444 1
+fi=(48)
+14 2
+cfi=(37)
+cfn=(118)
+calls=1 115 
+* 157
+fi=(52)
+453 2
+0 2
+fi=(53)
+547 4
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 39
+* 1
+fi=(139)
+1014 4
+fe=(35)
+250 17
+fi=(33)
+4027 2
+fi=(45) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/args/unix.rs
+145 2
+fi=(33)
+4027 2
+fi=(111) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/intrinsics/mod.rs
+458 3
+fi=(36)
+-14 2
+0 3
+fi=(48)
+14 2
+cfi=(37)
+cfn=(118)
+calls=1 115 
+* 1292
+fi=(36)
+453 2
+fi=(43) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/vec/mod.rs
+967 3
+fi=(45)
+0 10
+fi=(21)
+1910 15
+fi=(45)
+0 5
+fi=(25)
+1908 15
+fi=(44) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/iter/range.rs
+772 5
+0 5
+fi=(21)
+1710 5
+fi=(45)
+42 10
+-42 5
+fi=(47) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/ffi/c_str.rs
+756 10
+cfi=(46)
+cfn=(148)
+calls=5 16 
+* 243
+* 5
+fi=(36)
+444 10
+fi=(48)
+14 10
+cfi=(37)
+cfn=(118)
+calls=5 115 
+* 1740
+* 5
+fi=(36)
+453 10
+fi=(21)
++94 20
+cfi=(7)
+cfn=(16)
+calls=5 7 
+* 129
+fi=(43)
+1033 15
+fe=(35)
+250 9
+0 1
+fi=(45)
+61 2
+fi=(28)
+961 4
+fi=(73)
+1692 1
+fi=(50)
+224 1
+0 1
+fi=(53)
+1710 1
+fi=(57) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/spec_from_iter_nested.rs
+24 3
+fe=(35)
+-24 1
+fi=(57)
+26 2
+fi=(79)
+729 5
+fi=(161)
+1030 3
+fi=(51)
+458 3
+0 2
+fi=(52)
+444 4
+0 1
+fi=(48)
+14 1
+cfi=(37)
+cfn=(118)
+calls=1 115 
+* 129
+fi=(52)
+453 2
+0 6
+fi=(53)
+1910 3
+fi=(57)
+36 3
+fi=(73)
+1692 1
+fi=(50)
+224 1
+fi=(54)
+3905 4
+0 2
+fi=(53)
+1710 1
+fi=(54)
+3905 2
+0 6
+fi=(53)
+1710 3
+fi=(54)
+3905 14
++2 8
+fi=(53)
+1910 12
+fi=(54)
+3916 4
+2106 4
+fi=(50)
+224 4
+fi=(73)
+1692 8
+fi=(50)
+224 5
+fi=(54)
+0 2
+fi=(53)
+805 2
+fi=(52)
+617 2
+fi=(48)
+48 2
+cfi=(55)
+cfn=(170)
+calls=1 -43 
+* 160
+fi=(57)
+-6 5
++1 1
+fe=(35)
+
+fl=(186) /rust/deps/hashbrown-0.16.1/src/raw/mod.rs
+fn=(874) hashbrown::raw::RawTable<T,A>::reserve_rehash
+999 60
++17 6
+2794 6
+fi=(136)
+688 12
+fi=(51)
+458 6
+fe=(186)
+2798 6
+185 42
+2799 24
+0 6
+2826 6
+fi=(161)
+1030 18
+fe=(186)
+2738 12
+cfn=(876) hashbrown::raw::RawTableInner::fallible_with_capacity
+calls=6 1653 
+* 2480
+fi=(70)
+2173 6
+0 6
+2173 12
+0 24
+fe=(186)
+2665 12
+3986 18
+0 5
+fi=(190)
+1320 5
+1563 5
+fi=(192) /rust/deps/hashbrown-0.16.1/src/control/bitmask.rs
+31 30
+-31 5
+50 216
+-50 4
+fi=(190)
+1320 4
+fi=(173)
+961 4
+fi=(190)
+1563 4
+fe=(186)
+3972 4
+fi=(192)
+50 8
+-19 4
+fi=(191) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/nonzero.rs
+641 4
+fe=(186)
+3942 4
+fi=(173)
+1072 16
+fe=(186)
+-56 8
+fi=(185) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rustc-hash-2.1.3/src/lib.rs
+268 12
+fi=(191)
+641 104
+fe=(186)
+3942 104
+fi=(173)
+1072 416
+fe=(186)
+-56 208
+fi=(185)
+268 312
++2 68
+0 34
+271 102
++1 34
+fi=(71)
+2154 444
+0 14
+2154 70
+0 14
+fi=(185)
+296 42
+fi=(136)
+2452 28
+fi=(185)
+226 14
++70 28
+fi=(79)
+863 14
+fi=(185)
+296 14
+fi=(136)
+2452 28
+fi=(185)
+226 14
+fi=(71)
+2154 28
+0 28
+2154 148
+fi=(185)
+296 180
+fi=(136)
+2452 180
+fi=(185)
+226 60
++77 60
++1 120
+-36 60
++35 14
++1 28
+-36 14
+0 68
+fi=(136)
+2452 68
+fi=(185)
+226 34
++81 34
+fi=(136)
+2452 136
+fi=(51)
+2027 34
+fe=(186)
+0 68
+fi=(53)
+547 34
+fi=(190)
+1563 34
+fi=(192)
+50 68
+fi=(136)
+2452 148
+fi=(185)
+226 74
++81 74
+fi=(136)
+2452 296
+fi=(51)
+2027 74
+fe=(186)
+0 148
+fi=(53)
+547 74
+fi=(190)
+1563 74
+fi=(192)
+50 148
+-50 108
+fi=(191)
+641 108
+fe=(186)
+1793 216
+fi=(51)
+458 216
+fe=(186)
+0 324
+fi=(300) /rust/deps/hashbrown-0.16.1/src/control/tag.rs
+48 108
+fi=(136)
+2413 108
+fe=(186)
+2631 108
++3 108
++1 108
+2439 756
+fi=(53)
+547 756
+fe=(186)
+3986 221
+0 12
+2981 12
+fi=(53)
+1435 24
+fe=(186)
+2747 12
+fi=(136)
+2970 10
+688 5
+fe=(186)
+224 5
++1 5
+fi=(77)
+-25 10
+fi=(173)
+1072 5
+fi=(48)
+48 5
+cfi=(55)
+cfn=(170)
+calls=5 -43 
+* 1075
+fi=(77)
+200 5
+fe=(186)
+1026 54
+
+fn=(876)
+1653 54
+110 12
++33 21
+fi=(136)
+2970 6
+fi=(51)
+458 3
+fi=(136)
+2970 6
+fe=(186)
+158 21
+fi=(136)
+3696 3
++5 3
++1 9
++23 3
+2970 6
+fi=(51)
+458 3
+fi=(136)
+2970 6
+fi=(51)
+458 3
+fi=(136)
+688 6
+fi=(51)
+458 6
+fi=(136)
+688 6
+fe=(186)
+224 6
++1 6
+fi=(136)
+688 36
+fi=(51)
+458 12
+fi=(77)
+186 12
+0 6
+95 6
+fi=(48)
+-82 6
++1 12
+cfi=(37)
+cfn=(118)
+calls=6 115 
+* 1844
+* 18
+fi=(187) /rust/deps/hashbrown-0.16.1/src/raw/alloc.rs
++5 12
+fi=(173)
+961 6
+fe=(186)
+1642 6
+185 36
+fi=(53)
+709 24
+cfi=(188) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/string/x86_64/memset.s
+cfn=(888) 0x0000000000894454
+calls=6 4 
+* 183
+fe=(186)
+1678 24
++3 48
+
+fl=(241)
+fn=(1372) clap_builder::parser::parser::Parser::resolve_pending
+1119 96
+fi=(99)
+900 60
++1 12
+fe=(241)
+1120 24
+0 5
+1128 2
+fi=(73)
+1692 1
+fi=(141)
+180 1
+0 21
+fi=(73)
+1692 13
+fi=(141)
+180 13
+fi=(72)
+-28 28
+fi=(249)
+285 2
+fi=(72)
+160 6
+cfi=(75)
+cfn=(232)
+calls=2 7 
+* 60
+* 2
+fi=(141)
+349 2
+0 1
+fe=(241)
+1133 4
+-4 11
+cfn=(1370) clap_builder::parser::parser::Parser::react
+calls=1 +12 
+* 3695
+* 3
+fi=(248) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/macros.rs
+585 1
+fe=(241)
+0 1
+1136 1
+cfi=(53)
+cfn=(1466) core::ptr::drop_in_place<clap_builder::parser::parser::ParseResult>
+calls=1 805 
+* 20
+0 12
+1139 96
+
+fn=(1373) clap_builder::parser::parser::Parser::resolve_pending'2
+1119 8
+fi=(99)
+900 5
++1 1
+fe=(241)
+1120 2
+0 1
+1139 8
+
+fn=(1418) clap_builder::parser::parser::Parser::push_arg_values
+1093 88
++9 44
+fi=(173)
+961 44
+fi=(73)
+1692 22
+fi=(50)
+224 11
+0 341
+fi=(73)
+660 11
+fi=(53)
+1710 11
+fe=(241)
+1102 44
+fi=(73)
+660 1
+fi=(53)
+1710 1
+fe=(241)
+1102 4
+0 36
+fi=(99)
+901 48
+fi=(245)
+261 36
+0 48
+fe=(241)
+1110 24
+fi=(245)
+242 60
+cfn=(1424) <P as clap_builder::builder::value_parser::AnyValueParser>::parse_ref_
+calls=2 634 
+* 670
+cfn=(1424)
+calls=10 634 
+* 2424
+fe=(241)
+1110 12
+fi=(248)
+585 12
+0 12
+586 60
+fe=(241)
+1112 120
+cfi=(240)
+cfn=(1438) clap_builder::parser::arg_matcher::ArgMatcher::add_val_to
+calls=12 168 
+* 8927
+* 12
+fi=(129) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/cell.rs
+555 60
+fi=(73)
+1692 57
+fi=(238)
+82 57
+fi=(73)
+1692 57
+fi=(141)
+180 57
+fi=(72)
+-28 138
+fi=(161)
+2115 38
+fi=(72)
+160 38
+cfi=(75)
+cfn=(232)
+calls=19 7 
+* 926
+* 19
+fi=(247)
+-49 19
+fi=(157)
+278 60
+fi=(54)
+1030 12
++3 24
+fi=(52)
+597 24
+fi=(53)
+1910 12
+fi=(54)
+1039 48
+fi=(73)
+1692 12
+fi=(50)
+224 23
+fi=(54)
+1034 22
+cfi=(52)
+cfn=(718)
+calls=11 186 
+* 2767
+* 11
+fi=(48)
+0 11
+fi=(52)
+617 22
+0 11
+fi=(48)
+48 11
+cfi=(55)
+cfn=(170)
+calls=11 -43 
+* 1709
+fe=(241)
+1117 99
+
+fn=(1342) clap_builder::parser::parser::Parser::possible_subcommand
+584 24
+fi=(70)
+713 6
+0 3
+fe=(241)
+619 27
+fi=(70)
++95 9
+fe=(241)
+592 3
+fi=(233)
+19 3
+fi=(226)
+3901 6
+fe=(241)
+592 6
+0 4
+592 4
+fi=(226)
+3901 6
+fe=(241)
+593 6
++21 3
+fi=(73)
+1692 3
+fi=(141)
+180 3
+fe=(241)
+
+fn=(1330)
+49 10
++48 1
++3 1
+fi=(73)
+1692 1
+fi=(141)
+25 1
+-25 1
+284 14
+0 3
+fi=(254)
+138 6
+fi=(253)
+-85 1
+fi=(254)
++85 2
+fi=(253)
+-85 1
+fi=(141)
+-53 15
+fi=(254)
+138 36
+fi=(253)
+-85 6
+fi=(254)
++85 12
+fi=(253)
+-85 6
+fi=(141)
+-53 18
+284 7
+0 1
+fi=(237)
+33 3
+fi=(253)
++20 1
+fi=(141)
+284 3
+0 1
+fe=(241)
+104 2
+fi=(141)
+331 2
+0 1
+fi=(73)
+1692 1
+fi=(141)
+180 1
+0 16
+fi=(73)
+1692 16
+fi=(141)
+180 16
+fi=(234)
+17 16
+fi=(73)
+660 16
+fi=(141)
+332 32
+0 2
+fe=(241)
+106 2
+fi=(157)
+219 2
+0 11
+219 11
++2 3
+fi=(52)
+597 1
+fi=(54)
+1753 2
+fi=(136)
+2220 1
+fe=(241)
+113 5
+fi=(157)
+219 22
++2 6
+fi=(52)
+597 2
+fi=(54)
+1753 4
+fi=(136)
+2220 2
+fe=(241)
+113 10
+fi=(157)
+221 3
+fi=(52)
+597 1
+fi=(54)
+1753 2
+fi=(136)
+2220 1
+fe=(241)
+113 5
+0 12
+114 16
+fi=(226)
+3901 8
+fe=(241)
+114 4
+0 8
+114 4
+0 12
+114 8
+fi=(223)
+306 15
+cfi=(68)
+cfn=(216)
+calls=3 89 
+* 169
+fi=(70)
+713 9
+0 15
+fe=(241)
+118 12
+cfn=(1342)
+calls=3 584 
+* 116
++2 15
+fi=(72)
++32 8
++8 8
+fe=(241)
+-29 2
+fi=(141)
+0 6
+fi=(71)
+2689 2
+fi=(72)
+160 20
+fi=(71)
+2691 8
+fi=(72)
+160 4
+fi=(71)
+2691 4
+0 2
+2624 6
+fi=(242) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_lex-1.1.1/src/lib.rs
+0 2
+fi=(72)
+160 2
+fi=(242)
+349 2
+fi=(243) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_lex-1.1.1/src/ext.rs
+188 10
+cfi=(68)
+cfn=(216)
+calls=2 -99 
+* 72
+fi=(242)
+480 6
+fe=(241)
+0 2
+291 4
+0 2
+322 6
++4 2
+fi=(234)
+0 2
+fe=(241)
+337 2
+fi=(52)
+597 2
+fi=(54)
+1753 2
+fi=(141)
+348 4
+0 2
+fi=(73)
+1692 2
+fi=(141)
+180 2
+fi=(73)
+1692 48
+fi=(141)
+180 48
+0 50
+fi=(161)
+2115 50
+fi=(141)
+349 50
+fi=(237)
+39 50
+fi=(141)
+349 54
+fi=(237)
+108 2
+fi=(54)
+1753 2
+fi=(157)
+272 4
+fi=(52)
+597 2
+fi=(59)
+1165 4
+745 6
+fe=(241)
+344 2
+fi=(226)
+3901 14
+fe=(241)
+322 2
++22 2
++7 4
++29 4
+fi=(52)
+597 2
+fi=(54)
+1753 2
+fi=(141)
+348 6
+0 2
+fi=(73)
+1692 2
+fi=(141)
+180 2
+fi=(73)
+1692 48
+fi=(141)
+180 48
+0 50
+fi=(161)
+2115 50
+fi=(141)
+349 50
+fi=(237)
+39 50
+fi=(141)
+349 54
+fi=(237)
+108 2
+fi=(54)
+1753 2
+fi=(157)
+272 4
+fi=(52)
+597 2
+fi=(157)
+272 4
+fe=(241)
+393 2
+fi=(234)
+17 6
+fe=(241)
+393 6
+0 2
+fi=(234)
+17 2
+fe=(241)
+407 6
+fi=(59)
+745 2
+2389 2
+fi=(161)
+2115 1
+fi=(72)
+152 2
+fi=(161)
+2115 2
+fi=(72)
+160 1
+cfi=(75)
+cfn=(232)
+calls=1 7 
+* 41
+* 1
+fe=(241)
+411 1
+0 1
+412 2
+cfn=(1372)
+calls=1 1119 
+* 25
+* 1
+fi=(248)
+585 1
+fe=(241)
+415 2
+fi=(59)
+745 6
+1810 6
+fe=(241)
+420 1
+fi=(59)
+1811 7
+fi=(240)
+214 4
+fi=(59)
+0 2
+fi=(51)
+458 2
+0 4
+fi=(52)
+444 2
+fi=(48)
+14 4
+cfi=(37)
+cfn=(118)
+calls=2 115 
+* 353
+fi=(52)
+453 4
+0 4
+fi=(53)
+547 8
+cfi=(7)
+cfn=(16)
+calls=2 7 
+* 60
+* 4
+fi=(54)
+1030 2
++3 4
+fi=(52)
+597 2
+fi=(173)
+961 2
+fi=(53)
+1910 6
+fi=(54)
+1039 4
+fi=(59)
++58 2
+fi=(244) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/builder/range.rs
+112 18
+fe=(241)
+432 12
+0 2
+fi=(157)
+219 25
+fi=(59)
+1097 1
+fi=(244)
+112 4
+fe=(241)
+411 4
+fi=(242)
++70 12
+fi=(173)
+961 2
+fe=(241)
+213 24
+894 4
+0 2
+fi=(52)
+597 2
+fi=(54)
+1753 4
+fi=(141)
+348 8
+0 2
+fi=(73)
+1692 2
+fi=(141)
+180 2
+fi=(73)
+1692 48
+fi=(141)
+180 48
+0 50
+fi=(161)
+2115 50
+fi=(141)
+349 50
+fi=(237)
+39 50
+fi=(141)
+349 50
+0 2
+349 4
+fi=(237)
+108 4
+fi=(54)
+1753 2
+fi=(157)
+272 4
+fi=(52)
+597 2
+fi=(59)
+1165 4
+fi=(234)
+17 2
+fe=(241)
+899 2
+0 10
+fi=(73)
+1692 2
+fi=(141)
+180 2
+fi=(73)
+1692 48
+fi=(141)
+180 48
+0 50
+fi=(161)
+2115 50
+fi=(141)
+349 50
+fi=(237)
+39 50
+fi=(141)
+349 50
+0 2
+349 6
+fi=(237)
+108 2
+fi=(54)
+1753 2
+fi=(157)
+272 4
+fi=(52)
+597 2
+fi=(59)
+1165 6
+fe=(241)
+913 8
+-4 2
+fi=(54)
+1034 2
+cfi=(36)
+cfn=(306) alloc::raw_vec::RawVec<T,A>::grow_one
+calls=1 186 
+* 206
+* 2
+fe=(241)
+923 6
++2 2
++1 6
+fi=(161)
+1908 2
+fi=(301) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/iter/range.rs
+772 2
+fi=(141)
+185 2
+fi=(138)
++7 2
+fi=(73)
+1692 2
+fi=(141)
+180 2
+fi=(125)
+37 2
++1 4
+-38 6
+fi=(138)
+192 6
+fe=(241)
+935 4
++13 2
+fi=(52)
+597 2
+fi=(54)
+1753 2
+fi=(141)
+348 4
+0 2
+fi=(73)
+1692 2
+fi=(141)
+180 2
+fi=(73)
+1692 14
+fi=(141)
+180 14
+0 16
+fi=(161)
+2115 16
+fi=(141)
+349 16
+fi=(237)
+75 16
+fi=(141)
+349 34
+fi=(237)
+108 2
+fi=(54)
+1753 2
+fi=(157)
+272 4
+fi=(52)
+597 2
+fi=(157)
+272 6
+fe=(241)
+952 10
+fi=(54)
+466 8
+fe=(241)
+955 16
+cfn=(1370)
+calls=2 1141 
+* 7042
+* 4
+fi=(248)
+585 2
+fe=(241)
+955 4
+cfi=(53)
+cfn=(1466)
+calls=2 805 
+* 32
+* 22
+0 8
+fi=(73)
+1692 2
+fi=(141)
+180 2
++5 2
+fi=(138)
++7 6
+fi=(242)
+444 2
+fi=(248)
+586 20
+fe=(241)
+228 20
+1015 20
+219 8
+fi=(248)
+585 2
+fe=(241)
+289 4
+cfi=(53)
+cfn=(1466)
+calls=2 805 
+* 40
+* 8
+0 6
+fi=(157)
+219 4
+fe=(241)
+0 1
+66 3
+cfn=(1372)
+calls=1 1119 
+* 3918
+* 1
+fi=(248)
+585 1
+fe=(241)
+69 3
+cfn=(1516) clap_builder::parser::parser::Parser::add_env
+calls=1 1414 
+* 799
+* 1
+fi=(248)
+585 1
+fe=(241)
+70 3
+cfn=(1530) clap_builder::parser::parser::Parser::add_defaults
+calls=1 1444 
+* 30146
+* 1
+fi=(248)
+585 1
+fe=(241)
+73 9
+-1 2
+fi=(252)
+-52 2
+cfi=(226)
+cfn=(1552)
+calls=1 5040 
+* 899
++1 1
+fi=(247)
+143 6
+fi=(52)
+597 1
+fi=(54)
+1753 2
+fi=(173)
+961 3
+fi=(52)
+597 2
+fi=(54)
+1753 2
+fi=(173)
+961 9
+0 2
+fi=(73)
+1692 1
+fi=(141)
+180 1
+fi=(173)
+0 6
+fi=(73)
+1692 3
+fi=(141)
+180 3
+fi=(73)
+1692 8
+fi=(141)
+180 8
+fi=(73)
+1692 11
+fi=(141)
+180 11
+fi=(73)
+660 22
+fi=(59)
+1164 33
+fi=(74)
+2434 11
+fi=(35)
+310 12
+fi=(252)
+450 12
+cfn=(1570)
+calls=3 +41 
+* 964
+* 3
+fi=(59)
+1165 12
+fi=(247)
+37 9
+-37 3
+fi=(54)
+1030 3
++3 6
+fi=(52)
+597 3
+fi=(173)
+961 6
+fi=(53)
+1910 6
+fi=(54)
+1039 6
+-6 6
+fi=(52)
+597 3
+fi=(173)
+961 3
+fi=(53)
+1910 9
+fi=(54)
+1039 12
+fi=(247)
+37 3
+fi=(54)
+1034 3
+cfi=(52)
+cfn=(718)
+calls=1 186 
+* 206
+* 1
+-4 2
++4 4
+cfi=(52)
+cfn=(718)
+calls=1 186 
+* 206
+* 3
+fi=(252)
+454 7
+fi=(59)
+745 2
+fi=(252)
+0 1
+29 2
+fi=(233)
+-10 1
+fi=(226)
+3901 3
+fi=(252)
+29 1
+fi=(226)
+3901 1
+fi=(252)
+39 1
+fi=(52)
+-39 2
+fi=(252)
+54 2
+cfn=(1590)
+calls=1 +8 
+* 2406
+* 2
+-54 5
+fi=(73)
+1692 1
+fi=(141)
+180 1
+fi=(252)
+0 22
+fi=(73)
+1692 11
+fi=(141)
+180 11
+fi=(73)
+1692 11
+fi=(141)
+180 11
+fi=(73)
+660 44
+fi=(59)
+1164 11
+fi=(74)
+2434 11
+0 3
+fi=(252)
+203 6
++9 6
+fi=(73)
+1692 3
+fi=(141)
+180 3
+0 40
+fi=(73)
+1692 22
+fi=(141)
+180 22
+fi=(72)
+-28 50
+fi=(249)
+285 5
+fi=(72)
+160 15
+cfi=(75)
+cfn=(232)
+calls=5 7 
+* 175
+* 5
+fi=(141)
+349 5
+fi=(54)
+466 9
+fi=(48)
+14 6
+cfi=(37)
+cfn=(118)
+calls=3 115 
+* 387
+fi=(77)
+489 6
+0 6
+fi=(226)
+5092 3
+fi=(54)
+1192 6
+466 54
+0 3
+2731 12
++4 6
+fi=(53)
+1710 6
+fi=(73)
+-18 3
+fi=(141)
+180 3
+fi=(72)
+0 6
+fi=(54)
+1033 6
+0 3
+fi=(53)
+1910 3
+fi=(54)
+1039 24
+0 22
+fi=(73)
+1692 22
+fi=(141)
+180 22
+fi=(72)
+-28 50
+fi=(249)
+285 5
+fi=(72)
+160 15
+cfi=(75)
+cfn=(232)
+calls=5 7 
+* 175
+* 5
+fi=(141)
+349 5
+fi=(52)
+597 3
+fi=(54)
+1753 3
+fi=(173)
+961 12
+fi=(73)
+1692 9
+fi=(141)
+180 3
+0 6
+fi=(226)
+5103 9
+fi=(54)
+1034 6
+cfi=(52)
+cfn=(718)
+calls=3 186 
+* 710
+fi=(52)
+597 9
+fi=(226)
+5114 15
+fi=(52)
+617 6
+fi=(226)
+5115 3
+fi=(48)
+48 3
+cfi=(55)
+cfn=(170)
+calls=3 -43 
+* 408
+fi=(52)
+617 6
+fi=(226)
+5115 3
+fi=(48)
+48 3
+cfi=(55)
+cfn=(170)
+calls=3 -43 
+* 465
+fi=(73)
+1692 6
+fi=(50)
+224 3
+fi=(52)
+617 6
+fi=(54)
+466 3
+fi=(73)
+1692 1
+fi=(141)
+180 1
+0 46
+fi=(73)
+1692 11
+fi=(141)
+180 11
+fi=(73)
+1692 22
+0 11
+fi=(59)
+1164 11
+fi=(254)
+86 26
+-86 22
+fi=(73)
+1692 22
+fi=(141)
+180 22
+fi=(72)
+-28 50
+fi=(249)
+285 5
+fi=(72)
+160 15
+cfi=(75)
+cfn=(232)
+calls=5 7 
+* 175
+* 10
+fi=(141)
+349 5
+fi=(74)
+2434 6
+fi=(141)
+0 1
+fi=(252)
+241 2
+fi=(173)
+961 8
+fi=(73)
+1692 2
+0 2
+1692 1
+fi=(141)
+180 1
+fi=(73)
+1692 1
+fi=(141)
+180 1
+fi=(73)
+660 2
+fi=(252)
+242 5
+fi=(73)
+1692 2
+fi=(238)
+82 2
+fi=(73)
+1692 4
+fi=(72)
+152 6
+fi=(161)
+2115 2
+fi=(72)
+160 6
+cfi=(75)
+cfn=(232)
+calls=2 7 
+* 60
+* 4
+fi=(247)
+-62 2
+fi=(157)
+272 2
+fi=(246) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/parser/matches/matched_arg.rs
+136 1
+fi=(59)
+1164 3
+fi=(252)
+275 1
++2 2
+fi=(173)
+961 7
+0 1
+fi=(73)
+1692 45
+fi=(141)
+180 17
+0 16
+fi=(73)
+660 16
+fi=(252)
+278 96
+fi=(73)
+1692 110
+fi=(238)
+82 110
+fi=(73)
+1692 110
+fi=(141)
+180 110
+fi=(72)
+-28 242
+fi=(161)
+2115 19
+fi=(72)
+160 57
+cfi=(75)
+cfn=(232)
+calls=19 7 
+* 911
+* 38
+fi=(247)
+-62 19
+fi=(157)
+272 22
+fi=(246)
+136 22
+fi=(59)
+1164 33
+0 26
+fi=(54)
+1753 13
+fi=(73)
+-61 13
+fi=(141)
+180 13
+0 26
+fi=(54)
+1753 13
+fi=(73)
+-61 13
+fi=(141)
+180 13
+0 26
+180 13
+fi=(252)
+295 52
+0 13
+fi=(54)
+2933 26
+fi=(252)
+0 26
+303 52
+fi=(59)
+0 39
+fi=(252)
+313 26
++9 2
+fi=(226)
+3901 6
+fi=(252)
+322 1
++3 1
+fi=(73)
+1692 1
+fi=(141)
+180 1
+0 6
+fi=(73)
+1692 18
+fi=(141)
+180 16
+0 16
+fi=(73)
+660 16
+fi=(59)
++85 36
+fi=(252)
+326 7
+fi=(73)
+1692 2
+fi=(238)
+82 2
+fi=(73)
+1692 2
+fi=(141)
+180 2
+fi=(72)
+-28 6
+fi=(161)
+2115 2
+fi=(72)
+160 6
+cfi=(75)
+cfn=(232)
+calls=2 7 
+* 60
+* 4
+fi=(247)
+-62 2
+fi=(157)
+272 2
+fi=(246)
+136 2
+fi=(59)
+1164 4
+fi=(252)
+0 1
+fi=(54)
+2933 1
+fi=(252)
+338 2
+fi=(52)
+617 4
+fi=(53)
+805 1
+fi=(48)
+48 1
+cfi=(55)
+cfn=(170)
+calls=1 -43 
+* 131
+fi=(53)
+805 4
+fi=(52)
+617 3
+fi=(53)
+805 9
+fi=(52)
+617 6
+fi=(53)
+805 2
+fi=(48)
+48 2
+cfi=(55)
+cfn=(170)
+calls=2 -43 
+* 262
+* 2
+-48 1
+fi=(52)
+617 2
+fi=(48)
+48 2
+cfi=(55)
+cfn=(170)
+calls=1 -43 
+* 167
+fi=(53)
+805 4
+fi=(52)
+617 3
+fi=(53)
+805 3
+fi=(52)
+617 4
+fi=(48)
+48 2
+cfi=(55)
+cfn=(170)
+calls=1 -43 
+* 426
+* 1
+fe=(241)
+
+fn=(1396) clap_builder::parser::parser::Parser::start_custom_arg
+1533 121
++1 44
+fi=(54)
+1753 3
+fi=(73)
+-61 3
+fi=(141)
+180 3
+0 10
+fi=(73)
+660 2
+fe=(241)
+1395 8
+cfi=(240)
+cfn=(1392) clap_builder::parser::arg_matcher::ArgMatcher::remove
+calls=2 101 
+* 56
+* 2
+fi=(73)
+1692 2
+fi=(141)
+180 2
+fi=(54)
+466 9
+1753 3
+fi=(73)
+-61 3
+fi=(141)
+180 3
+0 4
+fe=(241)
+1401 2
+fi=(73)
+1692 4
+0 35
+1692 3
+fi=(141)
+180 3
+0 3
+fe=(241)
+1401 6
+fi=(73)
+1692 3
+fi=(141)
+180 3
+0 37
+fi=(73)
+1692 16
+fi=(141)
+180 16
+fi=(72)
+-28 38
+fi=(249)
+285 5
+fi=(72)
+160 15
+cfi=(75)
+cfn=(232)
+calls=5 7 
+* 189
+* 5
+fi=(141)
+349 5
+fi=(54)
+1753 3
+fi=(73)
+-61 3
+fi=(141)
+180 3
+0 15
+fi=(73)
+1692 6
+fi=(141)
+180 3
+0 3
+fi=(72)
+152 6
+fe=(241)
+1407 4
+fi=(73)
+1692 2
+fi=(50)
+224 2
+fi=(52)
+617 4
+fi=(48)
+0 3
+fi=(250)
+10 6
+fi=(240)
+118 6
+fi=(54)
+1753 3
+fi=(73)
+-61 6
+fi=(141)
+180 3
+fi=(250)
+10 16
+fi=(240)
+118 16
+fi=(54)
+1753 8
+fi=(73)
+-61 16
+fi=(141)
+180 8
+0 60
+fi=(73)
+1692 55
+fi=(238)
+82 55
+fi=(73)
+1692 55
+fi=(141)
+180 55
+fi=(72)
+-28 110
+fi=(247)
+-67 12
+fi=(72)
++75 12
+cfi=(75)
+cfn=(232)
+calls=6 7 
+* 79
+* 12
+fi=(247)
+-75 6
+fi=(245)
+-85 11
+fi=(247)
+89 44
+fi=(234)
+-72 11
+fi=(59)
+745 22
+fi=(228)
+4483 22
+fi=(245)
+261 77
+fi=(197) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/boxed.rs
+0 2
+fi=(246)
+28 11
+fi=(245)
+247 11
+cfn=(1408) <P as clap_builder::builder::value_parser::AnyValueParser>::type_id
+calls=1 645 
+* 7
+cfn=(1408)
+calls=10 645 
+* 70
+fi=(246)
+28 165
+fi=(240)
+138 11
+cfi=(247)
+cfn=(1410)
+calls=11 +18 
+* 4693
+fi=(246)
++20 44
+0 11
+fi=(54)
+1030 11
++3 22
+fi=(52)
+597 11
+fi=(173)
+961 11
+fi=(53)
+1910 33
+fi=(54)
+1039 22
+-9 11
++3 22
+fi=(52)
+597 11
+fi=(173)
+961 11
+fi=(53)
+1910 33
+fi=(54)
+1039 22
+fi=(302) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/parser/matches/value_source.rs
+2 11
+fe=(241)
+1539 11
+0 3
+1540 3
+fi=(54)
+1753 3
+fi=(73)
+-61 3
+fi=(141)
+180 3
+fe=(241)
+1549 88
+fi=(54)
+1034 33
+cfi=(52)
+cfn=(718)
+calls=11 186 
+* 3387
+* 66
+cfi=(52)
+cfn=(718)
+calls=11 186 
+* 3342
+* 22
+fe=(241)
+
+fn=(1516)
+1414 10
++3 2
+fi=(73)
+1692 1
+fi=(141)
+180 1
+0 10
+fe=(241)
+0 48
+fi=(73)
+1692 16
+fi=(141)
+180 16
+0 16
+fe=(241)
+1420 16
+fi=(73)
+1692 16
+fi=(141)
+180 16
+0 128
+fi=(73)
+1692 84
+fi=(141)
+180 42
+fi=(72)
+-28 90
+fi=(161)
+2115 6
+fi=(72)
+160 18
+cfi=(75)
+cfn=(232)
+calls=6 7 
+* 187
+* 6
+fi=(247)
+48 9
+-48 13
+fe=(241)
+1426 39
+fi=(52)
+0 1
+fe=(241)
+1442 8
+
+fn=(1370)
+1141 165
++9 22
+cfn=(1373)
+calls=1 -31 
+* 25
+cfn=(1372)
+calls=10 -31 
+* 250
+* 33
+fi=(248)
+585 11
+fi=(48)
+0 22
+fi=(302)
+2 22
+fe=(241)
+1161 11
+fi=(54)
+2933 40
+fe=(241)
+1165 22
++13 27
+0 11
+1199 22
+fi=(59)
+745 11
+fe=(241)
+1199 77
+fi=(54)
+1753 6
+fe=(241)
+1336 24
+fi=(59)
+969 6
+fe=(241)
+0 6
+1343 18
+fi=(54)
+2933 2
+fe=(241)
+1167 4
+0 2
+fi=(52)
+597 2
+736 2
+-80 2
+-59 2
+fi=(141)
+25 8
+279 4
+fi=(51)
+458 2
+0 6
+fi=(52)
+444 2
+0 2
+fi=(48)
+14 4
+cfi=(37)
+cfn=(118)
+calls=2 115 
+* 258
+fi=(52)
+453 4
+0 6
+fi=(53)
+547 6
+cfi=(7)
+cfn=(16)
+calls=2 7 
+* 42
+1910 8
+fi=(220)
+19 2
+fi=(141)
+284 12
+0 2
+fi=(220)
+31 4
+fe=(241)
+1178 8
+fi=(244)
+108 3
+fe=(241)
+1355 3
++1 4
++10 2
++8 2
+fi=(139)
+0 3
+fe=(241)
+1356 3
+0 2
+fi=(302)
+2 4
+fe=(241)
+1228 2
++7 7
+cfn=(1396)
+calls=1 1533 
+* 1357
++1 5
+0 1
+cfn=(1418)
+calls=1 1093 
+0 2208
+0 1
+fi=(248)
+585 1
+fe=(241)
+0 10
+fi=(54)
+2933 10
+fe=(241)
+1245 40
++3 50
+-3 10
+fi=(59)
+0 2
+fe=(241)
+1141 2
+1333 88
+-82 60
+cfi=(240)
+cfn=(1392)
+calls=10 101 
+* 690
+* 20
++10 80
+cfn=(1396)
+calls=10 1533 
+* 12372
+* 20
+0 50
+cfn=(1418)
+calls=10 1093 
+0 17259
+0 10
+fi=(248)
+585 10
+fe=(241)
+0 60
+1333 30
+fi=(52)
+658 14
+cfn=(588)
+calls=2 -14 
+* 846
+* 4
+fi=(220)
+14 4
+fe=(241)
+
+fn=(1530)
+1444 9
++3 2
+fi=(73)
+1692 1
+fi=(141)
+180 1
+0 7
+fe=(241)
+0 16
+cfi=(53)
+cfn=(1466)
+calls=8 805 
+0 160
+0 16
+fi=(73)
+660 8
+1692 8
+fi=(141)
+180 8
+fe=(241)
+0 8
+fi=(73)
+660 8
+1692 8
+fi=(141)
+180 8
+0 16
+fi=(54)
+2933 16
+fe=(241)
+1456 32
+fi=(247)
+0 16
+fi=(54)
+2933 32
+fe=(241)
+1493 32
+0 10
+1498 10
+fi=(73)
+1692 10
+fi=(141)
+180 10
+0 80
+fi=(73)
+1692 106
+fi=(141)
+180 53
+fi=(72)
+-28 110
+fi=(161)
+2115 7
+fi=(72)
+160 21
+cfi=(75)
+cfn=(232)
+calls=7 7 
+* 163
+* 7
+fi=(247)
+48 9
+fi=(51)
+458 32
+0 16
+fi=(136)
+2970 16
+fi=(48)
+14 16
+cfi=(37)
+cfn=(118)
+calls=8 115 
+* 1124
+fi=(52)
+453 16
+0 16
+fi=(51)
+458 16
+fi=(141)
+279 24
+0 8
+fi=(52)
+444 8
+0 8
+fi=(48)
+14 16
+cfi=(37)
+cfn=(118)
+calls=8 115 
+* 1510
+fi=(52)
+453 16
+0 24
+fi=(53)
+547 24
+cfi=(7)
+cfn=(16)
+calls=8 7 
+* 192
+1910 24
+fi=(141)
+284 32
+0 8
+fi=(57)
+61 40
+fe=(241)
+1512 80
+cfn=(1370)
+calls=8 1141 
+* 25839
+* 16
+fi=(248)
+585 8
+fe=(241)
+0 1
+1453 8
+
+fl=(56)
+fn=(172)
+103 504
+-1 1260
+fi=(38)
++29 504
+-5 252
++6 252
+-6 756
++8 504
++5 1260
++1 252
+-1 504
++2 504
++1 1008
++1 756
++1 756
++1 252
++1 252
+-1 252
++1 504
++1 1512
++1 1764
++1 1008
++4 756
++1 192
++24 2
+fe=(56)
+-41 270
+fi=(39)
+-63 351
+fe=(56)
++70 351
+cfn=(178) nontrivial_free
+calls=117 -71 
+* 12159
+fi=(39)
+-66 117
+fe=(56)
++66 234
+fi=(39)
+-66 117
+cfi=(42)
+cfn=(140)
+calls=117 -21 
+* 468
+fe=(56)
++68 234
++1 13
+cfi=(24)
+cfn=(84)
+calls=13 4 
+* 39
++1 26
+-1 26
++1 13
+cfi=(178)
+cfn=(782)
+calls=13 8 
+* 416
++1 26
+fi=(38)
+-23 160
++51 95
+-51 1100
++54 1540
+fe=(56)
+-72 220
+fi=(38)
++53 220
+fe=(56)
+-53 220
++1 440
+fi=(38)
++52 220
++1 440
++18 217
+fe=(56)
+-72 31
+fi=(38)
++53 31
+fe=(56)
+-53 31
++1 62
+fi=(38)
++52 31
++1 62
+fe=(56)
+-54 1
+fi=(38)
++53 1
+fe=(56)
+-53 1
++1 2
+fi=(38)
++52 1
++1 2
++1 408
++1 204
++1 408
++1 408
++2 1008
++1 1008
++2 504
+fe=(56)
+-60 504
++4 252
+-4 756
++1 252
++3 252
+-4 504
++20 252
++1 252
++1 252
++1 504
++1 993
++1 540
++15 1512
+
+fn=(178)
+73 234
++1 234
++4 117
+-2 117
+-2 117
++2 117
+-1 117
++3 234
+-2 117
++2 234
+-3 117
++3 234
+-3 117
++3 468
++11 136
++1 88
++3 176
+fi=(38)
+-16 50
++1 50
++1 100
++2 25
++1 50
++1 75
+fi=(18)
+-35 25
+fe=(56)
++50 50
++1 50
+fi=(18)
+-51 43
+fe=(56)
++50 86
++1 184
+-57 147
++3 245
+fi=(38)
+177 100
+fe=(56)
+-96 82
+-62 196
+fi=(38)
+178 1
+fe=(56)
+45 1
+fi=(38)
+178 1
+fe=(56)
+45 55
++6 96
++4 16
+fi=(38)
+285 32
+fe=(56)
+83 8
+fi=(38)
++14 62
+285 24
+95 15
+fe=(56)
+-10 108
+fi=(38)
++32 15
++1 35
++1 5
++1 5
+fi=(18)
+4 5
+fi=(38)
+120 5
+fi=(18)
+4 5
+fi=(38)
+120 10
++1 211
+fe=(56)
+-94 41
+fi=(38)
+131 82
+-5 41
++6 41
+-6 123
++8 82
++5 246
++1 41
+-1 41
++2 82
++1 164
++1 123
++1 123
++1 41
++1 41
+-1 41
++1 82
++1 246
++1 287
++1 164
++4 123
++1 180
+fe=(56)
+30 41
+fi=(38)
++96 41
+fe=(56)
+-96 41
+fi=(38)
++96 41
+fe=(56)
+-94 41
+cfn=(179) nontrivial_free'2
+calls=41 +41 
+* 2635
+* 41
+fi=(38)
++53 26
++1 13
+fe=(56)
+-51 13
++48 82
+fi=(38)
++9 82
++1 36
++1 36
++1 54
++4 98
+fe=(56)
+-14 98
+-68 147
++1 98
++3 98
+fi=(38)
+251 24
++4 16
++6 56
+fe=(56)
+25 8
+-1 8
++1 8
+fi=(38)
++86 32
+-32 24
++32 164
+-32 123
++2 36
++1 72
++1 144
+fe=(56)
+
+fn=(179)
+73 94
++1 94
++4 47
+-2 47
+-2 47
++2 47
+-1 47
++3 94
+-2 47
++2 94
+-3 47
++3 94
+-3 47
++3 188
++11 72
++1 34
++3 68
+fi=(38)
+-16 12
++1 12
++1 24
++2 5
++1 10
++1 15
+fi=(18)
+-35 5
+fe=(56)
++50 10
++1 10
+fi=(18)
+-51 31
+fe=(56)
++50 62
++1 84
+-57 33
++3 55
+fi=(38)
+177 22
+fe=(56)
+-96 12
+-62 44
++26 11
++6 22
++4 10
++26 4
++2 6
+fi=(38)
+285 12
+fe=(56)
+83 3
+fi=(38)
++14 16
+285 9
+95 6
+fe=(56)
+-10 30
+fi=(38)
++32 6
++1 14
++1 2
++1 2
+fi=(18)
+4 2
+fi=(38)
+120 2
+fi=(18)
+4 2
+fi=(38)
+120 4
++1 50
+fe=(56)
+-94 6
+fi=(38)
+131 12
+-5 6
++6 6
+-6 18
++8 12
++5 36
++1 6
+-1 6
++2 12
++1 24
++1 18
++1 18
++1 6
++1 6
+-1 6
++1 12
++1 36
++1 42
++1 24
++4 18
++1 18
+fe=(56)
+30 6
+fi=(38)
++96 6
+fe=(56)
+-96 6
+fi=(38)
++96 6
+fe=(56)
+-94 6
+cfn=(179)
+calls=6 +41 
+* 503
+* 6
+fi=(38)
++53 10
++1 5
+fe=(56)
+-51 5
+fi=(38)
++50 2
++1 2
+fe=(56)
+-3 12
+fi=(38)
++9 12
++1 6
++1 6
++1 9
++4 22
+fe=(56)
+-14 22
+-68 33
++1 22
++3 22
+fi=(38)
+251 15
++4 10
++6 35
+fe=(56)
+25 5
+-1 5
++1 5
+fi=(38)
++86 20
+-32 15
++32 24
+-32 18
++2 6
++1 12
++1 24
+fe=(56)
+
+fl=(114) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/stat/stat.c
+fn=(406) stat
+5 4
++1 16
+cfi=(115)
+cfn=(408)
+calls=4 140 
+* 258
+
+fl=(139)
+fn=(584)
+3346 16
+fi=(52)
+602 2
+fi=(54)
+1451 2
+fi=(136)
+2413 2
+fi=(52)
+736 2
+-80 2
+0 2
+fi=(173)
+961 2
+fi=(53)
+547 4
+cfi=(7)
+cfn=(16)
+calls=2 7 
+* 30
+fi=(54)
+2822 4
+fe=(139)
+3349 14
+fi=(52)
+658 5
+cfn=(588)
+calls=1 -14 
+* 200
+* 1
+fi=(54)
+2933 2
+fe=(139)
+3346 16
+fi=(52)
+602 2
+fi=(54)
+1451 2
+fi=(136)
+2413 2
+fi=(52)
+736 2
+-80 2
+0 2
+fi=(173)
+961 2
+fi=(53)
+547 4
+cfi=(7)
+cfn=(16)
+calls=2 7 
+* 46
+fi=(54)
+2822 4
+fe=(139)
+3349 14
+fi=(52)
+658 7
+cfn=(588)
+calls=1 -14 
+* 555
+* 1
+fi=(54)
+2933 2
+fe=(139)
+
+fn=(600) <alloc::string::String as core::fmt::Write>::write_char
+3352 6
+fi=(54)
+2933 2
+fi=(151)
+1845 2
+fi=(52)
+602 1
+fi=(136)
+2413 2
+fi=(52)
+736 1
+-80 1
+-59 1
+fi=(151)
+1845 2
++72 1
+fi=(140) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-langid-impl-0.9.6/src/lib.rs
+0 1
+fe=(139)
+1424 1
+fi=(54)
+2106 1
+fe=(139)
+3355 7
+
+fn=(548)
+2713 15
+fi=(52)
+597 5
+fi=(54)
+1753 5
+fi=(120)
+2960 15
+cfn=(550)
+calls=5 1909 
+* 2023
+fe=(139)
+
+fl=(82)
+fn=(256)
+73 9
+fi=(72)
++79 6
+fe=(82)
+0 1
+75 1
+cfi=(83) /home/callen/work/coreutils-startup-factorial/musl/src/uucore/src/lib/mods/locale.rs
+cfn=(260) uucore::mods::locale::setup_localization
+calls=1 641 
+* 264205
+fi=(70)
+1620 3
+fe=(82)
+85 7
+
+fn=(1898)
+30 2
++9 1
+cfi=(275)
+cfn=(1900)
+calls=1 2465 
+* 869
+
+fl=(27)
+fn=(92)
+6 2
++4 1
+fi=(6)
++19 1
+fe=(27)
+-20 1
+-1 1
++1 1
++1 1
+fi=(6)
++19 2
+fe=(27)
+-19 1
+cfi=(12)
+cfn=(50)
+calls=1 -4 
+* 4
++1 2
+
+fl=(224)
+fn=(1190)
+1085 10
++1 2
+0 1
+fi=(64) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/slice/index.rs
+219 3
+fe=(224)
+0 9
+1636 1
+fi=(64)
+219 2
+fe=(224)
+1638 4
++1 2
++5 1
+fi=(64)
+0 1
+fe=(224)
+1655 3
+0 7
+1641 2
++2 2
+0 1
+1636 1
+fi=(64)
+219 2
+fe=(224)
+1638 5
++1 1
+0 1
+1380 5
+fi=(65)
+842 1
+fe=(224)
+1395 2
+fi=(65)
+842 3
+0 2
+fi=(64)
+89 1
+fi=(225) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/slice/cmp.rs
++71 3
+cfi=(75)
+cfn=(232)
+calls=1 7 
+* 12
+* 1
+fe=(224)
+1395 1
+fi=(62) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/slice/iter/macros.rs
+284 5
+0 4
+284 5
+0 1
+279 1
+fe=(224)
+1446 1
+fi=(62)
+284 3
+-5 1
+fe=(224)
+1446 1
+fi=(62)
+284 3
+fi=(25)
+1029 2
+fe=(224)
+1433 5
+-38 1
+fi=(62)
+0 1
+fe=(224)
+1099 4
+fi=(118) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/profiling.rs
+13 9
+fe=(224)
+1108 8
+
+fl=(135)
+fn=(526)
+432 70
+fi=(136)
+842 20
+0 10
+fe=(135)
+438 20
+0 25
+fi=(137) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/memchr.rs
+27 25
+fi=(136)
+846 10
+fi=(157)
+89 5
+fi=(137)
+-62 10
++12 2
+-39 2
+40 2
++4 1
+-5 3
+fi=(21)
+2285 8
+fi=(101) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/slice/memchr.rs
+71 8
+-71 4
+91 1
+-91 2
+89 1
+-70 4
++71 1
+-71 4
++72 4
+-91 3
+91 3
+-91 6
+89 3
+-70 12
++71 3
+-71 12
++72 12
+-91 5
+89 5
+-70 20
++71 5
+-71 20
++72 20
++4 6
+-14 13
+-81 6
+40 20
++4 10
+-5 20
+-39 6
+81 6
+-42 24
+-39 4
+40 16
+-40 4
+40 50
++4 22
+-5 45
++65 3
+fe=(135)
+457 9
++1 21
+fi=(157)
+89 9
+fi=(72)
++71 9
+cfi=(75)
+cfn=(232)
+calls=3 7 
+* 39
+* 18
+fe=(135)
+461 3
+0 3
+462 12
++6 2
+0 6
+472 16
+0 6
+472 24
+
+fl=(75)
+fn=(232)
+7 190
+cfi=(76)
+cfn=(234)
+calls=190 -1 
+* 7821
+
+fl=(178)
+fn=(782)
+8 70
++1 14
+cfi=(41)
+cfn=(136)
+calls=14 -1 
+* 168
+fi=(6)
++12 70
+fe=(178)
+-11 14
+cfi=(12)
+cfn=(50)
+calls=14 -4 
+* 56
++1 56
+
+fl=(122)
+fn=(454)
+194 9
+0 2
+195 2
+0 1
+fi=(223)
+306 3
+cfi=(68)
+cfn=(216)
+calls=1 89 
+* 119
+fi=(70)
+713 2
++1 2
+fe=(122)
+213 3
+0 7
+cfi=(123) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/os_display-0.1.4/src/unix.rs
+cfn=(458) os_display::unix::write
+calls=1 22 
+0 2693
+
+fl=(202)
+fn=(1778) uu_ln::link
+394 13
++4 9
+fi=(48)
+0 2
+fe=(202)
+404 3
+cfi=(60)
+cfn=(1782) std::path::Path::is_symlink
+calls=1 3555 
+* 242
+* 4
++1 2
+fi=(227) /home/callen/work/coreutils-startup-factorial/musl/src/uucore/src/lib/features/backup_control.rs
++25 3
++1 2
+fe=(202)
+-26 5
++7 2
++8 6
+0 1
+430 3
+cfi=(60)
+cfn=(1782)
+calls=1 3555 
+* 242
+* 4
+0 2
+430 1
++13 3
++16 2
++1 8
+cfi=(262) /home/callen/work/coreutils-startup-factorial/musl/src/uucore/src/lib/features/fs.rs
+cfn=(1804) uucore::features::fs::replace_link
+calls=1 1107 
+* 1394
+* 1
+fi=(70)
+966 2
+0 6
+fe=(202)
+502 2
++12 3
+fi=(53)
+805 3
+fi=(48)
+0 1
+fi=(53)
+805 4
+fe=(202)
+515 11
+
+fn=(1012) uu_ln::uu_app
+153 14
+fi=(83)
+534 7
+cfn=(1014) uucore::mods::locale::get_message_internal
+calls=1 -32 
+* 5174
+fe=(202)
+154 7
+fi=(195) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/fmt.rs
+654 4
+cfi=(119) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/fmt.rs
+cfn=(426) alloc::fmt::format::format_inner
+calls=1 -9 
+* 1685
+fi=(52)
+-37 2
+fi=(53)
+805 1
+fi=(48)
+48 1
+cfi=(55)
+cfn=(170)
+calls=1 -43 
+* 429
+fe=(202)
+162 5
+cfi=(205)
+cfn=(1078) uucore::localized_help_template
+calls=1 316 
+* 6123
+fi=(218) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/builder/resettable.rs
++30 2
+42 1
+fi=(83)
+534 6
+cfn=(1014)
+calls=1 -32 
+* 617
+fi=(218)
+192 2
+42 1
+fi=(83)
+534 6
+cfn=(1014)
+calls=1 -32 
+* 2431
+fi=(52)
++63 1
+fi=(54)
+1753 2
+fe=(202)
+164 1
+cfi=(205)
+cfn=(1130) uucore::format_usage
+calls=1 290 
+* 5730
+fi=(218)
++28 1
+42 1
+192 1
+42 1
+fi=(226)
+2027 57
+fe=(202)
+167 1
+cfi=(227)
+cfn=(1206) uucore::features::backup_control::arguments::backup
+calls=1 +47 
+* 893
+fi=(59)
+767 2
+-22 2
+fi=(226)
+180 1
+fi=(59)
+1810 2
++1 2
+fi=(226)
+182 2
+fi=(59)
+1810 2
+fi=(226)
+187 1
+fi=(59)
+1811 2
+fi=(54)
+1030 1
++3 2
++1 2
+cfi=(52)
+cfn=(718)
+calls=1 186 
+* 242
+fi=(173)
+-73 5
+fi=(53)
+1910 2
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 91
+fi=(54)
+1039 4
+fi=(226)
+174 2
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 100
+fi=(217)
+30 5
+fi=(52)
+658 5
+cfn=(588)
+calls=1 -14 
+* 214
+-61 1
+fi=(54)
+2933 1
+fi=(53)
+547 6
+fi=(59)
+767 2
+fi=(226)
+180 1
++2 3
+fe=(202)
+-14 2
+fi=(226)
++19 1
+fi=(54)
+1030 1
+fi=(226)
+187 1
+fi=(54)
+1033 2
+fi=(52)
+597 1
+fi=(173)
+961 2
+fi=(53)
+1910 58
+fi=(54)
+1039 4
+fi=(226)
+174 3
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 100
+fi=(83)
+534 6
+cfn=(1014)
+calls=1 -32 
+* 638
+fi=(217)
+163 2
+fi=(228)
+2280 7
+fi=(53)
+1910 1
+fi=(228)
+2280 46
+4122 1
+fi=(54)
+1034 1
+cfi=(52)
+cfn=(718)
+calls=1 186 
+* 326
+fi=(52)
+597 1
+fi=(53)
+1910 3
+fi=(54)
+1039 1
+fi=(228)
+4126 16
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 75
+* 12
+fi=(59)
+767 2
+-22 7
+fi=(226)
+180 1
+fi=(59)
+1810 2
+fi=(226)
+182 4
+0 1
+fi=(59)
+1810 2
+0 5
+fi=(54)
+1030 1
++3 2
+fi=(52)
+597 1
+fi=(173)
+961 4
+fi=(53)
+1910 17
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 75
+* 15
+fi=(54)
+1039 4
+fi=(226)
+174 2
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 100
+* 2
+fi=(83)
+534 6
+cfn=(1014)
+calls=1 -32 
+* 608
+fi=(217)
+163 2
+fi=(228)
+2280 54
+4122 1
+fi=(54)
+1034 1
+cfi=(52)
+cfn=(718)
+calls=1 186 
+* 650
+fi=(52)
+597 1
+fi=(53)
+1910 3
+fi=(54)
+1039 1
+fi=(228)
+4126 16
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 75
+* 12
+fi=(59)
+767 2
+-22 7
+fi=(226)
+180 1
+fi=(59)
+1810 2
+fi=(226)
+182 4
+0 1
+fi=(59)
+1810 2
+0 5
+fi=(54)
+1030 1
++3 2
+fi=(52)
+597 1
+fi=(173)
+961 3
+fi=(53)
+1910 17
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 75
+* 15
+fi=(54)
+1039 4
+fi=(226)
+174 2
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 100
+fi=(83)
+534 7
+cfn=(1014)
+calls=1 -32 
+* 1735
+fi=(59)
+767 2
+fi=(226)
+180 1
++2 3
+-3 1
+0 3
+187 1
+fi=(54)
+1030 1
+fi=(226)
+187 1
+fi=(54)
+1033 2
+0 1
+1034 4
+cfi=(52)
+cfn=(718)
+calls=1 186 
+* 989
+* 3
+fi=(52)
+597 1
+fi=(173)
+961 2
+fi=(53)
+1910 59
+fi=(54)
+1039 4
+fi=(226)
+174 3
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 100
+fi=(83)
+534 6
+cfn=(1014)
+calls=1 -32 
+* 667
+fi=(217)
+163 2
+fi=(228)
+2280 7
+fi=(53)
+1910 1
+fi=(228)
+2280 45
+4122 1
+fi=(54)
+1034 1
+cfi=(52)
+cfn=(718)
+calls=1 186 
+* 231
+fi=(52)
+597 1
+fi=(53)
+1910 3
+fi=(54)
+1039 1
+fi=(228)
+4126 16
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 75
+* 12
+fi=(59)
+767 2
+-22 7
+fi=(226)
+180 1
+fi=(59)
+1810 2
+fi=(226)
+182 4
+fi=(59)
+1810 2
+0 7
+fi=(54)
+1030 1
++3 2
+fi=(52)
+597 1
+fi=(173)
+961 3
+fi=(53)
+1910 17
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 75
+* 15
+fi=(54)
+1039 4
+fi=(226)
+174 2
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 100
+fi=(83)
+534 7
+cfn=(1014)
+calls=1 -32 
+* 946
+fi=(59)
+767 2
+fi=(226)
+180 1
++2 3
+-3 1
+0 3
+187 1
+fi=(54)
+1030 1
+fi=(226)
+187 1
+fi=(54)
+1033 2
+fi=(52)
+597 1
+fi=(173)
+961 2
+fi=(53)
+1910 59
+fi=(54)
+1039 4
+fi=(226)
+174 3
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 100
+fi=(83)
+534 6
+cfn=(1014)
+calls=1 -32 
+* 571
+fi=(217)
+163 2
+fi=(228)
+2280 7
+fi=(53)
+1910 1
+fi=(228)
+2280 45
+4122 1
+fi=(54)
+1034 1
+cfi=(52)
+cfn=(718)
+calls=1 186 
+* 234
+fi=(52)
+597 1
+fi=(53)
+1910 2
+fi=(54)
+1039 1
+fi=(228)
+4126 16
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 75
+* 12
+fi=(59)
+767 2
+-22 7
+fi=(226)
+180 1
+fi=(59)
+1810 2
+fi=(226)
+182 4
+0 1
+fi=(59)
+1810 2
+0 5
+fi=(54)
+1030 1
++3 2
+fi=(52)
+597 1
+fi=(173)
+961 3
+fi=(53)
+1910 17
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 75
+* 15
+fi=(54)
+1039 4
+fi=(226)
+174 2
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 100
+* 1
+fe=(202)
++49 1
+cfi=(227)
+cfn=(1228) uucore::features::backup_control::arguments::suffix
+calls=1 +10 
+* 447
+fi=(59)
+767 3
+-22 2
+fi=(226)
+180 1
+fi=(59)
+1810 2
++1 2
+fi=(226)
+182 2
+fi=(59)
+1810 2
+fi=(226)
+187 1
+fi=(59)
+1811 2
+fi=(54)
+1030 1
++3 2
++1 2
+cfi=(52)
+cfn=(718)
+calls=1 186 
+* 1470
+fi=(173)
+-73 4
+fi=(53)
+1910 3
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 91
+fi=(54)
+1039 4
+fi=(226)
+174 2
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 100
+fi=(83)
+534 6
+cfn=(1014)
+calls=1 -32 
+* 640
+fi=(217)
+163 3
+fi=(48)
+14 2
+cfi=(37)
+cfn=(118)
+calls=1 115 
+* 132
+fi=(52)
+453 2
+fi=(53)
+1910 3
+fi=(228)
+1353 59
+fe=(202)
+230 2
+cfi=(228)
+cfn=(1236) clap_builder::builder::arg::Arg::value_hint
+calls=1 1392 
+* 1410
+fi=(53)
+805 3
+fi=(228)
+1049 3
++1 2
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 91
+fi=(54)
+-20 1
++3 2
++1 2
+cfi=(52)
+cfn=(718)
+calls=1 186 
+* 558
+fi=(52)
+597 1
+fi=(173)
+961 2
+fi=(53)
+1910 3
+fi=(54)
+1039 2
+fi=(228)
+4013 15
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 75
+* 10
+fi=(59)
+767 2
+-22 7
+fi=(226)
+180 1
+fi=(59)
+1810 2
+fi=(226)
+182 3
+0 1
+fi=(59)
+1810 2
+0 7
+fi=(54)
+1030 1
++3 2
+fi=(52)
+597 1
+fi=(173)
+961 2
+fi=(53)
+1910 18
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 75
+* 12
+fi=(54)
+1039 4
+fi=(226)
+174 2
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 100
+fi=(83)
+534 7
+cfn=(1014)
+calls=1 -32 
+* 674
+fi=(59)
+767 2
+fi=(226)
+180 1
++2 3
+-3 1
+0 3
+187 1
+fi=(54)
+1030 1
+fi=(226)
+187 1
+fi=(54)
+1033 2
+fi=(52)
+597 1
+fi=(173)
+961 2
+fi=(53)
+1910 59
+fi=(54)
+1039 4
+fi=(226)
+174 3
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 100
+fi=(83)
+534 6
+cfn=(1014)
+calls=1 -32 
+* 586
+fi=(217)
+163 2
+fi=(228)
+2280 7
+fi=(53)
+1910 1
+fi=(228)
+2280 45
+827 1
+fi=(54)
+1034 1
+cfi=(52)
+cfn=(718)
+calls=1 186 
+* 231
+fi=(52)
+597 1
+fi=(228)
+831 2
+fi=(53)
+1910 4
+fi=(54)
+1039 1
+fi=(228)
+831 17
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 75
+* 10
+fi=(59)
+-64 2
+-22 7
+0 3
+fi=(54)
+1030 1
++3 2
+fi=(52)
+597 1
+fi=(173)
+961 2
+fi=(53)
+1910 16
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 75
+* 14
+fi=(54)
+1039 2
+fi=(83)
+534 7
+cfn=(1014)
+calls=1 -32 
+* 574
+fi=(59)
+767 2
+fi=(226)
+180 1
++2 3
+-3 1
+0 3
+187 1
+fi=(54)
+1030 1
+fi=(226)
+187 1
+fi=(54)
+1033 2
+fi=(52)
+597 1
+fi=(173)
+961 2
+fi=(53)
+1910 59
+fi=(54)
+1039 2
+fi=(228)
+59 48
++72 3
+987 3
+fe=(202)
+259 2
+cfi=(228)
+cfn=(1236)
+calls=1 1392 
+* 733
+fi=(228)
+1049 1
+fi=(53)
+805 3
+fi=(228)
+1049 1
++1 10
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 75
+* 5
+fi=(59)
+767 2
+-22 4
+0 2
+1810 3
+0 10
+fi=(54)
+1030 1
++3 2
+fi=(52)
+597 1
+fi=(173)
+961 2
+fi=(53)
+1910 17
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 75
+* 11
+fi=(54)
+1039 3
+fi=(226)
+174 4
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 100
+fi=(52)
+617 2
+fi=(53)
+805 1
+fi=(48)
+48 1
+cfi=(55)
+cfn=(170)
+calls=1 -43 
+* 187
+fe=(202)
+264 9
+fi=(226)
+-84 1
+fi=(59)
+1810 2
+fi=(226)
+182 6
+fi=(59)
+1810 2
+fe=(202)
+
+fn=(994)
+105 9
+fi=(154)
+4028 1
+729 1
+fe=(202)
+105 1
+fi=(203) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.31.3/src/sys/signal.rs
+0 3
+cfi=(17)
+cfn=(68)
+calls=1 5 
+0 130
+fi=(204) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/nix-0.31.3/src/errno.rs
+132 2
+fe=(202)
+-27 1
+cfi=(205)
+cfn=(1000) uucore::disable_rust_signal_handlers
+calls=1 +88 
+* 225
+fi=(70)
+1183 2
+0 1
+fe=(202)
+107 2
+cfn=(1012)
+calls=1 +46 
+* 43125
+* 1
+fi=(230) /home/callen/work/coreutils-startup-factorial/musl/src/uucore/src/lib/mods/clap_localization.rs
+400 4
+cfn=(1248) uucore::mods::clap_localization::handle_clap_result_with_exit_code
+calls=1 +67 
+* 80021
+fi=(70)
+2173 1
+0 1
+2173 2
+0 1
+2173 1
++1 4
+fe=(202)
+107 3
+fi=(73)
+1692 1
+fi=(141)
+180 1
+0 5
+fi=(73)
+1692 2
+fi=(238)
+82 2
+fi=(73)
+1692 2
+fi=(141)
+180 2
+fi=(72)
+-28 6
+fi=(247)
+-54 4
+fi=(72)
++62 8
+fi=(247)
+-62 2
+fi=(54)
+1753 1
+fi=(157)
+272 2
+0 1
+fi=(52)
+597 1
+fi=(157)
+272 1
+fi=(246)
+171 2
+fi=(59)
+1654 3
+fi=(256) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/parser/matches/arg_matches.rs
+0 1
+fi=(59)
+1655 1
+fi=(258)
+761 3
+fi=(256)
+1292 1
+fi=(73)
+1692 1
+fi=(141)
+25 1
+284 4
+0 2
+284 9
+0 1
+fi=(253)
+53 1
+fi=(141)
+284 3
+fi=(173)
+961 2
+fi=(303) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/iter/adapters/map.rs
+69 10
+fi=(304) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/spec_from_iter.rs
+-36 1
+cfi=(57)
+cfn=(1684) <alloc::vec::Vec<T> as alloc::vec::spec_from_iter_nested::SpecFromIterNested<T,I>>::from_iter
+calls=1 -15 
+* 679
+fe=(202)
++84 5
+cfi=(256)
+cfn=(1718) clap_builder::parser::matches::arg_matches::ArgMatches::get_flag
+calls=1 +64 
+* 157
+* 1
++2 4
+cfi=(256)
+cfn=(1718)
+calls=1 +62 
+* 142
+* 3
+0 1
+fi=(100) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/env.rs
+260 4
+cfn=(490) std::env::_var_os
+calls=1 +3 
+* 1114
+-33 3
+fi=(70)
+715 1
+fi=(53)
++90 1
+fi=(70)
+0 3
+fe=(202)
+128 2
+cfi=(227)
+cfn=(1736) uucore::features::backup_control::determine_backup_mode
+calls=1 346 
+* 351
+fi=(70)
+2173 3
++1 3
+fe=(202)
+129 2
+cfi=(227)
+cfn=(1744) uucore::features::backup_control::determine_backup_suffix
+calls=1 254 
+* 1382
++3 4
+cfi=(256)
+cfn=(1718)
+calls=1 +49 
+* 186
+* 1
++8 4
+cfi=(256)
+cfn=(1718)
+calls=1 +41 
+* 247
+* 1
+fi=(256)
+-21 6
+cfn=(1746) clap_builder::parser::matches::arg_matches::ArgMatches::try_get_one
+calls=1 1081 
+* 98
+* 2
+fi=(260) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/parser/error.rs
+-93 2
++1 1
+fi=(59)
+1164 3
+fe=(202)
+0 4
+144 5
+cfi=(256)
+cfn=(1718)
+calls=1 +37 
+* 282
+* 1
++1 4
+cfi=(256)
+cfn=(1718)
+calls=1 +36 
+* 229
+* 1
++1 4
+cfi=(256)
+cfn=(1718)
+calls=1 +35 
+* 228
+* 1
+-12 20
+fi=(52)
+597 1
+fi=(54)
+1753 1
+fe=(202)
+268 4
+0 1
+fi=(71)
+241 4
+fe=(202)
++35 5
+0 2
+280 2
++3 5
+fi=(52)
+617 2
+fi=(53)
+805 1
+fi=(48)
+48 1
+cfi=(55)
+cfn=(170)
+calls=1 -43 
+* 131
+fi=(53)
+805 5
+0 1
+fi=(52)
+617 3
+fi=(53)
+805 6
+fi=(52)
+617 4
+fi=(53)
+805 2
+fi=(48)
+48 2
+cfi=(55)
+cfn=(170)
+calls=2 -43 
+* 262
+* 2
+fi=(52)
+617 2
+0 1
+fi=(48)
+48 1
+cfi=(55)
+cfn=(170)
+calls=1 -43 
+* 131
+-48 1
+fe=(202)
+151 1
+cfi=(53)
+cfn=(1884) core::ptr::drop_in_place<clap_builder::parser::matches::arg_matches::ArgMatches>
+calls=1 805 
+* 16931
+* 1
+fi=(52)
+597 1
+fi=(54)
+1753 1
+fe=(202)
+280 2
+0 1
+280 4
+cfi=(60)
+cfn=(398) std::path::Path::is_dir
+calls=1 3522 
+* 244
+* 4
+0 1
+fi=(52)
+597 1
+fi=(54)
+1753 1
+fi=(52)
+597 1
+fi=(54)
+1753 3
+fe=(202)
+284 1
+cfn=(1778)
+calls=1 394 
+* 1986
+* 1
+0 1
+fi=(70)
+2173 3
+fi=(154)
+4029 1
+fe=(202)
+105 9
+
+fl=(286)
+fn=(1960)
+17 1
++2 1
+cfi=(287)
+cfn=(1962)
+calls=1 -9 
+* 10
+* 3
++1 2
+cfn=(1966) close_file
+calls=1 -10 
+* 3
++1 2
+cfn=(1966)
+calls=1 -11 
+* 3
++1 1
++1 1
+-1 1
+cfn=(1966)
+calls=1 -12 
+* 16
+
+fn=(1966)
+10 6
+-1 1
++2 4
++1 3
++1 4
++1 4
+
+fl=(91) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/thread/pthread_rwlock_timedwrlock.c
+fn=(278) pthread_rwlock_timedwrlock
+4 15
++3 3
+cfi=(18)
+cfn=(280) pthread_rwlock_trywrlock
+calls=3 -3 
+* 21
++1 6
++15 12
+
+fl=(265) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/io/error.rs
+fn=(1816) std::io::error::Error::kind
+1005 3
+fi=(150) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/io/error/repr_bitpacked.rs
+249 6
++2 1
+fi=(266) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/io/error/unix.rs
+103 3
+0 1
+103 3
+fe=(265)
+0 1
+1012 2
+
+fl=(22)
+fn=(78)
+6 3
++1 6
++1 8
++4 4
+fi=(6)
++9 9
+fe=(22)
+-4 3
+cfi=(12)
+cfn=(50)
+calls=3 -11 
+* 12
++1 6
+
+fl=(24)
+fn=(300)
+4 2
+fi=(96) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/thread/pthread_setspecific.c
++3 10
++1 1
++1 1
++3 4
+fe=(24)
+
+fn=(84)
+4 23
+fi=(305) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/errno/__errno_location.c
++2 23
++1 23
+fe=(24)
+
+fl=(53)
+fn=(1072) core::ptr::drop_in_place<alloc::vec::Vec<fluent_bundle::errors::FluentError>>
+805 196
+0 14
+fi=(52)
+617 28
+fe=(53)
+805 112
+
+fn=(1648) core::ptr::drop_in_place<clap_builder::builder::command::Command>
+805 29
+fi=(52)
+617 6
+fe=(53)
+805 19
+0 19
+805 48
+0 16
+805 195
+fi=(48)
+48 15
+cfi=(55)
+cfn=(170)
+calls=15 -43 
+* 2301
+fe=(53)
+805 92
+fi=(52)
+617 32
+fe=(53)
+805 1
+fi=(48)
+48 1
+cfi=(55)
+cfn=(170)
+calls=1 -43 
+* 131
+fi=(52)
+617 32
+fe=(53)
+805 4
+fi=(48)
+48 4
+cfi=(55)
+cfn=(170)
+calls=4 -43 
+* 622
+fi=(52)
+617 64
+fe=(53)
+805 1
+fi=(48)
+48 1
+cfi=(55)
+cfn=(170)
+calls=1 -43 
+* 131
+fi=(52)
+617 224
+fe=(53)
+805 3
+fi=(48)
+48 3
+cfi=(55)
+cfn=(170)
+calls=3 -43 
+* 449
+fi=(52)
+617 32
+fe=(53)
+805 10
+fi=(48)
+48 10
+cfi=(55)
+cfn=(170)
+calls=10 -43 
+* 1310
+fe=(53)
+805 64
+fi=(52)
+617 64
+fe=(53)
+805 10
+fi=(48)
+48 10
+cfi=(55)
+cfn=(170)
+calls=10 -43 
+* 1366
+fe=(53)
+805 64
+fi=(52)
+617 32
+fe=(53)
+805 2
+fi=(48)
+48 2
+cfi=(55)
+cfn=(170)
+calls=2 -43 
+* 702
+fe=(53)
+805 64
+0 4
+805 6
+fi=(73)
+445 2
+fi=(154)
+4079 2
+fi=(229) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/sync.rs
+2811 2
++43 6
+cfn=(1658) alloc::sync::Arc<T,A>::drop_slow
+calls=2 2109 
+* 312
+* 2
+fi=(52)
+617 32
+fi=(48)
+48 4
+cfi=(55)
+cfn=(170)
+calls=2 -43 
+* 507
+* 2
+-48 1
+fi=(52)
+617 2
+0 1
+fi=(48)
+48 1
+cfi=(55)
+cfn=(170)
+calls=1 -43 
+* 293
+fi=(52)
+617 2
+fe=(53)
+805 1
+fi=(48)
+48 1
+cfi=(55)
+cfn=(170)
+calls=1 -43 
+* 140
+fi=(52)
+597 1
+fi=(54)
+4160 1
+fe=(53)
+805 2
+fi=(52)
+617 2
+fe=(53)
+805 4
+fi=(48)
+0 1
+fi=(52)
+617 2
+fe=(53)
+805 3
+fi=(52)
+617 2
+fe=(53)
+805 4
+fi=(52)
+617 2
+fe=(53)
+805 9
+fi=(48)
+48 1
+cfi=(55)
+cfn=(170)
+calls=1 -43 
+* 131
+fe=(53)
+805 5
+fi=(48)
+48 1
+cfi=(55)
+cfn=(170)
+calls=1 -43 
+* 180
+fe=(53)
+805 5
+fi=(48)
+48 1
+cfi=(55)
+cfn=(170)
+calls=1 -43 
+* 182
+fe=(53)
+805 5
+fi=(48)
+48 1
+cfi=(55)
+cfn=(170)
+calls=1 -43 
+* 180
+fe=(53)
+805 5
+fi=(48)
+48 1
+cfi=(55)
+cfn=(170)
+calls=1 -43 
+* 131
+* 1
+fe=(53)
+
+fn=(574) core::ptr::drop_in_place<uucore::mods::locale::LocalizationError>
+805 24
+0 2
+805 6
+fi=(150)
+0 2
+fe=(53)
+805 6
+fi=(48)
+48 12
+cfi=(55)
+cfn=(170)
+calls=2 -43 
+* 644
+fe=(53)
+
+fn=(1884)
+805 9
+fi=(52)
+617 2
+fe=(53)
+805 1
+fi=(48)
+48 1
+cfi=(55)
+cfn=(170)
+calls=1 -43 
+* 315
+fe=(53)
+805 7
+0 14
+805 33
+0 11
+805 33
+fi=(52)
+617 22
+fe=(53)
+805 11
+fi=(48)
+48 11
+cfi=(55)
+cfn=(170)
+calls=11 -43 
+* 1656
+fe=(53)
+805 66
+0 33
+805 99
+0 22
+805 36
+fi=(73)
+445 12
+fi=(154)
+4079 12
+fi=(229)
+2811 12
++43 36
+cfn=(1658)
+calls=12 2109 
+* 2751
+* 12
+0 11
+fe=(53)
+805 11
+fi=(52)
+617 22
+0 11
+fi=(48)
+48 11
+cfi=(55)
+cfn=(170)
+calls=11 -43 
+* 2285
+* 11
+-48 11
+fi=(52)
+617 22
+fi=(48)
+48 22
+cfi=(55)
+cfn=(170)
+calls=11 -43 
+* 2232
+fe=(53)
+805 55
+0 33
+805 99
+0 11
+fi=(52)
+617 22
+fe=(53)
+805 36
+fi=(52)
+617 24
+fe=(53)
+805 12
+fi=(48)
+48 12
+cfi=(55)
+cfn=(170)
+calls=12 -43 
+* 1787
+* 12
+-48 11
+fe=(53)
+805 11
+fi=(52)
+617 22
+0 11
+fi=(48)
+48 11
+cfi=(55)
+cfn=(170)
+calls=11 -43 
+* 2208
+* 11
+-48 11
+fi=(52)
+617 22
+fi=(48)
+48 22
+cfi=(55)
+cfn=(170)
+calls=11 -43 
+* 2305
+* 11
+-48 1
+fi=(52)
+617 2
+0 1
+fi=(48)
+48 1
+cfi=(55)
+cfn=(170)
+calls=1 -43 
+* 290
+fe=(53)
+805 11
+
+fn=(1466)
+805 156
+0 11
+805 85
+
+fn=(1894) core::ptr::drop_in_place<alloc::boxed::convert::<impl core::convert::From<alloc::string::String> for alloc::boxed::Box<dyn core::error::Error+core::marker::Sync+core::marker::Send>>::from::StringError>
+805 4
+fi=(52)
+617 4
+fe=(53)
+805 2
+fi=(48)
+48 4
+cfi=(55)
+cfn=(170)
+calls=2 -43 
+* 262
+fe=(53)
+
+fl=(83)
+fn=(322) uucore::mods::locale::get_locales_dir
+737 12
++39 1
+cfi=(100)
+cfn=(324) std::env::current_exe
+calls=1 -26 
+* 1750
+fi=(70)
+966 1
+0 1
+966 3
++1 1
+fi=(60)
+304 2
+fi=(61) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/path/unix.rs
+7 3
+fi=(60)
+3156 7
+2594 1
+cfn=(196) <std::path::Components as core::iter::traits::double_ended::DoubleEndedIterator>::next_back
+calls=1 951 
+* 177
+fi=(67)
+1545 4
+0 1
+fi=(60)
+2597 1
+cfn=(366) std::path::Components::as_path
+calls=1 703 
+* 134
+fi=(59)
+1367 2
+fi=(109) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/path.rs
+2997 7
+cfi=(60)
+cfn=(374) std::path::Path::_join
+calls=1 +3 
+* 2261
+* 1
+fi=(52)
+597 1
+fi=(54)
+1753 2
+fi=(109)
+2997 4
+cfi=(60)
+cfn=(374)
+calls=1 +3 
+* 1849
+fi=(52)
+617 2
+fi=(48)
+48 2
+cfi=(55)
+cfn=(170)
+calls=1 -43 
+* 124
+fi=(52)
+597 1
+fi=(54)
+1753 1
+fe=(83)
+715 2
+cfi=(60)
+cfn=(398)
+calls=1 3522 
+* 264
+* 2
+fi=(48)
+0 2
+fi=(60)
+304 2
+0 1
+fi=(61)
+7 3
+fi=(60)
+3156 7
+2594 1
+cfn=(196)
+calls=1 951 
+* 149
+fi=(67)
+1545 4
+0 1
+fi=(60)
+2597 1
+cfn=(366)
+calls=1 703 
+* 127
+fe=(83)
+720 2
+fi=(109)
+2997 5
+cfi=(60)
+cfn=(374)
+calls=1 +3 
+* 1946
+fi=(52)
+597 1
+fi=(54)
+1753 1
+fi=(109)
+2997 5
+cfi=(60)
+cfn=(374)
+calls=1 +3 
+* 1259
+fi=(52)
+597 1
+fi=(54)
+1753 2
+fi=(109)
+2997 4
+cfi=(60)
+cfn=(374)
+calls=1 +3 
+* 932
+fi=(52)
+617 2
+fi=(48)
+48 2
+cfi=(55)
+cfn=(170)
+calls=1 -43 
+* 124
+fi=(52)
+617 2
+0 1
+fi=(48)
+48 1
+cfi=(55)
+cfn=(170)
+calls=1 -43 
+* 478
+fi=(52)
+597 1
+fi=(54)
+1753 2
+fe=(83)
+722 1
+cfi=(60)
+cfn=(398)
+calls=1 3522 
+* 264
+0 1
+722 2
+fi=(52)
+617 2
+0 1
+fi=(48)
+48 1
+cfi=(55)
+cfn=(170)
+calls=1 -43 
+* 160
+-48 2
+fi=(109)
+2997 5
+cfi=(60)
+cfn=(374)
+calls=1 +3 
+* 1260
+fi=(52)
+597 1
+fi=(54)
+1753 1
+fe=(83)
+729 2
+cfi=(60)
+cfn=(398)
+calls=1 3522 
+* 364
+0 1
+729 2
+fi=(52)
+617 2
+fi=(48)
+48 2
+cfi=(55)
+cfn=(170)
+calls=1 -43 
+* 124
+fi=(52)
+617 3
+fi=(48)
+48 1
+cfi=(55)
+cfn=(170)
+calls=1 -43 
+* 601
+-48 1
+fi=(122)
+87 5
+fe=(83)
+788 5
+fi=(195)
+654 3
+cfi=(119)
+cfn=(426)
+calls=1 -9 
+* 4213
+fe=(83)
+788 1
+fi=(52)
+617 2
+fi=(48)
+48 2
+cfi=(55)
+cfn=(170)
+calls=1 -43 
+* 131
+fe=(83)
+793 8
+
+fn=(634) uucore::mods::locale::parse_fluent_resource_owned
+355 18
+fi=(51)
+458 2
+fi=(36)
+0 6
+fi=(52)
+444 2
+fi=(48)
+14 4
+cfi=(37)
+cfn=(118)
+calls=2 115 
+* 859
+fi=(52)
+453 4
+0 4
+fi=(53)
+547 8
+cfi=(7)
+cfn=(16)
+calls=2 7 
+* 950
+fi=(139)
+1014 10
+fe=(83)
+356 2
+cfi=(156)
+cfn=(646)
+calls=2 82 
+* 190633
+fi=(70)
+0 2
+966 8
++1 6
+fe=(83)
+374 16
+
+fn=(982) uucore::mods::locale::set_localizer
+498 7
+fi=(306) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/thread_local/native/mod.rs
+68 2
+fi=(129)
+555 2
+fi=(84) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/thread_local/native/eager.rs
+35 3
++14 3
+cfi=(85) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/thread_local/destructors/linux_like.rs
+cfn=(264) std::sys::thread_local::destructors::linux_like::register
+calls=1 -34 
+* 55
+fi=(99)
+901 1
+fi=(129)
+2043 2
+fi=(99)
+901 1
+fi=(129)
+2424 2
+fi=(53)
+805 2
+fe=(83)
+499 4
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 55
+fi=(99)
+901 1
+fe=(83)
+500 6
+
+fn=(260)
+641 22
+fi=(306)
+68 4
+fi=(129)
+555 4
+fi=(84)
+35 4
++14 6
+cfi=(85)
+cfn=(264)
+calls=1 -34 
+* 567
+* 2
+fi=(99)
+901 1
+0 1
+fi=(129)
+555 1
+932 2
+1537 1
+fi=(99)
+0 1
+fi=(129)
+555 1
+932 2
+1537 1
+fi=(98) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/int_macros.rs
+2101 2
+fi=(99)
+901 2
+fi=(59)
+745 8
+fi=(52)
+597 3
+fi=(72)
+160 1
+cfi=(75)
+cfn=(232)
+calls=1 7 
+* 20
+* 3
+fi=(99)
+901 1
+fi=(72)
+160 1
+fe=(83)
+660 1
++1 2
+fi=(99)
+901 1
+0 1
+fe=(83)
+663 1
+cfn=(322)
+calls=1 +74 
+* 18867
+fi=(129)
+555 2
+fi=(84)
+35 1
+fi=(129)
+932 1
+1537 1
+fi=(59)
+636 6
+fe=(83)
++31 2
+fi=(48)
+0 1
+fi=(100)
+260 4
+cfn=(490)
+calls=1 +3 
+* 1011
+-33 4
++1 3
+fi=(121)
+561 3
+cfi=(68)
+cfn=(216)
+calls=1 89 
+* 43
+fi=(70)
+1620 2
+fi=(52)
+617 3
+fi=(164)
+1640 12
+fi=(138)
+666 1
+cfi=(135)
+cfn=(526)
+calls=1 432 
+* 61
+* 2
+-20 2
++5 1
+0 3
+649 3
+fi=(79)
+863 2
+fi=(51)
+458 1
+fi=(52)
+-14 1
+fi=(48)
+14 2
+cfi=(37)
+cfn=(118)
+calls=1 115 
+* 129
+fi=(52)
+453 2
+0 1
+fi=(53)
+547 4
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 12
+fi=(139)
+1014 3
+fi=(52)
+617 2
+fi=(48)
+48 2
+cfi=(55)
+cfn=(170)
+calls=1 -43 
+* 167
+-48 1
+fe=(83)
+599 3
+cfi=(140)
+cfn=(538) <unic_langid_impl::LanguageIdentifier as core::str::traits::FromStr>::from_str
+calls=1 454 
+* 59
+fi=(70)
+966 3
+0 1
+fe=(83)
+600 4
+fi=(195)
++54 3
+cfi=(119)
+cfn=(426)
+calls=1 -9 
+* 805
+fi=(70)
+968 13
+fi=(53)
+805 1
+fi=(70)
+968 1
+fi=(52)
+617 2
+fi=(53)
+805 1
+fi=(48)
+48 1
+cfi=(55)
+cfn=(170)
+calls=1 -43 
+* 131
+fi=(70)
+966 1
+1620 1
++2 13
+fe=(83)
+675 4
+cfi=(140)
+cfn=(538)
+calls=1 454 
+* 302
+fi=(70)
+1183 2
++1 5
+fe=(83)
+676 1
+cfi=(53)
+cfn=(574)
+calls=1 805 
+* 341
+* 2
++3 1
++5 4
+cfi=(140)
+cfn=(538)
+calls=1 454 
+* 302
+fi=(70)
+1183 3
++1 4
+fe=(83)
+701 5
+cfn=(578) uucore::mods::locale::create_english_bundle_from_embedded
+calls=1 412 
+* 240467
+fi=(70)
+2173 1
+0 12
+2173 2
+fe=(83)
+0 1
+fi=(53)
+805 1
+cfn=(574)
+calls=1 * 
+* 355
+fe=(83)
+-96 16
+fi=(70)
+2174 10
+fe=(83)
+701 12
+75 3
+705 1
+cfn=(982)
+calls=1 498 
+* 146
++1 1
+fi=(53)
++99 2
+fe=(83)
+-98 2
+fi=(129)
+555 2
+fi=(84)
+35 1
+fi=(129)
+2043 2
+fi=(99)
+901 2
+fi=(51)
+458 1
+fi=(52)
+-14 1
+fi=(77)
+95 3
+cfi=(1)
+cfn=(242)
+calls=1 -95 
+* 138
+fi=(52)
+453 2
+0 2
+fi=(53)
+547 4
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 15
+805 4
+fe=(83)
+-98 3
+fi=(99)
+901 1
+fe=(83)
+708 1
++1 1
+fi=(53)
++96 2
+fi=(48)
+0 1
+fe=(83)
+709 1
+
+fn=(1014)
+502 140
+fi=(306)
+68 28
+fi=(129)
+555 28
+fi=(84)
+35 14
+fi=(99)
+-35 14
+fi=(129)
+555 14
+932 28
+1537 14
+fi=(98)
+2101 14
+fi=(99)
+901 14
+fi=(59)
+745 14
+1276 14
+0 28
+745 28
+0 14
+fi=(307) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/collections/hash/map.rs
+1002 56
+cfi=(184) /rust/deps/hashbrown-0.16.1/src/map.rs
+cfn=(1022) hashbrown::map::HashMap<K,V,S,A>::get
+calls=14 1309 
+* 2834
+fi=(59)
+1545 28
+fi=(201) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/entry.rs
+40 28
++2 14
+fi=(157)
+219 28
+fi=(52)
+597 14
+fi=(201)
+42 14
++1 14
+fi=(308) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/self_cell-1.3.0/src/unsafe_self_cell.rs
++23 14
+fi=(157)
+219 28
+fi=(52)
+597 14
+fi=(157)
+221 28
+fi=(201)
+43 14
+-43 14
+fe=(83)
+88 14
+fi=(59)
+745 28
+fi=(99)
+901 28
+fi=(207) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/thread/local.rs
+478 56
+fi=(53)
+805 42
+fe=(83)
+507 112
+fi=(207)
+724 14
+fe=(83)
+0 14
+fi=(54)
+466 70
+fe=(83)
+92 42
+cfi=(152) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/bundle.rs
+cfn=(1038) fluent_bundle::bundle::FluentBundle<R,M>::format_pattern
+calls=14 485 
+* 8123
+fi=(211)
+350 28
+fi=(51)
+458 14
+0 28
+fi=(52)
+444 14
+fi=(77)
+95 42
+cfi=(1)
+cfn=(242)
+calls=14 -95 
+* 2716
+fi=(52)
+453 28
+0 28
+fi=(53)
+547 56
+cfi=(7)
+cfn=(16)
+calls=14 7 
+* 421
+805 42
+fi=(48)
+48 6
+cfi=(55)
+cfn=(170)
+calls=3 -43 
+* 500
+-48 28
+cfi=(53)
+cfn=(1072)
+calls=14 805 
+0 350
+0 14
+fe=(83)
+
+fn=(578)
+412 13
+fi=(139)
++26 3
+2917 4
+cfi=(140)
+cfn=(580) <unic_langid_impl::LanguageIdentifier as core::fmt::Display>::fmt
+calls=1 467 
+* 384
+fi=(70)
+1183 2
+fi=(139)
+2919 2
+fi=(72)
+152 2
+0 1
+160 5
+fi=(52)
+617 2
+fi=(48)
+48 1
+cfi=(55)
+cfn=(170)
+calls=1 -43 
+* 124
+fe=(83)
+417 2
+fi=(48)
+14 2
+cfi=(37)
+cfn=(118)
+calls=1 115 
+* 542
+fi=(77)
+489 2
+0 2
+fi=(144) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-langid-impl-0.9.6/src/subtags/language.rs
+7 1
+fi=(59)
+2225 22
+fi=(140)
+83 2
+fe=(83)
+423 5
+fi=(59)
+2225 2
+fi=(52)
+0 1
+fi=(59)
+2225 1
+fi=(152)
+636 19
+fe=(83)
+427 3
+cfi=(153)
+cfn=(626)
+calls=1 6 
+* 334
+* 3
+fi=(154)
+4028 1
+fi=(291)
+82 1
+fi=(155)
++74 1
+0 1
+fe=(83)
+387 2
+cfn=(634)
+calls=1 -32 
+* 139223
+fi=(70)
+2173 1
+0 1
+2173 2
+fi=(154)
+4028 1
+fi=(291)
+82 1
+fi=(155)
++74 1
+fe=(83)
+429 3
+cfi=(152)
+cfn=(852) fluent_bundle::bundle::FluentBundle<R,M>::add_resource_overriding
+calls=1 297 
+* 34830
+fi=(164)
++59 1
+0 1
+fi=(71)
+2655 2
+fe=(83)
+0 1
+441 3
+fi=(195)
+654 4
+cfi=(119)
+cfn=(426)
+calls=1 -9 
+* 971
+fi=(194) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hint.rs
+-49 4
+fi=(52)
+-8 1
+fe=(83)
+442 1
+cfi=(153)
+cfn=(626)
+calls=1 6 
+* 56
+* 2
+0 3
+443 3
+fi=(195)
+654 4
+cfi=(119)
+cfn=(426)
+calls=1 -9 
+* 973
+* 1
+fi=(154)
+4112 2
+fi=(200) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/sync/mutex/futex.rs
+32 1
+fi=(154)
+4027 1
+fi=(196) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/panicking.rs
+464 4
+0 1
+fi=(154)
+4027 1
+fe=(83)
+403 3
+fi=(59)
+745 2
+fi=(70)
+0 3
+fe=(83)
+444 1
+cfn=(634)
+calls=1 -89 
+* 53311
+fi=(70)
+2173 1
+0 1
+2173 2
+fi=(48)
+14 2
+cfi=(37)
+cfn=(118)
+calls=1 115 
+* 129
+fi=(77)
+489 2
+fi=(197)
+265 4
+fe=(83)
+407 1
+cfi=(198) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/collections/btree/map.rs
+cfn=(962) alloc::collections::btree::map::BTreeMap<K,V,A>::insert
+calls=1 1046 
+* 617
+fi=(199) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sync/poison.rs
+129 2
+fi=(154)
+4027 1
+fi=(196)
+464 2
+0 1
+fi=(154)
+4045 1
+fi=(200)
+90 3
+-90 2
+fe=(83)
+446 1
+cfi=(152)
+cfn=(852)
+calls=1 297 
+* 8408
+fi=(184)
+1309 2
+0 1
+fi=(186)
+2492 6
+0 1
+fi=(53)
+547 1
+fi=(190)
+1563 3
+fi=(192)
+50 2
+fi=(191)
+641 1
+fi=(186)
+2073 2
+fi=(173)
+1072 3
+fi=(72)
+152 2
+fi=(186)
+1236 3
+fi=(72)
+160 4
+fi=(51)
+435 1
+fi=(201)
+40 2
++2 1
+fi=(157)
+219 2
+fi=(52)
+597 1
+fi=(201)
+42 1
++1 1
+fi=(308)
++23 1
+fi=(157)
+219 2
+fi=(52)
+597 1
+fi=(157)
+221 2
+fi=(201)
+43 1
+-43 1
+fe=(83)
+459 8
+fi=(48)
+0 1
+fe=(83)
+453 3
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 33
+fi=(52)
+617 2
+fi=(53)
+805 1
+fi=(48)
+48 1
+cfi=(55)
+cfn=(170)
+calls=1 -43 
+* 187
+* 1
+fi=(155)
+410 2
+cfi=(154)
+cfn=(844)
+calls=1 4028 
+* 83
++4 1
+fe=(83)
+
+fl=(19)
+fn=(72)
+29 3
+176 8
++3 2
++2 9
++16 2
++35 4
+
+fl=(60)
+fn=(192)
+304 2
+fi=(61)
+7 3
+-7 3
+fe=(60)
+3156 7
+2660 1
+cfn=(196)
+calls=1 951 
+* 130
+* 1
+fi=(67)
+1545 4
+1164 1
+fe=(60)
+2820 1
+fi=(290)
+851 2
+fi=(66) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/array/equality.rs
+157 1
+fe=(60)
+309 1
+fi=(59)
+0 3
+fi=(63)
+1692 2
+fi=(62)
+25 1
+fi=(59)
+-25 2
+fi=(63)
+1692 4
+fi=(62)
+25 2
+406 2
+fe=(60)
+-89 2
+fi=(62)
++90 2
+fe=(60)
+0 2
+fi=(67)
+1625 2
+fi=(59)
+2726 2
+fi=(67)
+1625 3
+fi=(223)
+306 1
+cfi=(68)
+cfn=(216)
+calls=1 89 
+* 47
+fi=(70)
+713 2
+0 3
+fi=(82)
+149 3
+fe=(60)
+
+fn=(1782)
+3555 18
+fi=(113) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/helpers/small_c_string.rs
+25 4
+-25 2
+fi=(21)
+547 6
+cfi=(7)
+cfn=(16)
+calls=2 7 
+* 60
+1910 2
+fi=(113)
+47 2
+fi=(101)
+-20 4
+-27 4
+40 32
++4 14
+-5 28
+fi=(47)
+354 4
+fi=(21)
+709 24
+fi=(102) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/fs/unix.rs
+2184 2
+cfi=(261) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/stat/futimens.c
+cfn=(1792) lstat
+calls=2 5 
+* 178
+fi=(105)
+235 2
++10 2
+fi=(102)
+2185 4
+fi=(118)
+29 4
+cfi=(7)
+cfn=(16)
+calls=2 -22 
+* 58
+* 2
+fi=(97)
+835 6
+0 2
+fi=(102)
+803 2
+-4 4
+fe=(60)
+3557 14
+
+fn=(398)
+3522 36
+fi=(113)
+25 8
+-25 4
+fi=(21)
+547 12
+cfi=(7)
+cfn=(16)
+calls=4 7 
+* 149
+1910 4
+fi=(113)
+47 4
+fi=(101)
+-20 8
+-27 2
+40 16
++4 7
+-5 14
+fi=(21)
+2285 6
+fi=(101)
+71 6
+-71 15
+85 3
++1 3
+-67 18
++72 12
+-6 9
++1 9
+-67 54
++72 36
++4 11
+-14 24
+-42 6
+-39 12
+40 64
++4 29
+-5 58
++65 3
+fi=(47)
+354 8
+fi=(21)
+709 48
+fi=(102)
+2167 4
+cfi=(114)
+cfn=(406)
+calls=4 5 
+* 278
+fi=(105)
+235 4
++10 4
+fi=(102)
+2168 4
+fi=(118)
+29 4
+cfi=(7)
+cfn=(16)
+calls=2 -22 
+* 58
+* 2
+fi=(97)
+835 6
+fi=(113)
+0 4
+fi=(97)
+835 4
++2 2
+fi=(117) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/io/error/repr_bitpacked.rs
+249 8
+fi=(48)
+0 4
+fi=(116) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/io/error/unix.rs
+42 2
+cfi=(24)
+cfn=(84)
+calls=2 -38 
+* 6
+fi=(117)
+168 6
+fi=(97)
+2189 2
+0 2
+fi=(102)
+803 2
+-4 4
+fe=(60)
+3524 28
+
+fn=(374)
+3000 72
+fi=(36)
+444 12
+0 6
+fi=(48)
+14 12
+cfi=(37)
+cfn=(118)
+calls=6 115 
+* 2933
+fi=(36)
+453 12
+fi=(110) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/slice.rs
+0 6
+fi=(21)
+547 24
+cfi=(7)
+cfn=(16)
+calls=6 7 
+* 187
+fe=(60)
+1957 18
+fi=(61)
+7 12
+fe=(60)
+304 12
+0 6
+fi=(61)
+7 6
+fe=(60)
+1337 6
++53 12
+0 6
+fi=(36)
+658 30
+cfn=(380) alloc::raw_vec::RawVecInner<A>::reserve::do_reserve_and_handle
+calls=6 -14 
+* 5844
+-61 6
+fi=(43)
+2933 6
+fi=(21)
+547 6
+fi=(43)
+2822 6
+fi=(36)
+602 6
+fe=(60)
+0 6
+fi=(65)
+2413 6
+fi=(36)
+736 6
+-80 6
+fi=(28)
+961 6
+fi=(21)
+547 24
+cfi=(7)
+cfn=(16)
+calls=6 7 
+* 129
+fi=(43)
+2822 12
+fe=(60)
+3003 18
++1 48
+
+fn=(198) std::path::Components::parse_next_component_back
+768 16
+fi=(25)
+511 8
+fe=(60)
+672 8
++44 16
++55 10
+fi=(64)
+568 10
+fe=(60)
+0 3
+771 3
+fi=(64)
+89 3
+fi=(222)
+729 6
+fi=(62)
+405 9
+0 3
+fi=(63)
+1692 3
+fi=(62)
+25 3
+fe=(60)
+771 5
+fi=(64)
+89 5
+fi=(222)
+729 10
+fi=(62)
+405 15
+0 5
+fi=(63)
+1692 5
+fi=(62)
+25 5
+fi=(63)
+1692 41
+fi=(62)
+25 41
+-25 46
+406 46
+fi=(61)
+7 46
+fi=(62)
+407 92
+fe=(60)
+773 5
+fi=(64)
+568 10
+89 10
+-89 5
+fe=(60)
+744 10
+fi=(64)
+0 3
+fe=(60)
+744 38
+-1 4
+-11 3
++2 6
+0 3
+734 6
+0 8
+776 40
++1 16
+-44 6
+
+fn=(196)
+951 66
+680 6
+994 48
+0 6
+680 66
+0 12
+680 6
+0 3
+953 15
+0 3
+954 3
+0 3
+955 12
+cfn=(198)
+calls=3 768 
+* 249
+* 3
++1 3
+-1 21
++1 3
+fi=(65)
+842 3
+0 9
+fe=(60)
+956 6
+fi=(67)
+636 6
+fe=(60)
+957 6
+680 6
+0 3
+953 15
+0 3
+734 12
+-1 6
+0 3
+954 6
+0 3
+955 9
+cfn=(198)
+calls=3 768 
+* 234
+* 9
++1 3
+-1 21
++1 3
+fi=(65)
+842 3
+0 3
+fe=(60)
+956 6
+fi=(67)
+636 6
+fe=(60)
+957 6
+
+fn=(366)
+703 21
+593 6
+fi=(67)
+2225 9
+fe=(60)
+593 3
+375 6
+593 36
+705 6
++3 6
+0 12
+793 4
+0 6
+794 6
+cfn=(198)
+calls=2 -26 
+* 153
+fi=(67)
+636 2
+fe=(60)
+795 2
+-83 27
+0 3
+734 2
++59 2
+
+fl=(228)
+fn=(1236)
+1392 22
+fi=(48)
+14 4
+cfi=(37)
+cfn=(118)
+calls=2 115 
+* 264
+fi=(77)
+489 4
+fi=(197)
+265 6
+fi=(52)
+597 2
+fi=(54)
+1753 2
+fi=(247)
+20 10
+-20 2
+fi=(73)
+1692 2
+fi=(141)
+180 2
+fi=(229)
+0 2
+fi=(54)
+1033 4
+0 4
+fi=(53)
+1910 4
+fi=(54)
+1039 4
+-9 2
++3 4
+fi=(52)
+597 2
+fi=(173)
+961 4
+fi=(53)
+1910 10
+fi=(54)
+1039 6
+fe=(228)
+1402 22
+fi=(54)
+1034 6
+cfi=(52)
+cfn=(718)
+calls=2 186 
+* 520
+* 2
+fi=(52)
+597 4
+fi=(54)
+1034 6
+cfi=(52)
+cfn=(718)
+calls=2 186 
+* 1031
+* 4
+fi=(7)
+7 2
++1 2
++1 2
++1 2
++1 2
++5 2
++1 2
++1 162
++2 2
++1 2
++4 2
+fe=(228)
+
+fl=(245)
+fn=(1424)
+634 70
+735 50
+cfn=(1426) <clap_builder::builder::value_parser::BoolValueParser as clap_builder::builder::value_parser::TypedValueParser>::parse_ref
+calls=10 1696 
+* 320
+fi=(248)
+585 20
++1 10
+fi=(48)
+14 20
+cfi=(37)
+cfn=(118)
+calls=10 115 
+* 1774
+fi=(77)
+489 20
+fi=(197)
+265 30
+fe=(245)
+642 50
++1 60
+-9 14
+fi=(51)
+458 2
+fi=(36)
+0 4
+fi=(52)
+444 2
+0 2
+fi=(48)
+14 4
+cfi=(37)
+cfn=(118)
+calls=2 115 
+* 264
+fi=(52)
+453 4
+0 6
+fi=(53)
+547 8
+cfi=(7)
+cfn=(16)
+calls=2 7 
+* 60
+fi=(48)
+14 4
+cfi=(37)
+cfn=(118)
+calls=2 115 
+* 258
+fi=(77)
+489 4
+fi=(197)
+265 10
+fe=(245)
+642 10
++1 14
+
+fn=(1408)
+645 30
+fi=(309) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/util/any_value.rs
+50 20
+fe=(245)
+647 20
+-2 3
+fi=(309)
+50 2
+fe=(245)
+647 2
+
+fn=(1426)
+1696 110
+fi=(72)
+152 20
++8 2
+fe=(245)
+1702 4
+fi=(72)
+152 16
+0 8
+160 32
+fe=(245)
+1704 8
+fi=(72)
+152 10
+fe=(245)
+1720 20
++1 90
+
+fl=(119)
+fn=(426)
+645 60
+fi=(120)
+878 12
+fi=(21)
+1710 6
+fi=(120)
+767 12
+0 24
+772 12
+fi=(63)
+660 6
+fi=(21)
+1710 6
+fi=(120)
+767 12
+fi=(21)
+1710 7
+fi=(120)
+767 14
+fi=(63)
+660 13
+fi=(120)
+770 26
++4 21
++8 21
++4 56
++2 28
++1 21
+fi=(63)
+660 28
+0 12
+fi=(120)
+795 12
+0 2
+fi=(36)
+444 12
+fi=(48)
+14 8
+cfi=(37)
+cfn=(118)
+calls=4 115 
+* 1939
+fi=(36)
+453 8
+0 4
+fi=(121)
+485 6
+fi=(120)
+236 10
+cfn=(440)
+calls=2 1630 
+* 2447
+fi=(121)
+485 12
+fi=(120)
+236 20
+cfn=(440)
+calls=4 1630 
+* 4327
+fi=(97)
+1183 12
+fe=(119)
+651 24
++1 42
+0 4
+fi=(111)
+458 4
+fe=(119)
+
+fl=(134)
+fn=(510)
+6 715
++1 2299
++1 143
++1 143
+
+fl=(283)
+fn=(1948)
+23 4
++14 1
+cfi=(24)
+cfn=(84)
+calls=1 -33 
+* 3
+* 1
+fi=(33)
+4112 2
+fe=(283)
+38 1
++20 4
+
+fl=(240)
+fn=(1392)
+101 108
+fi=(54)
+1753 12
+fi=(73)
+-61 12
+fi=(141)
+180 12
+0 80
+fi=(238)
+120 54
+fi=(73)
+1692 108
+fi=(141)
+180 54
+fi=(72)
+-28 108
+fi=(74)
+2434 10
+fi=(72)
+160 10
+cfi=(75)
+cfn=(232)
+calls=5 7 
+* 60
+* 5
+fi=(74)
+2434 5
+fi=(53)
+0 12
+fe=(240)
+103 96
+
+fn=(1438)
+168 144
+fi=(54)
+1753 12
+fi=(73)
+-61 12
+fi=(141)
+180 12
+0 84
+fi=(73)
+1692 57
+fi=(238)
+82 57
+fi=(73)
+1692 57
+fi=(141)
+180 57
+fi=(72)
+-28 138
+fi=(161)
+2115 38
+fi=(72)
+160 38
+cfi=(75)
+cfn=(232)
+calls=19 7 
+* 926
+* 19
+fi=(247)
+-49 19
+0 12
+fi=(54)
+1789 12
+fi=(157)
+278 24
+fi=(52)
+597 12
+fi=(157)
+278 12
+fi=(54)
+1789 12
+fi=(71)
+305 24
+fe=(240)
+0 12
+fi=(52)
+597 12
+fi=(71)
+305 24
+fi=(54)
+1030 12
++3 24
+fi=(52)
+597 12
+fi=(173)
+961 36
+fi=(53)
+1910 48
+fi=(54)
+1039 24
+1789 12
+fi=(71)
+305 24
+fi=(52)
+597 12
+fi=(71)
+305 24
+fi=(54)
+1030 12
++3 24
+fi=(52)
+597 12
+fi=(173)
+961 24
+fi=(53)
+1910 48
+fi=(54)
+1039 24
+fe=(240)
+171 96
+fi=(54)
+1034 22
+cfi=(52)
+cfn=(718)
+calls=11 186 
+* 3495
+* 33
+cfi=(36)
+cfn=(306)
+calls=11 186 
+* 3072
+* 11
+fe=(240)
+
+fn=(1640)
+53 12
+fi=(73)
+1692 1
+fi=(141)
+180 1
+fi=(53)
+0 2
+fe=(240)
+79 3
+fi=(54)
+1789 1
+fi=(73)
+-97 1
+fi=(141)
+180 1
+fe=(240)
+-89 8
+
+fl=(26)
+fn=(88)
+15 102
++2 68
++4 170
++4 68
++6 68
+fi=(6)
++26 34
++2 136
+fe=(26)
+-25 68
++3 102
+-1 34
+cfi=(12)
+cfn=(50)
+calls=34 -30 
+* 136
+-14 4
++4 1
+cfi=(41)
+cfn=(136)
+calls=1 -18 
+* 12
+* 5
+
+fl=(198)
+fn=(962)
+1046 8
+1348 1
+0 3
+1348 2
++1 1
+1050 3
+0 1
+fi=(48)
+14 2
+cfi=(37)
+cfn=(118)
+calls=1 115 
+* 576
+fi=(197)
+549 2
+fi=(53)
+1910 1
+fi=(59)
+1726 2
+fi=(310) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/collections/btree/node.rs
+671 1
+fi=(183) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/mem/maybe_uninit.rs
+564 5
+fi=(311) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/collections/btree/map/entry.rs
+422 1
+fe=(198)
+1057 8
+
+fl=(193)
+fn=(948)
+2865 10
+fi=(120)
++95 6
+cfn=(550)
+calls=2 1909 
+* 405
+fe=(193)
+
+fl=(229)
+fn=(1658)
+2109 112
++11 28
+fi=(53)
+805 28
+fe=(229)
+2120 8
+fi=(53)
+805 2
+cfn=(1894)
+calls=2 * 
+* 276
+fi=(255) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/rc.rs
+3245 14
+fe=(229)
++82 14
+fi=(154)
+4079 14
+fe=(229)
+3479 14
+fi=(99)
+428 98
+fi=(77)
+200 28
+fi=(48)
+48 98
+cfi=(55)
+cfn=(170)
+calls=14 -43 
+* 2329
+fe=(229)
+
+fl=(85)
+fn=(264)
+15 18
++25 4
+fi=(58) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/cell.rs
+2043 4
+fi=(86) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/thread_local/destructors/list.rs
+10 2
+fi=(279) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/mem/mod.rs
+901 2
+fi=(86)
+13 2
+cfi=(87)
+cfn=(270)
+calls=2 -4 
+* 335
+fi=(43)
+1030 2
++3 4
+fi=(86)
+0 2
+fi=(43)
+1034 1
+cfi=(36)
+cfn=(306)
+calls=1 186 
+* 216
+fi=(36)
+597 2
+fi=(28)
+961 4
+fi=(21)
+1910 4
+fi=(43)
+1039 4
+fi=(279)
+901 2
+fe=(85)
+55 14
+
+fl=(31)
+fn=(108) std::sync::once::Once::call_once_force::{{closure}}
+219 10
+fi=(99)
+900 2
++1 2
+fi=(59)
+1014 4
+fi=(34) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sync/lazy_lock.rs
+252 4
+0 2
+fi=(35)
+250 2
+cfn=(112)
+calls=1 * 
+* 748
+cfn=(112)
+calls=1 * 
+* 4034
+fi=(34)
++10 8
+fe=(31)
+-41 9
+fi=(99)
+900 2
++1 1
+fi=(59)
+1014 2
+fi=(183)
+564 1
+fe=(31)
+219 1
+
+fl=(177) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/expression.rs
+fn=(764) fluent_syntax::parser::expression::<impl fluent_syntax::parser::core::Parser<S>>::get_inline_expression
+66 594
+fi=(158)
+-57 132
+fi=(157)
+219 132
+fi=(158)
+9 264
+fi=(127)
+819 198
+fe=(177)
+0 195
+fi=(158)
+9 134
+fe=(177)
+127 130
++1 195
++1 65
+cfi=(162)
+cfn=(664)
+calls=65 +77 
+* 7702
+fi=(70)
+2173 65
+0 130
+2173 130
+0 65
+fe=(177)
+130 65
+0 130
+fi=(127)
+680 5
+fe=(177)
+133 2
+fi=(157)
++86 2
+fi=(162)
+-22 24
+fi=(157)
++22 48
+fi=(127)
+785 75
+fi=(162)
+195 171
+fe=(177)
+-38 528
+fi=(163)
++12 2
+fi=(164)
+366 6
++4 2
+fi=(127)
+1080 1
+fi=(163)
+171 1
+fi=(162)
++30 3
+fe=(177)
+-66 1
+cfn=(796) fluent_syntax::parser::expression::<impl fluent_syntax::parser::core::Parser<S>>::get_call_arguments
+calls=1 +24 
+* 51
+fi=(70)
+2173 1
+0 7
+2173 2
+0 3
+fe=(177)
+135 7
++1 3
+0 4
+143 2
+cfi=(162)
+cfn=(804) fluent_syntax::parser::core::Parser<S>::get_attribute_accessor
+calls=1 +76 
+* 16
+fi=(70)
+2173 1
+0 2
+2173 2
+fe=(177)
+144 6
+-8 1
+
+fn=(796)
+159 14
+0 2
+fi=(157)
+219 4
+fi=(158)
+9 14
+fi=(157)
+219 2
+fi=(161)
+1870 1
+fi=(159)
+67 1
+fe=(177)
+-67 1
+162 4
++61 8
+
+fl=(37)
+fn=(118)
+115 415
+cfi=(38)
+cfn=(120)
+calls=415 242 
+* 89634
+
+fl=(256)
+fn=(1692) clap_builder::parser::matches::arg_matches::unwrap_downcast_ref{{reify.shim}}
+1889 12
+fi=(229)
+2422 12
+fi=(258)
+198 4
+cfn=(1694)
+calls=2 -59 
+* 14
+761 8
+fi=(59)
+969 6
+fe=(256)
+1889 10
+
+fn=(1718)
+181 96
+fi=(54)
+1753 8
+fi=(73)
+-61 8
+fi=(141)
+180 8
+0 56
+fi=(73)
+1692 42
+fi=(238)
+82 42
+fi=(73)
+1692 42
+fi=(141)
+180 42
+fi=(72)
+-28 100
+fi=(247)
+-54 22
+fi=(72)
++62 22
+cfi=(75)
+cfn=(232)
+calls=11 7 
+* 637
+* 11
+fi=(247)
+-62 11
+-98 8
+fi=(54)
+1753 8
+fi=(157)
+272 16
+0 16
+fi=(52)
+597 8
+fi=(157)
+272 8
+fi=(246)
+171 16
+fi=(59)
+1654 16
+fe=(256)
+0 8
+fi=(59)
+1655 16
+fi=(258)
+761 40
+fe=(256)
+1292 8
+fi=(59)
+767 24
+0 16
+767 48
+0 8
+fe=(256)
+1093 16
+fi=(229)
+2422 48
+fi=(258)
+198 16
+cfn=(1694)
+calls=8 -59 
+* 56
+761 24
+fi=(59)
+1164 24
+fe=(256)
+182 8
++7 64
+
+fn=(1746)
+1081 11
+fi=(54)
+1753 1
+fi=(73)
+-61 1
+fi=(141)
+180 1
+0 7
+fi=(73)
+1692 11
+fi=(238)
+82 11
+fi=(73)
+1692 11
+fi=(141)
+180 11
+fi=(72)
+-28 22
+fe=(256)
+0 1
+1089 1
+0 1
+1096 8
+-15 11
+fi=(54)
+1753 1
+fi=(73)
+-61 1
+fi=(141)
+180 1
+0 7
+fi=(73)
+1692 11
+fi=(238)
+82 11
+fi=(73)
+1692 11
+fi=(141)
+180 11
+fi=(72)
+-28 22
+fe=(256)
+0 1
+1089 1
+0 1
+1096 8
+
+fl=(262)
+fn=(1804)
+1107 13
++81 3
++1 1
+fi=(272) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rustix-1.1.5/src/fs/at.rs
+337 4
+fi=(263) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rustix-1.1.5/src/path/arg.rs
+959 2
+0 1
+fi=(53)
+547 4
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 30
+1910 1
+fi=(263)
+981 1
+fi=(101)
+27 2
+-27 2
+40 16
++4 7
+-5 14
+fi=(47)
+354 2
+fi=(263)
+959 2
+0 1
+fi=(53)
+547 4
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 30
+1910 1
+fi=(263)
+981 1
+fi=(101)
+27 2
+-27 2
+40 16
++4 7
+-5 14
+fi=(47)
+354 2
+0 2
+fi=(264) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rustix-1.1.5/src/backend/linux_raw/arch/x86_64.rs
+133 4
+fe=(262)
+0 3
+1121 2
+0 1
+fi=(70)
+966 3
+fe=(262)
+1122 2
+cfi=(265)
+cfn=(1816)
+calls=1 1005 
+* 20
+* 2
+fi=(60)
+304 2
+fi=(61)
+7 3
+fi=(60)
+3156 7
+2594 1
+cfn=(196)
+calls=1 951 
+* 165
+fi=(67)
+1545 4
+0 1
+fi=(60)
+2597 1
+cfn=(366)
+calls=1 703 
+* 51
+* 1
+fi=(59)
+1583 6
+1065 3
+fi=(60)
+304 2
+fi=(61)
+7 3
+fi=(60)
+3156 7
+2660 1
+cfn=(196)
+calls=1 951 
+* 165
+* 1
+fi=(67)
+1545 2
+0 1
+fi=(59)
+1367 1
+fe=(262)
+0 2
+fi=(312) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rustix-1.1.5/src/backend/linux_raw/fs/types.rs
+170 1
+69 1
+fe=(262)
+1135 2
+fi=(272)
+90 5
+fi=(263)
+959 2
+0 1
+fi=(53)
+547 4
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 12
+1910 1
+fi=(263)
+981 1
+fi=(101)
+27 2
+-27 2
+40 4
++4 1
+-5 2
+fi=(47)
+354 2
+0 1
+fi=(264)
+178 6
+fi=(313) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rustix-1.1.5/src/backend/linux_raw/reg.rs
++10 1
+fi=(314) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rustix-1.1.5/src/backend/linux_raw/io/errno.rs
+-3 1
+fi=(205)
+0 1
+fi=(315) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/niche_types.rs
+37 1
+fi=(267) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rustix-1.1.5/src/backend/linux_raw/conv.rs
+1015 3
+fi=(70)
+2173 2
+fi=(263)
+820 1
+fe=(262)
+1135 2
+fi=(316) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/fs.rs
+1692 3
+fi=(317) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/fs/unix.rs
+1245 2
+fi=(21)
+547 2
+1910 1
+fi=(101)
+40 12
+-40 1
+40 2
+-40 3
+fi=(102)
+1346 2
+cfn=(1834) std::sys::fs::unix::File::open_c
+calls=1 +3 
+* 114
+fi=(97)
+835 2
++1 14
+fe=(262)
+1144 2
++1 2
+fi=(269)
+1045 4
+cfn=(1846)
+calls=1 572 
+* 67
+fi=(70)
+2173 2
+fe=(262)
+1147 2
++1 14
+fi=(53)
+1710 2
+fe=(262)
+1148 12
+fi=(53)
+1710 2
+fe=(262)
+1148 12
+fi=(53)
+1710 2
+fe=(262)
+1148 23
+fi=(53)
+1710 2
+fe=(262)
+1148 10
++40 2
++1 2
+fi=(272)
+337 8
+fi=(263)
+959 1
+fi=(53)
+547 4
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 30
+1910 2
+fi=(101)
+27 1
+-27 1
+40 16
++4 7
+-5 14
+fi=(47)
+354 2
+fi=(53)
+547 2
+1910 1
+fi=(101)
+40 6
+fi=(271) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/fd/owned.rs
+285 1
+fi=(264)
+133 5
+fe=(262)
+1152 2
+0 4
+fi=(70)
+0 1
+fe=(262)
+1154 2
+fi=(272)
+276 6
+fi=(263)
+820 3
+cfn=(1860) rustix::path::arg::with_c_str
+calls=1 948 
+* 126
+* 5
+cfn=(1860)
+calls=1 948 
+* 19
+fi=(70)
+966 2
+fe=(262)
+0 2
+fi=(271)
+216 1
+cfi=(273) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/unistd/close.c
+cfn=(1874) close
+calls=1 14 
+* 36
+fe=(262)
+1168 1
+fi=(271)
+216 1
+cfi=(273)
+cfn=(1874)
+calls=1 14 
+* 36
+fi=(205)
+0 1
+fe=(262)
+1181 9
+
+fl=(11)
+fn=(46)
+8 3
++4 6
+-1 3
+-3 3
++3 12
++3 6
++1 6
++1 6
++7 6
+fi=(6)
++6 12
+fe=(11)
++17 3
+cfi=(12)
+cfn=(50)
+calls=3 -40 
+* 12
++2 6
+fi=(6)
+-19 6
+fe=(11)
+
+fl=(227)
+fn=(1744)
+254 9
+fi=(256)
+119 5
+cfn=(1746)
+calls=1 1081 
+* 98
+* 2
+fi=(260)
+-93 2
++1 1
+fe=(227)
+256 2
+fi=(100)
++4 4
+cfn=(490)
+calls=1 +3 
+* 1093
+-33 4
+0 1
+fi=(70)
+1620 1
+0 1
+fi=(48)
+14 2
+cfi=(37)
+cfn=(118)
+calls=1 115 
+* 129
+fi=(52)
+453 2
+fi=(259)
+0 1
+fi=(53)
+547 1
+805 3
+fi=(48)
+0 3
+fi=(137)
+40 2
++4 1
+-5 3
+fe=(227)
+264 4
++2 8
+
+fn=(1228)
+233 8
+fi=(217)
+30 4
+fi=(52)
+658 5
+cfn=(588)
+calls=1 -14 
+* 217
+-61 1
+fi=(54)
+2933 1
+fi=(53)
+547 4
+fi=(217)
+179 1
+fi=(48)
+14 2
+cfi=(37)
+cfn=(118)
+calls=1 115 
+* 132
+fi=(52)
+453 2
+fi=(54)
+2822 1
+fi=(53)
+1910 3
+fi=(228)
+1353 58
+fi=(234)
+9 1
+fe=(227)
+241 7
+
+fn=(1736)
+346 11
++1 1
+fi=(73)
+1692 1
+fi=(141)
+180 1
+0 6
+fi=(73)
+1692 22
+fi=(141)
+180 11
+fi=(72)
+-28 22
+fe=(227)
+362 4
+cfi=(256)
+cfn=(1718)
+calls=1 181 
+* 196
+* 2
+fi=(73)
+1692 1
+fi=(141)
+180 1
+0 3
+fi=(73)
+1692 22
+fi=(141)
+180 11
+fi=(72)
+-28 22
+fe=(227)
+381 1
+0 1
+383 12
+
+fn=(1206)
+214 8
+fi=(217)
+30 4
+fi=(52)
+658 5
+cfn=(588)
+calls=1 -14 
+* 214
+-61 1
+fi=(54)
+2933 1
+fi=(53)
+547 6
+fi=(217)
+179 1
+fi=(48)
+14 2
+cfi=(37)
+cfn=(118)
+calls=1 115 
+* 577
+fi=(52)
+453 2
+fi=(54)
+2822 1
+fi=(53)
+1910 3
+fi=(228)
+1353 61
+fe=(227)
+222 7
+
+fl=(103)
+fn=(334) readlink
+6 2
+fi=(104) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/unistd/readlink.c
++2 2
+fi=(6)
++21 2
+fi=(104)
+-16 1
++4 2
++1 2
+cfi=(12)
+cfn=(50)
+calls=1 -12 
+* 4
++1 2
+fe=(103)
+
+fn=(1850)
+5 3
++1 7
+cfi=(15)
+cfn=(62)
+calls=1 +13 
+* 10
++1 1
+-1 2
+cfi=(12)
+cfn=(50)
+calls=1 * 
+* 4
+
+fl=(130) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/env/unix.rs
+fn=(500) std::sys::env::unix::getenv::{{closure}}
+95 48
+fi=(33)
+4027 6
+fi=(131) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/sync/rwlock/futex.rs
+54 12
++45 6
+fi=(33)
+4177 6
+fi=(131)
+97 6
+fi=(33)
+4027 6
+fe=(130)
+97 12
+cfi=(132)
+cfn=(506)
+calls=6 -91 
+* 5127
++2 12
+-99 1
+fi=(47)
+756 2
+cfi=(46)
+cfn=(148)
+calls=1 16 
+* 13
+* 1
+fi=(36)
+444 2
+fi=(48)
+14 2
+cfi=(37)
+cfn=(118)
+calls=1 115 
+* 129
+* 1
+fi=(36)
+453 2
+0 5
+fe=(130)
+100 10
+fi=(21)
+547 4
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 12
+fe=(130)
+105 3
+0 1
+fi=(33)
+4079 1
+fi=(131)
+111 1
++7 4
+fe=(130)
+0 5
+fi=(33)
+4079 5
+fi=(131)
+111 5
++7 20
+fe=(130)
+-11 36
+
+fl=(167)
+fn=(690)
+177 8
+fi=(169) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/../../stdarch/crates/core_arch/src/x86/cpuid.rs
+-89 8
+fi=(168) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std_detect/src/detect/os/x86.rs
+-38 2
+-50 3
+fi=(169)
+88 7
+fi=(168)
+-21 4
+fi=(169)
++21 14
+fi=(168)
++5 9
+-93 2
+fi=(169)
+88 5
+fi=(168)
+-5 3
+fi=(169)
++5 5
+fi=(168)
++5 1
+-93 1
+93 1
++1 16
+fi=(318) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std_detect/src/detect/bit.rs
+-86 2
+fi=(168)
++86 4
+-1 1
++1 5
+fi=(318)
+-86 2
+fi=(168)
++86 55
+fi=(318)
+-86 2
+fi=(168)
++86 5
++39 2
+0 1
+94 5
++64 5
+0 2
+158 4
++9 4
+0 1
+195 1
+cfi=(170)
+cfn=(696)
+calls=1 90 
+* 5
+* 1
++6 2
++6 3
+0 2
+fe=(167)
+11 2
+fi=(168)
+223 2
+fi=(169)
+88 7
+fi=(168)
++6 3
+fi=(318)
+-86 2
+fi=(168)
++86 1
+fi=(318)
+-86 1
+fi=(168)
++86 4
+-94 2
+199 1
+94 38
+255 3
+0 2
+201 1
++74 2
+0 1
+203 4
++90 5
+94 2
+-94 1
+fi=(66)
+157 7
+fi=(168)
+324 4
+fe=(167)
+99 1
+fi=(33)
+4012 1
+fe=(167)
+179 10
+
+fl=(159)
+fn=(814) fluent_syntax::parser::helper::<impl fluent_syntax::parser::core::Parser<S>>::get_number_literal
+159 24
+fi=(158)
+9 3
+fe=(159)
+160 6
+fi=(157)
++59 6
+fi=(158)
+9 3
+fi=(161)
+1870 6
+fe=(159)
+67 3
+fi=(157)
+219 6
+0 9
+fi=(127)
+819 24
+fe=(159)
+143 6
+fi=(157)
++76 6
+fe=(159)
+-72 6
+fi=(157)
++72 6
+fi=(161)
+1870 3
+fe=(159)
+67 3
+fi=(70)
+-67 3
+fi=(163)
+169 9
+fi=(164)
+366 6
+fi=(157)
+219 3
+fi=(164)
+370 3
+fi=(127)
+1080 3
+fi=(163)
+170 3
+fi=(164)
+366 6
++4 6
+fi=(127)
+1080 3
+fi=(163)
+171 3
+fi=(79)
+863 3
+fe=(159)
+167 9
++1 18
+
+fl=(2)
+fn=(2)
+22 1
++7 1
+-7 1
++7 132
++1 3
++2 152
++1 113
++1 67
++32 169
++1 98
++1 48
++36 1
++1 3
++23 1
++1 1
+-1 2
++2 1
+-24 1
++1 1
++1 1
++1 15
++1 10
+-1 8
++2 3
++19 4
++6 1
++1 1
+-1 2
++2 130290
++1 104228
++2 130285
++3 1
++1 1
+-1 2
++3 5
++14 1
++1 2
++1 1
+-1 1
+cfi=(3)
+cfn=(4)
+calls=1 13 
+* 423196
+
+fl=(5)
+fn=(14) __copy_tls
+40 7
++20 1
++1 1
++3 1
+-4 1
++1 2
++3 4
++1 2
++1 2
+-1 1
++1 4
+cfi=(7)
+cfn=(16)
+calls=1 -59 
+* 91
+-2 2
++5 2
++3 1
+-2 1
++2 6
+
+fn=(28) __init_tp
+15 2
++2 1
++1 1
+cfi=(8)
+cfn=(30)
+calls=1 -11 
+* 5
++1 2
++1 2
++1 1
+fi=(6)
+-7 3
+fe=(5)
++8 1
++1 2
++1 2
++1 1
++1 2
+-1 1
++2 1
++1 2
+
+fn=(10)
+83 1
++7 2
+-3 1
+-1 1
++16 1
+-12 2
++6 19
+-6 42
++2 30
++2 23
++1 3
++3 16
++1 2
+-1 2
++7 2
++2 1
+-1 1
++5 1
+-3 1
+-2 1
++1 1
++2 1
++1 1
+-1 1
++2 1
++3 1
++1 2
+-1 1
++1 1
+-1 2
++7 1
++2 2
++8 1
+-6 1
++20 1
+-14 1
+-5 1
++7 2
+fi=(6)
+-77 1
++2 1
++1 2
+-2 1
++2 2
+fe=(5)
++78 1
++12 1
+cfn=(14)
+calls=1 40 
+* 129
+* 2
+cfn=(28)
+calls=1 15 
+* 29
+* 2
++2 2
+
+fl=(263)
+fn=(1860)
+948 7
+fi=(53)
+547 1
+1910 1
+fi=(101)
+40 6
+fe=(263)
+985 7
+0 1
+982 4
+fi=(272)
+277 5
+fe=(263)
+959 2
+0 1
+fi=(53)
+547 3
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 30
+1910 1
+fe=(263)
+981 1
+fi=(101)
+27 2
+-27 2
+40 16
++4 7
+-5 14
+fi=(47)
+354 2
+fi=(272)
+-75 1
+fi=(271)
++6 1
+fi=(272)
+-4 1
+fi=(271)
++4 3
+fi=(264)
+178 3
+fi=(79)
+38 4
+fe=(263)
+948 3
+fi=(53)
+547 1
+1910 1
+fi=(101)
+40 6
+fi=(267)
+175 2
+fi=(264)
+-42 3
+fe=(263)
+985 3
+
+fl=(273)
+fn=(1874)
+14 2
++1 2
+cfi=(274)
+cfn=(1876)
+calls=2 -10 
+* 4
++1 18
+cfi=(15)
+cfn=(62)
+calls=2 +3 
+* 20
++1 10
++1 4
+cfi=(12)
+cfn=(50)
+calls=2 -12 
+* 8
++1 4
+
+fl=(12)
+fn=(50)
+6 154
++4 74
++1 74
+-6 6
++2 3
+cfi=(24)
+cfn=(84)
+calls=3 -3 
+* 9
+* 9
++1 3
++3 6
+
+fl=(102)
+fn=(1834)
+1349 10
+-77 8
++45 7
+0 1
+1353 1
+-3 6
+0 1
+1358 5
+cfi=(268)
+cfn=(1836)
+calls=1 6 
+* 51
+fi=(105)
+235 1
++10 1
+fi=(97)
+0 1
+fe=(102)
+1359 3
+-59 4
+0 1
+1300 4
+0 1
+1360 8
+
+fn=(328) std::sys::fs::unix::readlink
+2092 11
+fi=(48)
+14 2
+cfi=(37)
+cfn=(118)
+calls=1 115 
+* 834
+fi=(36)
+453 2
+fi=(43)
+967 5
+0 1
+fe=(102)
+2099 4
+cfi=(103)
+cfn=(334)
+calls=1 6 
+* 17
+fi=(105)
+235 1
++10 1
+fi=(43)
+2106 1
+fe=(102)
+-1 2
+fi=(43)
+1588 1
+fi=(36)
+813 2
+fi=(48)
+54 4
+cfi=(106)
+cfn=(344)
+calls=1 -49 
+* 785
+fi=(97)
+966 2
+fi=(36)
+0 2
+fe=(102)
+2108 7
++8 8
+
+fl=(184)
+fn=(1022)
+1309 182
+fi=(185)
+268 28
++2 20
++1 10
++1 10
+fe=(184)
+0 4
+fi=(71)
+2154 12
+0 4
+2154 12
+fi=(185)
+296 8
+fi=(136)
+2452 16
+fi=(185)
+226 4
++77 4
+0 4
+fi=(136)
+2452 8
+fi=(185)
+226 4
++81 8
+fi=(136)
+2452 12
+fi=(51)
+2027 4
+fi=(300)
+48 12
+fi=(186)
+2492 32
+0 4
+fi=(53)
+547 4
+fi=(190)
+1563 12
+fi=(192)
+50 8
+fi=(185)
+-50 10
+fi=(136)
+2452 20
+fi=(185)
+226 10
++81 20
+fi=(136)
+2452 30
+fi=(51)
+2027 10
+fi=(300)
+48 30
+fi=(186)
+2492 80
+0 10
+fi=(53)
+547 10
+fi=(190)
+1563 30
+fi=(192)
+50 20
+-50 84
+fi=(191)
+641 14
+fi=(186)
+2073 28
+fi=(173)
+1072 42
+fi=(72)
+152 28
+fi=(186)
+1236 42
+fi=(72)
+160 42
+cfi=(75)
+cfn=(232)
+calls=14 7 
+* 1652
+* 28
+fi=(51)
+435 14
+fi=(186)
+1251 140
+fe=(184)
++67 14
+
+fn=(866) hashbrown::map::HashMap<K,V,S,A>::insert
+1841 1092
+fi=(319) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hash/mod.rs
+944 182
+fi=(185)
+268 182
++2 48
++1 24
++1 24
+-2 24
+0 67
+fi=(71)
+2154 201
+0 55
+2154 115
+0 12
+fi=(185)
+296 36
+fi=(136)
+2452 24
+fi=(185)
+226 12
++70 24
+fi=(79)
+863 12
+fi=(185)
+296 12
+fi=(136)
+2452 24
+fi=(185)
+226 12
+fi=(71)
+2154 158
+fi=(185)
+296 110
+fi=(136)
+2452 220
+fi=(185)
+226 55
+0 55
+303 55
++1 55
+fi=(136)
+2452 110
+fi=(185)
+226 55
++81 110
+fi=(136)
+2452 165
+fi=(51)
+2027 55
+fi=(186)
+956 55
+fi=(51)
+458 55
+fi=(185)
+0 12
+303 12
++1 12
+fi=(136)
+2452 24
+fi=(185)
+226 12
++81 24
+fi=(136)
+2452 36
+fi=(51)
+2027 12
+fi=(186)
+956 12
+fi=(51)
+458 12
+fi=(136)
+2452 48
+fi=(185)
+226 24
++81 48
+fi=(136)
+2452 72
+fi=(51)
+2027 24
+fi=(186)
+956 24
+fi=(51)
+458 24
+fi=(186)
+1179 182
+fi=(300)
+48 819
+fi=(186)
+-48 91
+fi=(53)
+547 91
+fi=(190)
+1563 273
+fi=(192)
+50 182
+fi=(186)
+-50 4
+fi=(53)
+547 4
+fi=(190)
+1563 12
+fi=(192)
+50 8
+-50 30
+fi=(191)
+641 3
+fi=(186)
+1863 6
+fi=(173)
+1072 9
+fi=(72)
+152 6
+fi=(51)
+0 3
+fi=(191)
+499 3
+fi=(192)
+50 39
+-50 3
+fi=(189) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/macros/mod.rs
+437 3
+fi=(51)
+-2 3
+fi=(189)
++2 92
+fi=(51)
+-2 92
+fi=(190)
+1563 95
+fi=(192)
+50 190
+fi=(191)
+641 91
+fi=(186)
+1793 182
+fi=(190)
+1563 182
+fi=(51)
+435 182
+0 4
+fi=(186)
+91 8
+-1 4
+1844 4
+2687 91
+fi=(51)
+458 182
+fe=(184)
+1847 728
+fi=(300)
+30 91
+fi=(136)
+2413 91
+fi=(186)
+2631 91
++3 91
++1 91
+2499 546
+fi=(173)
+1072 273
+fi=(53)
+1910 546
+fe=(184)
+-61 91
++3 728
+fi=(186)
+962 54
+cfn=(874)
+calls=6 +37 
+* 12302
+* 36
+fe=(184)
+
+fl=(36)
+fn=(308) alloc::raw_vec::RawVecInner<A>::grow_amortized
+486 6
+fi=(65)
+688 1
+fe=(36)
+506 2
+fi=(25)
+1029 5
+fe=(36)
+512 5
+cfn=(310) alloc::raw_vec::RawVecInner<A>::finish_grow
+calls=1 +15 
+* 177
+fi=(97)
+2173 2
++1 1
+fe=(36)
+745 1
++1 2
+517 5
+
+fn=(380)
+644 35
+fi=(65)
++44 7
+fi=(111)
+458 7
+0 7
+fe=(36)
+506 14
+fi=(25)
+1029 35
+fe=(36)
+512 35
+cfn=(310)
+calls=7 +15 
+* 3344
+fi=(97)
+2173 14
++1 7
+fe=(36)
+745 7
++1 7
+-92 35
+-10 30
+fi=(65)
++44 6
+fi=(111)
+458 6
+0 18
+fe=(36)
+506 12
+fi=(25)
+1029 12
+fe=(36)
+159 24
+fi=(25)
+1029 12
+fe=(36)
+512 30
+cfn=(310)
+calls=6 +15 
+* 5634
+fi=(97)
+2173 12
++1 6
+fe=(36)
+745 6
++1 6
+-92 30
+
+fn=(306)
+186 2
+476 2
+cfn=(308)
+calls=1 +10 
+* 207
+* 3
+189 2
+-3 72
+476 12
++30 12
+fi=(25)
+1029 36
+fe=(36)
+512 72
+cfn=(310)
+calls=12 +15 
+* 2954
+fi=(97)
+2173 24
++1 12
+fe=(36)
+745 12
++1 12
+189 60
+
+fn=(310)
+527 63
+fi=(111)
+-69 7
+0 7
+fe=(36)
+617 14
+fi=(48)
+54 15
+cfi=(106)
+cfn=(344)
+calls=5 -49 
+* 2816
+fe=(36)
+547 10
+fi=(112) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/alloc.rs
+186 4
+fi=(48)
+14 4
+cfi=(37)
+cfn=(118)
+calls=2 115 
+* 323
+fe=(36)
+547 4
++1 21
+0 14
+551 42
+-24 180
+fi=(320) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/alloc/layout.rs
+306 90
+fi=(65)
+2970 126
+fi=(111)
+458 54
+0 18
+fe=(36)
+617 36
+fi=(112)
+135 6
+fi=(48)
+-82 6
+fi=(112)
+186 24
+-91 12
+fi=(48)
+-82 12
++41 18
+cfi=(106)
+cfn=(344)
+calls=6 -49 
+* 5340
+fe=(36)
+547 12
++1 72
+fi=(48)
+14 24
+cfi=(37)
+cfn=(118)
+calls=12 115 
+* 2354
+fe=(36)
+547 24
+0 36
+551 144
+-24 7
+fi=(65)
+2970 7
+fi=(111)
+458 3
+fe=(36)
+617 2
+-69 4
+fi=(48)
+14 2
+cfi=(37)
+cfn=(118)
+calls=1 115 
+* 142
+fe=(36)
+547 2
+0 2
+551 6
+
+fl=(90) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/thread/pthread_rwlock_wrlock.c
+fn=(276) pthread_rwlock_wrlock
+5 6
+cfi=(91)
+cfn=(278)
+calls=3 -1 
+* 57
+
+fl=(123)
+fn=(458)
+22 12
++6 3
+-28 2
+fi=(141)
+180 1
+fi=(124) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unicode-width-0.2.2/src/tables.rs
+0 3
+fi=(173)
+961 14
+fi=(73)
+1692 60
+fi=(141)
+180 60
+fi=(125)
+37 60
++1 120
+-38 60
+fe=(123)
+57 120
++3 300
+-60 87
+fi=(127)
+1049 120
+fi=(126) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/unicode/unicode_data.rs
+0 60
+fe=(123)
+63 120
+fi=(127)
+1049 120
+0 60
+1049 60
+fe=(123)
+88 4
++4 2
++2 3
+-94 2
+fi=(120)
+2838 5
+cfi=(121)
+cfn=(470) <alloc::string::String as core::fmt::Write>::write_char
+calls=1 3352 
+* 29
+* 1
+fi=(70)
+2173 2
+fi=(120)
+-80 4
+cfi=(121)
+cfn=(446)
+calls=1 3346 
+* 1157
+fi=(70)
++80 2
+fi=(120)
+2838 2
+0 1
+2838 8
+cfi=(121)
+cfn=(470)
+calls=1 3352 
+* 29
+fe=(123)
+
+fl=(57)
+fn=(1684)
+18 14
+fi=(257) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/iter/adapters/flatten.rs
+519 2
+fi=(59)
+767 3
+0 1
+fi=(73)
+1692 1
+fi=(141)
+180 2
+fi=(257)
+0 2
+fi=(59)
+767 4
+fi=(141)
+185 1
+fi=(257)
+525 2
+fi=(173)
+961 2
+fi=(257)
+525 2
+-6 1
+fi=(59)
+767 3
+fi=(257)
+0 1
+fi=(35)
+166 3
+cfi=(256)
+cfn=(1692)
+calls=1 1889 
+* 33
+fi=(256)
+1507 3
+fi=(35)
+310 1
+fi=(52)
+444 4
+fi=(35)
+310 1
+fi=(48)
+14 2
+cfi=(37)
+cfn=(118)
+calls=1 115 
+* 129
+fi=(52)
+453 2
+0 1
+fi=(53)
+547 4
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 30
+fe=(57)
+24 4
+fi=(136)
+2220 4
+fi=(161)
+1030 4
+fi=(51)
+458 2
+fi=(36)
+0 2
+fi=(52)
+444 2
+0 1
+fi=(48)
+14 1
+cfi=(37)
+cfn=(118)
+calls=1 115 
+* 129
+fi=(52)
+453 2
+fi=(53)
+1910 4
+fe=(57)
+36 4
++5 6
+-41 1
+fi=(54)
+3907 3
+fi=(173)
+961 1
+fi=(53)
+1910 4
+fi=(54)
+3916 1
+2106 2
+0 1
+fi=(59)
+767 3
+fi=(54)
+0 1
+fi=(59)
+767 15
+0 4
+fi=(35)
+166 1
+cfi=(256)
+cfn=(1692)
+calls=1 1889 
+* 33
+310 1
+fi=(52)
+444 2
+fi=(35)
+310 1
+fi=(48)
+14 2
+cfi=(37)
+cfn=(118)
+calls=1 115 
+* 129
+fi=(52)
+453 2
+fi=(259)
+0 1
+fi=(53)
+547 4
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 30
+fi=(54)
+3905 5
+fe=(57)
+42 5
++1 8
+
+fl=(17)
+fn=(68)
+5 4
++1 8
++1 4
+-1 38
++1 2
+-1 2
++1 2
+cfi=(13)
+cfn=(52)
+calls=2 +57 
+* 190
++2 6
++1 4
+
+fl=(188)
+fn=(888)
+4 6
++1 6
++1 6
++2 6
++1 6
++2 5
++1 5
++2 5
++1 5
++1 5
++1 5
++2 5
++1 5
++1 5
++1 5
++2 5
++1 5
++1 5
++1 5
++2 5
++1 5
++1 5
++1 5
++2 3
++1 3
++1 3
++1 3
++1 3
++1 3
++2 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++1 1
++2 1
++1 1
+-1 4
++1 4
++2 1
++1 1
++1 1
++1 1
++1 1
++2 1
++1 19
++2 1
++1 1
+
+fl=(213)
+fn=(1906) std::sync::once::Once::call_once::{{closure}}
+159 5
+fi=(279)
+900 1
++1 1
+fi=(67)
+1014 2
+fi=(277) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/io/stdio.rs
+727 1
+fi=(33)
+4028 1
+fi=(32)
+82 1
+fi=(212)
++74 1
+fi=(277)
+733 2
+fi=(58)
+555 1
+fi=(67)
+1065 2
+fi=(33)
+4027 1
+fi=(278) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sync/reentrant_lock.rs
+101 1
+337 1
+0 1
+fi=(33)
+4112 2
+fi=(278)
+340 1
+fi=(33)
+4012 1
+fi=(278)
+0 1
+fi=(321) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/io/buffered/linewriter.rs
+110 4
+fi=(58)
+2043 2
+fi=(279)
+901 1
+fi=(277)
+739 2
+cfi=(21)
+cfn=(1918)
+calls=1 +66 
+* 342
+* 4
+fi=(279)
+901 1
+fi=(278)
+425 1
++1 1
+fi=(33)
+4012 2
++33 1
+fi=(298)
+90 2
+fi=(33)
+4027 1
+fi=(20)
+202 1
+cfn=(1926)
+calls=1 +82 
+* 293
+fe=(213)
+-43 4
+
+fn=(1094) std::sync::once::Once::call_once_force::{{closure}}
+219 5
+fi=(279)
+900 1
++1 1
+fi=(67)
+1014 2
+fi=(48)
+14 2
+cfi=(37)
+cfn=(118)
+calls=1 115 
+* 194
+fi=(36)
+453 2
+fi=(214) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/mem/maybe_uninit.rs
+564 7
+fe=(213)
+219 4
+
+fl=(94) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/signal/block.c
+fn=(288) __block_app_sigs
+37 2
+fi=(6)
++1 4
+fe=(94)
++1 1
+
+fn=(298) __restore_sigs
+42 1
+fi=(6)
+-5 1
++1 4
+fe=(94)
++6 1
+
+fl=(261)
+fn=(1792)
+5 2
+fi=(322) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/stat/lstat.c
++1 8
+cfi=(115)
+cfn=(408)
+calls=2 140 
+* 168
+fe=(261)
+
+fl=(32)
+fn=(104)
+141 55
+fi=(33)
+4028 20
+0 12
+fe=(32)
+154 4
+fi=(33)
+4180 4
+fe=(32)
+155 4
+-11 8
++1 8
++1 12
++28 8
+-2 20
++6 4
+cfi=(213)
+cfn=(1094)
+calls=1 +41 
+* 218
+cfi=(31)
+cfn=(108)
+calls=1 +41 
+* 8
+cfi=(31)
+cfn=(108)
+calls=2 +41 
+* 4824
+-6 5
++6 1
+cfi=(213)
+cfn=(1906)
+calls=1 -19 
+* 689
+fi=(58)
+555 5
+fi=(33)
+4045 5
+fe=(32)
+62 10
+205 40
+0 2
+154 2
+fi=(33)
+4180 2
+fe=(32)
+155 1
+-11 2
++1 2
++1 4
+
+fl=(205)
+fn=(1000)
+193 3
+fi=(203)
+863 1
+506 1
+cfi=(206)
+cfn=(1002)
+calls=1 14 
+* 4
+863 4
++70 2
+cfi=(13)
+cfn=(52)
+calls=1 64 
+* 95
+fi=(161)
+1870 1
+fi=(204)
+132 1
+fi=(203)
+863 1
+506 1
+cfi=(206)
+cfn=(1002)
+calls=1 14 
+* 4
+863 4
++70 2
+cfi=(13)
+cfn=(52)
+calls=1 64 
+* 95
+fi=(161)
+1870 1
+fi=(204)
+132 1
+0 1
+fe=(205)
+207 3
+
+fn=(1078)
+316 11
+fi=(100)
+-56 4
+cfn=(490)
+calls=1 +3 
+* 976
+-33 4
+0 2
+fi=(53)
+805 1
+fi=(48)
+0 1
+fi=(100)
+260 4
+cfn=(490)
+calls=1 +3 
+* 1060
+-33 3
++33 4
+cfn=(490)
+calls=1 +3 
+* 1018
+-33 3
+fi=(33)
+4028 1
+fi=(32)
+82 1
+fi=(212)
++74 1
+410 1
+cfi=(33)
+cfn=(1090)
+calls=1 4028 
+* 288
+fi=(215) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/io/is_terminal/isatty.rs
+5 2
+cfi=(6)
+cfn=(1106) isatty
+calls=1 +2 
+* 36
+* 1
+fe=(205)
+325 1
+0 3
+329 12
+cfn=(1110) uucore::localized_help_template_with_colors
+calls=1 +5 
+* 2685
+
+fn=(1110)
+334 9
++7 1
+cfi=(83)
+cfn=(260)
+calls=1 641 
+* 68
+fi=(53)
+805 2
+0 1
+fi=(83)
+534 7
+cfn=(1014)
+calls=1 -32 
+* 545
+fi=(217)
+30 4
+fi=(52)
+658 5
+cfn=(588)
+calls=1 -14 
+* 217
+-61 1
+fi=(54)
+2933 1
+fi=(53)
+547 5
+fi=(54)
+2822 2
+fe=(205)
+353 2
++7 3
+fi=(193)
+236 5
+cfi=(120)
+cfn=(440)
+calls=1 1630 
+* 771
+fi=(70)
+1231 2
+fi=(52)
+602 1
+fi=(54)
+1451 1
+fi=(136)
+2413 1
+fi=(52)
+736 1
+-80 1
+-59 1
+fi=(53)
+-50 4
+fi=(54)
+2822 3
+fe=(205)
+366 3
+fi=(52)
+617 2
+fi=(53)
+805 1
+fi=(48)
+48 1
+cfi=(55)
+cfn=(170)
+calls=1 -43 
+* 131
+fe=(205)
+367 6
+0 1
+fi=(52)
+658 4
+cfn=(588)
+calls=1 -14 
+* 870
+fi=(54)
+2933 2
+fe=(205)
+
+fn=(1130)
+290 11
+fi=(48)
+14 2
+cfi=(37)
+cfn=(118)
+calls=1 115 
+* 129
+fi=(52)
+453 2
+fi=(53)
++94 3
+fi=(139)
+1014 4
+fe=(205)
+291 3
+fi=(195)
+654 4
+cfi=(119)
+cfn=(426)
+calls=1 -9 
+* 643
+fi=(52)
+-37 2
+fi=(53)
+805 1
+fi=(48)
+48 1
+cfi=(55)
+cfn=(170)
+calls=1 -43 
+* 131
+fi=(194)
+605 2
+fi=(52)
++12 2
+fe=(205)
+291 5
+cfi=(219)
+cfn=(1138)
+calls=1 -23 
+* 2459
+fi=(52)
+617 2
+fi=(48)
+48 2
+cfi=(55)
+cfn=(170)
+calls=1 -43 
+* 124
+fi=(52)
+597 1
+fi=(54)
+1753 1
+fi=(154)
+4028 1
+fi=(291)
+82 1
+fi=(31)
+214 1
+fi=(52)
+597 1
+fi=(54)
+1753 1
+fe=(205)
+292 5
+cfi=(219)
+cfn=(1138)
+calls=1 -24 
+* 1023
+fi=(52)
+617 2
+fi=(53)
+805 1
+fi=(48)
+48 1
+cfi=(55)
+cfn=(170)
+calls=1 -43 
+* 318
+fe=(205)
+293 8
+fi=(31)
+-75 2
++1 11
+cfi=(32)
+cfn=(104)
+calls=1 -78 
+* 817
+* 3
+fe=(205)
+
+fl=(89)
+fn=(286)
+57 4
+fi=(24)
+-53 1
+fe=(89)
++53 1
++4 3
+cfi=(94)
+cfn=(288)
+calls=1 -24 
+* 7
++1 2
+cfi=(90)
+cfn=(276)
+calls=1 -57 
+* 21
++2 1
+cfi=(95)
+cfn=(290)
+calls=1 -40 
+* 18
++1 1
+-6 1
++6 2
++1 3
++1 1
+cfi=(95)
+cfn=(294)
+calls=1 -30 
+* 9
++2 1
++2 1
+-2 1
++2 1
+cfi=(92)
+cfn=(282)
+calls=1 -66 
+* 21
++1 2
+cfi=(94)
+cfn=(298)
+calls=1 -30 
+* 7
++3 6
+
+fn=(274)
+32 8
+fi=(24)
+-28 2
+fe=(89)
++28 2
++5 4
++3 4
++2 2
+-2 2
++2 2
+cfi=(90)
+cfn=(276)
+calls=2 -37 
+* 42
++1 6
++2 9
++5 4
+-13 3
++9 2
++1 2
+-1 4
++1 2
+cfi=(92)
+cfn=(282)
+calls=2 -42 
+* 42
++1 2
++6 8
+
+fl=(121)
+fn=(470)
+3352 12
+fi=(43)
+2933 4
+fi=(128) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/char/methods.rs
+1845 4
+fi=(36)
+602 2
+fi=(65)
+2413 4
+fi=(36)
+736 2
+-80 2
+-59 2
+fi=(128)
+1845 4
++72 2
+fi=(323) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/lib.rs
+0 2
+fe=(121)
+1424 2
+fi=(43)
+2106 2
+fe=(121)
+3355 14
+
+fn=(446)
+3346 104
+fi=(36)
+602 13
+fi=(43)
+1451 13
+fi=(65)
+2413 13
+fi=(36)
+736 13
+-80 13
+0 13
+fi=(28)
+961 13
+fi=(21)
+547 26
+cfi=(7)
+cfn=(16)
+calls=13 7 
+* 464
+fi=(43)
+2822 26
+fe=(121)
+3349 91
+fi=(36)
+658 35
+cfn=(380)
+calls=7 -14 
+* 3554
+* 7
+fi=(43)
+2933 14
+fe=(121)
+
+fn=(1176)
+619 10
+fi=(221)
+46 4
+fe=(121)
+622 1
+cfi=(221)
+cfn=(1178)
+calls=1 203 
+* 464
+* 4
++4 2
+fi=(36)
+0 4
+fe=(121)
+645 9
+
+fl=(133)
+fn=(508)
+11 12
++2 12
++5 12
++8 18
+-6 12
++1 12
+-1 6
++1 156
++3 162
+
+fl=(162)
+fn=(804)
+219 4
+fi=(158)
+9 1
+fi=(157)
+219 2
+fi=(158)
+9 1
+fi=(161)
+1870 1
+fi=(159)
+67 1
+fe=(162)
+224 2
++2 4
+
+fn=(744)
+159 910
+fi=(54)
+466 546
+0 91
+fe=(162)
+163 182
+fi=(157)
++56 182
+0 267
+fi=(159)
+101 178
+fi=(157)
+219 182
+fi=(158)
+9 89
+fi=(161)
+1870 89
+fi=(159)
+67 89
+fe=(162)
+-67 182
+177 364
++1 728
+
+fn=(756)
+289 720
+fi=(157)
+-70 120
+0 204
+219 84
+fi=(158)
+9 732
+fi=(159)
+-9 120
+fi=(177)
+10 180
+cfn=(764)
+calls=60 +56 
+* 10381
+fi=(70)
+2173 60
+0 120
+2173 60
+0 540
+2173 120
+fi=(177)
+10 1080
+-10 82
+fi=(157)
+219 202
+fi=(158)
+9 726
+fi=(159)
+-9 60
+fi=(157)
+219 120
+fi=(161)
+1870 60
+fi=(177)
+14 63
+fi=(157)
+219 6
+fi=(161)
+1870 3
+fi=(177)
+14 3
++9 27
++22 6
+fi=(157)
+219 6
+fi=(159)
+101 6
+fi=(177)
+-86 342
+-15 285
+20 399
+fi=(70)
+2174 171
+fe=(162)
+291 912
+fi=(157)
+-72 171
+fi=(70)
+2174 9
+fe=(162)
+291 48
+fi=(157)
+-72 9
+0 120
+fi=(159)
+101 120
+fi=(157)
+219 120
+fi=(161)
+1870 120
+fi=(159)
+122 120
+fe=(162)
+295 519
++10 840
++1 540
+fi=(157)
+-87 6
+fi=(158)
+9 9
+fi=(177)
+-9 12
+fi=(157)
+219 15
+0 36
+219 24
+0 15
+fi=(158)
+9 96
+fi=(159)
+-9 6
+fi=(48)
+14 6
+cfi=(37)
+cfn=(118)
+calls=3 115 
+* 483
+fi=(52)
+453 6
+fi=(54)
+967 12
+fi=(157)
+219 9
+0 9
+fi=(70)
+0 12
+fi=(157)
+219 12
+0 9
+fi=(161)
+1870 27
+fi=(159)
+67 9
++1 6
+fe=(162)
+255 6
+fi=(157)
+-36 6
+0 6
+fi=(161)
+1870 3
+fi=(159)
+67 3
+-67 6
+fi=(161)
+1870 6
+fi=(159)
+67 6
++1 12
+fi=(157)
+219 36
+fi=(127)
+819 42
+fe=(162)
+231 6
+0 3
+233 9
+cfi=(159)
+cfn=(814)
+calls=3 -74 
+* 198
+fi=(70)
+2173 3
+0 6
+2173 6
+0 3
+fe=(162)
+231 3
+fi=(158)
+9 48
+fi=(161)
+-9 3
+fe=(162)
+237 9
+cfn=(664)
+calls=3 -31 
+* 318
+fi=(70)
+2173 3
+0 6
+2173 6
+0 27
+fi=(157)
+219 12
+fi=(158)
+9 48
+fi=(157)
+219 12
+fi=(161)
+1870 6
+fi=(159)
+119 6
+0 6
+122 12
+fe=(162)
+268 18
+cfi=(165)
+cfn=(677)
+calls=6 45 
+* 6802
+fi=(70)
+2173 6
+0 36
+2173 12
+0 6
+fe=(162)
+270 12
+fi=(161)
+1870 18
+fi=(54)
+1033 12
+fi=(173)
+-72 18
+fi=(53)
+1910 66
+fi=(54)
+1039 42
+fi=(157)
+219 12
+0 27
+219 18
+0 15
+fi=(158)
+9 102
+fi=(181) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/errors.rs
+-9 3
+fe=(162)
+282 6
+0 3
+283 6
+fi=(177)
+61 30
+fi=(70)
+2173 30
+fe=(162)
+
+fn=(757)
+289 72
+fi=(157)
+-70 12
+0 24
+219 12
+fi=(158)
+9 84
+fi=(159)
+-9 12
+fi=(177)
+10 18
+cfn=(764)
+calls=6 +56 
+* 924
+fi=(70)
+2173 6
+0 12
+2173 6
+0 54
+2173 12
+fi=(177)
+10 108
+-10 12
+fi=(157)
+219 24
+fi=(158)
+9 84
+fi=(159)
+-9 6
+fi=(157)
+219 12
+fi=(161)
+1870 6
+fi=(177)
+14 6
++1 36
+-15 30
+20 42
+fi=(70)
+2174 18
+fe=(162)
+291 96
+fi=(157)
+-72 18
+0 12
+fi=(159)
+101 12
+fi=(157)
+219 12
+fi=(161)
+1870 12
+fi=(159)
+122 12
+fe=(162)
+295 54
++10 84
++1 54
+
+fn=(664)
+206 954
+fi=(158)
+9 318
+fi=(157)
+219 318
+fi=(158)
+9 159
+fi=(127)
+680 795
+fe=(162)
+207 159
++8 159
+fi=(157)
++4 318
+fe=(162)
+-22 2345
+fi=(157)
++22 4690
+fi=(127)
+785 7512
+fe=(162)
+195 16847
+fi=(163)
+-26 318
+fi=(164)
+366 1272
++4 318
+fi=(127)
+1080 159
+fi=(163)
+171 159
+fe=(162)
+0 159
+201 159
+fi=(163)
++17 159
+fe=(162)
+-2 477
++1 636
+
+fl=(6)
+fn=(1106)
+7 1
+fi=(216) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/unistd/isatty.c
++2 1
+fe=(6)
++20 2
+fi=(216)
+-20 1
+fe=(6)
++20 2
+fi=(216)
+-20 1
+cfi=(12)
+cfn=(50)
+calls=1 -3 
+* 14
++1 3
++1 1
+cfi=(24)
+cfn=(84)
+calls=1 -7 
+* 3
++1 1
+-1 3
++2 3
+fe=(6)
+
+fl=(230)
+fn=(1248)
+467 12
++9 2
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 100
+fi=(231) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/iter/traits/collect.rs
+320 6
+fi=(232)
+183 2
+fi=(79)
+729 5
+fi=(232)
+183 2
+fi=(79)
+729 4
+fi=(136)
+2220 1
+0 1
+fi=(51)
+458 3
+fi=(226)
+0 3
+fi=(52)
+444 2
+0 1
+fi=(48)
+14 4
+cfi=(37)
+cfn=(118)
+calls=1 115 
+* 132
+* 4
+fi=(52)
+453 2
+fi=(54)
+967 3
+fi=(232)
+183 2
+fi=(79)
+729 5
+fi=(232)
+183 2
+fi=(79)
+729 4
+fi=(136)
+2220 1
+fi=(52)
+736 1
+-80 1
+0 2
+fi=(232)
+183 1
+-63 1
+fi=(73)
+1692 1
+fi=(50)
+323 3
+0 1
+fi=(53)
+1910 2
+fi=(73)
+660 1
+fi=(53)
+1910 2
+fi=(220)
+19 1
+fi=(73)
+1692 2
+fi=(50)
+323 1
+fi=(52)
+617 2
+0 2
+fi=(48)
+48 1
+cfi=(55)
+cfn=(170)
+calls=1 -43 
+* 180
+* 2
+fi=(232)
+183 1
+-60 1
+fi=(73)
+1692 1
+fi=(141)
+25 1
+fi=(79)
+729 6
+fi=(141)
+276 9
+fi=(53)
+547 16
+cfi=(7)
+cfn=(16)
+calls=4 7 
+* 90
+* 4
+1910 12
+fi=(141)
+284 20
+-5 8
+fi=(52)
+444 8
+fi=(48)
+14 8
+cfi=(37)
+cfn=(118)
+calls=4 115 
+* 516
+* 4
+fi=(52)
+453 8
+fi=(232)
+0 3
+fi=(57)
+61 5
+fi=(226)
+869 1
+fi=(233)
+19 1
+fi=(226)
+869 1
+0 1
+869 1
+0 1
+fi=(233)
+19 1
+fi=(226)
+898 1
+fi=(157)
+219 2
+fi=(52)
+597 1
+fi=(157)
+221 1
+fi=(52)
+597 1
+fi=(54)
+1753 1
+fi=(60)
+304 2
+fi=(61)
+7 3
+fi=(52)
+617 2
+fi=(48)
+48 2
+cfi=(55)
+cfn=(170)
+calls=1 -43 
+* 160
+-48 1
+fi=(226)
+819 1
+cfi=(53)
+cfn=(1648)
+calls=1 -14 
+* 10371
+fi=(70)
+966 2
++1 9
+fe=(230)
+485 8
+fi=(60)
+3156 7
+2660 1
+cfn=(196)
+calls=1 951 
+* 132
+fi=(67)
+1545 1
+fi=(226)
+902 1
+0 3
+fi=(223)
+306 1
+cfi=(68)
+cfn=(216)
+calls=1 89 
+* 48
+fi=(70)
+713 2
+fi=(59)
+-77 1
+fi=(226)
+904 1
+0 2
+fi=(51)
+458 1
+0 1
+fi=(52)
+444 1
+0 1
+fi=(77)
+95 3
+cfi=(1)
+cfn=(242)
+calls=1 -95 
+* 138
+fi=(52)
+453 2
+0 3
+fi=(53)
+547 3
+cfi=(7)
+cfn=(16)
+calls=1 7 
+* 15
+fi=(226)
+905 3
+0 4
+912 2
+cfn=(1286)
+calls=1 4350 
+* 67083
+fi=(53)
+805 1
+fi=(52)
+617 3
+fi=(53)
+805 15
+fi=(52)
+617 10
+fi=(53)
+805 5
+fi=(48)
+48 5
+cfi=(55)
+cfn=(170)
+calls=5 -43 
+* 711
+* 5
+fe=(230)
+
+fl=(18)
+fn=(280)
+4 9
+fi=(324) /build/musl-cross-make/build/local/x86_64-linux-musl/obj_musl/../src_musl/src/thread/pthread_rwlock_trywrlock.c
++1 9
++2 3
+fe=(18)
+
+fl=(140)
+fn=(580)
+467 12
+fi=(144)
+96 2
+fi=(120)
+-96 1
+fi=(136)
+129 2
+fi=(149)
++54 3
+fi=(120)
+2093 3
+0 1
+2093 1
+cfi=(139)
+cfn=(584)
+calls=1 3346 
+* 249
+* 1
+fi=(70)
++80 2
+fe=(140)
+484 9
+0 1
+469 2
+0 1
+473 2
++4 3
+fi=(120)
+2838 3
+cfi=(139)
+cfn=(600)
+calls=1 3352 
+* 29
+* 1
+fi=(70)
+2173 2
+0 2
+fi=(136)
+129 2
+fi=(149)
+-98 3
+fi=(120)
+2093 2
+cfi=(139)
+cfn=(584)
+calls=1 3346 
+* 41
+fi=(70)
++80 2
+0 2
+fe=(140)
+
+fn=(538)
+454 24
+fi=(73)
+1692 3
+fi=(141)
+180 3
+0 6
+384 31
++6 5
+fi=(73)
+1692 5
+fi=(141)
+180 5
+0 3
+fi=(142)
+160 3
+fi=(145) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/iter.rs
+473 2
+fi=(157)
+-63 2
+89 6
+fi=(142)
++71 6
++13 6
++2 3
++2 6
+0 3
+172 6
+0 7
+172 1
++1 2
++2 4
++2 8
+0 2
+172 4
+0 12
+172 2
++16 6
+fi=(143) /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/range.rs
+873 10
+0 42
+fi=(149)
+191 2
++1 6
++1 8
+-2 4
++3 2
+fi=(144)
+15 2
+-15 1
+fi=(70)
+2175 1
+0 1
+fe=(140)
+106 2
+456 8
+106 4
+456 16
+0 2
+fi=(149)
+268 4
++1 2
+-1 6
++4 2
+fi=(144)
+19 4
+fi=(136)
+129 4
+fi=(72)
++23 6
+fi=(146) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-langid-impl-0.9.6/src/parser/mod.rs
+14 6
+fi=(70)
+2173 6
+fi=(54)
+466 6
+fi=(145)
+-3 4
+0 32
+463 4
+0 2
+fi=(73)
+1692 2
+fi=(141)
+180 2
+0 4
+384 20
++6 4
+fi=(73)
+1692 4
+fi=(141)
+180 4
+0 8
+180 2
+fi=(146)
+26 10
+fi=(142)
+160 6
++13 4
++2 2
++2 4
+0 4
+fi=(54)
+0 2
+fi=(142)
+172 4
++1 2
++2 4
++2 8
+0 6
+172 4
+0 2
+172 2
++16 4
+fi=(147) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-langid-impl-0.9.6/src/subtags/script.rs
+13 4
+fi=(146)
+-13 2
+30 6
+cfi=(148)
+cfn=(564)
+calls=2 -21 
+* 98
+* 4
+-30 2
+64 4
+fi=(52)
+617 6
+fi=(48)
+0 4
+fi=(70)
+2173 10
+fe=(140)
+106 2
+fi=(70)
+2174 28
+fe=(140)
+
+fl=(100)
+fn=(324)
+750 10
+fi=(21)
+547 3
+1910 1
+fi=(101)
+40 25
+-40 1
+40 2
+-40 2
+fi=(325) /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/ops/function.rs
+79 1
+cfi=(102)
+cfn=(328)
+calls=1 2092 
+* 1692
+fi=(108)
+266 2
++5 4
+fe=(100)
+752 7
+
+fn=(490)
+263 66
+fi=(113)
+25 12
+-25 6
+fi=(21)
+547 18
+cfi=(7)
+cfn=(16)
+calls=6 7 
+* 142
+1910 6
+fi=(113)
+47 6
+fi=(101)
+-20 12
+-27 8
+40 82
++4 37
+-5 74
+fi=(21)
+2285 4
+fi=(101)
+71 4
+-71 10
+85 2
++1 2
+-67 12
++72 8
++4 1
+-14 3
+-42 4
+-39 8
+40 42
++4 19
+-5 38
++65 2
+fi=(47)
+354 12
+0 12
+fi=(113)
+48 6
+cfi=(130)
+cfn=(500)
+calls=6 +47 
+* 5506
+fi=(97)
+713 30
+0 6
+714 18
+fi=(67)
+0 6
+fe=(100)
+265 48
+
+fl=(152)
+fn=(1038)
+485 140
+fi=(326) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resolver/scope.rs
+35 84
+fi=(208)
++59 28
+fi=(52)
+597 11
+fi=(208)
+95 33
+-95 11
+95 22
++1 11
+fi=(59)
+1276 22
+fi=(139)
+438 15
+fi=(208)
+104 9
+cfn=(1042)
+calls=3 -87 
+* 6952
+fi=(70)
+1183 6
+fi=(208)
+106 12
+fi=(209)
+294 3
+fe=(152)
+497 3
+fi=(208)
+107 3
+fi=(209)
+306 33
+fi=(59)
+0 22
+fe=(152)
+497 33
+cfi=(209)
+cfn=(1056)
+calls=11 263 
+* 374
+fi=(59)
+0 3
+fe=(152)
+497 9
+cfi=(209)
+cfn=(1056)
+calls=3 263 
+* 102
+fi=(53)
+805 42
+fi=(210) /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/smallvec-1.16.1/src/lib.rs
+1056 14
+2258 14
+fe=(152)
+498 112
+
+fn=(852)
+297 16
+fi=(54)
+2933 4
+fi=(308)
+66 2
+fi=(52)
+597 2
+fi=(54)
+1753 8
+fe=(152)
+304 10
+0 273
+fi=(73)
+1692 91
+fi=(238)
+82 91
+fi=(73)
+1692 91
+fi=(141)
+180 91
+fi=(73)
+1692 2
+fi=(141)
+180 2
+fe=(152)
+305 273
+0 546
+fi=(51)
+458 91
+0 273
+fi=(52)
+444 91
+fi=(48)
+14 182
+cfi=(37)
+cfn=(118)
+calls=91 115 
+* 14151
+fi=(52)
+453 182
+0 182
+fi=(53)
+547 364
+cfi=(7)
+cfn=(16)
+calls=91 7 
+* 2117
+fi=(139)
+1014 273
+fi=(307)
+1296 455
+cfi=(184)
+cfn=(866)
+calls=91 1841 
+* 22859
+fi=(53)
+805 273
+fi=(36)
+0 2
+fi=(54)
+1030 2
++3 4
+fi=(52)
+597 4
+fi=(53)
+1910 2
+fi=(54)
+1039 4
+fe=(152)
+318 16
+fi=(54)
+1034 2
+cfi=(52)
+cfn=(718)
+calls=1 186 
+* 206
+* 1
+fe=(152)
+
+ob=(2)
+fl=(9)
+fn=(1958)
+0 3
+
+fn=(40)
+0 3
+
+totals: 788859

@@ -1,0 +1,43 @@
+Benchmark 1: previous-true
+  Time (mean ± σ):      76.9 µs ±  41.1 µs    [User: 54.1 µs, System: 5.6 µs]
+  Range (min … max):    62.2 µs … 677.7 µs    2000 runs
+ 
+  Warning: The first benchmarking run for this command was significantly slower than the rest (125.6 µs). This could be caused by (filesystem) caches that were not filled until after the first run. You are already using the '--warmup' option which helps to fill these caches before the actual benchmark. You can either try to increase the warmup count further or re-run this benchmark on a quiet system in case it was a random outlier. Alternatively, consider using the '--prepare' option to clear the caches before each timing run.
+ 
+Benchmark 2: relr-true
+  Time (mean ± σ):      74.9 µs ±  39.3 µs    [User: 53.3 µs, System: 5.7 µs]
+  Range (min … max):    64.6 µs … 570.8 µs    2000 runs
+ 
+  Warning: The first benchmarking run for this command was significantly slower than the rest (96.9 µs). This could be caused by (filesystem) caches that were not filled until after the first run. You are already using the '--warmup' option which helps to fill these caches before the actual benchmark. You can either try to increase the warmup count further or re-run this benchmark on a quiet system in case it was a random outlier. Alternatively, consider using the '--prepare' option to clear the caches before each timing run.
+ 
+Benchmark 3: previous-multi-true
+  Time (mean ± σ):     202.3 µs ±  28.2 µs    [User: 153.2 µs, System: 32.5 µs]
+  Range (min … max):   189.5 µs … 628.9 µs    2000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 4: relr-multi-true
+  Time (mean ± σ):     217.9 µs ±  28.2 µs    [User: 170.7 µs, System: 29.8 µs]
+  Range (min … max):   195.5 µs … 716.0 µs    2000 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 5: previous-ln
+  Time (mean ± σ):     185.1 µs ±  23.2 µs    [User: 137.6 µs, System: 20.3 µs]
+  Range (min … max):   170.7 µs … 383.4 µs    2000 runs
+ 
+  Warning: The first benchmarking run for this command was significantly slower than the rest (217.4 µs). This could be caused by (filesystem) caches that were not filled until after the first run. You are already using the '--warmup' option which helps to fill these caches before the actual benchmark. You can either try to increase the warmup count further or re-run this benchmark on a quiet system in case it was a random outlier. Alternatively, consider using the '--prepare' option to clear the caches before each timing run.
+ 
+Benchmark 6: relr-ln
+  Time (mean ± σ):     180.5 µs ±  22.3 µs    [User: 134.0 µs, System: 20.1 µs]
+  Range (min … max):   169.7 µs … 371.9 µs    2000 runs
+ 
+  Warning: The first benchmarking run for this command was significantly slower than the rest (362.7 µs). This could be caused by (filesystem) caches that were not filled until after the first run. You are already using the '--warmup' option which helps to fill these caches before the actual benchmark. You can either try to increase the warmup count further or re-run this benchmark on a quiet system in case it was a random outlier. Alternatively, consider using the '--prepare' option to clear the caches before each timing run.
+ 
+Summary
+  relr-true ran
+    1.03 ± 0.77 times faster than previous-true
+    2.41 ± 1.30 times faster than relr-ln
+    2.47 ± 1.34 times faster than previous-ln
+    2.70 ± 1.47 times faster than previous-multi-true
+    2.91 ± 1.57 times faster than relr-multi-true

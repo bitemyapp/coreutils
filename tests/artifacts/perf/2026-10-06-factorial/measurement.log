@@ -1,0 +1,27 @@
+Completed timing block 1
+Completed timing block 2
+Completed timing block 3
+Completed timing block 4
+Completed timing block 5
+Completed timing block 6
+Completed timing block 7
+Completed timing block 8
+gnu-true                    p50=  159.05 p95=  186.01 us
+baseline-single-true        p50=  295.00 p95=  373.23 us
+baseline-multi-true         p50=  478.76 p95=  594.06 us
+lazy-single-true            p50=  243.66 p95=  282.36 us
+lazy-multi-true             p50=  416.92 p95=  522.25 us
+musl-single-true            p50=  161.04 p95=  213.92 us
+musl-multi-true             p50=  291.17 p95=  342.87 us
+lazy-musl-single-true       p50=   72.24 p95=   83.14 us
+lazy-musl-multi-true        p50=  196.14 p95=  226.87 us
+gnu-ln                      p50=  215.89 p95=  253.67 us
+baseline-single-ln          p50=  386.12 p95=  474.36 us
+baseline-multi-ln           p50=  569.17 p95=  674.32 us
+lazy-single-ln              p50=  321.22 p95=  377.31 us
+lazy-multi-ln               p50=  496.73 p95=  611.04 us
+musl-single-ln              p50=  275.18 p95=  300.53 us
+musl-multi-ln               p50=  410.17 p95=  499.68 us
+lazy-musl-single-ln         p50=  181.00 p95=  213.38 us
+lazy-musl-multi-ln          p50=  308.50 p95=  362.01 us
+MEASUREMENTS COMPLETE

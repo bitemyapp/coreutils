@@ -1,0 +1,291 @@
+Coreutils startup investigation — 2026-10-06
+
+The complaint reproduces on wx-workstation. In the initial, lower-load runs,
+Rust multicall true is 3.00x GNU and multicall ln -sf is 2.65x GNU by median
+elapsed time. Standalone Rust executables substantially reduce that gap,
+but still cost 1.88x and 1.80x GNU respectively.
+
+All compilation, correctness tests, benchmark execution, instrumentation,
+profiling, and statistical analysis ran through ssh wx-workstation. The Mac
+was used to read the uutils source, prepare scripts, and retain these results.
+No GNU implementation source was read or copied. No production source change
+was made; the two files instrumented in the remote copy were restored and
+their Git blob hashes match the local checkout.
+
+WHAT WAS COMPARED
+
+Host: AMD Ryzen Threadripper PRO 9985WX, 64 cores / 128 threads, 250 GiB RAM;
+Ubuntu 24.04.4; Linux 6.17.0-1032-oem; ext4 on NVMe; performance governor.
+Rust: this checkout, 8cf2e4f4ab613947b955f442c750df9d53d17b08, version 0.13.0.
+GNU: installed Ubuntu coreutils 9.4-3ubuntu6.3, /usr/bin/true and /usr/bin/ln.
+Toolchain: rustc 1.94.1, hyperfine 1.20.0, Callgrind 3.22.0.
+Remote work directory: /home/callen/work/coreutils-startup-8cf2e4f4
+
+The initial Rust build used the upstream release profile (opt-level 3,
+fat LTO, one codegen unit, panic=abort), with debug information and frame
+pointers for profiling. It has no timing probes. It is a local optimized
+build, not a distribution package or the upstream PGO release artifact.
+Multicall is invoked through true/ln symlinks; standalone is a separate ELF
+executable for each utility. Separate-package standalone builds were also
+checked later to control for workspace feature unification.
+
+Original reports, verified against the screenshot:
+https://github.com/uutils/coreutils/issues/9081
+  Ubuntu's uutils 0.2.2, Ryzen 5700G; ln -s -f; hyperfine -N --warmup 10.
+https://efraingaray.com/blog/rust-coreutils-contra-gnu/
+  uutils 0.12.0 versus GNU 9.12, including true and 5,000 launches.
+This investigation reproduces the workloads and regression, not those exact
+historical binaries, operating systems, or absolute timings.
+
+TIMING RESULTS
+
+Warm filesystem caches; LC_ALL=C and LANG=C; inherited affinity to CPU 4;
+hyperfine -N (no shell) with 10 warmups. Explicit executable paths prevent
+accidentally benchmarking the shell's true builtin. ln always replaces an
+existing dst.txt symlink to src.txt. Creation and replacement were verified.
+The benchmark runs in a fixture directory outside the source tree, with no
+external locale files, so Rust uses its embedded English resources.
+
+Initial forward/reverse sweeps: 2 x 2,000 launches per executable/workload.
+All values below are microseconds. No outliers were discarded.
+
+Command          GNU                  Rust multicall       Rust standalone
+                 median / p95         median / p95         median / p95
+true             158.6 / 170.8         476.3 / 559.1         297.7 / 381.0
+ln -s -f         212.8 / 223.8         564.2 / 648.1         383.1 / 460.6
+
+Command          GNU mean             Multicall mean       Standalone mean
+true             162.7                485.6                310.8
+ln -s -f         227.4                574.5                390.0
+
+There was one 43.8 ms outlier in GNU ln's first sweep; median is the primary
+statistic. Full distributions, p99, p99.9, p99.99, maximum, and launch rates
+are in baseline-summary.json. Extreme percentiles are weak estimates:
+4,000 samples contain only about four observations beyond p99.9 and fewer
+than one beyond p99.99. Do not treat them as reliable tail guarantees.
+
+The median multicall-minus-standalone difference is almost identical for
+both utilities: 178.6 us for true and 181.0 us for ln. Most of that difference
+is common process startup, rather than the actual link operation.
+
+Explicit Bash loop, 5,000 external true invocations; 20 measured loop runs:
+                         GNU          Rust multicall       Rust standalone
+Mean elapsed seconds     1.014        2.618                1.756
+Median seconds           1.009        2.617                1.762
+Multicall is 2.58x slower by loop mean; standalone is 1.73x slower.
+This includes Bash loop/fork/wait overhead, and is not the same metric as
+hyperfine's direct single-command execution. See loops-5000.json.
+
+A later randomized sequence (8 blocks x 500 launches per case) rechecked
+order sensitivity after the standalone p95 values drifted between sweeps:
+                         GNU          Rust multicall       Rust standalone
+true median, us          162.1        521.5                311.2
+ln median, us            219.4        626.6                407.5
+The host is shared. Background Nix/Cargo jobs were active in the later run;
+load rose from under 1 to over 6. Later tails are noisier, but both the
+regression and the multicall/standalone distinction persist. CPU pinning
+did not reserve the core or its SMT sibling. See interleaved-*.json,
+analysis.json, fingerprint.txt, and fingerprint-after.txt.
+
+Independent standalone-package builds, followed by a contemporaneous
+randomized comparison (4 blocks x 500 launches per case):
+                         GNU       Multicall   Standalone    Standalone
+                                               joint build   isolated build
+true median, us          154.9     489.4       297.3         296.3
+ln median, us            210.1     589.0       389.5         378.2
+"Joint" means the utility was built alongside the root multicall crate;
+"isolated" means cargo build -p uu_true / -p uu_ln in separate invocations.
+The isolated binaries have ~4 KB less text and nearly identical instruction
+counts. Separate Cargo feature resolution does not explain the startup gap.
+These builds and their profiles are preserved separately as rust-isolated-*;
+see build-standalone-*.log, cases-isolated.json, isolated-check-*.json,
+isolated-check-summary.json and rust-isolated-*.instructions-yes.txt.
+
+WHERE THE WORK GOES
+
+Rank  Location                    Evidence / measured contribution
+1     ELF loader / relocations    Multicall has 25,861 relative relocations
+                                 across its loaded objects, compared with
+                                 1,246 for standalone true and 3 for GNU true.
+                                 Multicall ln uses the same 25,861; standalone
+                                 ln has 1,566; GNU ln has 28.
+                                 Callgrind: loader startup is 687,678
+                                 instructions for multicall true (67.8% of
+                                 its 1,014,570 total); 609,419 instructions
+                                 are under _dl_relocate_object (60.1%).
+                                 GNU true totals 154,577 instructions;
+                                 standalone Rust true totals 512,108.
+                                 Evidence: *.elf.txt, *.loader.json,
+                                 *instructions-yes.txt, *.callgrind.
+
+2     Eager localization          Native stage medians are 45.3 us for
+                                 multicall true, 39.5 us standalone true,
+                                 52.1 us multicall ln, 48.3 us standalone ln.
+                                 Callgrind localization is 182,450
+                                 instructions for multicall true (18.0%)
+                                 and 233,714 for multicall ln (19.9%).
+                                 This probes locale paths, parses embedded
+                                 Fluent text, allocates parser objects, and
+                                 builds bundles on every fresh process.
+                                 OnceLock/caches help within one process;
+                                 they do not survive the next exec.
+                                 Evidence: native-stages.json,
+                                 rust-*-true.heap.txt, *.strace,
+                                 *instructions-yes.txt.
+
+3     Rust runtime / stack setup  Rust startup checks file descriptors,
+                                 configures signals and an alternate stack,
+                                 and calls pthread_getattr_np, which reads
+                                 /proc/self/maps. The latter accounts for
+                                 118,029 instructions in multicall true
+                                 (11.6%) and multicall ln (10.0%).
+                                 Empty-program control: C median 173.0 us,
+                                 Rust std median 255.8 us. This ~83 us gap
+                                 includes the Rust executable's loader and
+                                 runtime footprint; it is not a pure timing
+                                 of stack setup alone.
+                                 Evidence: *.strace, empty-controls.json,
+                                 artifacts/empty.c and empty.rs in the
+                                 remote work directory, Callgrind reports.
+
+4     ln command construction     ln builds/translates its Clap command and
+      and argument parsing       parses options even for this tiny workload.
+                                 uu_app: 29,590 instructions; _do_parse:
+                                 57,392. Combined ~7.4% of the multicall ln
+                                 instruction total. They are within the
+                                 utility stage, not additional to it.
+                                 Native complete utility stage: 68.1 us
+                                 multicall / 59.7 us standalone, including
+                                 argument handling and filesystem work.
+                                 Evidence: rust-multi-ln.instructions-yes.txt,
+                                 native-stages.json.
+
+5     Multicall dispatch          About 7.3 us for true and 6.9 us for ln
+                                 from Rust main entry to localization entry.
+                                 This includes argument/name handling and
+                                 dispatch. It is much smaller than the
+                                 179–181 us multicall executable penalty.
+                                 Evidence: native-stages.json and
+                                 instrumentation.patch.
+
+Instruction percentages are inclusive USERSPACE INSTRUCTION counts under
+Callgrind, not elapsed-time percentages, cycle samples, or kernel profiles.
+Nested functions (e.g. relocation within loader, parsing within localization)
+must not be added together. Native stage probes are a separate build, gated
+for reporting by UUTILS_STARTUP_PROFILE=1. They never supplied the baseline
+timings. Timer calls perturb tiny stages, so sub-microsecond values should
+be interpreted as approximate.
+
+The Rust true utility itself takes about 0.8 us multicall / 0.4 us standalone
+once entered. It pays localization before doing essentially no useful work.
+Relevant checkout code:
+  src/bin/coreutils.rs:122 — unconditional localization before uumain
+  src/uucore/src/lib/lib.rs:233 — standalone startup localization
+  src/uucore/src/lib/mods/locale.rs:641 — setup_localization
+  src/uucore/src/lib/mods/locale.rs:412 — build embedded English bundle
+  src/uucore/src/lib/mods/locale.rs:355 — parse Fluent resource text
+  src/uu/ln/src/ln.rs:107 — construct and parse command
+  src/uu/ln/src/ln.rs:153 — build translated help/options
+
+FOOTPRINT, DISK I/O, AND ALLOCATIONS
+
+Sample unprofiled /usr/bin/time -v results:
+                         GNU true      Multicall true      Standalone true
+Minor faults             68            353                 119
+Major faults             0             0                   0
+Max RSS, KiB             1052          5200                2088
+Block reads              0             0                   0
+
+ln: GNU 76 minor faults / 1024 KiB RSS; multicall 379 / 6184; standalone
+139 / 2096. These RSS/fault figures are single-run samples, supported by
+separate repeated resource accounting. The accounting harness also includes
+the Python child's pre-exec fork overhead and should not be used as a pure
+executable CPU-time measurement. No measured case needed major page faults
+or block reads in this warm-cache experiment. Cold-cache behavior was not
+measured, and no global cache drop was performed.
+
+Heaptrack observed 218 allocation calls for multicall true and 217 for
+standalone true, versus 1 in the GNU true control; multicall ln made 476.
+Fluent parsing/bundle construction appears prominently in their stacks.
+Reported high-water heap: ~134 KB for Rust true and ~176 KB for Rust ln.
+Heaptrack has preload/constructor overhead (including ~74 KB seen even in
+GNU true); these are instrumented-process figures, not net utility-only
+allocations. Process-lifetime cached resources retained at exit are not
+automatically evidence of a leak bug. Heaptrack RSS includes profiler memory.
+
+The profiling multicall file is 63,618,656 bytes with debug data, and
+15,782,128 bytes after strip --strip-debug. Same loaded implementation:
+means 502.3 vs 502.8 us, medians 487.5 vs 494.7 us. There is no material
+speedup from removing debug-file bulk. Relevant factors are mapped/touched
+pages, relocations, additional libraries, and initialization work, rather
+than raw file size alone. The multicall has libgcc_s, libm and libc as NEEDED
+libraries; GNU true/ln only list libc. Stripped size is not a cold-I/O test.
+
+HYPOTHESIS LEDGER
+
+Supported: multicall packaging adds a large shared startup cost; similar
+true/ln deltas, far more relocations, and hundreds more minor faults.
+Supported: eager localization is substantial on success/no-output paths;
+native timings, allocation stacks, and instruction profiles agree.
+Supported: Rust std initialization contributes independently of uutils;
+empty-program comparison and stack/signal/syscall profiles agree.
+Supported: Clap construction/parsing adds ln-specific overhead.
+Small contributor: dispatch/search by executable name, measured ~7 us.
+Not supported as the warm-cache explanation: reading the full large file
+from disk; no block reads/major faults, and stripping debug data did not help.
+Not observed: lock contention, worker-thread waits, or fsync stalls.
+Unresolved: exact allocation of elapsed time among kernel exec, mapping,
+page faults, process teardown, scheduling, and userspace startup. We have
+userspace instruction attribution and native stage measurements, not a
+complete additive kernel+userspace wall-time decomposition.
+
+PROFILER LIMITS AND VALIDATION
+
+perf_event_paranoid is 4; sudo is unavailable without a password. Both samply
+and software perf sampling were denied. The /usr/bin/perf wrapper also lacks
+a matching kernel package; using the available perf binary did not overcome
+the access restriction. No kernel settings or governors were changed.
+Callgrind, strace, LD_DEBUG=statistics, heaptrack and native probes provided
+the evidence above. Raw loader statistics retain their reported "cycles"
+unit; this report does not convert them into an end-to-end wall-time budget.
+
+Correctness: all six initial cases return status 0 with no output; all ln
+variants create and replace the exact requested symlink. The unmodified
+remote source passed all 7 test_true tests and all 60 test_ln tests using:
+  cargo test --locked --no-default-features --features 'true ln' test_true::
+  cargo test --locked --no-default-features --features 'true ln' test_ln::
+See smoke-tests.txt, test-true.log and test-ln.log.
+
+REPRODUCING / CONTINUING THE COMPARISON
+
+Keep separate GNU / Rust multicall / Rust standalone results in every
+future run. Record any changes to build features, target, locale, invocation
+style, packaging, or linker flags; they can affect startup independently.
+
+Baseline build in the remote source directory:
+  CARGO_PROFILE_RELEASE_DEBUG=1 RUSTFLAGS='-C force-frame-pointers=yes' \
+    cargo build --locked --release --features unix \
+      -p coreutils -p uu_true -p uu_ln --bin coreutils --bin true --bin ln
+
+Copy the resulting uninstrumented executables to bin/multi and bin/single
+before any probe build; symlink bin/multi/true and bin/multi/ln to coreutils.
+Run these scripts only on wx-workstation, sequentially:
+  python3 artifacts/measure.py
+  python3 artifacts/profile.py
+  bash artifacts/controls.sh
+  python3 artifacts/interleave.py
+The paths in the scripts deliberately point at the remote work directory.
+profile.py expects the privately extracted Valgrind package under
+tools/valgrind, avoiding system package installation.
+
+instrument.py applies measurement-only native stage probes to the disposable
+remote source. Build with the same release flags, preserve those binaries
+separately, collect UUTILS_STARTUP_PROFILE=1 runs, then restore the files from
+the original-* backups. instrumentation.patch contains the full probe diff.
+analysis.json, baseline-summary.json and raw JSON preserve the distributions;
+*.callgrind / *.instructions-*.txt preserve instruction attribution;
+*.strace and *.elf.txt preserve syscall and binary metadata evidence.
+
+The next optimization candidates, if requested, are reducing the multicall
+relocation/touched-page footprint and deferring localization until required.
+This investigation made no optimization changes.

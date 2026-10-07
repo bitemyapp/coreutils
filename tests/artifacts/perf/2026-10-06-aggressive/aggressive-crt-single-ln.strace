@@ -1,0 +1,46 @@
+execve("/home/callen/work/coreutils-startup-factorial/bin/aggressive-crt/single/ln", ["/home/callen/work/coreutils-star"..., "-s", "-f", "src.txt", "dst.txt"], 0x7ffe17012830 /* 21 vars */) = 0 <0.000072>
+mmap(NULL, 960, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7ba2cb65a000 <0.000002>
+arch_prctl(ARCH_SET_FS, 0x7ba2cb65a2f8) = 0 <0.000001>
+set_tid_address(0x7ba2cb7b1418)         = 2111042 <0.000001>
+fcntl(0, F_GETFD)                       = 0 <0.000001>
+fcntl(1, F_GETFD)                       = 0 <0.000001>
+fcntl(2, F_GETFD)                       = 0 <0.000001>
+rt_sigaction(SIGPIPE, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000001>
+poll([{fd=0, events=0}, {fd=1, events=0}, {fd=2, events=0}], 3, 0) = 1 ([{fd=0, revents=POLLHUP}]) <0.000002>
+rt_sigaction(SIGPIPE, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7ba2cb740271}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000001>
+rt_sigaction(SIGSEGV, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000001>
+sigaltstack(NULL, {ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=0}) = 0 <0.000002>
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7ba2cb657000 <0.000002>
+mprotect(0x7ba2cb657000, 4096, PROT_NONE) = 0 <0.000003>
+sigaltstack({ss_sp=0x7ba2cb658000, ss_flags=0, ss_size=8192}, NULL) = 0 <0.000001>
+rt_sigprocmask(SIG_UNBLOCK, [RT_1 RT_2], NULL, 8) = 0 <0.000001>
+rt_sigaction(SIGSEGV, {sa_handler=0x7ba2cb6fad90, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_SIGINFO, sa_restorer=0x7ba2cb740271}, NULL, 8) = 0 <0.000001>
+rt_sigaction(SIGBUS, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000001>
+rt_sigaction(SIGBUS, {sa_handler=0x7ba2cb6fad90, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_SIGINFO, sa_restorer=0x7ba2cb740271}, NULL, 8) = 0 <0.000001>
+brk(NULL)                               = 0x555561e9c000 <0.000001>
+brk(0x555561e9e000)                     = 0x555561e9e000 <0.000003>
+mmap(0x555561e9c000, 4096, PROT_NONE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x555561e9c000 <0.000003>
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7ba2cb656000 <0.000003>
+rt_sigprocmask(SIG_BLOCK, ~[RTMIN RT_1 RT_2], [], 8) = 0 <0.000001>
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0 <0.000001>
+rt_sigaction(SIGPIPE, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7ba2cb740271}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7ba2cb740271}, 8) = 0 <0.000001>
+rt_sigaction(SIGSEGV, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1 RT_2], sa_flags=SA_RESTORER, sa_restorer=0x7ba2cb740271}, {sa_handler=0x7ba2cb6fad90, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_SIGINFO, sa_restorer=0x7ba2cb740271}, 8) = 0 <0.000001>
+rt_sigaction(SIGBUS, {sa_handler=SIG_DFL, sa_mask=~[RTMIN RT_1 RT_2], sa_flags=SA_RESTORER, sa_restorer=0x7ba2cb740271}, {sa_handler=0x7ba2cb6fad90, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_SIGINFO, sa_restorer=0x7ba2cb740271}, 8) = 0 <0.000001>
+stat("dst.txt", {st_mode=S_IFREG|0664, st_size=19, ...}) = 0 <0.000006>
+lstat("dst.txt", {st_mode=S_IFLNK|0777, st_size=7, ...}) = 0 <0.000002>
+lstat("dst.txt", {st_mode=S_IFLNK|0777, st_size=7, ...}) = 0 <0.000002>
+symlinkat("src.txt", AT_FDCWD, "dst.txt") = -1 EEXIST (File exists) <0.000002>
+openat(AT_FDCWD, ".", O_RDONLY|O_LARGEFILE|O_CLOEXEC|O_DIRECTORY) = 3 <0.000003>
+open("/dev/urandom", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 4 <0.000003>
+fcntl(4, F_SETFD, FD_CLOEXEC)           = 0 <0.000001>
+read(4, "G\244|'\321\336", 6)           = 6 <0.000002>
+symlinkat("src.txt", 3, "CuJoAnXk")     = 0 <0.000013>
+renameat(3, "CuJoAnXk", 3, "dst.txt")   = 0 <0.000012>
+unlinkat(3, "CuJoAnXk", 0)              = -1 ENOENT (No such file or directory) <0.000003>
+close(4)                                = 0 <0.000002>
+close(3)                                = 0 <0.000002>
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7ba2cb655000 <0.000003>
+munmap(0x7ba2cb655000, 4096)            = 0 <0.000004>
+sigaltstack({ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=8192}, NULL) = 0 <0.000001>
+munmap(0x7ba2cb657000, 12288)           = 0 <0.000003>
+exit_group(0)                           = ?

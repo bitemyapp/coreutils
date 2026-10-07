@@ -1,0 +1,92 @@
+{
+  "gnu-true": [
+    "/usr/bin/true"
+  ],
+  "baseline-single-true": [
+    "/home/callen/work/coreutils-startup-factorial/bin/baseline/single/true"
+  ],
+  "baseline-multi-true": [
+    "/home/callen/work/coreutils-startup-factorial/bin/baseline/multi/true"
+  ],
+  "lazy-single-true": [
+    "/home/callen/work/coreutils-startup-factorial/bin/lazy/single/true"
+  ],
+  "lazy-multi-true": [
+    "/home/callen/work/coreutils-startup-factorial/bin/lazy/multi/true"
+  ],
+  "musl-single-true": [
+    "/home/callen/work/coreutils-startup-factorial/bin/musl/single/true"
+  ],
+  "musl-multi-true": [
+    "/home/callen/work/coreutils-startup-factorial/bin/musl/multi/true"
+  ],
+  "lazy-musl-single-true": [
+    "/home/callen/work/coreutils-startup-factorial/bin/lazy-musl/single/true"
+  ],
+  "lazy-musl-multi-true": [
+    "/home/callen/work/coreutils-startup-factorial/bin/lazy-musl/multi/true"
+  ],
+  "gnu-ln": [
+    "/usr/bin/ln",
+    "-s",
+    "-f",
+    "src.txt",
+    "dst.txt"
+  ],
+  "baseline-single-ln": [
+    "/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln",
+    "-s",
+    "-f",
+    "src.txt",
+    "dst.txt"
+  ],
+  "baseline-multi-ln": [
+    "/home/callen/work/coreutils-startup-factorial/bin/baseline/multi/ln",
+    "-s",
+    "-f",
+    "src.txt",
+    "dst.txt"
+  ],
+  "lazy-single-ln": [
+    "/home/callen/work/coreutils-startup-factorial/bin/lazy/single/ln",
+    "-s",
+    "-f",
+    "src.txt",
+    "dst.txt"
+  ],
+  "lazy-multi-ln": [
+    "/home/callen/work/coreutils-startup-factorial/bin/lazy/multi/ln",
+    "-s",
+    "-f",
+    "src.txt",
+    "dst.txt"
+  ],
+  "musl-single-ln": [
+    "/home/callen/work/coreutils-startup-factorial/bin/musl/single/ln",
+    "-s",
+    "-f",
+    "src.txt",
+    "dst.txt"
+  ],
+  "musl-multi-ln": [
+    "/home/callen/work/coreutils-startup-factorial/bin/musl/multi/ln",
+    "-s",
+    "-f",
+    "src.txt",
+    "dst.txt"
+  ],
+  "lazy-musl-single-ln": [
+    "/home/callen/work/coreutils-startup-factorial/bin/lazy-musl/single/ln",
+    "-s",
+    "-f",
+    "src.txt",
+    "dst.txt"
+  ],
+  "lazy-musl-multi-ln": [
+    "/home/callen/work/coreutils-startup-factorial/bin/lazy-musl/multi/ln",
+    "-s",
+    "-f",
+    "src.txt",
+    "dst.txt"
+  ]
+}

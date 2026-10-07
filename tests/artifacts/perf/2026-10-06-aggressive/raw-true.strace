@@ -1,0 +1,2 @@
+execve("/home/callen/work/coreutils-startup-factorial/bin/aggressive/single/true", ["/home/callen/work/coreutils-star"...], 0x7ffd07e326d8 /* 20 vars */) = 0
+exit_group(0)                           = ?

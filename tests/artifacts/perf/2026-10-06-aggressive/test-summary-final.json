@@ -1,0 +1,8 @@
+{
+  "tests-final-lazy-musl-single": 0,
+  "tests-final-lazy-musl-multi": 0,
+  "tests-final-aggressive-crt-single": 0,
+  "tests-final-aggressive-crt-multi": 0,
+  "tests-final-aggressive-single": 0,
+  "tests-final-aggressive-multi": 0
+}

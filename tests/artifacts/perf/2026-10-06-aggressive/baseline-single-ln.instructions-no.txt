@@ -1,0 +1,800 @@
+--------------------------------------------------------------------------------
+Profile data file '/home/callen/work/coreutils-startup-factorial/artifacts-aggressive/baseline-single-ln.callgrind' (creator: callgrind-3.22.0)
+--------------------------------------------------------------------------------
+I1 cache: 
+D1 cache: 
+LL cache: 
+Timerange: Basic block 0 - 139658
+Trigger: Program termination
+Profiled target:  /home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln -s -f src.txt dst.txt (PID 2110884, part 1)
+Events recorded:  Ir
+Events shown:     Ir
+Event sort order: Ir
+Thresholds:       99
+Include dirs:     
+User annotated:   
+Auto-annotation:  off
+
+--------------------------------------------------------------------------------
+Ir               
+--------------------------------------------------------------------------------
+684,744 (100.0%)  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+Ir               file:function
+--------------------------------------------------------------------------------
+57,195 ( 8.35%)  ./malloc/./malloc/malloc.c:_int_malloc [/usr/lib/x86_64-linux-gnu/libc.so.6]
+48,809 ( 7.13%)  ./elf/./elf/dl-lookup.c:do_lookup_x [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+47,918 ( 7.00%)  ./stdio-common/./stdio-common/vfscanf-internal.c:__vfscanf_internal [/usr/lib/x86_64-linux-gnu/libc.so.6]
+23,174 ( 3.38%)  ./stdlib/../stdlib/strtol_l.c:____strtoul_l_internal [/usr/lib/x86_64-linux-gnu/libc.so.6]
+21,895 ( 3.20%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/core.rs:fluent_syntax::parser::core::Parser<S>::get_identifier [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+21,478 ( 3.14%)  ./malloc/./malloc/malloc.c:_int_free [/usr/lib/x86_64-linux-gnu/libc.so.6]
+19,481 ( 2.85%)  ./elf/./elf/dl-reloc.c:_dl_relocate_object [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+18,855 ( 2.75%)  ./elf/../sysdeps/x86_64/dl-machine.h:_dl_relocate_object
+18,764 ( 2.74%)  ./malloc/./malloc/malloc.c:malloc [/usr/lib/x86_64-linux-gnu/libc.so.6]
+16,519 ( 2.41%)  ./elf/./elf/dl-lookup.c:_dl_lookup_symbol_x [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+16,086 ( 2.35%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/pattern.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+15,972 ( 2.33%)  ./elf/./elf/do-rel.h:_dl_relocate_object
+14,606 ( 2.13%)  ./elf/../sysdeps/generic/dl-new-hash.h:_dl_lookup_symbol_x
+14,288 ( 2.09%)  ./string/../sysdeps/x86_64/multiarch/../multiarch/strcmp-sse2.S:strcmp [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+13,766 ( 2.01%)  ./elf/./elf/dl-tunables.c:__GI___tunables_init [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+10,197 ( 1.49%)  ./elf/./elf/dl-lookup.c:check_match [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+ 9,942 ( 1.45%)  ./string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:__memcpy_avx_unaligned_erms [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 8,540 ( 1.25%)  ./malloc/./malloc/malloc.c:free [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 8,466 ( 1.24%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/mod.rs:fluent_syntax::parser::core::Parser<S>::get_identifier
+ 7,575 ( 1.11%)  ./elf/./elf/dl-version.c:_dl_check_map_versions [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+ 6,700 ( 0.98%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+ 5,991 ( 0.87%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:alloc::raw_vec::RawVecInner<A>::finish_grow [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+ 5,326 ( 0.78%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/index.rs:fluent_syntax::parser::core::Parser<S>::get_identifier
+ 4,081 ( 0.60%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/macros.rs:fluent_bundle::resource::FluentResource::try_new
+ 3,990 ( 0.58%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:alloc::raw_vec::RawVec<T,A>::grow_one [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+ 3,872 ( 0.57%)  ./libio/./libio/genops.c:_IO_sputbackc [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 3,823 ( 0.56%)  ./malloc/./malloc/malloc.c:realloc [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 3,660 ( 0.53%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/core.rs:fluent_syntax::parser::core::Parser<S>::get_placeable [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+ 3,472 ( 0.51%)  ./malloc/./malloc/malloc.c:_int_realloc [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 3,376 ( 0.49%)  ./libio/./libio/iogetdelim.c:getdelim [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 3,356 ( 0.49%)  ./string/../sysdeps/x86_64/multiarch/memcmp-avx2-movbe.S:__memcmp_avx2_movbe [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 3,096 ( 0.45%)  ./elf/../sysdeps/x86/dl-cacheinfo.h:intel_check_word.constprop.0 [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+ 2,870 ( 0.42%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/comment.rs:fluent_bundle::resource::FluentResource::try_new
+ 2,865 ( 0.42%)  /rust/deps/hashbrown-0.16.1/src/raw/mod.rs:hashbrown::raw::RawTable<T,A>::reserve_rehash [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+ 2,639 ( 0.39%)  /rust/deps/hashbrown-0.16.1/src/map.rs:hashbrown::map::HashMap<K,V,S,A>::insert [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+ 2,509 ( 0.37%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/expression.rs:fluent_syntax::parser::core::Parser<S>::get_placeable
+ 2,493 ( 0.36%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/index.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+ 2,366 ( 0.35%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/core.rs:fluent_syntax::parser::core::Parser<S>::get_attributes [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+ 2,352 ( 0.34%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/index.rs:fluent_bundle::resource::FluentResource::try_new
+ 2,339 ( 0.34%)  ./elf/./elf/dl-load.c:_dl_map_object_from_fd [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+ 2,268 ( 0.33%)  ./elf/../bits/stdlib-bsearch.h:intel_check_word.constprop.0
+ 2,184 ( 0.32%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memchr-2.8.3/src/arch/x86_64/avx2/memchr.rs:memchr::arch::x86_64::memchr::memchr3_raw::find_avx2
+ 2,154 ( 0.31%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/helper.rs:fluent_bundle::resource::FluentResource::try_new
+ 2,129 ( 0.31%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+ 2,093 ( 0.31%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/result.rs:fluent_bundle::resource::FluentResource::try_new
+ 2,083 ( 0.30%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/helper.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+ 1,955 ( 0.29%)  ./string/../sysdeps/x86_64/multiarch/memchr-avx2.S:__memchr_avx2 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 1,928 ( 0.28%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/expression.rs:fluent_syntax::parser::expression::<impl fluent_syntax::parser::core::Parser<S>>::get_inline_expression [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+ 1,856 ( 0.27%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memchr-2.8.3/src/arch/x86_64/avx2/memchr.rs:memchr::arch::x86_64::avx2::memchr::Three::find_raw [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+ 1,848 ( 0.27%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memchr-2.8.3/src/arch/x86_64/memchr.rs:memchr::arch::x86_64::memchr::memchr3_raw::find_avx2 [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+ 1,808 ( 0.26%)  ./elf/./elf/dl-cache.c:_dl_cache_libcmp [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+ 1,761 ( 0.26%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/macros.rs:fluent_syntax::parser::core::Parser<S>::get_placeable
+ 1,760 ( 0.26%)  ./libio/./libio/strops.c:_IO_str_init_static_internal [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 1,715 ( 0.25%)  ./string/../sysdeps/x86_64/multiarch/strlen-avx2.S:__strlen_avx2 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 1,672 ( 0.24%)  ./stdio-common/./stdio-common/isoc23_sscanf.c:__isoc23_sscanf [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 1,599 ( 0.23%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/iter/macros.rs:clap_builder::parser::parser::Parser::get_matches_with
+ 1,590 ( 0.23%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/str/mod.rs:fluent_syntax::parser::core::Parser<S>::get_identifier
+ 1,572 ( 0.23%)  /rust/deps/hashbrown-0.16.1/src/raw/mod.rs:hashbrown::map::HashMap<K,V,S,A>::insert
+ 1,535 ( 0.22%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/macros.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+ 1,524 ( 0.22%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/x86/avx2.rs:memchr::arch::x86_64::avx2::memchr::Three::find_raw_avx2
+ 1,497 ( 0.22%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/uint_macros.rs:alloc::raw_vec::RawVecInner<A>::finish_grow
+ 1,486 ( 0.22%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rustc-hash-2.1.3/src/lib.rs:hashbrown::raw::RawTable<T,A>::reserve_rehash
+ 1,480 ( 0.22%)  ./malloc/./malloc/malloc.c:alloc_perturb [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 1,441 ( 0.21%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/index.rs:fluent_syntax::parser::core::Parser<S>::get_placeable
+ 1,426 ( 0.21%)  ./elf/./elf/dl-deps.c:_dl_map_object_deps [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+ 1,376 ( 0.20%)  ./malloc/./malloc/malloc.c:_int_free_merge_chunk [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 1,339 ( 0.20%)  ./libio/./libio/genops.c:_IO_setb [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 1,302 ( 0.19%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memchr-2.8.3/src/arch/generic/memchr.rs:memchr::arch::x86_64::avx2::memchr::Three::find_raw_avx2
+ 1,281 ( 0.19%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/iter/macros.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+ 1,278 ( 0.19%)  ./stdlib/./stdlib/getenv.c:getenv [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 1,255 ( 0.18%)  ./elf/./elf/dl-tunables.h:__GI___tunables_init
+ 1,242 ( 0.18%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/result.rs:fluent_syntax::parser::core::Parser<S>::get_placeable
+ 1,233 ( 0.18%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:fluent_bundle::resource::FluentResource::try_new
+ 1,223 ( 0.18%)  ./nptl/./nptl/pthread_getattr_np.c:pthread_getattr_np@@GLIBC_2.32 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 1,209 ( 0.18%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:fluent_bundle::resource::FluentResource::try_new
+ 1,193 ( 0.17%)  ./elf/./elf/rtld.c:dl_main [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+ 1,158 ( 0.17%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/const_ptr.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+ 1,134 ( 0.17%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/bundle.rs:fluent_bundle::bundle::FluentBundle<R,M>::add_resource_overriding [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+ 1,134 ( 0.17%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/uint_macros.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+ 1,104 ( 0.16%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rustc-hash-2.1.3/src/lib.rs:hashbrown::map::HashMap<K,V,S,A>::insert
+ 1,100 ( 0.16%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/core.rs:fluent_bundle::resource::FluentResource::try_new
+ 1,097 ( 0.16%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/uint_macros.rs:hashbrown::raw::RawTable<T,A>::reserve_rehash
+ 1,093 ( 0.16%)  ./elf/./elf/dl-misc.c:_dl_name_match_p [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+ 1,087 ( 0.16%)  ./libio/./libio/genops.c:_IO_no_init [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 1,080 ( 0.16%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/result.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+ 1,065 ( 0.16%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/alloc/layout.rs:alloc::raw_vec::RawVecInner<A>::finish_grow
+ 1,037 ( 0.15%)  ./libio/./libio/genops.c:_IO_old_init [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 1,014 ( 0.15%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/parser/parser.rs:clap_builder::parser::parser::Parser::react [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+ 1,008 ( 0.15%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/simd.rs:memchr::arch::x86_64::memchr::memchr3_raw::find_avx2
+ 1,008 ( 0.15%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/str/mod.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+ 1,000 ( 0.15%)  ./elf/./elf/get-dynamic-info.h:_dl_map_object_from_fd
+   977 ( 0.14%)  ./elf/./elf/dl-load.c:_dl_map_object [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   972 ( 0.14%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memchr-2.8.3/src/arch/x86_64/memchr.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+   968 ( 0.14%)  ./stdio-common/../include/scratch_buffer.h:__vfscanf_internal
+   924 ( 0.13%)  ./elf/./elf/dl-minimal-malloc.c:__minimal_malloc [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   920 ( 0.13%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:hashbrown::raw::RawTable<T,A>::reserve_rehash
+   915 ( 0.13%)  ./malloc/./malloc/arena.c:free
+   910 ( 0.13%)  /rust/deps/hashbrown-0.16.1/src/control/tag.rs:hashbrown::map::HashMap<K,V,S,A>::insert
+   906 ( 0.13%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/pattern.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2 [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   877 ( 0.13%)  /rust/deps/hashbrown-0.16.1/src/control/bitmask.rs:hashbrown::raw::RawTable<T,A>::reserve_rehash
+   862 ( 0.13%)  ./elf/./elf/dl-tunables.c:__tunable_get_val [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   858 ( 0.13%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/non_null.rs:clap_builder::parser::parser::Parser::get_matches_with
+   855 ( 0.12%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/intrinsics/mod.rs:alloc::raw_vec::RawVecInner<A>::finish_grow
+   814 ( 0.12%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/uint_macros.rs:hashbrown::map::HashMap<K,V,S,A>::insert
+   808 ( 0.12%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/runtime.rs:fluent_bundle::resource::FluentResource::try_new
+   805 ( 0.12%)  ./elf/../sysdeps/generic/ldsodefs.h:do_lookup_x
+   801 ( 0.12%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:ln::main
+   774 ( 0.11%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/mod.rs:hashbrown::raw::RawTable<T,A>::reserve_rehash
+   771 ( 0.11%)  ./malloc/./malloc/malloc.c:ptmalloc_init.part.0
+   770 ( 0.11%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mut_ptr.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+   763 ( 0.11%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memchr-2.8.3/src/arch/x86_64/avx2/memchr.rs:memchr::arch::x86_64::avx2::memchr::Three::find_raw_avx2 [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   759 ( 0.11%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/alloc/unix.rs:alloc::raw_vec::RawVecInner<A>::finish_grow
+   752 ( 0.11%)  ./elf/./elf/dl-object.c:_dl_new_object [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   747 ( 0.11%)  ./malloc/./malloc/arena.c:malloc
+   744 ( 0.11%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/into_iter.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+   722 ( 0.11%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/cmp.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+   705 ( 0.10%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/os_display-0.1.4/src/unix.rs:os_display::unix::write [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   672 ( 0.10%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs:alloc::raw_vec::RawVecInner<A>::finish_grow [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   669 ( 0.10%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mut_ptr.rs:hashbrown::raw::RawTable<T,A>::reserve_rehash
+   660 ( 0.10%)  ./stdio-common/../libio/strfile.h:__isoc23_sscanf
+   657 ( 0.10%)  ./malloc/./malloc/malloc.c:unlink_chunk.isra.0 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   654 ( 0.10%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:core::ptr::drop_in_place<clap_builder::parser::matches::arg_matches::ArgMatches> [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   651 ( 0.10%)  ./elf/./elf/dl-cache.c:_dl_load_cache_lookup [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   648 ( 0.09%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/intrinsics/mod.rs:hashbrown::map::HashMap<K,V,S,A>::insert
+   644 ( 0.09%)  ./elf/../sysdeps/generic/dl-protected.h:do_lookup_x
+   641 ( 0.09%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:hashbrown::map::HashMap<K,V,S,A>::insert
+   640 ( 0.09%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/cmp.rs:clap_builder::parser::parser::Parser::get_matches_with
+   639 ( 0.09%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:fluent_bundle::bundle::FluentBundle<R,M>::add_resource_overriding
+   637 ( 0.09%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:fluent_syntax::parser::core::Parser<S>::get_attributes
+   636 ( 0.09%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/str/traits.rs:fluent_syntax::parser::core::Parser<S>::get_identifier
+   632 ( 0.09%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/str/pattern.rs:core::str::pattern::TwoWaySearcher::next [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   631 ( 0.09%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/index.rs:fluent_syntax::parser::core::Parser<S>::get_attributes
+   630 ( 0.09%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/str/traits.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+   624 ( 0.09%)  ./nptl/./nptl/libc-cleanup.c:__libc_cleanup_push_defer [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   623 ( 0.09%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/non_null.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+   614 ( 0.09%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:core::ptr::drop_in_place<clap_builder::builder::command::Command> [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   612 ( 0.09%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/slice.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+   588 ( 0.09%)  ./string/../sysdeps/x86_64/multiarch/../multiarch/strlen-sse2.S:strlen [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   570 ( 0.08%)  ./string/../sysdeps/x86_64/multiarch/../multiarch/strchr-sse2.S:index [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   570 ( 0.08%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/cmp.rs:alloc::raw_vec::RawVec<T,A>::grow_one
+   570 ( 0.08%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/result.rs:alloc::raw_vec::RawVec<T,A>::grow_one
+   565 ( 0.08%)  ./elf/../sysdeps/generic/ldsodefs.h:_dl_relocate_object
+   563 ( 0.08%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/alloc.rs:alloc::raw_vec::RawVecInner<A>::finish_grow
+   562 ( 0.08%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/x86/sse2.rs:hashbrown::map::HashMap<K,V,S,A>::insert
+   558 ( 0.08%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/builder/arg.rs:ln::main
+   549 ( 0.08%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:alloc::raw_vec::RawVecInner<A>::reserve::do_reserve_and_handle [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   544 ( 0.08%)  ./elf/./elf/dl-hwcaps_split.c:_dl_hwcaps_split_masked [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   544 ( 0.08%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/str/validations.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+   541 ( 0.08%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/mod.rs:hashbrown::map::HashMap<K,V,S,A>::insert
+   532 ( 0.08%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:core::ptr::drop_in_place<clap_builder::builder::command::Command>
+   530 ( 0.08%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/macros.rs:fluent_syntax::parser::expression::<impl fluent_syntax::parser::core::Parser<S>>::get_inline_expression
+   528 ( 0.08%)  ./stdio-common/./stdio-common/printf-parse.h:__vfscanf_internal
+   527 ( 0.08%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/builder/arg.rs:clap_builder::builder::command::Command::_build_self
+   516 ( 0.08%)  ./elf/../sysdeps/x86/dl-cacheinfo.h:handle_intel.constprop.0 [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   498 ( 0.07%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/helper.rs:fluent_syntax::parser::core::Parser<S>::get_placeable
+   495 ( 0.07%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/str/lossy.rs:<core::str::lossy::Utf8Chunks as core::iter::traits::iterator::Iterator>::next [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   490 ( 0.07%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/option.rs:clap_builder::builder::command::Command::_build_self
+   483 ( 0.07%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/parser/parser.rs:clap_builder::parser::parser::Parser::push_arg_values [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   480 ( 0.07%)  ./malloc/./malloc/malloc.c:_int_free_maybe_consolidate [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   477 ( 0.07%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/macros.rs:fluent_syntax::parser::core::Parser<S>::get_identifier
+   476 ( 0.07%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/types/mod.rs:fluent_bundle::types::FluentValue::into_string [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   470 ( 0.07%)  ./string/../sysdeps/x86_64/multiarch/../multiarch/memset-vec-unaligned-erms.S:memset [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   464 ( 0.07%)  ./string/../string/strcspn.c:strcspn [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   461 ( 0.07%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:fluent_bundle::bundle::FluentBundle<R,M>::add_resource_overriding
+   455 ( 0.07%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/collections/hash/map.rs:fluent_bundle::bundle::FluentBundle<R,M>::add_resource_overriding
+   452 ( 0.07%)  /rust/deps/hashbrown-0.16.1/src/control/bitmask.rs:hashbrown::map::HashMap<K,V,S,A>::insert
+   440 ( 0.06%)  ./stdlib/../stdlib/strtol.c:__strtoul_internal [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   434 ( 0.06%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/slice/memchr.rs:std::env::_var_os
+   432 ( 0.06%)  ./nptl/./nptl/libc-cleanup.c:__libc_cleanup_pop_restore [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   431 ( 0.06%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memchr-2.8.3/src/vector.rs:memchr::arch::x86_64::avx2::memchr::Three::find_raw_avx2
+   424 ( 0.06%)  ./elf/./elf/dl-load.c:open_path [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   420 ( 0.06%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2
+   415 ( 0.06%)  ./elf/./dl-map-segments.h:_dl_map_object_from_fd
+   414 ( 0.06%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/parser/parser.rs:clap_builder::parser::parser::Parser::get_matches_with [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   413 ( 0.06%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/slice/memchr.rs:<core::str::pattern::CharSearcher as core::str::pattern::Searcher>::next_match
+   413 ( 0.06%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/slice/memchr.rs:std::sys::fs::metadata
+   409 ( 0.06%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/fmt/mod.rs:core::fmt::write [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   408 ( 0.06%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/result.rs:fluent_syntax::parser::expression::<impl fluent_syntax::parser::core::Parser<S>>::get_inline_expression
+   403 ( 0.06%)  ./string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:mempcpy [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   398 ( 0.06%)  ./misc/../sysdeps/unix/sysv/linux/mmap64.c:mmap [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   396 ( 0.06%)  ./elf/./elf/dl-load.c:open_verify.constprop.0 [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   395 ( 0.06%)  ./elf/./elf/dl-sort-maps.c:dfs_traversal.part.0 [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   390 ( 0.06%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/mod.rs:os_display::unix::write
+   384 ( 0.06%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/const_ptr.rs:memchr::arch::x86_64::avx2::memchr::Three::find_raw_avx2
+   379 ( 0.06%)  ./elf/./get-dynamic-info.h:dl_main
+   375 ( 0.05%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/into_iter.rs:clap_builder::parser::parser::Parser::push_arg_values
+   373 ( 0.05%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mut_ptr.rs:core::ptr::drop_in_place<std::collections::hash::map::HashMap<alloc::string::String,fluent_bundle::entry::Entry,rustc_hash::FxBuildHasher>>
+   372 ( 0.05%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/iter/adapters/enumerate.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+   372 ( 0.05%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/option.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+   364 ( 0.05%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/intrinsics/mod.rs:fluent_bundle::bundle::FluentBundle<R,M>::add_resource_overriding
+   364 ( 0.05%)  ???:__cpu_indicator_init [/usr/lib/x86_64-linux-gnu/libgcc_s.so.1]
+   362 ( 0.05%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/parser/validator.rs:clap_builder::parser::parser::Parser::get_matches_with
+   360 ( 0.05%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/core.rs:fluent_syntax::parser::core::Parser<S>::get_placeable'2 [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   357 ( 0.05%)  ./malloc/./malloc/arena.c:realloc
+   353 ( 0.05%)  ./signal/../sysdeps/unix/sysv/linux/libc_sigaction.c:__libc_sigaction [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   351 ( 0.05%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/intrinsics/mod.rs:hashbrown::raw::RawTable<T,A>::reserve_rehash
+   340 ( 0.05%)  ./elf/../elf/dl-tls.c:_dl_allocate_tls_storage [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   339 ( 0.05%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/const_ptr.rs:memchr::arch::x86_64::avx2::memchr::Three::find_raw
+   336 ( 0.05%)  /rust/deps/hashbrown-0.16.1/src/raw/mod.rs:hashbrown::map::HashMap<K,V,S,A>::get
+   333 ( 0.05%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/path.rs:<std::path::Components as core::iter::traits::double_ended::DoubleEndedIterator>::next_back [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   330 ( 0.05%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+   324 ( 0.05%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/iter/macros.rs:clap_builder::builder::command::Command::_build_self
+   322 ( 0.05%)  ./string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:memcpy [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   322 ( 0.05%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:core::ptr::drop_in_place<alloc::vec::Vec<fluent_bundle::errors::FluentError>> [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   322 ( 0.05%)  /home/callen/work/coreutils-startup-factorial/baseline/src/uucore/src/lib/mods/locale.rs:uucore::mods::locale::get_message_internal [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   318 ( 0.05%)  ./elf/./elf/dl-load.c:_dl_init_paths [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   315 ( 0.05%)  ./elf/./dl-find_object.h:_dl_find_object_from_map [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   314 ( 0.05%)  ./elf/./elf/dl-sort-maps.c:_dl_sort_maps [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   309 ( 0.05%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:clap_builder::parser::parser::Parser::get_matches_with
+   305 ( 0.04%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/builder/command.rs:clap_builder::builder::command::Command::_build_self [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   303 ( 0.04%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/fmt/mod.rs:alloc::fmt::format::format_inner
+   297 ( 0.04%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/bundle.rs:fluent_bundle::bundle::FluentBundle<R,M>::format_pattern [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   295 ( 0.04%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/iter/macros.rs:clap_builder::parser::validator::Validator::validate_conflicts
+   292 ( 0.04%)  ./misc/./misc/getauxval.c:getauxval [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   292 ( 0.04%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/parser/parser.rs:clap_builder::parser::parser::Parser::start_custom_arg [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   282 ( 0.04%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/const_ptr.rs:core::ptr::drop_in_place<std::collections::hash::map::HashMap<alloc::string::String,fluent_bundle::entry::Entry,rustc_hash::FxBuildHasher>>
+   282 ( 0.04%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mut_ptr.rs:hashbrown::map::HashMap<K,V,S,A>::insert
+   281 ( 0.04%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:core::ptr::drop_in_place<std::collections::hash::map::HashMap<alloc::string::String,fluent_bundle::entry::Entry,rustc_hash::FxBuildHasher>> [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   280 ( 0.04%)  ./elf/./elf/dl-tunables.c:__GI___tunable_set_val [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   280 ( 0.04%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/non_null.rs:clap_builder::builder::command::Command::_build_self
+   280 ( 0.04%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/str/validations.rs:core::str::converts::from_utf8
+   279 ( 0.04%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/mod.rs:fluent_syntax::parser::expression::<impl fluent_syntax::parser::core::Parser<S>>::get_inline_expression
+   277 ( 0.04%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/iter/adapters/take.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+   274 ( 0.04%)  ./elf/./elf/dl-lookup-direct.c:_dl_lookup_direct [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   273 ( 0.04%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/string.rs:fluent_bundle::bundle::FluentBundle<R,M>::add_resource_overriding
+   273 ( 0.04%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mut_ptr.rs:fluent_bundle::resource::FluentResource::try_new
+   271 ( 0.04%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs:alloc::raw_vec::RawVecInner<A>::reserve::do_reserve_and_handle [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   268 ( 0.04%)  ./elf/./get-dynamic-info.h:_dl_start
+   268 ( 0.04%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/builder/value_parser.rs:<P as clap_builder::builder::value_parser::AnyValueParser>::parse_ref_ [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   267 ( 0.04%)  ./string/../sysdeps/x86_64/multiarch/strcmp-avx2.S:__strncmp_avx2 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   267 ( 0.04%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/helper.rs:fluent_syntax::parser::core::Parser<S>::get_attributes
+   263 ( 0.04%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:clap_builder::parser::parser::Parser::start_custom_arg
+   262 ( 0.04%)  ./libio/./libio/fileops.c:_IO_file_underflow@@GLIBC_2.2.5 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   260 ( 0.04%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/str/validations.rs:os_display::unix::write
+   257 ( 0.04%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/option.rs:clap_builder::parser::parser::Parser::get_matches_with
+   255 ( 0.04%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/parser/parser.rs:clap_builder::parser::parser::Parser::resolve_pending [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   255 ( 0.04%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:clap_builder::builder::command::Command::_build_self
+   254 ( 0.04%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/iter/macros.rs:clap_builder::parser::parser::Parser::add_defaults
+   252 ( 0.04%)  ./elf/./elf/dl-catch.c:_dl_catch_exception [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   252 ( 0.04%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/parser/arg_matcher.rs:clap_builder::parser::arg_matcher::ArgMatcher::add_val_to [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   252 ( 0.04%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/expression.rs:fluent_syntax::parser::core::Parser<S>::get_placeable'2
+   252 ( 0.04%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:core::ptr::drop_in_place<clap_builder::parser::parser::ParseResult> [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   252 ( 0.04%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs:alloc::raw_vec::RawVec<T,A>::grow_one [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   251 ( 0.04%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/mod.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+   248 ( 0.04%)  ./elf/./elf/dl-minimal.c:strsep [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   247 ( 0.04%)  ./elf/./elf/rtld.c:_dl_start [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   246 ( 0.04%)  ./elf/./elf/dl-init.c:call_init.part.0 [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   246 ( 0.04%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/cmp.rs:fluent_syntax::parser::core::Parser<S>::get_placeable
+   245 ( 0.04%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/slice/iter/macros.rs:std::path::Components::parse_next_component_back
+   244 ( 0.04%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/builder/action.rs:clap_builder::builder::command::Command::_build_self
+   244 ( 0.04%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/cmp.rs:clap_builder::parser::parser::Parser::get_matches_with
+   243 ( 0.04%)  ./elf/./elf/dl-fini.c:_dl_fini [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   243 ( 0.04%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:clap_builder::builder::command::Command::_build_self
+   243 ( 0.04%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/index.rs:core::str::pattern::TwoWaySearcher::next
+   242 ( 0.04%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/util/flat_map.rs:clap_builder::util::flat_map::Entry<K,V>::or_insert [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   240 ( 0.04%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/parser/parser.rs:clap_builder::parser::parser::Parser::add_defaults [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   239 ( 0.03%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/iter/macros.rs:clap_builder::parser::parser::Parser::start_custom_arg
+   234 ( 0.03%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:clap_builder::parser::arg_matcher::ArgMatcher::add_val_to
+   232 ( 0.03%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/builder/value_parser.rs:<clap_builder::builder::value_parser::BoolValueParser as clap_builder::builder::value_parser::TypedValueParser>::parse_ref [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   232 ( 0.03%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/nonzero.rs:hashbrown::raw::RawTable<T,A>::reserve_rehash
+   231 ( 0.03%)  ./elf/../sysdeps/x86/dl-cacheinfo.h:init_cpu_features.constprop.0
+   231 ( 0.03%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/mkeymap.rs:clap_builder::parser::parser::Parser::get_matches_with
+   231 ( 0.03%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/parser/matches/matched_arg.rs:clap_builder::parser::parser::Parser::start_custom_arg
+   223 ( 0.03%)  ./elf/../sysdeps/x86/dl-cacheinfo.h:get_common_cache_info.constprop.0 [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   222 ( 0.03%)  ./elf/./elf/dl-hwcaps.c:_dl_important_hwcaps [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   221 ( 0.03%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std_detect/src/detect/os/x86.rs:std_detect::detect::cache::detect_and_initialize
+   219 ( 0.03%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resolver/pattern.rs:fluent_bundle::resolver::pattern::<impl fluent_bundle::resolver::WriteValue for fluent_syntax::ast::Pattern<&str>>::write [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   217 ( 0.03%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/non_null.rs:clap_builder::parser::parser::Parser::start_custom_arg
+   217 ( 0.03%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/str/pattern.rs:<core::str::pattern::CharSearcher as core::str::pattern::Searcher>::next_match [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   216 ( 0.03%)  ./malloc/./malloc/malloc.c:calloc [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   211 ( 0.03%)  /rust/deps/hashbrown-0.16.1/src/control/bitmask.rs:core::ptr::drop_in_place<std::collections::hash::map::HashMap<alloc::string::String,fluent_bundle::entry::Entry,rustc_hash::FxBuildHasher>>
+   210 ( 0.03%)  ./elf/./elf/dl-find_object.c:_dlfo_process_initial [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   210 ( 0.03%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/cmp.rs:clap_builder::parser::validator::Validator::validate_conflicts
+   209 ( 0.03%)  ./elf/../elf/dl-tls.c:_dl_allocate_tls_init [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   208 ( 0.03%)  ./signal/../string/bits/string_fortified.h:__libc_sigaction
+   204 ( 0.03%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/parser/arg_matcher.rs:clap_builder::parser::arg_matcher::ArgMatcher::remove [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   204 ( 0.03%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:fluent_bundle::resource::FluentResource::try_new
+   204 ( 0.03%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/path.rs:std::path::Path::_join [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   203 ( 0.03%)  ./elf/../sysdeps/unix/sysv/linux/dl-parse_auxv.h:_dl_sysdep_parse_arguments
+   202 ( 0.03%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/builder/command.rs:ln::main
+   202 ( 0.03%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/non_null.rs:clap_builder::parser::validator::Validator::validate_conflicts
+   200 ( 0.03%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/parser/matches/arg_matches.rs:clap_builder::parser::matches::arg_matches::ArgMatches::get_flag [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   200 ( 0.03%)  /rust/deps/hashbrown-0.16.1/src/map.rs:hashbrown::map::HashMap<K,V,S,A>::get [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   199 ( 0.03%)  ./io/../sysdeps/unix/sysv/linux/open64_nocancel.c:__open_nocancel [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   198 ( 0.03%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/core.rs:fluent_syntax::parser::expression::<impl fluent_syntax::parser::core::Parser<S>>::get_inline_expression
+   198 ( 0.03%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/cmp.rs:clap_builder::parser::parser::Parser::start_custom_arg
+   195 ( 0.03%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/cmp.rs:clap_builder::parser::arg_matcher::ArgMatcher::add_val_to
+   195 ( 0.03%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/cmp.rs:clap_builder::parser::parser::Parser::push_arg_values
+   195 ( 0.03%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/string.rs:<alloc::string::String as core::fmt::Write>::write_str [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   192 ( 0.03%)  ./libio/../string/bits/string_fortified.h:getdelim
+   192 ( 0.03%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/sync/once/futex.rs:std::sys::sync::once::futex::Once::call [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   184 ( 0.03%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/non_null.rs:fluent_bundle::bundle::FluentBundle<R,M>::add_resource_overriding
+   183 ( 0.03%)  ./elf/./elf/dl-object.c:_dl_add_to_namespace_list [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   183 ( 0.03%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:core::ptr::drop_in_place<clap_builder::parser::matches::arg_matches::ArgMatches>
+   182 ( 0.03%)  ./elf/./elf/dl-environ.c:_dl_next_ld_env_entry [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   182 ( 0.03%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:core::ptr::drop_in_place<std::collections::hash::map::HashMap<alloc::string::String,fluent_bundle::entry::Entry,rustc_hash::FxBuildHasher>>
+   182 ( 0.03%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/hash/mod.rs:hashbrown::map::HashMap<K,V,S,A>::insert
+   182 ( 0.03%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/nonzero.rs:core::ptr::drop_in_place<std::collections::hash::map::HashMap<alloc::string::String,fluent_bundle::entry::Entry,rustc_hash::FxBuildHasher>>
+   182 ( 0.03%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/option.rs:fluent_bundle::resource::FluentResource::try_new
+   182 ( 0.03%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/index.rs:fluent_syntax::parser::expression::<impl fluent_syntax::parser::core::Parser<S>>::get_inline_expression
+   182 ( 0.03%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/alloc/unix.rs:fluent_bundle::bundle::FluentBundle<R,M>::add_resource_overriding
+   178 ( 0.03%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/option.rs:ln::main
+   178 ( 0.03%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/fs/unix.rs:std::sys::fs::unix::try_statx [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   177 ( 0.03%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/path.rs:std::path::Components::parse_next_component_back [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   176 ( 0.03%)  ./elf/../sysdeps/x86/cpu-features.c:update_active.constprop.0 [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   176 ( 0.03%)  ./libio/./libio/libioP.h:getdelim
+   176 ( 0.03%)  ./stdio-common/./stdio-common/getline.c:getline [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   176 ( 0.03%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/sync.rs:alloc::sync::Arc<T,A>::drop_slow [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   176 ( 0.03%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:clap_builder::util::flat_map::Entry<K,V>::or_insert
+   175 ( 0.03%)  ./elf/../sysdeps/x86/cpu-features.c:init_cpu_features.constprop.0 [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   175 ( 0.03%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/fmt/mod.rs:core::fmt::Formatter::pad [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   175 ( 0.03%)  ???:main [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   174 ( 0.03%)  ./stdlib/./stdlib/cxa_finalize.c:__cxa_finalize [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   174 ( 0.03%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/helper.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2
+   171 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:ln::main
+   170 ( 0.02%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/alloc/unix.rs:core::ptr::drop_in_place<clap_builder::parser::matches::arg_matches::ArgMatches>
+   168 ( 0.02%)  ./elf/./elf/dl-call_fini.c:_dl_call_fini [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   168 ( 0.02%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/macros.rs:fluent_syntax::parser::core::Parser<S>::get_placeable'2
+   168 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:memchr::arch::x86_64::avx2::memchr::Three::find_raw_avx2
+   166 ( 0.02%)  ./elf/../sysdeps/unix/sysv/linux/dl-sysdep.c:_dl_sysdep_parse_arguments [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   166 ( 0.02%)  ./setjmp/../sysdeps/x86_64/setjmp.S:__sigsetjmp [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   166 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/uint_macros.rs:memchr::arch::x86_64::avx2::memchr::Three::find_raw_avx2
+   166 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/iter/macros.rs:clap_builder::parser::validator::Conflicts::gather_conflicts
+   162 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/sync/atomic.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+   160 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:ln::main
+   160 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/non_null.rs:clap_builder::parser::parser::Parser::push_arg_values
+   159 ( 0.02%)  ./libio/./libio/genops.c:_IO_flush_all [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   159 ( 0.02%)  ./libio/./libio/genops.c:__underflow [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   154 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/option.rs:uucore::mods::locale::get_message_internal
+   153 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/iter/macros.rs:clap_builder::parser::arg_matcher::ArgMatcher::add_val_to
+   152 ( 0.02%)  ./elf/./elf/dl-minimal.c:lookup_malloc_symbol [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   152 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/option.rs:clap_builder::parser::matches::arg_matches::ArgMatches::get_flag
+   151 ( 0.02%)  ./libio/./libio/genops.c:_IO_cleanup [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   149 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/non_null.rs:clap_builder::parser::parser::Parser::add_defaults
+   148 ( 0.02%)  ./elf/./elf/dl-load.c:_dl_process_pt_gnu_property [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   148 ( 0.02%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/path.rs:std::path::Components::as_path [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   147 ( 0.02%)  ./elf/../elf/dl-tls.c:_dl_determine_tlsoffset [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   146 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/index.rs:clap_builder::parser::parser::Parser::get_matches_with
+   146 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/iter/macros.rs:clap_builder::parser::arg_matcher::ArgMatcher::remove
+   144 ( 0.02%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/builder/value_parser.rs:clap_builder::parser::parser::Parser::push_arg_values
+   144 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/index.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2
+   140 ( 0.02%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rustc-hash-2.1.3/src/lib.rs:hashbrown::map::HashMap<K,V,S,A>::get
+   140 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:clap_builder::util::flat_map::Entry<K,V>::or_insert
+   140 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:uucore::mods::locale::get_message_internal
+   140 ( 0.02%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/env.rs:std::env::_var_os [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   138 ( 0.02%)  ./elf/./elf/dl-load.c:fillin_rpath.isra.0 [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   138 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/cmp.rs:clap_builder::parser::parser::Parser::add_defaults
+   137 ( 0.02%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.8.4/src/ascii.rs:<unic_langid_impl::LanguageIdentifier as core::str::traits::FromStr>::from_str
+   137 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:fluent_bundle::resolver::pattern::<impl fluent_bundle::resolver::WriteValue for fluent_syntax::ast::Pattern<&str>>::write
+   136 ( 0.02%)  /home/callen/work/coreutils-startup-factorial/baseline/src/uucore/src/lib/features/fs.rs:uucore::features::fs::replace_link [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   135 ( 0.02%)  ./elf/./elf/dl-setup_hash.c:_dl_setup_hash [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   134 ( 0.02%)  ???:0x00000000048b66b0 [???]
+   133 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/cmp.rs:clap_builder::parser::matches::arg_matches::ArgMatches::get_flag
+   132 ( 0.02%)  ./nptl/./nptl/pthread_mutex_lock.c:pthread_mutex_lock@@GLIBC_2.2.5 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   132 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/cmp.rs:uucore::mods::locale::get_embedded_locale
+   130 ( 0.02%)  ./libio/./libio/genops.c:_IO_switch_to_get_mode [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   130 ( 0.02%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/fmt.rs:alloc::fmt::format::format_inner [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   129 ( 0.02%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resolver/pattern.rs:fluent_bundle::bundle::FluentBundle<R,M>::format_pattern
+   128 ( 0.02%)  ./elf/./elf/dl-find_object.c:_dlfo_sort_mappings [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   128 ( 0.02%)  ./string/../sysdeps/x86_64/multiarch/memset-vec-unaligned-erms.S:__memset_avx2_unaligned_erms [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   126 ( 0.02%)  ./elf/./elf/dl-init.c:_dl_init [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   126 ( 0.02%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/parser/validator.rs:clap_builder::parser::validator::Conflicts::gather_conflicts [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   126 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/x86/sse2.rs:hashbrown::raw::RawTable<T,A>::reserve_rehash
+   126 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/non_null.rs:clap_builder::parser::arg_matcher::ArgMatcher::add_val_to
+   126 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/index.rs:fluent_syntax::parser::core::Parser<S>::get_placeable'2
+   126 ( 0.02%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/num/uint_macros.rs:alloc::raw_vec::RawVecInner<A>::finish_grow
+   123 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/cmp.rs:clap_builder::parser::arg_matcher::ArgMatcher::remove
+   120 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/non_null.rs:clap_builder::parser::arg_matcher::ArgMatcher::remove
+   119 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:clap_builder::builder::command::Command::_build_self
+   117 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:clap_builder::parser::parser::Parser::push_arg_values
+   116 ( 0.02%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/slice/memchr.rs:uucore::features::fs::replace_link
+   115 ( 0.02%)  ./elf/./elf/dl-load.c:_dl_dst_count [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   114 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/iter/adapters/enumerate.rs:clap_builder::parser::parser::Parser::get_matches_with
+   114 ( 0.02%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/ptr/mod.rs:std::sys::fs::unix::try_statx
+   112 ( 0.02%)  /rust/deps/hashbrown-0.16.1/src/control/bitmask.rs:hashbrown::map::HashMap<K,V,S,A>::get
+   110 ( 0.02%)  ./elf/./elf/dl-deps.c:openaux [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   110 ( 0.02%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/mkeymap.rs:clap_builder::builder::command::Command::_build_self
+   108 ( 0.02%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/parser/validator.rs:clap_builder::parser::validator::Validator::validate_conflicts [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   108 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2
+   108 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/result.rs:fluent_syntax::parser::core::Parser<S>::get_placeable'2
+   108 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/result.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2
+   108 ( 0.02%)  /rust/deps/hashbrown-0.16.1/src/control/tag.rs:hashbrown::raw::RawTable<T,A>::reserve_rehash
+   106 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/cmp.rs:fluent_bundle::resource::FluentResource::try_new
+   106 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/iter/macros.rs:clap_builder::parser::matches::arg_matches::ArgMatches::get_flag
+   104 ( 0.02%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/iter/adapters/filter.rs:clap_builder::parser::parser::Parser::get_matches_with
+   104 ( 0.02%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/str/converts.rs:core::str::converts::from_utf8 [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+   102 ( 0.01%)  ./nptl/./nptl/pthread_mutex_unlock.c:pthread_mutex_unlock@@GLIBC_2.2.5 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   102 ( 0.01%)  /rust/deps/hashbrown-0.16.1/src/raw/mod.rs:core::ptr::drop_in_place<std::collections::hash::map::HashMap<alloc::string::String,fluent_bundle::entry::Entry,rustc_hash::FxBuildHasher>>
+   102 ( 0.01%)  ???:0x00000000048b6500 [???]
+   100 ( 0.01%)  ./elf/./elf/dl-minimal-malloc.c:__minimal_calloc [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   100 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/alloc/unix.rs:core::ptr::drop_in_place<std::collections::hash::map::HashMap<alloc::string::String,fluent_bundle::entry::Entry,rustc_hash::FxBuildHasher>>
+    99 ( 0.01%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/builder/value_parser.rs:clap_builder::parser::parser::Parser::start_custom_arg
+    98 ( 0.01%)  ./libio/./libio/fileops.c:_IO_file_fopen@@GLIBC_2.2.5 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    98 ( 0.01%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/builder/value_parser.rs:clap_builder::builder::command::Command::_build_self
+    98 ( 0.01%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/entry.rs:uucore::mods::locale::get_message_internal
+    98 ( 0.01%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/lib.rs:fluent_bundle::resource::FluentResource::try_new
+    98 ( 0.01%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resolver/scope.rs:fluent_bundle::bundle::FluentBundle<R,M>::format_pattern
+    98 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:clap_builder::parser::parser::Parser::get_matches_with
+    98 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:uucore::mods::locale::get_message_internal
+    98 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/mem/mod.rs:alloc::sync::Arc<T,A>::drop_slow
+    98 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/cmp.rs:hashbrown::map::HashMap<K,V,S,A>::get
+    98 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/alloc/unix.rs:alloc::sync::Arc<T,A>::drop_slow
+    97 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/cmp.rs:alloc::raw_vec::RawVecInner<A>::reserve::do_reserve_and_handle
+    97 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/nonzero.rs:hashbrown::map::HashMap<K,V,S,A>::insert
+    97 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/iter/macros.rs:<unic_langid_impl::LanguageIdentifier as core::str::traits::FromStr>::from_str
+    96 ( 0.01%)  ./stdlib/./stdlib/cxa_thread_atexit_impl.c:__cxa_thread_atexit_impl [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    96 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:clap_builder::parser::arg_matcher::ArgMatcher::add_val_to
+    96 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/mod.rs:clap_builder::parser::arg_matcher::ArgMatcher::add_val_to
+    96 ( 0.01%)  /rust/deps/libc-0.2.178/src/unix/linux_like/linux/mod.rs:std::sys::fs::unix::try_statx
+    96 ( 0.01%)  ???:0x00000000048b6480 [???]
+    95 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/macros/mod.rs:hashbrown::map::HashMap<K,V,S,A>::insert
+    94 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:fluent_bundle::resolver::pattern::<impl fluent_bundle::resolver::WriteValue for fluent_syntax::ast::Pattern<&str>>::write
+    94 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/intrinsics/mod.rs:alloc::raw_vec::RawVecInner<A>::reserve::do_reserve_and_handle
+    94 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs:<alloc::string::String as core::fmt::Write>::write_str
+    93 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/iter/macros.rs:fluent_bundle::bundle::FluentBundle<R,M>::add_resource_overriding
+    92 ( 0.01%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/parser/validator.rs:clap_builder::parser::validator::gather_direct_conflicts [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    92 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/non_null.rs:clap_builder::parser::matches::arg_matches::ArgMatches::get_flag
+    92 ( 0.01%)  /home/callen/work/coreutils-startup-factorial/baseline/src/uu/ln/src/ln.rs:ln::main
+    92 ( 0.01%)  /home/callen/work/coreutils-startup-factorial/baseline/src/uucore/src/lib/mods/locale.rs:uucore::mods::locale::setup_localization [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    91 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/iter/adapters/enumerate.rs:fluent_bundle::bundle::FluentBundle<R,M>::add_resource_overriding
+    90 ( 0.01%)  ./csu/../csu/libc-start.c:__libc_start_main@@GLIBC_2.34 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    90 ( 0.01%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/macros.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2
+    90 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/alloc/layout.rs:alloc::raw_vec::RawVecInner<A>::finish_grow
+    90 ( 0.01%)  ???:__rustc::__rust_alloc [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    89 ( 0.01%)  ./io/../sysdeps/unix/sysv/linux/statx.c:statx [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    89 ( 0.01%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/macros.rs:fluent_syntax::parser::core::Parser<S>::get_attributes
+    89 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/cmp.rs:fluent_syntax::parser::core::Parser<S>::get_attributes
+    89 ( 0.01%)  /home/callen/work/coreutils-startup-factorial/baseline/src/uucore/src/lib/mods/locale.rs:ln::main
+    88 ( 0.01%)  ./elf/../sysdeps/x86/dl-prop.h:dl_main
+    88 ( 0.01%)  ./libio/./libio/genops.c:_IO_link_in [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    88 ( 0.01%)  ./malloc/../string/bits/string_fortified.h:tcache_init.part.0
+    88 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:clap_builder::parser::parser::Parser::add_defaults
+    88 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/cmp.rs:<clap_builder::builder::value_parser::BoolValueParser as clap_builder::builder::value_parser::TypedValueParser>::parse_ref
+    87 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/iter/macros.rs:clap_builder::parser::validator::gather_direct_conflicts
+    86 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/x86/avx.rs:memchr::arch::x86_64::avx2::memchr::Three::find_raw_avx2
+    86 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/uint_macros.rs:hashbrown::map::HashMap<K,V,S,A>::get
+    86 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/intrinsics/mod.rs:alloc::raw_vec::RawVecInner<A>::finish_grow
+    85 ( 0.01%)  ./elf/./elf/dl-version.c:_dl_check_all_versions [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    84 ( 0.01%)  ./elf/../elf/dl-tls.c:_dl_add_to_slotinfo [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    84 ( 0.01%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/macros.rs:clap_builder::parser::parser::Parser::push_arg_values
+    84 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/cell.rs:uucore::mods::locale::get_message_internal
+    84 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/index.rs:uucore::mods::locale::get_message_internal
+    84 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/iter/macros.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2
+    84 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs:std::path::Path::_join
+    82 ( 0.01%)  /home/callen/work/coreutils-startup-factorial/baseline/src/uu/ln/src/ln.rs:uu_ln::link [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    82 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/slice/memchr.rs:std::sys::fs::symlink_metadata
+    80 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/any.rs:clap_builder::parser::matches::arg_matches::ArgMatches::get_flag
+    79 ( 0.01%)  ./elf/./elf/rtld.c:init_tls [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    79 ( 0.01%)  ./stdlib/./stdlib/exit.c:__run_exit_handlers [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    77 ( 0.01%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/parser/parser.rs:clap_builder::parser::parser::Parser::possible_subcommand [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    77 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/profiling.rs:std::sys::fs::unix::try_statx
+    75 ( 0.01%)  ./malloc/./malloc/scratch_buffer_set_array_size.c:__libc_scratch_buffer_set_array_size [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    75 ( 0.01%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/helper.rs:fluent_syntax::parser::helper::<impl fluent_syntax::parser::core::Parser<S>>::get_number_literal [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    75 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/cmp.rs:clap_builder::parser::validator::gather_direct_conflicts
+    74 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/result.rs:uucore::mods::locale::setup_localization
+    73 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/cmp.rs:clap_builder::parser::validator::Conflicts::gather_conflicts
+    72 ( 0.01%)  ./malloc/./malloc/arena.c:ptmalloc_init.part.0 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    72 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/mem/mod.rs:clap_builder::parser::parser::Parser::resolve_pending
+    72 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/result.rs:alloc::raw_vec::RawVecInner<A>::reserve::do_reserve_and_handle
+    72 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/str/pattern.rs:core::str::pattern::StrSearcher::new [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    71 ( 0.01%)  ./elf/./elf/rtld.c:handle_preload_list [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    71 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/sync.rs:core::ptr::drop_in_place<clap_builder::parser::matches::arg_matches::ArgMatches>
+    70 ( 0.01%)  ./elf/../sysdeps/x86/dl-prop.h:_dl_process_pt_gnu_property
+    70 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:uucore::mods::locale::get_message_internal
+    70 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/any.rs:<T as core::any::Any>::type_id [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    70 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/error.rs:core::error::Error::cause [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    70 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/thread/local.rs:uucore::mods::locale::get_message_internal
+    69 ( 0.01%)  ./io/../sysdeps/unix/sysv/linux/fcntl64.c:fcntl [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    68 ( 0.01%)  ./string/./string/strdup.c:strdup [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    68 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/path.rs:std::path::Path::is_dir [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    67 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/iter/macros.rs:fluent_bundle::resolver::pattern::<impl fluent_bundle::resolver::WriteValue for fluent_syntax::ast::Pattern<&str>>::write
+    66 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:fluent_syntax::parser::core::Parser<S>::get_placeable
+    66 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:clap_builder::parser::parser::Parser::start_custom_arg
+    66 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:fluent_syntax::parser::core::Parser<S>::get_placeable
+    66 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/iter/macros.rs:os_display::unix::write
+    65 ( 0.01%)  ./elf/../sysdeps/generic/dl-hash.h:__rtld_malloc_init_real
+    65 ( 0.01%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/builder/command.rs:clap_builder::parser::parser::Parser::get_matches_with
+    65 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/iter/adapters/filter.rs:clap_builder::parser::validator::Validator::validate_conflicts
+    65 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/option.rs:clap_builder::parser::validator::Validator::validate_conflicts
+    65 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/non_null.rs:os_display::unix::write
+    65 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/iter/macros.rs:ln::main
+    65 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/unicode/unicode_data.rs:os_display::unix::write
+    64 ( 0.01%)  ./libio/./libio/genops.c:__GI__IO_un_link.part.0 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    64 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/intrinsics/mod.rs:clap_builder::parser::parser::Parser::add_defaults
+    64 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mut_ptr.rs:clap_builder::builder::command::Command::_build_self
+    64 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mut_ptr.rs:clap_builder::parser::parser::Parser::get_matches_with
+    63 ( 0.01%)  ./elf/../sysdeps/x86/cpu-features.c:get_common_indices.constprop.0 [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    63 ( 0.01%)  ./signal/./signal/sigaction.c:sigaction [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    63 ( 0.01%)  ./string/../sysdeps/x86_64/multiarch/ifunc-memcmp.h:bcmp
+    63 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/sync/rwlock/futex.rs:std::env::_var_os
+    62 ( 0.01%)  ./elf/./elf/dl-open.c:_dl_find_dso_for_object [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    62 ( 0.01%)  ./signal/../sysdeps/posix/signal.c:signal [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    62 ( 0.01%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/util/flat_map.rs:clap_builder::parser::parser::Parser::start_custom_arg
+    62 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/alloc/unix.rs:core::ptr::drop_in_place<clap_builder::builder::command::Command>
+    61 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:clap_builder::parser::parser::Parser::get_matches_with
+    61 ( 0.01%)  /home/callen/work/coreutils-startup-factorial/baseline/src/uucore/src/lib/mods/locale.rs:uucore::mods::locale::create_english_bundle_from_embedded [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    60 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:clap_builder::parser::arg_matcher::ArgMatcher::add_val_to
+    60 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:uucore::format_usage
+    60 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/string.rs:<alloc::string::String as core::fmt::Write>::write_str [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    60 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/cell.rs:clap_builder::parser::parser::Parser::push_arg_values
+    60 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/const_ptr.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2
+    60 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mut_ptr.rs:clap_builder::parser::arg_matcher::ArgMatcher::add_val_to
+    60 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/index.rs:clap_builder::parser::parser::Parser::push_arg_values
+    60 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/fs/mod.rs:std::sys::fs::metadata [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    60 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/fs/unix.rs:std::sys::fs::unix::File::open_c [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    59 ( 0.01%)  ./elf/../sysdeps/x86_64/dl-machine.h:_dl_start
+    59 ( 0.01%)  ./misc/./misc/sbrk.c:sbrk [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    59 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/cmp.rs:alloc::raw_vec::RawVecInner<A>::reserve::do_reserve_and_handle
+    59 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/ptr/non_null.rs:alloc::fmt::format::format_inner
+    58 ( 0.01%)  ./elf/./dl-load.h:_dl_map_object_from_fd
+    58 ( 0.01%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-langid-impl-0.9.6/src/lib.rs:<unic_langid_impl::LanguageIdentifier as core::str::traits::FromStr>::from_str [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    58 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:clap_builder::parser::parser::Parser::react
+    57 ( 0.01%)  ./posix/./posix/register-atfork.c:__unregister_atfork [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    57 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:clap_builder::parser::parser::Parser::push_arg_values
+    57 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/iter/adapters/enumerate.rs:clap_builder::parser::arg_matcher::ArgMatcher::add_val_to
+    57 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/iter/adapters/enumerate.rs:clap_builder::parser::parser::Parser::push_arg_values
+    57 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/iter/macros.rs:clap_builder::parser::parser::Parser::push_arg_values
+    56 ( 0.01%)  ./elf/./elf/do-rel.h:_dl_start
+    56 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/mem/mod.rs:uucore::mods::locale::get_message_internal
+    56 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/collections/hash/map.rs:uucore::mods::locale::get_message_internal
+    56 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/pal/unix/weak/syscall.rs:std::sys::fs::unix::try_statx
+    55 ( 0.01%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/builder/value_parser.rs:<P as clap_builder::builder::value_parser::AnyValueParser>::type_id [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    55 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/iter/adapters/enumerate.rs:clap_builder::parser::parser::Parser::start_custom_arg
+    55 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/mod.rs:clap_builder::util::flat_map::Entry<K,V>::or_insert
+    54 ( 0.01%)  ./io/../sysdeps/unix/sysv/linux/fcntl_nocancel.c:__fcntl64_nocancel_adjusted [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    54 ( 0.01%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/slice.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2
+    54 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/iter/adapters/enumerate.rs:clap_builder::parser::arg_matcher::ArgMatcher::remove
+    54 ( 0.01%)  /home/callen/work/coreutils-startup-factorial/target-baseline/x86_64-unknown-linux-gnu/release/build/uucore-731f90082fd1912e/out/embedded_locales.rs:uucore::mods::locale::get_embedded_locale [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    54 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/ptr/mod.rs:std::path::Path::_join
+    54 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/alloc/unix.rs:ln::main
+    53 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/vec/mod.rs:<alloc::string::String as core::fmt::Write>::write_str
+    53 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/slice/memchr.rs:rustix::path::arg::with_c_str
+    52 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/range.rs:<unic_langid_impl::LanguageIdentifier as core::str::traits::FromStr>::from_str
+    52 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/non_null.rs:clap_builder::parser::validator::Conflicts::gather_conflicts
+    51 ( 0.01%)  ./libio/./libio/fileops.c:_IO_file_close_it@@GLIBC_2.2.5 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    51 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/iter/traits/iterator.rs:clap_builder::builder::command::Command::_build_self
+    49 ( 0.01%)  /home/callen/work/coreutils-startup-factorial/baseline/src/uu/ln/src/ln.rs:uu_ln::exec [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    48 ( 0.01%)  ./elf/../sysdeps/posix/dl-fileid.h:_dl_map_object_from_fd
+    48 ( 0.01%)  ./elf/./elf/dl-load.c:expand_dynamic_string_token [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    48 ( 0.01%)  ./io/../sysdeps/unix/sysv/linux/read_nocancel.c:__read_nocancel [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    48 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/sync.rs:clap_builder::parser::matches::arg_matches::ArgMatches::get_flag
+    48 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/into_iter.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2
+    48 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:clap_builder::parser::parser::Parser::add_defaults
+    48 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:core::ops::function::FnOnce::call_once
+    48 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/mem/mod.rs:clap_builder::parser::parser::Parser::push_arg_values
+    48 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:clap_builder::parser::parser::Parser::add_defaults
+    48 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mut_ptr.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2
+    48 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/non_null.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2
+    48 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/str/mod.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2
+    48 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/str/validations.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2
+    48 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/ptr/mod.rs:std::env::_var_os
+    48 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/alloc/unix.rs:uucore::mods::locale::get_message_internal
+    47 ( 0.01%)  ./elf/../sysdeps/nptl/dl-mutex.c:__rtld_mutex_init [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    47 ( 0.01%)  ./libio/./libio/filedoalloc.c:_IO_file_doallocate [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    47 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/option.rs:fluent_bundle::bundle::FluentBundle<R,M>::format_pattern
+    46 ( 0.01%)  ./elf/./elf/dl-minimal.c:__rtld_malloc_init_real [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    46 ( 0.01%)  ./string/../sysdeps/x86_64/multiarch/ifunc-memset.h:memset
+    46 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/non_null.rs:uucore::features::backup_control::determine_backup_mode
+    46 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/result.rs:<unic_langid_impl::LanguageIdentifier as core::str::traits::FromStr>::from_str
+    46 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/alloc.rs:alloc::raw_vec::RawVecInner<A>::finish_grow
+    46 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/../../stdarch/crates/core_arch/src/x86/cpuid.rs:std_detect::detect::cache::detect_and_initialize
+    46 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/ptr/non_null.rs:core::fmt::write
+    45 ( 0.01%)  ./elf/./elf/dl-misc.c:_dl_sysdep_read_whole_file [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    45 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/memchr.rs:<core::str::pattern::CharSearcher as core::str::pattern::Searcher>::next_match
+    45 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/ptr/non_null.rs:std::path::Components::parse_next_component_back
+    45 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/pal/unix/stack_overflow.rs:std::sys::pal::unix::stack_overflow::imp::make_handler [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    44 ( 0.01%)  ./elf/../sysdeps/x86/get-isa-level.h:update_active.constprop.0
+    44 ( 0.01%)  ./stdio-common/../string/bits/string_fortified.h:__vfscanf_internal
+    44 ( 0.01%)  ./string/../sysdeps/x86_64/multiarch/ifunc-avx2.h:strlen
+    44 ( 0.01%)  ./string/../sysdeps/x86_64/multiarch/ifunc-avx2.h:strnlen
+    44 ( 0.01%)  ./wcsmbs/../sysdeps/x86_64/multiarch/ifunc-avx2.h:wcschr
+    44 ( 0.01%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/builder/arg.rs:clap_builder::builder::arg::Arg::value_hint [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    44 ( 0.01%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/util/flat_map.rs:clap_builder::parser::parser::Parser::get_matches_with
+    44 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:clap_builder::builder::arg::Arg::value_hint
+    44 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mut_ptr.rs:clap_builder::parser::parser::Parser::push_arg_values
+    44 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/cmp.rs:uucore::features::backup_control::determine_backup_mode
+    44 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/iter.rs:<unic_langid_impl::LanguageIdentifier as core::str::traits::FromStr>::from_str
+    44 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/slice/index.rs:std::path::Components::parse_next_component_back
+    43 ( 0.01%)  ./libio/./libio/iofopen.c:fopen@@GLIBC_2.2.5 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    43 ( 0.01%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/builder/command.rs:clap_builder::builder::command::Command::_do_parse [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    43 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/sync/atomic.rs:std::sys::sync::once::futex::Once::call
+    43 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/path/unix.rs:std::path::Components::parse_next_component_back
+    42 ( 0.01%)  ./elf/../sysdeps/x86/get-isa-level.h:_dl_hwcaps_subdirs_active
+    42 ( 0.01%)  ./stdlib/./stdlib/cxa_thread_atexit_impl.c:__call_tls_dtors [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    42 ( 0.01%)  ./string/../sysdeps/x86_64/multiarch/ifunc-memmove.h:memcpy@@GLIBC_2.14
+    42 ( 0.01%)  ./string/../sysdeps/x86_64/multiarch/ifunc-memmove.h:memmove
+    42 ( 0.01%)  ./wcsmbs/../sysdeps/x86_64/multiarch/ifunc-evex.h:wmemchr
+    42 ( 0.01%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resource.rs:fluent_bundle::resource::FluentResource::try_new [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    42 ( 0.01%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/helper.rs:fluent_syntax::parser::core::Parser<S>::get_placeable'2
+    42 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/alloc.rs:uucore::mods::locale::get_message_internal
+    42 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/../../stdarch/crates/core_arch/src/x86/sse2.rs:hashbrown::map::HashMap<K,V,S,A>::get
+    42 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/intrinsics/mod.rs:uucore::mods::locale::get_message_internal
+    42 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/iter/adapters/enumerate.rs:clap_builder::parser::matches::arg_matches::ArgMatches::get_flag
+    42 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/mod.rs:fluent_syntax::parser::core::Parser<S>::get_placeable
+    42 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/uint_macros.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2
+    42 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:fluent_bundle::bundle::FluentBundle<R,M>::format_pattern
+    42 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mut_ptr.rs:hashbrown::map::HashMap<K,V,S,A>::get
+    42 ( 0.01%)  /home/callen/work/coreutils-startup-factorial/baseline/src/uucore/src/lib/mods/locale.rs:uucore::mods::locale::get_locales_dir [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    42 ( 0.01%)  /rust/deps/hashbrown-0.16.1/src/control/tag.rs:hashbrown::map::HashMap<K,V,S,A>::get
+    42 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/result.rs:std::env::_var_os
+    42 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/io/buffered/bufwriter.rs:std::io::buffered::bufwriter::BufWriter<W>::flush_buf [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    42 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/alloc/unix.rs:clap_builder::builder::command::Command::_build_self
+    42 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/thread_local/destructors/linux_like.rs:std::sys::thread_local::destructors::linux_like::register [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    41 ( 0.01%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/util/flat_map.rs:clap_builder::parser::matches::arg_matches::ArgMatches::get_flag
+    41 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/slice/memchr.rs:core::ffi::c_str::CStr::from_bytes_with_nul
+    40 ( 0.01%)  ./elf/../elf/dl-tls.c:_dl_tls_static_surplus_init [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    40 ( 0.01%)  ./elf/./dl-hwcaps.h:_dl_important_hwcaps
+    40 ( 0.01%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.8.4/src/int_ops.rs:unic_langid_impl::subtags::region::Region::from_bytes
+    40 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/alloc.rs:clap_builder::builder::command::Command::_build_self
+    40 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/boxed.rs:<P as clap_builder::builder::value_parser::AnyValueParser>::parse_ref_
+    40 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:clap_builder::parser::parser::Parser::react
+    40 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/spec_from_iter_nested.rs:clap_builder::parser::parser::Parser::add_defaults
+    40 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/uint_macros.rs:<core::str::pattern::CharSearcher as core::str::pattern::Searcher>::next_match
+    40 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/index.rs:clap_builder::parser::matches::arg_matches::ArgMatches::get_flag
+    40 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/ptr/mod.rs:core::ops::function::FnOnce::call_once
+    40 ( 0.01%)  ???:0x00000000048b6720 [???]
+    39 ( 0.01%)  ./libio/./libio/fileops.c:_IO_file_open [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    39 ( 0.01%)  ./nptl/../sysdeps/unix/sysv/linux/x86/elision-conf.c:__lll_elision_init [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    39 ( 0.01%)  ./stdlib/./stdlib/cxa_atexit.c:__cxa_atexit [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    39 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/result.rs:alloc::raw_vec::RawVecInner<A>::reserve::do_reserve_and_handle
+    38 ( 0.01%)  ./elf/./elf/dl-find_object.c:_dl_find_object_init [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    38 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/cmp.rs:clap_builder::parser::arg_matcher::ArgMatcher::add_val_to
+    38 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/cmp.rs:clap_builder::parser::parser::Parser::push_arg_values
+    38 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:core::ptr::drop_in_place<fluent_bundle::bundle::FluentBundle<&fluent_bundle::resource::FluentResource,intl_memoizer::IntlLangMemoizer>> [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    38 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:core::ptr::drop_in_place<uucore::mods::locale::LocalizationError> [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    38 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/intrinsics/mod.rs:alloc::raw_vec::RawVecInner<A>::reserve::do_reserve_and_handle
+    37 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/iter/macros.rs:clap_builder::builder::command::Command::required_graph
+    37 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/iter/macros.rs:clap_builder::parser::parser::Parser::resolve_pending
+    37 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/ptr/mod.rs:core::fmt::write
+    37 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/result.rs:core::fmt::write
+    36 ( 0.01%)  ./elf/../sysdeps/nptl/dl-tls_init_tp.c:__tls_init_tp [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    36 ( 0.01%)  ./elf/../sysdeps/unix/sysv/linux/dl-sysdep.c:_dl_sysdep_start [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    36 ( 0.01%)  ./io/../sysdeps/unix/sysv/linux/open64.c:open [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    36 ( 0.01%)  ./libio/./libio/iofclose.c:fclose@@GLIBC_2.2.5 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    36 ( 0.01%)  ./malloc/../string/bits/string_fortified.h:_int_realloc
+    36 ( 0.01%)  ./misc/../sysdeps/unix/syscall-template.S:mprotect [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    36 ( 0.01%)  ./nptl/./nptl/pthread_attr_setaffinity.c:pthread_attr_setaffinity_np@@GLIBC_2.32 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    36 ( 0.01%)  ./string/../string/strstr.c:__GI_strstr [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    36 ( 0.01%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/types/mod.rs:fluent_bundle::bundle::FluentBundle<R,M>::format_pattern
+    36 ( 0.01%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memchr-2.8.3/src/arch/x86_64/memchr.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2
+    36 ( 0.01%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.8.4/src/int_ops.rs:<unic_langid_impl::LanguageIdentifier as core::str::traits::FromStr>::from_str
+    36 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/cmp.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2
+    36 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/cmp.rs:clap_builder::parser::parser::Parser::resolve_pending
+    36 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/cmp.rs:ln::main
+    36 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/index.rs:clap_builder::parser::arg_matcher::ArgMatcher::add_val_to
+    36 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/index.rs:fluent_syntax::parser::helper::<impl fluent_syntax::parser::core::Parser<S>>::get_number_literal
+    36 ( 0.01%)  /home/callen/work/coreutils-startup-factorial/baseline/src/uucore/src/lib/mods/locale.rs:uucore::mods::locale::parse_fluent_resource_owned [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    36 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/cmp.rs:alloc::raw_vec::RawVec<T,A>::grow_one
+    36 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/result.rs:alloc::raw_vec::RawVec<T,A>::grow_one
+    35 ( 0.01%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:core::ops::function::FnOnce::call_once [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    35 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/collections/btree/remove.rs:alloc::collections::btree::remove::<impl alloc::collections::btree::node::Handle<alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Mut,K,V,alloc::collections::btree::node::marker::Leaf>,alloc::collections::btree::node::marker::KV>>::remove_leaf_kv [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    35 ( 0.01%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/sync/atomic.rs:std::env::_var_os
+    34 ( 0.00%)  ./elf/./elf/dl-debug.c:_dl_debug_initialize [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    34 ( 0.00%)  ./string/../sysdeps/x86_64/multiarch/strrchr-avx2.S:__strrchr_avx2 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    34 ( 0.00%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-langid-impl-0.9.6/src/parser/mod.rs:<unic_langid_impl::LanguageIdentifier as core::str::traits::FromStr>::from_str
+    34 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:clap_builder::parser::validator::gather_direct_conflicts
+    34 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/non_null.rs:clap_builder::builder::command::Command::required_graph
+    34 ( 0.00%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/path.rs:std::path::Path::is_symlink [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    34 ( 0.00%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/args/unix.rs:core::ops::function::FnOnce::call_once
+    33 ( 0.00%)  ./elf/../sysdeps/x86_64/dl-cet.c:_dl_cet_check [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    33 ( 0.00%)  ./elf/./elf/dl-audit.c:_dl_audit_activity_nsid [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    33 ( 0.00%)  ./stdlib/./stdlib/cxa_atexit.c:__new_exitfn [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    33 ( 0.00%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/parser/arg_matcher.rs:clap_builder::parser::parser::Parser::start_custom_arg
+    33 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:clap_builder::util::flat_map::Entry<K,V>::or_insert
+    33 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mut_ptr.rs:clap_builder::util::flat_map::Entry<K,V>::or_insert
+    33 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/non_null.rs:clap_builder::builder::command::Command::_do_parse
+    33 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/iter/macros.rs:clap_builder::builder::command::Command::_do_parse
+    33 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/iter/macros.rs:uucore::features::backup_control::determine_backup_mode
+    32 ( 0.00%)  ./misc/../sysdeps/unix/sysv/linux/setvmaname.c:__set_vma_name [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    32 ( 0.00%)  ./string/../sysdeps/x86_64/multiarch/../multiarch/strcmp-sse2.S:strncmp [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    32 ( 0.00%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/builder/arg_settings.rs:clap_builder::builder::command::Command::_do_parse
+    32 ( 0.00%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/builder/arg_settings.rs:clap_builder::builder::command::Command::required_graph
+    32 ( 0.00%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/builder/styled_str.rs:ln::main
+    32 ( 0.00%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-langid-impl-0.9.6/src/subtags/region.rs:unic_langid_impl::subtags::region::Region::from_bytes [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    32 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/iter/adapters/enumerate.rs:clap_builder::builder::command::Command::_build_self
+    32 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/result.rs:ln::main
+    32 ( 0.00%)  /home/callen/work/coreutils-startup-factorial/baseline/src/uucore/src/lib/features/backup_control.rs:uucore::features::backup_control::determine_backup_mode [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    32 ( 0.00%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/alloc/unix.rs:clap_builder::parser::parser::Parser::add_defaults
+    32 ( 0.00%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/fs/unix.rs:std::sys::fs::unix::readlink [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    32 ( 0.00%)  ???:0x00000000000048f0 [/usr/lib/x86_64-linux-gnu/libgcc_s.so.1]
+    31 ( 0.00%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/util/flat_map.rs:clap_builder::parser::arg_matcher::ArgMatcher::add_val_to
+    31 ( 0.00%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rustix-1.1.5/src/path/arg.rs:uucore::features::fs::replace_link
+    31 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:uucore::features::fs::replace_link
+    31 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mut_ptr.rs:ln::main
+    31 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/non_null.rs:clap_builder::parser::validator::gather_direct_conflicts
+    31 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/path.rs:uucore::mods::locale::get_locales_dir
+    30 ( 0.00%)  ./elf/../sysdeps/nptl/dl-tls_init_tp.c:rtld_mutex_dummy [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    30 ( 0.00%)  ./io/../sysdeps/unix/sysv/linux/fstat64.c:fstat [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    30 ( 0.00%)  ./libio/./libio/libioP.h:_IO_file_underflow@@GLIBC_2.2.5
+    30 ( 0.00%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/macros.rs:<P as clap_builder::builder::value_parser::AnyValueParser>::parse_ref_
+    30 ( 0.00%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-langid-impl-0.9.6/src/lib.rs:<unic_langid_impl::LanguageIdentifier as core::fmt::Display>::fmt [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    30 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:<alloc::string::String as core::fmt::Write>::write_str
+    30 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:clap_builder::parser::validator::Conflicts::gather_conflicts
+    30 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/mod.rs:fluent_syntax::parser::helper::<impl fluent_syntax::parser::core::Parser<S>>::get_number_literal
+    30 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:alloc::sync::Arc<T,A>::drop_slow
+    30 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/non_null.rs:ln::main
+    30 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/str/traits.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2
+    30 ( 0.00%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/slice/iter/macros.rs:core::str::pattern::StrSearcher::new
+    30 ( 0.00%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/slice/memchr.rs:std::env::current_exe
+    30 ( 0.00%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/fs/mod.rs:std::sys::fs::symlink_metadata [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    29 ( 0.00%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/macros.rs:clap_builder::parser::parser::Parser::get_matches_with
+    29 ( 0.00%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/expression.rs:fluent_syntax::parser::expression::<impl fluent_syntax::parser::core::Parser<S>>::get_call_arguments [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    29 ( 0.00%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rustix-1.1.5/src/path/arg.rs:rustix::path::arg::with_c_str [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    29 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/str.rs:uucore::format_usage
+    29 ( 0.00%)  /home/callen/work/coreutils-startup-factorial/baseline/src/uucore/src/lib/features/signals.rs:uucore::features::signals::capture_startup_state [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    28 ( 0.00%)  ./elf/./elf/dl-debug.c:_dl_debug_update [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    28 ( 0.00%)  ./io/../sysdeps/unix/sysv/linux/fstatat64.c:fstatat [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    28 ( 0.00%)  ./libio/./libio/libioP.h:fclose@@GLIBC_2.2.5
+    28 ( 0.00%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/builder/arg_settings.rs:clap_builder::parser::parser::Parser::get_matches_with
+    28 ( 0.00%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/smallvec-1.16.1/src/lib.rs:fluent_bundle::bundle::FluentBundle<R,M>::format_pattern
+    28 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/alloc.rs:alloc::sync::Arc<T,A>::drop_slow
+    28 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/borrow.rs:uucore::mods::locale::get_message_internal
+    28 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:core::ptr::drop_in_place<alloc::vec::Vec<fluent_bundle::errors::FluentError>>
+    28 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/intrinsics/mod.rs:hashbrown::map::HashMap<K,V,S,A>::get
+    28 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/iter/traits/iterator.rs:clap_builder::parser::parser::Parser::get_matches_with
+    28 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:fluent_bundle::resolver::pattern::<impl fluent_bundle::resolver::WriteValue for fluent_syntax::ast::Pattern<&str>>::write
+    28 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/mod.rs:hashbrown::map::HashMap<K,V,S,A>::get
+    28 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/thread_local/native/mod.rs:uucore::mods::locale::get_message_internal
+    28 ( 0.00%)  /home/callen/work/coreutils-startup-factorial/baseline/src/uucore/src/lib/lib.rs:ln::main [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    28 ( 0.00%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/string.rs:<alloc::string::String as core::fmt::Write>::write_char [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    28 ( 0.00%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/alloc/unix.rs:<P as clap_builder::builder::value_parser::AnyValueParser>::parse_ref_
+    27 ( 0.00%)  ./nptl/./nptl/pthread_mutex_conf.c:__pthread_tunables_init [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    27 ( 0.00%)  ./string/../sysdeps/x86/cacheinfo.h:__x86_cacheinfo
+    27 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/collections/btree/map.rs:alloc::collections::btree::map::BTreeMap<K,V,A>::insert [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    27 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/option.rs:uucore::mods::locale::create_english_bundle_from_embedded
+    27 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/cmp.rs:<core::str::pattern::CharSearcher as core::str::pattern::Searcher>::next_match
+    27 ( 0.00%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs:core::ops::function::FnOnce::call_once
+    27 ( 0.00%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/alloc/unix.rs:clap_builder::parser::parser::Parser::get_matches_with
+    26 ( 0.00%)  ./csu/../sysdeps/nptl/libc_start_call_main.h:(below main) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    26 ( 0.00%)  ./elf/./elf/dl-catch.c:_dl_catch_error [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    26 ( 0.00%)  ./malloc/./malloc/malloc.c:tcache_init.part.0 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    26 ( 0.00%)  ./misc/./misc/init-misc.c:__init_misc [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    26 ( 0.00%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/parser/matches/value_source.rs:clap_builder::parser::parser::Parser::react
+    26 ( 0.00%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memchr-2.8.3/src/arch/x86_64/memchr.rs:memchr::arch::x86_64::memchr::memchr3_raw::detect
+    26 ( 0.00%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.8.4/src/ascii.rs:unic_langid_impl::subtags::region::Region::from_bytes
+    26 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:clap_builder::parser::parser::Parser::start_custom_arg
+    26 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:core::ops::function::FnOnce::call_once
+    26 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:uucore::format_usage
+    26 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/iter/macros.rs:clap_builder::parser::parser::Parser::react
+    26 ( 0.00%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/string.rs:alloc::string::String::from_utf8_lossy [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    26 ( 0.00%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/ptr/mod.rs:<alloc::string::String as core::fmt::Write>::write_str
+    26 ( 0.00%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/alloc/unix.rs:clap_builder::parser::parser::Parser::react
+    25 ( 0.00%)  ./elf/../sysdeps/nptl/pthread_early_init.h:__libc_early_init
+    25 ( 0.00%)  ./elf/./elf/dl-audit.c:_dl_audit_objclose [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    25 ( 0.00%)  ./elf/./elf/dl-call-libc-early-init.c:_dl_call_libc_early_init [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    25 ( 0.00%)  ./elf/./elf/dl-tunables.h:__GI___tunable_set_val
+    25 ( 0.00%)  ./libio/./libio/fileops.c:_IO_file_read [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    25 ( 0.00%)  ./libio/./libio/libioP.h:__underflow
+    25 ( 0.00%)  ./posix/../sysdeps/unix/sysv/linux/x86/sysconf.c:sysconf [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    25 ( 0.00%)  ./termios/../sysdeps/unix/sysv/linux/tcgetattr.c:tcgetattr [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    25 ( 0.00%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/parser/matches/matched_arg.rs:clap_builder::parser::parser::Parser::get_matches_with
+    25 ( 0.00%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/util/flat_map.rs:clap_builder::parser::parser::Parser::add_defaults
+    25 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:fluent_bundle::bundle::FluentBundle<R,M>::add_resource_overriding
+    25 ( 0.00%)  /home/callen/work/coreutils-startup-factorial/baseline/src/uucore/src/lib/lib.rs:uucore::format_usage [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    24 ( 0.00%)  ./elf/../elf/dl-tls.c:_dl_assign_tls_modid [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    24 ( 0.00%)  ./io/../sysdeps/unix/sysv/linux/close_nocancel.c:__GI___close_nocancel [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+    24 ( 0.00%)  ./libio/./libio/genops.c:_IO_doallocbuf [/usr/lib/x86_64-linux-gnu/libc.so.6]
+    24 ( 0.00%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_lex-1.1.1/src/lib.rs:clap_builder::parser::parser::Parser::get_matches_with
+    24 ( 0.00%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/os_display-0.1.4/src/lib.rs:<os_display::Quoted as core::fmt::Display>::fmt [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    24 ( 0.00%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rustix-1.1.5/src/fs/at.rs:uucore::features::fs::replace_link
+    24 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/alloc.rs:<P as clap_builder::builder::value_parser::AnyValueParser>::parse_ref_
+    24 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:uucore::format_usage
+    24 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/iter/adapters/enumerate.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern'2
+    24 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/num/uint_macros.rs:alloc::raw_vec::RawVecInner<A>::reserve::do_reserve_and_handle
+    24 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:clap_builder::parser::parser::Parser::push_arg_values
+    24 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/result.rs:clap_builder::parser::parser::Parser::get_matches_with
+    24 ( 0.00%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs:alloc::fmt::format::format_inner
+    24 ( 0.00%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/vec/mod.rs:std::path::Path::_join
+    24 ( 0.00%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/fmt/rt.rs:core::fmt::write
+    24 ( 0.00%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/env.rs:std::env::_var [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    23 ( 0.00%)  ./debug/../sysdeps/x86_64/multiarch/ifunc-memset.h:__memset_chk
+    23 ( 0.00%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/builder/command.rs:clap_builder::builder::command::Command::required_graph [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    23 ( 0.00%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/parser/arg_matcher.rs:clap_builder::parser::arg_matcher::ArgMatcher::fill_in_global_values [/home/callen/work/coreutils-startup-factorial/bin/baseline/single/ln]
+    23 ( 0.00%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:uucore::mods::locale::get_locales_dir
+

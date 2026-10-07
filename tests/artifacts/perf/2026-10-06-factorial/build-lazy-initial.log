@@ -1,0 +1,276 @@
+   Compiling proc-macro2 v1.0.107
+   Compiling quote v1.0.47
+   Compiling unicode-ident v1.0.26
+   Compiling rustix v1.1.5
+   Compiling thiserror v2.0.21
+   Compiling bitflags v2.13.2
+   Compiling utf8parse v0.2.2
+   Compiling linux-raw-sys v0.12.1
+   Compiling rustc-hash v2.1.3
+   Compiling is_terminal_polyfill v1.70.2
+   Compiling cfg_aliases v0.2.2
+   Compiling memchr v2.8.3
+   Compiling anstyle-query v1.1.5
+   Compiling colorchoice v1.0.5
+   Compiling libc v0.2.190
+   Compiling anstyle v1.0.14
+   Compiling clap_lex v1.1.1
+   Compiling self_cell v1.3.0
+   Compiling smallvec v1.16.1
+   Compiling strsim v0.11.1
+   Compiling cfg-if v1.0.5
+   Compiling uucore v0.13.0 (/home/callen/work/coreutils-startup-factorial/lazy/src/uucore)
+   Compiling unicode-width v0.2.2
+   Compiling anstyle-parse v1.0.0
+   Compiling nix v0.31.3
+   Compiling type-map v0.5.1
+   Compiling anstream v1.0.0
+   Compiling os_display v0.1.4
+   Compiling syn v3.0.6
+   Compiling uucore_procs v0.13.0 (/home/callen/work/coreutils-startup-factorial/lazy/src/uucore_procs)
+   Compiling terminal_size v0.4.4
+   Compiling clap_builder v4.6.7
+   Compiling displaydoc v0.2.7
+   Compiling thiserror-impl v2.0.21
+   Compiling tinystr v0.8.4
+   Compiling unic-langid-impl v0.9.6
+   Compiling unic-langid v0.9.6
+   Compiling fluent-langneg v0.13.1
+   Compiling intl-memoizer v0.5.3
+   Compiling intl_pluralrules v7.0.2
+   Compiling fluent-syntax v0.12.0
+   Compiling clap v4.6.7
+   Compiling fluent-bundle v0.16.0
+   Compiling fluent v0.17.0
+   Compiling uu_true v0.13.0 (/home/callen/work/coreutils-startup-factorial/lazy/src/uu/true)
+    Finished `release` profile [optimized + debuginfo] target(s) in 8.65s
+   Compiling rustix v1.1.5
+   Compiling uucore v0.13.0 (/home/callen/work/coreutils-startup-factorial/lazy/src/uucore)
+   Compiling dunce v1.0.5
+   Compiling terminal_size v0.4.4
+   Compiling clap_builder v4.6.7
+   Compiling clap v4.6.7
+   Compiling uu_ln v0.13.0 (/home/callen/work/coreutils-startup-factorial/lazy/src/uu/ln)
+error[E0277]: the trait bound `clap::builder::StyledStr: From<Option<std::string::String>>` is not satisfied
+    --> src/uu/ln/src/ln.rs:179:23
+     |
+ 179 |                 .help(with_help.then(|| translate!("ln-help-force")))
+     |                  ---- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `From<Option<std::string::String>>` is not implemented for `clap::builder::StyledStr`
+     |                  |
+     |                  required by a bound introduced by this call
+     |
+     = help: the following other types implement trait `From<T>`:
+               `clap::builder::StyledStr` implements `From<&&str>`
+               `clap::builder::StyledStr` implements `From<&std::string::String>`
+               `clap::builder::StyledStr` implements `From<&str>`
+               `clap::builder::StyledStr` implements `From<Cow<'_, str>>`
+               `clap::builder::StyledStr` implements `From<std::string::String>`
+     = note: required for `Option<std::string::String>` to implement `Into<clap::builder::StyledStr>`
+     = note: required for `Option<std::string::String>` to implement `IntoResettable<clap::builder::StyledStr>`
+note: required by a bound in `clap::Arg::help`
+    --> /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/builder/arg.rs:2278:35
+     |
+2278 |     pub fn help(mut self, h: impl IntoResettable<StyledStr>) -> Self {
+     |                                   ^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Arg::help`
+
+error[E0277]: the trait bound `clap::builder::StyledStr: From<Option<std::string::String>>` is not satisfied
+    --> src/uu/ln/src/ln.rs:187:23
+     |
+ 187 |                 .help(with_help.then(|| translate!("ln-help-interactive")))
+     |                  ---- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `From<Option<std::string::String>>` is not implemented for `clap::builder::StyledStr`
+     |                  |
+     |                  required by a bound introduced by this call
+     |
+     = help: the following other types implement trait `From<T>`:
+               `clap::builder::StyledStr` implements `From<&&str>`
+               `clap::builder::StyledStr` implements `From<&std::string::String>`
+               `clap::builder::StyledStr` implements `From<&str>`
+               `clap::builder::StyledStr` implements `From<Cow<'_, str>>`
+               `clap::builder::StyledStr` implements `From<std::string::String>`
+     = note: required for `Option<std::string::String>` to implement `Into<clap::builder::StyledStr>`
+     = note: required for `Option<std::string::String>` to implement `IntoResettable<clap::builder::StyledStr>`
+note: required by a bound in `clap::Arg::help`
+    --> /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/builder/arg.rs:2278:35
+     |
+2278 |     pub fn help(mut self, h: impl IntoResettable<StyledStr>) -> Self {
+     |                                   ^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Arg::help`
+
+error[E0277]: the trait bound `clap::builder::StyledStr: From<Option<std::string::String>>` is not satisfied
+    --> src/uu/ln/src/ln.rs:195:23
+     |
+ 195 |                 .help(with_help.then(|| translate!("ln-help-no-dereference")))
+     |                  ---- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `From<Option<std::string::String>>` is not implemented for `clap::builder::StyledStr`
+     |                  |
+     |                  required by a bound introduced by this call
+     |
+     = help: the following other types implement trait `From<T>`:
+               `clap::builder::StyledStr` implements `From<&&str>`
+               `clap::builder::StyledStr` implements `From<&std::string::String>`
+               `clap::builder::StyledStr` implements `From<&str>`
+               `clap::builder::StyledStr` implements `From<Cow<'_, str>>`
+               `clap::builder::StyledStr` implements `From<std::string::String>`
+     = note: required for `Option<std::string::String>` to implement `Into<clap::builder::StyledStr>`
+     = note: required for `Option<std::string::String>` to implement `IntoResettable<clap::builder::StyledStr>`
+note: required by a bound in `clap::Arg::help`
+    --> /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/builder/arg.rs:2278:35
+     |
+2278 |     pub fn help(mut self, h: impl IntoResettable<StyledStr>) -> Self {
+     |                                   ^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Arg::help`
+
+error[E0277]: the trait bound `clap::builder::StyledStr: From<Option<std::string::String>>` is not satisfied
+    --> src/uu/ln/src/ln.rs:202:23
+     |
+ 202 |                 .help(with_help.then(|| translate!("ln-help-logical")))
+     |                  ---- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `From<Option<std::string::String>>` is not implemented for `clap::builder::StyledStr`
+     |                  |
+     |                  required by a bound introduced by this call
+     |
+     = help: the following other types implement trait `From<T>`:
+               `clap::builder::StyledStr` implements `From<&&str>`
+               `clap::builder::StyledStr` implements `From<&std::string::String>`
+               `clap::builder::StyledStr` implements `From<&str>`
+               `clap::builder::StyledStr` implements `From<Cow<'_, str>>`
+               `clap::builder::StyledStr` implements `From<std::string::String>`
+     = note: required for `Option<std::string::String>` to implement `Into<clap::builder::StyledStr>`
+     = note: required for `Option<std::string::String>` to implement `IntoResettable<clap::builder::StyledStr>`
+note: required by a bound in `clap::Arg::help`
+    --> /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/builder/arg.rs:2278:35
+     |
+2278 |     pub fn help(mut self, h: impl IntoResettable<StyledStr>) -> Self {
+     |                                   ^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Arg::help`
+
+error[E0277]: the trait bound `clap::builder::StyledStr: From<Option<std::string::String>>` is not satisfied
+    --> src/uu/ln/src/ln.rs:211:23
+     |
+ 211 |                 .help(with_help.then(|| translate!("ln-help-physical")))
+     |                  ---- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `From<Option<std::string::String>>` is not implemented for `clap::builder::StyledStr`
+     |                  |
+     |                  required by a bound introduced by this call
+     |
+     = help: the following other types implement trait `From<T>`:
+               `clap::builder::StyledStr` implements `From<&&str>`
+               `clap::builder::StyledStr` implements `From<&std::string::String>`
+               `clap::builder::StyledStr` implements `From<&str>`
+               `clap::builder::StyledStr` implements `From<Cow<'_, str>>`
+               `clap::builder::StyledStr` implements `From<std::string::String>`
+     = note: required for `Option<std::string::String>` to implement `Into<clap::builder::StyledStr>`
+     = note: required for `Option<std::string::String>` to implement `IntoResettable<clap::builder::StyledStr>`
+note: required by a bound in `clap::Arg::help`
+    --> /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/builder/arg.rs:2278:35
+     |
+2278 |     pub fn help(mut self, h: impl IntoResettable<StyledStr>) -> Self {
+     |                                   ^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Arg::help`
+
+error[E0277]: the trait bound `clap::builder::StyledStr: From<Option<std::string::String>>` is not satisfied
+    --> src/uu/ln/src/ln.rs:218:23
+     |
+ 218 |                 .help(with_help.then(|| translate!("ln-help-symbolic")))
+     |                  ---- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `From<Option<std::string::String>>` is not implemented for `clap::builder::StyledStr`
+     |                  |
+     |                  required by a bound introduced by this call
+     |
+     = help: the following other types implement trait `From<T>`:
+               `clap::builder::StyledStr` implements `From<&&str>`
+               `clap::builder::StyledStr` implements `From<&std::string::String>`
+               `clap::builder::StyledStr` implements `From<&str>`
+               `clap::builder::StyledStr` implements `From<Cow<'_, str>>`
+               `clap::builder::StyledStr` implements `From<std::string::String>`
+     = note: required for `Option<std::string::String>` to implement `Into<clap::builder::StyledStr>`
+     = note: required for `Option<std::string::String>` to implement `IntoResettable<clap::builder::StyledStr>`
+note: required by a bound in `clap::Arg::help`
+    --> /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/builder/arg.rs:2278:35
+     |
+2278 |     pub fn help(mut self, h: impl IntoResettable<StyledStr>) -> Self {
+     |                                   ^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Arg::help`
+
+error[E0277]: the trait bound `clap::builder::StyledStr: From<Option<std::string::String>>` is not satisfied
+    --> src/uu/ln/src/ln.rs:228:23
+     |
+ 228 |                 .help(with_help.then(|| translate!("ln-help-target-directory")))
+     |                  ---- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `From<Option<std::string::String>>` is not implemented for `clap::builder::StyledStr`
+     |                  |
+     |                  required by a bound introduced by this call
+     |
+     = help: the following other types implement trait `From<T>`:
+               `clap::builder::StyledStr` implements `From<&&str>`
+               `clap::builder::StyledStr` implements `From<&std::string::String>`
+               `clap::builder::StyledStr` implements `From<&str>`
+               `clap::builder::StyledStr` implements `From<Cow<'_, str>>`
+               `clap::builder::StyledStr` implements `From<std::string::String>`
+     = note: required for `Option<std::string::String>` to implement `Into<clap::builder::StyledStr>`
+     = note: required for `Option<std::string::String>` to implement `IntoResettable<clap::builder::StyledStr>`
+note: required by a bound in `clap::Arg::help`
+    --> /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/builder/arg.rs:2278:35
+     |
+2278 |     pub fn help(mut self, h: impl IntoResettable<StyledStr>) -> Self {
+     |                                   ^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Arg::help`
+
+error[E0277]: the trait bound `clap::builder::StyledStr: From<Option<std::string::String>>` is not satisfied
+    --> src/uu/ln/src/ln.rs:238:23
+     |
+ 238 |                 .help(with_help.then(|| translate!("ln-help-no-target-directory")))
+     |                  ---- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `From<Option<std::string::String>>` is not implemented for `clap::builder::StyledStr`
+     |                  |
+     |                  required by a bound introduced by this call
+     |
+     = help: the following other types implement trait `From<T>`:
+               `clap::builder::StyledStr` implements `From<&&str>`
+               `clap::builder::StyledStr` implements `From<&std::string::String>`
+               `clap::builder::StyledStr` implements `From<&str>`
+               `clap::builder::StyledStr` implements `From<Cow<'_, str>>`
+               `clap::builder::StyledStr` implements `From<std::string::String>`
+     = note: required for `Option<std::string::String>` to implement `Into<clap::builder::StyledStr>`
+     = note: required for `Option<std::string::String>` to implement `IntoResettable<clap::builder::StyledStr>`
+note: required by a bound in `clap::Arg::help`
+    --> /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/builder/arg.rs:2278:35
+     |
+2278 |     pub fn help(mut self, h: impl IntoResettable<StyledStr>) -> Self {
+     |                                   ^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Arg::help`
+
+error[E0277]: the trait bound `clap::builder::StyledStr: From<Option<std::string::String>>` is not satisfied
+    --> src/uu/ln/src/ln.rs:245:23
+     |
+ 245 |                 .help(with_help.then(|| translate!("ln-help-relative")))
+     |                  ---- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `From<Option<std::string::String>>` is not implemented for `clap::builder::StyledStr`
+     |                  |
+     |                  required by a bound introduced by this call
+     |
+     = help: the following other types implement trait `From<T>`:
+               `clap::builder::StyledStr` implements `From<&&str>`
+               `clap::builder::StyledStr` implements `From<&std::string::String>`
+               `clap::builder::StyledStr` implements `From<&str>`
+               `clap::builder::StyledStr` implements `From<Cow<'_, str>>`
+               `clap::builder::StyledStr` implements `From<std::string::String>`
+     = note: required for `Option<std::string::String>` to implement `Into<clap::builder::StyledStr>`
+     = note: required for `Option<std::string::String>` to implement `IntoResettable<clap::builder::StyledStr>`
+note: required by a bound in `clap::Arg::help`
+    --> /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/builder/arg.rs:2278:35
+     |
+2278 |     pub fn help(mut self, h: impl IntoResettable<StyledStr>) -> Self {
+     |                                   ^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Arg::help`
+
+error[E0277]: the trait bound `clap::builder::StyledStr: From<Option<std::string::String>>` is not satisfied
+    --> src/uu/ln/src/ln.rs:253:23
+     |
+ 253 |                 .help(with_help.then(|| translate!("ln-help-verbose")))
+     |                  ---- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `From<Option<std::string::String>>` is not implemented for `clap::builder::StyledStr`
+     |                  |
+     |                  required by a bound introduced by this call
+     |
+     = help: the following other types implement trait `From<T>`:
+               `clap::builder::StyledStr` implements `From<&&str>`
+               `clap::builder::StyledStr` implements `From<&std::string::String>`
+               `clap::builder::StyledStr` implements `From<&str>`
+               `clap::builder::StyledStr` implements `From<Cow<'_, str>>`
+               `clap::builder::StyledStr` implements `From<std::string::String>`
+     = note: required for `Option<std::string::String>` to implement `Into<clap::builder::StyledStr>`
+     = note: required for `Option<std::string::String>` to implement `IntoResettable<clap::builder::StyledStr>`
+note: required by a bound in `clap::Arg::help`
+    --> /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/clap_builder-4.6.7/src/builder/arg.rs:2278:35
+     |
+2278 |     pub fn help(mut self, h: impl IntoResettable<StyledStr>) -> Self {
+     |                                   ^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Arg::help`
+
+For more information about this error, try `rustc --explain E0277`.
+error: could not compile `uu_ln` (lib) due to 10 previous errors
+warning: build failed, waiting for other jobs to finish...

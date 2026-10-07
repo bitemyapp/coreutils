@@ -1,0 +1,68 @@
+execve("/home/callen/work/coreutils-startup-factorial/bin/baseline/single/true", ["/home/callen/work/coreutils-star"...], 0x7fff2c1e0e90 /* 21 vars */) = 0 <0.000093>
+brk(NULL)                               = 0x582be7cd4000 <0.000001>
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7e9b26415000 <0.000004>
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory) <0.000002>
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3 <0.000002>
+fstat(3, {st_mode=S_IFREG|0644, st_size=123511, ...}) = 0 <0.000002>
+mmap(NULL, 123511, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7e9b263f6000 <0.000002>
+close(3)                                = 0 <0.000001>
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 3 <0.000003>
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832 <0.000002>
+fstat(3, {st_mode=S_IFREG|0644, st_size=183024, ...}) = 0 <0.000002>
+mmap(NULL, 185256, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7e9b263c8000 <0.000003>
+mmap(0x7e9b263cc000, 147456, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000) = 0x7e9b263cc000 <0.000005>
+mmap(0x7e9b263f0000, 16384, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7e9b263f0000 <0.000005>
+mmap(0x7e9b263f4000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2b000) = 0x7e9b263f4000 <0.000003>
+close(3)                                = 0 <0.000001>
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3 <0.000002>
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\220\243\2\0\0\0\0\0"..., 832) = 832 <0.000001>
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784 <0.000001>
+fstat(3, {st_mode=S_IFREG|0755, st_size=2129424, ...}) = 0 <0.000001>
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784 <0.000001>
+mmap(NULL, 2174352, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7e9b26000000 <0.000002>
+mmap(0x7e9b26028000, 1609728, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7e9b26028000 <0.000005>
+mmap(0x7e9b261b1000, 323584, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1b1000) = 0x7e9b261b1000 <0.000003>
+mmap(0x7e9b26200000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1ff000) = 0x7e9b26200000 <0.000003>
+mmap(0x7e9b26206000, 52624, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7e9b26206000 <0.000002>
+close(3)                                = 0 <0.000001>
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7e9b263c5000 <0.000002>
+arch_prctl(ARCH_SET_FS, 0x7e9b263c59c0) = 0 <0.000001>
+set_tid_address(0x7e9b263c5c90)         = 1534706 <0.000001>
+set_robust_list(0x7e9b263c5ca0, 24)     = 0 <0.000001>
+rseq(0x7e9b263c62e0, 0x20, 0, 0x53053053) = 0 <0.000001>
+mprotect(0x7e9b26200000, 16384, PROT_READ) = 0 <0.000003>
+mprotect(0x7e9b263f4000, 4096, PROT_READ) = 0 <0.000003>
+mprotect(0x582be5661000, 45056, PROT_READ) = 0 <0.000002>
+mprotect(0x7e9b26455000, 8192, PROT_READ) = 0 <0.000004>
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0 <0.000002>
+munmap(0x7e9b263f6000, 123511)          = 0 <0.000006>
+poll([{fd=0, events=0}, {fd=1, events=0}, {fd=2, events=0}], 3, 0) = 1 ([{fd=0, revents=POLLHUP}]) <0.000002>
+rt_sigaction(SIGPIPE, {sa_handler=SIG_IGN, sa_mask=[PIPE], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7e9b26045330}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000002>
+getrandom("\x94\x78\x9f\x37\x4f\xf9\x65\x35", 8, GRND_NONBLOCK) = 8 <0.000001>
+brk(NULL)                               = 0x582be7cd4000 <0.000001>
+brk(0x582be7cf5000)                     = 0x582be7cf5000 <0.000003>
+openat(AT_FDCWD, "/proc/self/maps", O_RDONLY|O_CLOEXEC) = 3 <0.000012>
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0 <0.000001>
+fstat(3, {st_mode=S_IFREG|0444, st_size=0, ...}) = 0 <0.000002>
+read(3, "582be5576000-582be55d2000 r--p 0"..., 1024) = 1024 <0.000009>
+read(3, "03:02 79204551                  "..., 1024) = 1024 <0.000004>
+read(3, "                  [vvar_vclock]\n"..., 1024) = 877 <0.000004>
+close(3)                                = 0 <0.000002>
+sched_getaffinity(1534706, 32, [4])     = 16 <0.000002>
+rt_sigaction(SIGSEGV, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000001>
+sigaltstack(NULL, {ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=0}) = 0 <0.000001>
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7e9b26412000 <0.000003>
+mprotect(0x7e9b26412000, 4096, PROT_NONE) = 0 <0.000004>
+sigaltstack({ss_sp=0x7e9b26413000, ss_flags=0, ss_size=8192}, NULL) = 0 <0.000001>
+gettid()                                = 1534706 <0.000001>
+rt_sigaction(SIGSEGV, {sa_handler=0x582be563e850, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_SIGINFO, sa_restorer=0x7e9b26045330}, NULL, 8) = 0 <0.000001>
+rt_sigaction(SIGBUS, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000001>
+rt_sigaction(SIGBUS, {sa_handler=0x582be563e850, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_SIGINFO, sa_restorer=0x7e9b26045330}, NULL, 8) = 0 <0.000001>
+readlink("/proc/self/exe", "/home/callen/work/coreutils-star"..., 256) = 70 <0.000006>
+statx(AT_FDCWD, "/home/callen/work/coreutils-startup-factorial/bin/baseline/single/locales/true", AT_STATX_SYNC_AS_STAT, STATX_ALL, 0x7fff64c635d0) = -1 ENOENT (No such file or directory) <0.000003>
+statx(0, NULL, AT_STATX_SYNC_AS_STAT, STATX_ALL, NULL) = -1 EFAULT (Bad address) <0.000003>
+statx(AT_FDCWD, "/home/callen/work/coreutils-startup-factorial/bin/baseline/share/locales/true", AT_STATX_SYNC_AS_STAT, STATX_ALL, 0x7fff64c635d0) = -1 ENOENT (No such file or directory) <0.000002>
+statx(AT_FDCWD, "/home/callen/work/coreutils-startup-factorial/bin/baseline/single/true", AT_STATX_SYNC_AS_STAT, STATX_ALL, {stx_mask=STATX_ALL|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFREG|0775, stx_size=4960976, ...}) = 0 <0.000002>
+sigaltstack({ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=8192}, NULL) = 0 <0.000001>
+munmap(0x7e9b26412000, 12288)           = 0 <0.000003>
+exit_group(0)                           = ?

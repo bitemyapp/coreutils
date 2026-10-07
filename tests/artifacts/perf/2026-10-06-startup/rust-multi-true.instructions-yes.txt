@@ -1,0 +1,94 @@
+--------------------------------------------------------------------------------
+Profile data file '/home/callen/work/coreutils-startup-8cf2e4f4/artifacts/rust-multi-true.callgrind' (creator: callgrind-3.22.0)
+--------------------------------------------------------------------------------
+I1 cache: 
+D1 cache: 
+LL cache: 
+Timerange: Basic block 0 - 211494
+Trigger: Program termination
+Profiled target:  /home/callen/work/coreutils-startup-8cf2e4f4/bin/multi/true (PID 910910, part 1)
+Events recorded:  Ir
+Events shown:     Ir
+Event sort order: Ir
+Thresholds:       99
+Include dirs:     
+User annotated:   
+Auto-annotation:  off
+
+--------------------------------------------------------------------------------
+Ir                 
+--------------------------------------------------------------------------------
+1,014,570 (100.0%)  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+Ir                  file:function
+--------------------------------------------------------------------------------
+1,014,570 (100.0%)  ???:0x000000000001f540 [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+  687,678 (67.78%)  ./elf/./elf/rtld.c:_dl_start [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+  687,005 (67.71%)  ./elf/../sysdeps/unix/sysv/linux/dl-sysdep.c:_dl_sysdep_start [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+  664,150 (65.46%)  ./elf/./elf/rtld.c:dl_main [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+  609,419 (60.07%)  ./elf/./elf/dl-reloc.c:_dl_relocate_object [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+  325,897 (32.12%)  ???:(below main) [/home/callen/work/coreutils-startup-8cf2e4f4/bin/multi/coreutils]
+  325,885 (32.12%)  ./csu/../csu/libc-start.c:__libc_start_main@@GLIBC_2.34 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  324,393 (31.97%)  ./csu/../sysdeps/nptl/libc_start_call_main.h:(below main) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  324,329 (31.97%)  ???:main [/home/callen/work/coreutils-startup-8cf2e4f4/bin/multi/coreutils]
+  220,441 (21.73%)  ./elf/./elf/dl-lookup.c:_dl_lookup_symbol_x [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+  219,297 (21.61%)  ./elf/../sysdeps/x86_64/dl-machine.h:_dl_relocate_object
+  204,775 (20.18%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:std::sys::backtrace::__rust_begin_short_backtrace [/home/callen/work/coreutils-startup-8cf2e4f4/bin/multi/coreutils]
+  204,773 (20.18%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:std::sys::backtrace::__rust_begin_short_backtrace
+  204,772 (20.18%)  /home/callen/work/coreutils-startup-8cf2e4f4/source/src/bin/coreutils.rs:coreutils::main [/home/callen/work/coreutils-startup-8cf2e4f4/bin/multi/coreutils]
+  182,479 (17.99%)  /home/callen/work/coreutils-startup-8cf2e4f4/source/src/common/validation.rs:coreutils::common::validation::setup_localization_or_exit [/home/callen/work/coreutils-startup-8cf2e4f4/bin/multi/coreutils]
+  182,450 (17.98%)  /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:uucore::mods::locale::setup_localization [/home/callen/work/coreutils-startup-8cf2e4f4/bin/multi/coreutils]
+  170,590 (16.81%)  /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:uucore::mods::locale::create_english_bundle_from_embedded [/home/callen/work/coreutils-startup-8cf2e4f4/bin/multi/coreutils]
+  160,256 (15.80%)  ./elf/./elf/dl-lookup.c:do_lookup_x [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+  143,177 (14.11%)  ./elf/./elf/do-rel.h:_dl_relocate_object
+  131,022 (12.91%)  /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:uucore::mods::locale::parse_fluent_resource_owned [/home/callen/work/coreutils-startup-8cf2e4f4/bin/multi/coreutils]
+  129,879 (12.80%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resource.rs:fluent_bundle::resource::FluentResource::try_new [/home/callen/work/coreutils-startup-8cf2e4f4/bin/multi/coreutils]
+  118,029 (11.63%)  ./nptl/./nptl/pthread_getattr_np.c:pthread_getattr_np@@GLIBC_2.32 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  111,907 (11.03%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/core.rs:fluent_bundle::resource::FluentResource::try_new
+  102,967 (10.15%)  ./stdio-common/./stdio-common/isoc23_sscanf.c:__isoc23_sscanf [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   92,338 ( 9.10%)  ./stdio-common/./stdio-common/vfscanf-internal.c:__vfscanf_internal [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   84,751 ( 8.35%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/pattern.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern [/home/callen/work/coreutils-startup-8cf2e4f4/bin/multi/coreutils]
+   43,954 ( 4.33%)  ./elf/./elf/dl-lookup.c:check_match [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   37,326 ( 3.68%)  ./malloc/./malloc/malloc.c:malloc [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   36,074 ( 3.56%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/bundle.rs:fluent_bundle::bundle::FluentBundle<R,M>::add_resource_overriding [/home/callen/work/coreutils-startup-8cf2e4f4/bin/multi/coreutils]
+   30,488 ( 3.01%)  ./string/../sysdeps/x86_64/multiarch/../multiarch/strcmp-sse2.S:strcmp [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   29,314 ( 2.89%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/core.rs:fluent_syntax::parser::core::Parser<S>::get_identifier [/home/callen/work/coreutils-startup-8cf2e4f4/bin/multi/coreutils]
+   28,447 ( 2.80%)  ./malloc/./malloc/malloc.c:_int_malloc [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   28,070 ( 2.77%)  ./stdlib/../stdlib/strtol.c:__strtoul_internal [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   27,550 ( 2.72%)  ./stdlib/../stdlib/strtol_l.c:____strtoul_l_internal [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   26,814 ( 2.64%)  ./elf/../sysdeps/generic/dl-new-hash.h:_dl_lookup_symbol_x
+   26,380 ( 2.60%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:alloc::raw_vec::RawVec<T,A>::grow_one [/home/callen/work/coreutils-startup-8cf2e4f4/bin/multi/coreutils]
+   24,032 ( 2.37%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:alloc::raw_vec::RawVecInner<A>::finish_grow [/home/callen/work/coreutils-startup-8cf2e4f4/bin/multi/coreutils]
+   23,601 ( 2.33%)  /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/core.rs:fluent_syntax::parser::core::Parser<S>::get_placeable [/home/callen/work/coreutils-startup-8cf2e4f4/bin/multi/coreutils]
+   23,041 ( 2.27%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:fluent_syntax::parser::pattern::<impl fluent_syntax::parser::core::Parser<S>>::get_pattern
+   22,100 ( 2.18%)  ./elf/./elf/dl-catch.c:_dl_catch_exception [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   21,625 ( 2.13%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/alloc/unix.rs:alloc::raw_vec::RawVecInner<A>::finish_grow
+   21,500 ( 2.12%)  ./elf/./elf/dl-deps.c:_dl_map_object_deps [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   20,456 ( 2.02%)  ./elf/./elf/dl-load.c:_dl_map_object [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   19,543 ( 1.93%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/collections/hash/map.rs:fluent_bundle::bundle::FluentBundle<R,M>::add_resource_overriding
+   19,203 ( 1.89%)  /rust/deps/hashbrown-0.16.1/src/map.rs:hashbrown::map::HashMap<K,V,S,A>::insert [/home/callen/work/coreutils-startup-8cf2e4f4/bin/multi/coreutils]
+   18,611 ( 1.83%)  ./elf/./elf/dl-catch.c:_dl_receive_error [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   18,589 ( 1.83%)  ./elf/./elf/rtld.c:version_check_doit [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   18,574 ( 1.83%)  ./elf/./elf/dl-version.c:_dl_check_all_versions [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   18,476 ( 1.82%)  ./elf/./elf/dl-version.c:_dl_check_map_versions [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   17,801 ( 1.75%)  ./elf/./elf/dl-deps.c:openaux [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   15,926 ( 1.57%)  /home/callen/work/coreutils-startup-8cf2e4f4/source/src/common/validation.rs:coreutils::common::validation::exit [/home/callen/work/coreutils-startup-8cf2e4f4/bin/multi/coreutils]
+   15,923 ( 1.57%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/process.rs:std::process::exit [/home/callen/work/coreutils-startup-8cf2e4f4/bin/multi/coreutils]
+   15,276 ( 1.51%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/pal/unix/os.rs:std::sys::pal::unix::os::exit [/home/callen/work/coreutils-startup-8cf2e4f4/bin/multi/coreutils]
+   15,251 ( 1.50%)  ./stdlib/./stdlib/exit.c:exit [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   15,244 ( 1.50%)  ./stdlib/./stdlib/exit.c:__run_exit_handlers [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   15,021 ( 1.48%)  ./elf/./elf/dl-tunables.c:__GI___tunables_init [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   14,363 ( 1.42%)  ./malloc/./malloc/malloc.c:free [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   13,277 ( 1.31%)  ./stdlib/./stdlib/cxa_thread_atexit_impl.c:__call_tls_dtors [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   13,021 ( 1.28%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/thread_local/native/eager.rs:std::sys::thread_local::native::eager::destroy [/home/callen/work/coreutils-startup-8cf2e4f4/bin/multi/coreutils]
+   12,915 ( 1.27%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/alloc/unix.rs:fluent_bundle::bundle::FluentBundle<R,M>::add_resource_overriding
+   12,900 ( 1.27%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:std::sys::thread_local::native::eager::destroy
+   12,889 ( 1.27%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:core::ptr::drop_in_place<fluent_bundle::bundle::FluentBundle<&fluent_bundle::resource::FluentResource,intl_memoizer::IntlLangMemoizer>> [/home/callen/work/coreutils-startup-8cf2e4f4/bin/multi/coreutils]
+   12,655 ( 1.25%)  /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ptr/mod.rs:core::ptr::drop_in_place<std::collections::hash::map::HashMap<alloc::string::String,fluent_bundle::entry::Entry,rustc_hash::FxBuildHasher>> [/home/callen/work/coreutils-startup-8cf2e4f4/bin/multi/coreutils]
+   12,402 ( 1.22%)  /rust/deps/hashbrown-0.16.1/src/raw/mod.rs:hashbrown::map::HashMap<K,V,S,A>::insert
+   12,102 ( 1.19%)  ./malloc/./malloc/malloc.c:_int_free [/usr/lib/x86_64-linux-gnu/libc.so.6]
+   11,410 ( 1.12%)  /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/alloc/unix.rs:core::ptr::drop_in_place<std::collections::hash::map::HashMap<alloc::string::String,fluent_bundle::entry::Entry,rustc_hash::FxBuildHasher>>
+   11,198 ( 1.10%)  /rust/deps/hashbrown-0.16.1/src/raw/mod.rs:hashbrown::raw::RawTable<T,A>::reserve_rehash [/home/callen/work/coreutils-startup-8cf2e4f4/bin/multi/coreutils]
+    9,907 ( 0.98%)  ./stdio-common/./stdio-common/getline.c:getline [/usr/lib/x86_64-linux-gnu/libc.so.6]
+

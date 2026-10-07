@@ -1,0 +1,11 @@
+==910910== Callgrind, a call-graph generating cache profiler
+==910910== Copyright (C) 2002-2017, and GNU GPL'd, by Josef Weidendorfer et al.
+==910910== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==910910== Command: /home/callen/work/coreutils-startup-8cf2e4f4/bin/multi/true
+==910910== 
+==910910== For interactive control, run 'callgrind_control -h'.
+==910910== 
+==910910== Events    : Ir
+==910910== Collected : 1014570
+==910910== 
+==910910== I   refs:      1,014,570

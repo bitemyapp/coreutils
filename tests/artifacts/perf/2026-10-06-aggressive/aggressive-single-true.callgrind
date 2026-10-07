@@ -1,0 +1,26 @@
+# callgrind format
+version: 1
+creator: callgrind-3.22.0
+pid: 2110784
+cmd:  /home/callen/work/coreutils-startup-factorial/bin/aggressive/single/true
+part: 1
+
+
+desc: I1 cache: 
+desc: D1 cache: 
+desc: LL cache: 
+
+desc: Timerange: Basic block 0 - 2
+desc: Trigger: Program termination
+
+positions: line
+events: Ir
+summary: 3
+
+
+ob=(1) /home/callen/work/coreutils-startup-factorial/bin/aggressive/single/true
+fl=(1) ???
+fn=(0) uutils_true_start
+0 3
+
+totals: 3

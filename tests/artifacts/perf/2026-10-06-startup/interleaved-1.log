@@ -1,0 +1,43 @@
+Benchmark 1: rust-multi-ln
+  Time (mean ± σ):     685.3 µs ±  80.5 µs    [User: 324.6 µs, System: 303.7 µs]
+  Range (min … max):   617.7 µs … 1034.6 µs    500 runs
+ 
+  Warning: The first benchmarking run for this command was significantly slower than the rest (889.7 µs). This could be caused by (filesystem) caches that were not filled until after the first run. You are already using the '--warmup' option which helps to fill these caches before the actual benchmark. You can either try to increase the warmup count further or re-run this benchmark on a quiet system in case it was a random outlier. Alternatively, consider using the '--prepare' option to clear the caches before each timing run.
+ 
+Benchmark 2: gnu-true
+  Time (mean ± σ):     174.6 µs ±  70.3 µs    [User: 124.2 µs, System: 18.1 µs]
+  Range (min … max):   152.8 µs … 782.5 µs    500 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 3: rust-multi-true
+  Time (mean ± σ):     545.7 µs ±  83.3 µs    [User: 307.4 µs, System: 183.2 µs]
+  Range (min … max):   505.1 µs … 1263.5 µs    500 runs
+ 
+  Warning: The first benchmarking run for this command was significantly slower than the rest (1.0 ms). This could be caused by (filesystem) caches that were not filled until after the first run. You are already using the '--warmup' option which helps to fill these caches before the actual benchmark. You can either try to increase the warmup count further or re-run this benchmark on a quiet system in case it was a random outlier. Alternatively, consider using the '--prepare' option to clear the caches before each timing run.
+ 
+Benchmark 4: rust-single-ln
+  Time (mean ± σ):     426.5 µs ±  81.4 µs    [User: 270.7 µs, System: 102.8 µs]
+  Range (min … max):   394.5 µs … 885.3 µs    500 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 5: rust-single-true
+  Time (mean ± σ):     329.8 µs ±  83.6 µs    [User: 218.0 µs, System: 61.4 µs]
+  Range (min … max):   301.4 µs … 851.3 µs    500 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Benchmark 6: gnu-ln
+  Time (mean ± σ):     233.1 µs ±  84.4 µs    [User: 159.9 µs, System: 34.3 µs]
+  Range (min … max):   208.8 µs … 860.5 µs    500 runs
+ 
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
+ 
+Summary
+  gnu-true ran
+    1.34 ± 0.72 times faster than gnu-ln
+    1.89 ± 0.90 times faster than rust-single-true
+    2.44 ± 1.09 times faster than rust-single-ln
+    3.13 ± 1.35 times faster than rust-multi-true
+    3.93 ± 1.65 times faster than rust-multi-ln

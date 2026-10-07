@@ -1,0 +1,24 @@
+Startup investigation evidence — 2026-10-06
+
+All builds, tests, timings and profiles were run on ssh wx-workstation.
+Raw outputs are preserved byte-for-byte; reports describe the methods and limits.
+Build caches and executable snapshots remain on the workstation. This directory
+contains the captured evidence, analysis scripts and source-transfer bundles.
+
+Start with the REPORT.txt in each experiment directory:
+  perf/2026-10-06-startup/REPORT.txt     Initial reproduction and profiling
+  perf/2026-10-06-factorial/REPORT.txt   Baseline / lazy / musl / lazy+musl
+  perf/2026-10-06-aggressive/REPORT.txt  Parser and executable-entry experiments
+
+The five experiment branches are published to bitemyapp/coreutils on GitHub:
+  codex/startup-baseline
+  codex/startup-lazy
+  codex/startup-musl
+  codex/startup-lazy-musl
+  codex/startup-aggressive
+
+This complete evidence archive is committed on codex/startup-aggressive. Source
+recipes and reports also live in experiments/startup on the individual branches.
+The aggressive source-manifest.json and reports retain the measured source and
+binary hashes from before this artifact-publication commit. Earlier statements
+about publication status are historical snapshots, not current branch status.

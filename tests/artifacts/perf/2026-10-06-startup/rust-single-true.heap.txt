@@ -1,0 +1,2275 @@
+reading file "artifacts/rust-single-true.heap.zst" - please wait, this might take some time...
+Debuggee command was: /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+finished reading file, now analyzing data:
+
+MOST CALLS TO ALLOCATION FUNCTIONS
+167 calls to allocation functions with 40.94K peak consumption from
+std::sys::alloc::unix::_$LT$impl$u20$core..alloc..global..GlobalAlloc$u20$for$u20$std..alloc..System$GT$::alloc::h83536d09584c3555
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/alloc/unix.rs:14
+  in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+_RNvCs1Y7DaGC1cwg_7___rustc11___rdl_alloc
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/alloc.rs:455
+alloc::alloc::alloc::h5978ed8ca21d9a0f
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/alloc.rs:95
+alloc::alloc::Global::alloc_impl_runtime::he213c04b67e4a561
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/alloc.rs:190
+alloc::alloc::Global::alloc_impl::haccbcd8018bd386f
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/alloc.rs:312
+_$LT$alloc..alloc..Global$u20$as$u20$core..alloc..Allocator$GT$::allocate::h0da075f21210208d
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/alloc.rs:429
+alloc::alloc::exchange_malloc::h6d8270e0470dde16
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/alloc.rs:489
+alloc::boxed::Box$LT$T$GT$::new::hdc59b788faa5338d
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/boxed.rs:265
+uucore::mods::panic::mute_sigpipe_panic::h6b78aa85e08f11d1
+  at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/panic.rs:39
+true::main::h0a74e627d71a9043
+  at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/lib.rs:232
+65 calls with 1.58K peak consumption from:
+    uucore::mods::locale::create_english_bundle_from_embedded::h95b15b100d0d5522
+      at src/uucore/src/lib/mods/locale.rs:429
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::setup_localization::hc89fa4060dd4d63c
+      at src/uucore/src/lib/mods/locale.rs:701
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    true::main::h0a74e627d71a9043
+      at src/uucore/src/lib/lib.rs:233
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+53 calls with 18.72K peak consumption from:
+    alloc::raw_vec::RawVecInner$LT$A$GT$::grow_amortized::hafa86a3c40cc0af6
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:512
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::raw_vec::RawVecInner$LT$A$GT$::grow_one::h273a7f4ff9d5d0e9
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:476
+    alloc::raw_vec::RawVec$LT$T$C$A$GT$::grow_one::h09bd8c840ddfb1b8
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:188
+    alloc::vec::Vec$LT$T$C$A$GT$::push_mut::hfda9916917e8726c
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:1034
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::vec::Vec$LT$T$C$A$GT$::push::h4641b8cf19b50343
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:994
+    fluent_syntax::parser::pattern::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::get_pattern::hfc2f574fad3f1947
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/pattern.rs:106
+    fluent_syntax::parser::core::Parser$LT$S$GT$::get_message::hc0825fac63f311a2
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/core.rs:107
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    fluent_syntax::parser::runtime::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::get_entry_runtime::h4c984e4c2051d312
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/runtime.rs:57
+    fluent_syntax::parser::runtime::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::parse_runtime::he8cda6fd5caa8568
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/runtime.rs:25
+    fluent_syntax::parser::parse_runtime::h464acb24bcd6ba70
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/mod.rs:278
+    fluent_bundle::resource::FluentResource::try_new::_$u7b$$u7b$closure$u7d$$u7d$::h7a59da23ba429ec9
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resource.rs:85
+    fluent_bundle::resource::InnerFluentResource::new::h5aedb386104ffe75
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/self_cell-1.3.0/src/lib.rs:495
+    fluent_bundle::resource::FluentResource::try_new::h20a01527d88fc7fc
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resource.rs:85
+    uucore::mods::locale::parse_fluent_resource_owned::h61c94cbb3e71c6e5
+      at src/uucore/src/lib/mods/locale.rs:356
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::parse_fluent_resource::hfeebed422db62ebf
+      at src/uucore/src/lib/mods/locale.rs:387
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::create_english_bundle_from_embedded::h95b15b100d0d5522
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:428
+    uucore::mods::locale::setup_localization::hc89fa4060dd4d63c
+      at src/uucore/src/lib/mods/locale.rs:701
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    true::main::h0a74e627d71a9043
+      at src/uucore/src/lib/lib.rs:233
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+12 calls with 4.16K peak consumption from:
+    alloc::raw_vec::RawVecInner$LT$A$GT$::grow_amortized::hafa86a3c40cc0af6
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:512
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::raw_vec::RawVecInner$LT$A$GT$::grow_one::h273a7f4ff9d5d0e9
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:476
+    alloc::raw_vec::RawVec$LT$T$C$A$GT$::grow_one::h09bd8c840ddfb1b8
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:188
+    alloc::vec::Vec$LT$T$C$A$GT$::push_mut::hfda9916917e8726c
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:1034
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::vec::Vec$LT$T$C$A$GT$::push::h4641b8cf19b50343
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:994
+    fluent_syntax::parser::pattern::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::get_pattern::hfc2f574fad3f1947
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/pattern.rs:66
+    fluent_syntax::parser::core::Parser$LT$S$GT$::get_message::hc0825fac63f311a2
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/core.rs:107
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    fluent_syntax::parser::runtime::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::get_entry_runtime::h4c984e4c2051d312
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/runtime.rs:57
+    fluent_syntax::parser::runtime::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::parse_runtime::he8cda6fd5caa8568
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/runtime.rs:25
+    fluent_syntax::parser::parse_runtime::h464acb24bcd6ba70
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/mod.rs:278
+    fluent_bundle::resource::FluentResource::try_new::_$u7b$$u7b$closure$u7d$$u7d$::h7a59da23ba429ec9
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resource.rs:85
+    fluent_bundle::resource::InnerFluentResource::new::h5aedb386104ffe75
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/self_cell-1.3.0/src/lib.rs:495
+    fluent_bundle::resource::FluentResource::try_new::h20a01527d88fc7fc
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resource.rs:85
+    uucore::mods::locale::parse_fluent_resource_owned::h61c94cbb3e71c6e5
+      at src/uucore/src/lib/mods/locale.rs:356
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::parse_fluent_resource::hfeebed422db62ebf
+      at src/uucore/src/lib/mods/locale.rs:387
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::create_english_bundle_from_embedded::h95b15b100d0d5522
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:428
+    uucore::mods::locale::setup_localization::hc89fa4060dd4d63c
+      at src/uucore/src/lib/mods/locale.rs:701
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    true::main::h0a74e627d71a9043
+      at src/uucore/src/lib/lib.rs:233
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+6 calls with 2.50K peak consumption from:
+    alloc::raw_vec::RawVecInner$LT$A$GT$::grow_amortized::hafa86a3c40cc0af6
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:512
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::raw_vec::RawVecInner$LT$A$GT$::grow_one::h273a7f4ff9d5d0e9
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:476
+    alloc::raw_vec::RawVec$LT$T$C$A$GT$::grow_one::h09bd8c840ddfb1b8
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:188
+    alloc::vec::Vec$LT$T$C$A$GT$::push_mut::hfda9916917e8726c
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:1034
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::vec::Vec$LT$T$C$A$GT$::push::h4641b8cf19b50343
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:994
+    fluent_syntax::parser::pattern::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::get_pattern::hfc2f574fad3f1947
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/pattern.rs:66
+    fluent_syntax::parser::core::Parser$LT$S$GT$::get_variants::h49275387c3deb6e6
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/core.rs:268
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    fluent_syntax::parser::expression::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::get_expression::he0e7c62c712e529d
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/expression.rs:58
+    fluent_syntax::parser::core::Parser$LT$S$GT$::get_placeable::hee6421a0fac01a7d
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/core.rs:291
+    fluent_syntax::parser::pattern::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::get_pattern::hfc2f574fad3f1947
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/pattern.rs:64
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    fluent_syntax::parser::core::Parser$LT$S$GT$::get_message::hc0825fac63f311a2
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/core.rs:107
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    fluent_syntax::parser::runtime::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::get_entry_runtime::h4c984e4c2051d312
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/runtime.rs:57
+    fluent_syntax::parser::runtime::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::parse_runtime::he8cda6fd5caa8568
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/runtime.rs:25
+    fluent_syntax::parser::parse_runtime::h464acb24bcd6ba70
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/mod.rs:278
+    fluent_bundle::resource::FluentResource::try_new::_$u7b$$u7b$closure$u7d$$u7d$::h7a59da23ba429ec9
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resource.rs:85
+    fluent_bundle::resource::InnerFluentResource::new::h5aedb386104ffe75
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/self_cell-1.3.0/src/lib.rs:495
+    fluent_bundle::resource::FluentResource::try_new::h20a01527d88fc7fc
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resource.rs:85
+    uucore::mods::locale::parse_fluent_resource_owned::h61c94cbb3e71c6e5
+      at src/uucore/src/lib/mods/locale.rs:356
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::parse_fluent_resource::hfeebed422db62ebf
+      at src/uucore/src/lib/mods/locale.rs:387
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::create_english_bundle_from_embedded::h95b15b100d0d5522
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:428
+    uucore::mods::locale::setup_localization::hc89fa4060dd4d63c
+      at src/uucore/src/lib/mods/locale.rs:701
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    true::main::h0a74e627d71a9043
+      at src/uucore/src/lib/lib.rs:233
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+6 calls with 6.29K peak consumption from:
+    hashbrown::raw::RawTableInner::prepare_resize::hde8d48551fed75d0
+      at /rust/deps/hashbrown-0.16.1/src/raw/mod.rs:2738
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    hashbrown::raw::RawTableInner::resize_inner::h4314a01ef79e0d6a
+      at /rust/deps/hashbrown-0.16.1/src/raw/mod.rs:2936
+    hashbrown::raw::RawTableInner::reserve_rehash_inner::ha3b501dd4f4159dc
+      at /rust/deps/hashbrown-0.16.1/src/raw/mod.rs:2824
+    hashbrown::raw::RawTable$LT$T$C$A$GT$::reserve_rehash::hf7997b6ad3433046
+      at /rust/deps/hashbrown-0.16.1/src/raw/mod.rs:1013
+    hashbrown::raw::RawTable$LT$T$C$A$GT$::reserve::h4671d92799949e63
+      at /rust/deps/hashbrown-0.16.1/src/raw/mod.rs:962
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    hashbrown::raw::RawTable$LT$T$C$A$GT$::find_or_find_insert_index::h45d81fcbd01d214b
+      at /rust/deps/hashbrown-0.16.1/src/raw/mod.rs:1167
+    hashbrown::map::HashMap$LT$K$C$V$C$S$C$A$GT$::find_or_find_insert_index::hda2f78bcec8c52c3
+      at /rust/deps/hashbrown-0.16.1/src/map.rs:1863
+    hashbrown::map::HashMap$LT$K$C$V$C$S$C$A$GT$::insert::hd6a89140cbdf73a8
+      at /rust/deps/hashbrown-0.16.1/src/map.rs:1843
+    std::collections::hash::map::HashMap$LT$K$C$V$C$S$C$A$GT$::insert::h89ec8cbdbf7dcbb8
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/collections/hash/map.rs:1296
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    fluent_bundle::bundle::FluentBundle$LT$R$C$M$GT$::add_resource_overriding::hf5774231718dfa9a
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/bundle.rs:315
+    uucore::mods::locale::create_english_bundle_from_embedded::h95b15b100d0d5522
+      at src/uucore/src/lib/mods/locale.rs:429
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::setup_localization::hc89fa4060dd4d63c
+      at src/uucore/src/lib/mods/locale.rs:701
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    true::main::h0a74e627d71a9043
+      at src/uucore/src/lib/lib.rs:233
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+  and 25 from 19 other places
+
+15 calls to allocation functions with 18.37K peak consumption from
+std::sys::alloc::unix::_$LT$impl$u20$core..alloc..global..GlobalAlloc$u20$for$u20$std..alloc..System$GT$::realloc::hbcfae9422fa95774
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/alloc/unix.rs:54
+  in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+_RNvCs1Y7DaGC1cwg_7___rustc13___rdl_realloc
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/alloc.rs:477
+alloc::alloc::realloc::h341a228f070c62ba
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/alloc.rs:135
+alloc::alloc::Global::grow_impl_runtime::h15750a6328f95588
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/alloc.rs:239
+alloc::alloc::Global::grow_impl::hbb3774b69f7a7121
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/alloc.rs:342
+_$LT$alloc..alloc..Global$u20$as$u20$core..alloc..Allocator$GT$::grow::h66bda64267496a76
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/alloc.rs:454
+alloc::raw_vec::RawVecInner$LT$A$GT$::finish_grow::hc7eac76a860b0e8d
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:540
+8 calls with 6.66K peak consumption from:
+    alloc::raw_vec::RawVecInner$LT$A$GT$::grow_amortized::hafa86a3c40cc0af6
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:512
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::raw_vec::RawVecInner$LT$A$GT$::grow_one::h273a7f4ff9d5d0e9
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:476
+    alloc::raw_vec::RawVec$LT$T$C$A$GT$::grow_one::h09bd8c840ddfb1b8
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:188
+    alloc::vec::Vec$LT$T$C$A$GT$::push_mut::hfda9916917e8726c
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:1034
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::vec::Vec$LT$T$C$A$GT$::push::h4641b8cf19b50343
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:994
+    fluent_syntax::parser::pattern::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::get_pattern::hfc2f574fad3f1947
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/pattern.rs:106
+    fluent_syntax::parser::core::Parser$LT$S$GT$::get_message::hc0825fac63f311a2
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/core.rs:107
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    fluent_syntax::parser::runtime::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::get_entry_runtime::h4c984e4c2051d312
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/runtime.rs:57
+    fluent_syntax::parser::runtime::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::parse_runtime::he8cda6fd5caa8568
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/runtime.rs:25
+    fluent_syntax::parser::parse_runtime::h464acb24bcd6ba70
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/mod.rs:278
+    fluent_bundle::resource::FluentResource::try_new::_$u7b$$u7b$closure$u7d$$u7d$::h7a59da23ba429ec9
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resource.rs:85
+    fluent_bundle::resource::InnerFluentResource::new::h5aedb386104ffe75
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/self_cell-1.3.0/src/lib.rs:495
+    fluent_bundle::resource::FluentResource::try_new::h20a01527d88fc7fc
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resource.rs:85
+    uucore::mods::locale::parse_fluent_resource_owned::h61c94cbb3e71c6e5
+      at src/uucore/src/lib/mods/locale.rs:356
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::parse_fluent_resource::hfeebed422db62ebf
+      at src/uucore/src/lib/mods/locale.rs:387
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::create_english_bundle_from_embedded::h95b15b100d0d5522
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:428
+    uucore::mods::locale::setup_localization::hc89fa4060dd4d63c
+      at src/uucore/src/lib/mods/locale.rs:701
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    true::main::h0a74e627d71a9043
+      at src/uucore/src/lib/lib.rs:233
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+4 calls with 9.22K peak consumption from:
+    alloc::raw_vec::RawVecInner$LT$A$GT$::grow_amortized::hafa86a3c40cc0af6
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:512
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::raw_vec::RawVecInner$LT$A$GT$::grow_one::h273a7f4ff9d5d0e9
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:476
+    alloc::raw_vec::RawVec$LT$T$C$A$GT$::grow_one::h468aff7e819e5f2c
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:188
+    alloc::vec::Vec$LT$T$C$A$GT$::push_mut::h1f367fc1522c0eda
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:1034
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::vec::Vec$LT$T$C$A$GT$::push::heaa93cb554a53089
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:994
+    fluent_syntax::parser::runtime::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::parse_runtime::he8cda6fd5caa8568
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/runtime.rs:29
+    fluent_syntax::parser::parse_runtime::h464acb24bcd6ba70
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/mod.rs:278
+    fluent_bundle::resource::FluentResource::try_new::_$u7b$$u7b$closure$u7d$$u7d$::h7a59da23ba429ec9
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resource.rs:85
+    fluent_bundle::resource::InnerFluentResource::new::h5aedb386104ffe75
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/self_cell-1.3.0/src/lib.rs:495
+    fluent_bundle::resource::FluentResource::try_new::h20a01527d88fc7fc
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resource.rs:85
+    uucore::mods::locale::parse_fluent_resource_owned::h61c94cbb3e71c6e5
+      at src/uucore/src/lib/mods/locale.rs:356
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::parse_fluent_resource::hfeebed422db62ebf
+      at src/uucore/src/lib/mods/locale.rs:387
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::create_english_bundle_from_embedded::h95b15b100d0d5522
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:428
+    uucore::mods::locale::setup_localization::hc89fa4060dd4d63c
+      at src/uucore/src/lib/mods/locale.rs:701
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    true::main::h0a74e627d71a9043
+      at src/uucore/src/lib/lib.rs:233
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+2 calls with 1.66K peak consumption from:
+    alloc::raw_vec::RawVecInner$LT$A$GT$::grow_amortized::hafa86a3c40cc0af6
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:512
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::raw_vec::RawVecInner$LT$A$GT$::grow_one::h273a7f4ff9d5d0e9
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:476
+    alloc::raw_vec::RawVec$LT$T$C$A$GT$::grow_one::h09bd8c840ddfb1b8
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:188
+    alloc::vec::Vec$LT$T$C$A$GT$::push_mut::hfda9916917e8726c
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:1034
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::vec::Vec$LT$T$C$A$GT$::push::h4641b8cf19b50343
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:994
+    fluent_syntax::parser::pattern::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::get_pattern::hfc2f574fad3f1947
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/pattern.rs:66
+    fluent_syntax::parser::core::Parser$LT$S$GT$::get_message::hc0825fac63f311a2
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/core.rs:107
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    fluent_syntax::parser::runtime::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::get_entry_runtime::h4c984e4c2051d312
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/runtime.rs:57
+    fluent_syntax::parser::runtime::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::parse_runtime::he8cda6fd5caa8568
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/runtime.rs:25
+    fluent_syntax::parser::parse_runtime::h464acb24bcd6ba70
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/mod.rs:278
+    fluent_bundle::resource::FluentResource::try_new::_$u7b$$u7b$closure$u7d$$u7d$::h7a59da23ba429ec9
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resource.rs:85
+    fluent_bundle::resource::InnerFluentResource::new::h5aedb386104ffe75
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/self_cell-1.3.0/src/lib.rs:495
+    fluent_bundle::resource::FluentResource::try_new::h20a01527d88fc7fc
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resource.rs:85
+    uucore::mods::locale::parse_fluent_resource_owned::h61c94cbb3e71c6e5
+      at src/uucore/src/lib/mods/locale.rs:356
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::parse_fluent_resource::hfeebed422db62ebf
+      at src/uucore/src/lib/mods/locale.rs:387
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::create_english_bundle_from_embedded::h95b15b100d0d5522
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:428
+    uucore::mods::locale::setup_localization::hc89fa4060dd4d63c
+      at src/uucore/src/lib/mods/locale.rs:701
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    true::main::h0a74e627d71a9043
+      at src/uucore/src/lib/lib.rs:233
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+1 calls with 832B peak consumption from:
+    alloc::raw_vec::RawVecInner$LT$A$GT$::grow_amortized::hafa86a3c40cc0af6
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:512
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::raw_vec::RawVecInner$LT$A$GT$::grow_one::h273a7f4ff9d5d0e9
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:476
+    alloc::raw_vec::RawVec$LT$T$C$A$GT$::grow_one::h09bd8c840ddfb1b8
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:188
+    alloc::vec::Vec$LT$T$C$A$GT$::push_mut::hfda9916917e8726c
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:1034
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::vec::Vec$LT$T$C$A$GT$::push::h4641b8cf19b50343
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:994
+    fluent_syntax::parser::pattern::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::get_pattern::hfc2f574fad3f1947
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/pattern.rs:106
+    fluent_syntax::parser::core::Parser$LT$S$GT$::get_message::hc0825fac63f311a2
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/core.rs:107
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    fluent_syntax::parser::runtime::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::get_entry_runtime::h4c984e4c2051d312
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/runtime.rs:57
+    fluent_syntax::parser::runtime::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::parse_runtime::he8cda6fd5caa8568
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/runtime.rs:25
+    fluent_syntax::parser::parse_runtime::h464acb24bcd6ba70
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/mod.rs:278
+    fluent_bundle::resource::FluentResource::try_new::_$u7b$$u7b$closure$u7d$$u7d$::h7a59da23ba429ec9
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resource.rs:85
+    fluent_bundle::resource::InnerFluentResource::new::h5aedb386104ffe75
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/self_cell-1.3.0/src/lib.rs:495
+    fluent_bundle::resource::FluentResource::try_new::h20a01527d88fc7fc
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resource.rs:85
+    uucore::mods::locale::parse_fluent_resource_owned::h61c94cbb3e71c6e5
+      at src/uucore/src/lib/mods/locale.rs:356
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::create_english_bundle_from_embedded::_$u7b$$u7b$closure$u7d$$u7d$::hefd425b46d025636
+      at src/uucore/src/lib/mods/locale.rs:444
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::cached_resource::h821013fe796e95f7
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:406
+    uucore::mods::locale::create_english_bundle_from_embedded::h95b15b100d0d5522
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:443
+    uucore::mods::locale::setup_localization::hc89fa4060dd4d63c
+      at src/uucore/src/lib/mods/locale.rs:701
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    true::main::h0a74e627d71a9043
+      at src/uucore/src/lib/lib.rs:233
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+
+14 calls to allocation functions with 1.57K peak consumption from
+std::sys::alloc::unix::_$LT$impl$u20$core..alloc..global..GlobalAlloc$u20$for$u20$std..alloc..System$GT$::alloc::h83536d09584c3555
+  at library/std/src/sys/alloc/unix.rs:14
+  in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+_RNvCs1Y7DaGC1cwg_7___rustc11___rdl_alloc
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/alloc.rs:455
+alloc::alloc::alloc::h5978ed8ca21d9a0f
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/alloc.rs:95
+alloc::alloc::Global::alloc_impl_runtime::he213c04b67e4a561
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/alloc.rs:190
+alloc::alloc::Global::alloc_impl::haccbcd8018bd386f
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/alloc.rs:312
+_$LT$alloc..alloc..Global$u20$as$u20$core..alloc..Allocator$GT$::allocate::h0da075f21210208d
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/alloc.rs:429
+alloc::boxed::Box$LT$T$C$A$GT$::try_clone_from_ref_in::h4efd81d6a3f7923a
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/boxed.rs:840
+alloc::boxed::Box$LT$T$C$A$GT$::clone_from_ref_in::he3cad802aaf8f514
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/boxed.rs:799
+alloc::boxed::Box$LT$T$GT$::clone_from_ref::hc297785f1ed7a73e
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/boxed.rs:752
+alloc::boxed::convert::_$LT$impl$u20$core..convert..From$LT$$RF$str$GT$$u20$for$u20$alloc..boxed..Box$LT$str$GT$$GT$::from::h13f01d975eb01bdd
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/boxed/convert.rs:138
+core::ops::function::FnOnce::call_once::h3946deecba115d01
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/ops/function.rs:250
+core::option::Option$LT$T$GT$::map::h6287dddc09afbd48
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/option.rs:1165
+std::sys::pal::unix::stack_overflow::thread_info::set_current_info::_$u7b$$u7b$closure$u7d$$u7d$::h058a282d848d9065
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/pal/unix/stack_overflow/thread_info.rs:114
+std::thread::current::with_current_name::_$u7b$$u7b$closure$u7d$$u7d$::hf8f92c19b1f308f0
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/thread/current.rs:234
+std::thread::current::try_with_current::h07f0efd48ba9f709
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/thread/current.rs:204
+std::thread::current::with_current_name::h53391ef2d1bb9ee1
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/thread/current.rs:216
+std::sys::pal::unix::stack_overflow::thread_info::set_current_info::h21653e4068580a44
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/pal/unix/stack_overflow/thread_info.rs:114
+1 calls with 4B peak consumption from:
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+1 calls with 544B peak consumption from:
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+1 calls with 0B peak consumption from:
+    uucore::mods::locale::get_locales_dir::h36c74728b25d534d
+      at src/uucore/src/lib/mods/locale.rs:776
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::setup_localization::hc89fa4060dd4d63c
+      at src/uucore/src/lib/mods/locale.rs:663
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    true::main::h0a74e627d71a9043
+      at src/uucore/src/lib/lib.rs:233
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+1 calls with 0B peak consumption from:
+    std::path::Path::join::hbb444e18370f4151
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/path.rs:2997
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::resolve_locales_dir_from_exe_dir::h1a31b5919aa837c1
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:714
+    uucore::mods::locale::get_locales_dir::h36c74728b25d534d
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:784
+    uucore::mods::locale::setup_localization::hc89fa4060dd4d63c
+      at src/uucore/src/lib/mods/locale.rs:663
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    true::main::h0a74e627d71a9043
+      at src/uucore/src/lib/lib.rs:233
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+1 calls with 0B peak consumption from:
+    std::path::Path::join::hbb444e18370f4151
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/path.rs:2997
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::resolve_locales_dir_from_exe_dir::h1a31b5919aa837c1
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:714
+    uucore::mods::locale::get_locales_dir::h36c74728b25d534d
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:784
+    uucore::mods::locale::setup_localization::hc89fa4060dd4d63c
+      at src/uucore/src/lib/mods/locale.rs:663
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    true::main::h0a74e627d71a9043
+      at src/uucore/src/lib/lib.rs:233
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+  and 9 from 9 other places
+
+10 calls to allocation functions with 36B peak consumption from
+std::sys::alloc::unix::_$LT$impl$u20$core..alloc..global..GlobalAlloc$u20$for$u20$std..alloc..System$GT$::realloc::hbcfae9422fa95774
+  at library/std/src/sys/alloc/unix.rs:54
+  in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+_RNvCs1Y7DaGC1cwg_7___rustc13___rdl_realloc
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/alloc.rs:477
+alloc::alloc::realloc::h341a228f070c62ba
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/alloc.rs:135
+alloc::alloc::Global::shrink_impl_runtime::h75e6bfbc465ac335
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/alloc.rs:288
+alloc::alloc::Global::shrink_impl::hf9ea428c38455438
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/alloc.rs:359
+_$LT$alloc..alloc..Global$u20$as$u20$core..alloc..Allocator$GT$::shrink::hee670f1a6c410e74
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/alloc.rs:478
+alloc::raw_vec::RawVecInner$LT$A$GT$::shrink_unchecked::h4a23169657850c9b
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs:825
+alloc::raw_vec::RawVecInner$LT$A$GT$::shrink::hda687e897598990c
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs:786
+alloc::raw_vec::RawVecInner$LT$A$GT$::shrink_to_fit::hf680a4fb57ccac75
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs:729
+alloc::raw_vec::RawVec$LT$T$C$A$GT$::shrink_to_fit::h6a0cf38465465c96
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs:400
+alloc::vec::Vec$LT$T$C$A$GT$::shrink_to_fit::h9a7b9faf001d4376
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/vec/mod.rs:1589
+std::sys::fs::unix::readlink::h69aa508064a74099
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/fs/unix.rs:2106
+core::ops::function::Fn::call::h76bc9481cc71ff8a
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/ops/function.rs:79
+std::sys::helpers::small_c_string::run_with_cstr_stack::h73cd918911061227
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/helpers/small_c_string.rs:48
+std::sys::helpers::small_c_string::run_with_cstr::heac9c94138ee39f0
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/helpers/small_c_string.rs:28
+std::sys::helpers::small_c_string::run_path_with_cstr::ha7997b943a8d2309
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/helpers/small_c_string.rs:18
+std::sys::fs::read_link::h8bd5d65019afe2f9
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/fs/mod.rs:92
+std::fs::read_link::h429fed84935bc985
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/fs.rs:2992
+std::sys::pal::unix::os::current_exe::h537ed7583d9db57a
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/pal/unix/os.rs:266
+std::env::current_exe::h72eaee62d9359d7e
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/env.rs:751
+1 calls with 0B peak consumption from:
+    uucore::mods::locale::get_locales_dir::h36c74728b25d534d
+      at src/uucore/src/lib/mods/locale.rs:776
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::setup_localization::hc89fa4060dd4d63c
+      at src/uucore/src/lib/mods/locale.rs:663
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    true::main::h0a74e627d71a9043
+      at src/uucore/src/lib/lib.rs:233
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+1 calls with 0B peak consumption from:
+    alloc::raw_vec::RawVecInner$LT$A$GT$::grow_amortized::h7c1c08b1c6997a63
+      at library/alloc/src/raw_vec/mod.rs:512
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::raw_vec::RawVecInner$LT$A$GT$::reserve::do_reserve_and_handle::h5d733d1e89adc793
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs:651
+    alloc::raw_vec::RawVecInner$LT$A$GT$::reserve::h75b20e6404f87da2
+      at library/alloc/src/raw_vec/mod.rs:658
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::raw_vec::RawVec$LT$T$C$A$GT$::reserve::h8680f27b38a3e633
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs:340
+    alloc::vec::Vec$LT$T$C$A$GT$::reserve::h07fc7c3256c83e0f
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/vec/mod.rs:1451
+    alloc::vec::Vec$LT$T$C$A$GT$::append_elements::hb0e2cbc69abe4bbf
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/vec/mod.rs:2819
+    _$LT$alloc..vec..Vec$LT$T$C$A$GT$$u20$as$u20$alloc..vec..spec_extend..SpecExtend$LT$$RF$T$C$core..slice..iter..Iter$LT$T$GT$$GT$$GT$::spec_extend::h104428dc676c5e8a
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/vec/spec_extend.rs:56
+    alloc::vec::Vec$LT$T$C$A$GT$::extend_from_slice::h459dc69cdbc68485
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/vec/mod.rs:3436
+    std::sys::os_str::bytes::Buf::push_slice::h87f3eaf07c5d5540
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/os_str/bytes.rs:139
+    _$LT$T$u20$as$u20$std..ffi..os_str..OsString..push..SpecPushTo$GT$::spec_push_to::h10c0ec0490d58a02
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/ffi/os_str.rs:268
+    std::ffi::os_str::OsString::push::ha5213c16394d5b9f
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/ffi/os_str.rs:284
+    std::path::PathBuf::_push::ha18f2de566eba6af
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/path.rs:1391
+    std::path::PathBuf::push::h73accadeed9a2a95
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/path.rs:1313
+    std::path::Path::_join::h772e9499befd4fe9
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/path.rs:3002
+    std::path::Path::join::hbb444e18370f4151
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/path.rs:2997
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::resolve_locales_dir_from_exe_dir::h1a31b5919aa837c1
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:714
+    uucore::mods::locale::get_locales_dir::h36c74728b25d534d
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:784
+    uucore::mods::locale::setup_localization::hc89fa4060dd4d63c
+      at src/uucore/src/lib/mods/locale.rs:663
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    true::main::h0a74e627d71a9043
+      at src/uucore/src/lib/lib.rs:233
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+1 calls with 0B peak consumption from:
+    alloc::raw_vec::RawVecInner$LT$A$GT$::grow_amortized::h7c1c08b1c6997a63
+      at library/alloc/src/raw_vec/mod.rs:512
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::raw_vec::RawVecInner$LT$A$GT$::reserve::do_reserve_and_handle::h5d733d1e89adc793
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs:651
+    alloc::raw_vec::RawVecInner$LT$A$GT$::reserve::h75b20e6404f87da2
+      at library/alloc/src/raw_vec/mod.rs:658
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::raw_vec::RawVec$LT$T$C$A$GT$::reserve::h8680f27b38a3e633
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs:340
+    alloc::vec::Vec$LT$T$C$A$GT$::reserve::h07fc7c3256c83e0f
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/vec/mod.rs:1451
+    alloc::vec::Vec$LT$T$C$A$GT$::append_elements::hb0e2cbc69abe4bbf
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/vec/mod.rs:2819
+    _$LT$alloc..vec..Vec$LT$T$C$A$GT$$u20$as$u20$alloc..vec..spec_extend..SpecExtend$LT$$RF$T$C$core..slice..iter..Iter$LT$T$GT$$GT$$GT$::spec_extend::h104428dc676c5e8a
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/vec/spec_extend.rs:56
+    alloc::vec::Vec$LT$T$C$A$GT$::extend_from_slice::h459dc69cdbc68485
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/vec/mod.rs:3436
+    std::sys::os_str::bytes::Buf::push_slice::h87f3eaf07c5d5540
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/os_str/bytes.rs:139
+    _$LT$T$u20$as$u20$std..ffi..os_str..OsString..push..SpecPushTo$GT$::spec_push_to::h10c0ec0490d58a02
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/ffi/os_str.rs:268
+    std::ffi::os_str::OsString::push::ha5213c16394d5b9f
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/ffi/os_str.rs:284
+    std::path::PathBuf::_push::ha18f2de566eba6af
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/path.rs:1391
+    std::path::PathBuf::push::h73accadeed9a2a95
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/path.rs:1313
+    std::path::Path::_join::h772e9499befd4fe9
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/path.rs:3002
+    std::path::Path::join::hbb444e18370f4151
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/path.rs:2997
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::resolve_locales_dir_from_exe_dir::h1a31b5919aa837c1
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:714
+    uucore::mods::locale::get_locales_dir::h36c74728b25d534d
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:784
+    uucore::mods::locale::setup_localization::hc89fa4060dd4d63c
+      at src/uucore/src/lib/mods/locale.rs:663
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    true::main::h0a74e627d71a9043
+      at src/uucore/src/lib/lib.rs:233
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+1 calls with 0B peak consumption from:
+    alloc::raw_vec::RawVecInner$LT$A$GT$::grow_amortized::h7c1c08b1c6997a63
+      at library/alloc/src/raw_vec/mod.rs:512
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::raw_vec::RawVecInner$LT$A$GT$::reserve::do_reserve_and_handle::h5d733d1e89adc793
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs:651
+    alloc::raw_vec::RawVecInner$LT$A$GT$::reserve::h75b20e6404f87da2
+      at library/alloc/src/raw_vec/mod.rs:658
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::raw_vec::RawVec$LT$T$C$A$GT$::reserve::h8680f27b38a3e633
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs:340
+    alloc::vec::Vec$LT$T$C$A$GT$::reserve::h07fc7c3256c83e0f
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/vec/mod.rs:1451
+    alloc::vec::Vec$LT$T$C$A$GT$::append_elements::hb0e2cbc69abe4bbf
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/vec/mod.rs:2819
+    _$LT$alloc..vec..Vec$LT$T$C$A$GT$$u20$as$u20$alloc..vec..spec_extend..SpecExtend$LT$$RF$T$C$core..slice..iter..Iter$LT$T$GT$$GT$$GT$::spec_extend::h104428dc676c5e8a
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/vec/spec_extend.rs:56
+    alloc::vec::Vec$LT$T$C$A$GT$::extend_from_slice::h459dc69cdbc68485
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/vec/mod.rs:3436
+    std::sys::os_str::bytes::Buf::push_slice::h87f3eaf07c5d5540
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/os_str/bytes.rs:139
+    _$LT$T$u20$as$u20$std..ffi..os_str..OsString..push..SpecPushTo$GT$::spec_push_to::h10c0ec0490d58a02
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/ffi/os_str.rs:268
+    std::ffi::os_str::OsString::push::ha5213c16394d5b9f
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/ffi/os_str.rs:284
+    std::path::PathBuf::_push::ha18f2de566eba6af
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/path.rs:1391
+    std::path::PathBuf::push::h73accadeed9a2a95
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/path.rs:1313
+    std::path::Path::_join::h772e9499befd4fe9
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/path.rs:3002
+    std::path::Path::join::hbb444e18370f4151
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/path.rs:2997
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::resolve_locales_dir_from_exe_dir::h1a31b5919aa837c1
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:721
+    uucore::mods::locale::get_locales_dir::h36c74728b25d534d
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:784
+    uucore::mods::locale::setup_localization::hc89fa4060dd4d63c
+      at src/uucore/src/lib/mods/locale.rs:663
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    true::main::h0a74e627d71a9043
+      at src/uucore/src/lib/lib.rs:233
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+1 calls with 0B peak consumption from:
+    alloc::raw_vec::RawVecInner$LT$A$GT$::grow_amortized::h7c1c08b1c6997a63
+      at library/alloc/src/raw_vec/mod.rs:512
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::raw_vec::RawVecInner$LT$A$GT$::reserve::do_reserve_and_handle::h5d733d1e89adc793
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs:651
+    alloc::raw_vec::RawVecInner$LT$A$GT$::reserve::h75b20e6404f87da2
+      at library/alloc/src/raw_vec/mod.rs:658
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::raw_vec::RawVec$LT$T$C$A$GT$::reserve::h8680f27b38a3e633
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs:340
+    alloc::vec::Vec$LT$T$C$A$GT$::reserve::h07fc7c3256c83e0f
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/vec/mod.rs:1451
+    alloc::vec::Vec$LT$T$C$A$GT$::append_elements::hb0e2cbc69abe4bbf
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/vec/mod.rs:2819
+    _$LT$alloc..vec..Vec$LT$T$C$A$GT$$u20$as$u20$alloc..vec..spec_extend..SpecExtend$LT$$RF$T$C$core..slice..iter..Iter$LT$T$GT$$GT$$GT$::spec_extend::h104428dc676c5e8a
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/vec/spec_extend.rs:56
+    alloc::vec::Vec$LT$T$C$A$GT$::extend_from_slice::h459dc69cdbc68485
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/vec/mod.rs:3436
+    std::sys::os_str::bytes::Buf::push_slice::h87f3eaf07c5d5540
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/os_str/bytes.rs:139
+    _$LT$T$u20$as$u20$std..ffi..os_str..OsString..push..SpecPushTo$GT$::spec_push_to::h10c0ec0490d58a02
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/ffi/os_str.rs:268
+    std::ffi::os_str::OsString::push::ha5213c16394d5b9f
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/ffi/os_str.rs:284
+    std::path::PathBuf::_push::ha18f2de566eba6af
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/path.rs:1391
+    std::path::PathBuf::push::h73accadeed9a2a95
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/path.rs:1313
+    std::path::Path::_join::h772e9499befd4fe9
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/path.rs:3002
+    std::path::Path::join::hbb444e18370f4151
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/path.rs:2997
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::resolve_locales_dir_from_exe_dir::h1a31b5919aa837c1
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:721
+    uucore::mods::locale::get_locales_dir::h36c74728b25d534d
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:784
+    uucore::mods::locale::setup_localization::hc89fa4060dd4d63c
+      at src/uucore/src/lib/mods/locale.rs:663
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    true::main::h0a74e627d71a9043
+      at src/uucore/src/lib/lib.rs:233
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+  and 5 from 5 other places
+
+2 calls to allocation functions with 64B peak consumption from
+__cxa_thread_atexit_impl
+  at ./stdlib/cxa_thread_atexit_impl.c:106
+  in /lib/x86_64-linux-gnu/libc.so.6
+1 calls with 32B peak consumption from:
+    std::sys::thread_local::native::eager::Storage$LT$T$GT$::initialize::hc6bf46c625ed060f
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/thread_local/native/eager.rs:49
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::thread_local::native::eager::Storage$LT$T$GT$::get::h9bf01e7b69577f51
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/thread_local/native/eager.rs:38
+    uucore::mods::locale::setup_localization::LOCALIZED_UTIL::_$u7b$$u7b$constant$u7d$$u7d$::_$u7b$$u7b$closure$u7d$$u7d$::h8fab0a49a72f8bf3
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/thread_local/native/mod.rs:68
+    core::ops::function::FnOnce::call_once::hae56cc627467626b
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+    std::thread::local::LocalKey$LT$T$GT$::try_with::h089b7d19efbedaf2
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/thread/local.rs:512
+    std::thread::local::LocalKey$LT$T$GT$::with::h5a729e7fb6c0287f
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/thread/local.rs:477
+    std::thread::local::LocalKey$LT$core..cell..RefCell$LT$T$GT$$GT$::with_borrow::hcf663e68a3563219
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/thread/local.rs:724
+    uucore::mods::locale::setup_localization::hc89fa4060dd4d63c
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:660
+    true::main::h0a74e627d71a9043
+      at src/uucore/src/lib/lib.rs:233
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+1 calls with 32B peak consumption from:
+    std::sys::thread_local::native::eager::Storage$LT$T$GT$::initialize::hedda7be1d628c989
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/thread_local/native/eager.rs:49
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::thread_local::native::eager::Storage$LT$T$GT$::get::h11d9f7345531ccc3
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/thread_local/native/eager.rs:38
+    uucore::mods::locale::LOCALIZER::_$u7b$$u7b$constant$u7d$$u7d$::_$u7b$$u7b$closure$u7d$$u7d$::hcf994f7d14b260b7
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/thread_local/native/mod.rs:68
+    core::ops::function::FnOnce::call_once::h92bf1591548f9e16
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+    std::thread::local::LocalKey$LT$T$GT$::try_with::h734bd2c54e4b858a
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/thread/local.rs:512
+    std::thread::local::LocalKey$LT$T$GT$::with::h1f25e82d0cddf824
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/thread/local.rs:477
+    std::thread::local::LocalKey$LT$core..cell..RefCell$LT$T$GT$$GT$::with_borrow_mut::h26d475d6ad82022f
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/thread/local.rs:757
+    uucore::mods::locale::set_localizer::h77c770466c6cd8a2
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:499
+    uucore::mods::locale::setup_localization::hc89fa4060dd4d63c
+      at src/uucore/src/lib/mods/locale.rs:705
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    true::main::h0a74e627d71a9043
+      at src/uucore/src/lib/lib.rs:233
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+
+1 calls to allocation functions with 4B peak consumption from
+alloc::alloc::alloc::h5978ed8ca21d9a0f
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/alloc.rs:95
+  in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+alloc::alloc::Global::alloc_impl_runtime::he213c04b67e4a561
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/alloc.rs:190
+alloc::alloc::Global::alloc_impl::haccbcd8018bd386f
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/alloc.rs:312
+_$LT$alloc..alloc..Global$u20$as$u20$core..alloc..Allocator$GT$::allocate::h0da075f21210208d
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/alloc.rs:429
+alloc::raw_vec::RawVecInner$LT$A$GT$::try_allocate_in::h67a64c622546b3e4
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:449
+alloc::raw_vec::RawVecInner$LT$A$GT$::with_capacity_in::h73d01a069a69829e
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:418
+alloc::raw_vec::RawVec$LT$T$C$A$GT$::with_capacity_in::h78407ee3d0d7b99f
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:177
+alloc::vec::Vec$LT$T$C$A$GT$::with_capacity_in::hbc75fd3522b8d363
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:967
+_$LT$T$u20$as$u20$alloc..slice..$LT$impl$u20$$u5b$T$u5d$$GT$..to_vec_in..ConvertVec$GT$::to_vec::hc6f24ad882402fd4
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/slice.rs:447
+alloc::slice::_$LT$impl$u20$$u5b$T$u5d$$GT$::to_vec_in::hcf40a4492d7b8061
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/slice.rs:400
+alloc::slice::_$LT$impl$u20$$u5b$T$u5d$$GT$::to_vec::h14a5af133309fd32
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/slice.rs:376
+alloc::slice::_$LT$impl$u20$alloc..borrow..ToOwned$u20$for$u20$$u5b$T$u5d$$GT$::to_owned::haf123c6587d179c4
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/slice.rs:840
+alloc::str::_$LT$impl$u20$alloc..borrow..ToOwned$u20$for$u20$str$GT$::to_owned::hfd8770c0e3926be2
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/str.rs:211
+_$LT$alloc..string..String$u20$as$u20$core..convert..From$LT$$RF$str$GT$$GT$::from::h0183c7cfaafd1120
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/string.rs:3116
+_$LT$str$u20$as$u20$alloc..string..SpecToString$GT$::spec_to_string::h3c1d023728dc1ff7
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/string.rs:3047
+_$LT$T$u20$as$u20$alloc..string..ToString$GT$::to_string::h7d25783977b3b96f
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/string.rs:2896
+uucore::mods::locale::setup_localization::_$u7b$$u7b$closure$u7d$$u7d$::hc9f3b85f3514a972
+  at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:707
+std::thread::local::LocalKey$LT$core..cell..RefCell$LT$T$GT$$GT$::with_borrow_mut::_$u7b$$u7b$closure$u7d$$u7d$::h0748da0c6ea6d49a
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/thread/local.rs:757
+std::thread::local::LocalKey$LT$T$GT$::try_with::h03219d1dcf197821
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/thread/local.rs:513
+std::thread::local::LocalKey$LT$T$GT$::with::h29fcb77547562998
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/thread/local.rs:477
+std::thread::local::LocalKey$LT$core..cell..RefCell$LT$T$GT$$GT$::with_borrow_mut::he2a7121dfe25dade
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/thread/local.rs:757
+uucore::mods::locale::setup_localization::hc89fa4060dd4d63c
+  at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:707
+1 calls with 4B peak consumption from:
+    true::main::h0a74e627d71a9043
+      at src/uucore/src/lib/lib.rs:233
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+
+1 calls to allocation functions with 0B peak consumption from
+__pthread_getattr_np
+  at ./nptl/pthread_getattr_np.c:180
+  in /lib/x86_64-linux-gnu/libc.so.6
+1 calls with 0B peak consumption from:
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+
+1 calls to allocation functions with 0B peak consumption from
+_IO_new_fopen::__fopen_internal
+  at ./libio/iofopen.c:65
+  in /lib/x86_64-linux-gnu/libc.so.6
+_IO_new_fopen
+  at ./libio/./libio/iofopen.c:86
+1 calls with 0B peak consumption from:
+    __pthread_getattr_np
+      at ./nptl/pthread_getattr_np.c:85
+      in /lib/x86_64-linux-gnu/libc.so.6
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+
+1 calls to allocation functions with 0B peak consumption from
+__GI___getdelim
+  at ./libio/iogetdelim.c:65
+  in /lib/x86_64-linux-gnu/libc.so.6
+1 calls with 0B peak consumption from:
+    __pthread_getattr_np
+      at ./nptl/pthread_getattr_np.c:122
+      in /lib/x86_64-linux-gnu/libc.so.6
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+
+1 calls to allocation functions with 0B peak consumption from
+__GI___getdelim
+  at ./libio/iogetdelim.c:107
+  in /lib/x86_64-linux-gnu/libc.so.6
+1 calls with 0B peak consumption from:
+    __pthread_getattr_np
+      at ./nptl/pthread_getattr_np.c:122
+      in /lib/x86_64-linux-gnu/libc.so.6
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+
+
+PEAK MEMORY CONSUMERS
+73.73K peak memory consumed over 1 calls from
+0x7785a1ab738e
+  in /lib/x86_64-linux-gnu/libstdc++.so.6
+73.73K consumed over 1 calls from:
+    call_init
+      at ./elf/dl-init.c:74
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_init::call_init
+      at ./elf/dl-init.c:120
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_init
+      at ./elf/./elf/dl-init.c:121
+    _dl_start_user
+      in /lib64/ld-linux-x86-64.so.2
+
+40.94K peak memory consumed over 167 calls from
+std::sys::alloc::unix::_$LT$impl$u20$core..alloc..global..GlobalAlloc$u20$for$u20$std..alloc..System$GT$::alloc::h83536d09584c3555
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/alloc/unix.rs:14
+  in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+_RNvCs1Y7DaGC1cwg_7___rustc11___rdl_alloc
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/alloc.rs:455
+alloc::alloc::alloc::h5978ed8ca21d9a0f
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/alloc.rs:95
+alloc::alloc::Global::alloc_impl_runtime::he213c04b67e4a561
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/alloc.rs:190
+alloc::alloc::Global::alloc_impl::haccbcd8018bd386f
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/alloc.rs:312
+_$LT$alloc..alloc..Global$u20$as$u20$core..alloc..Allocator$GT$::allocate::h0da075f21210208d
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/alloc.rs:429
+alloc::alloc::exchange_malloc::h6d8270e0470dde16
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/alloc.rs:489
+alloc::boxed::Box$LT$T$GT$::new::hdc59b788faa5338d
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/boxed.rs:265
+uucore::mods::panic::mute_sigpipe_panic::h6b78aa85e08f11d1
+  at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/panic.rs:39
+true::main::h0a74e627d71a9043
+  at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/lib.rs:232
+18.72K consumed over 53 calls from:
+    alloc::raw_vec::RawVecInner$LT$A$GT$::grow_amortized::hafa86a3c40cc0af6
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:512
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::raw_vec::RawVecInner$LT$A$GT$::grow_one::h273a7f4ff9d5d0e9
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:476
+    alloc::raw_vec::RawVec$LT$T$C$A$GT$::grow_one::h09bd8c840ddfb1b8
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:188
+    alloc::vec::Vec$LT$T$C$A$GT$::push_mut::hfda9916917e8726c
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:1034
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::vec::Vec$LT$T$C$A$GT$::push::h4641b8cf19b50343
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:994
+    fluent_syntax::parser::pattern::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::get_pattern::hfc2f574fad3f1947
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/pattern.rs:106
+    fluent_syntax::parser::core::Parser$LT$S$GT$::get_message::hc0825fac63f311a2
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/core.rs:107
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    fluent_syntax::parser::runtime::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::get_entry_runtime::h4c984e4c2051d312
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/runtime.rs:57
+    fluent_syntax::parser::runtime::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::parse_runtime::he8cda6fd5caa8568
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/runtime.rs:25
+    fluent_syntax::parser::parse_runtime::h464acb24bcd6ba70
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/mod.rs:278
+    fluent_bundle::resource::FluentResource::try_new::_$u7b$$u7b$closure$u7d$$u7d$::h7a59da23ba429ec9
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resource.rs:85
+    fluent_bundle::resource::InnerFluentResource::new::h5aedb386104ffe75
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/self_cell-1.3.0/src/lib.rs:495
+    fluent_bundle::resource::FluentResource::try_new::h20a01527d88fc7fc
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resource.rs:85
+    uucore::mods::locale::parse_fluent_resource_owned::h61c94cbb3e71c6e5
+      at src/uucore/src/lib/mods/locale.rs:356
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::parse_fluent_resource::hfeebed422db62ebf
+      at src/uucore/src/lib/mods/locale.rs:387
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::create_english_bundle_from_embedded::h95b15b100d0d5522
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:428
+    uucore::mods::locale::setup_localization::hc89fa4060dd4d63c
+      at src/uucore/src/lib/mods/locale.rs:701
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    true::main::h0a74e627d71a9043
+      at src/uucore/src/lib/lib.rs:233
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+6.29K consumed over 6 calls from:
+    hashbrown::raw::RawTableInner::prepare_resize::hde8d48551fed75d0
+      at /rust/deps/hashbrown-0.16.1/src/raw/mod.rs:2738
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    hashbrown::raw::RawTableInner::resize_inner::h4314a01ef79e0d6a
+      at /rust/deps/hashbrown-0.16.1/src/raw/mod.rs:2936
+    hashbrown::raw::RawTableInner::reserve_rehash_inner::ha3b501dd4f4159dc
+      at /rust/deps/hashbrown-0.16.1/src/raw/mod.rs:2824
+    hashbrown::raw::RawTable$LT$T$C$A$GT$::reserve_rehash::hf7997b6ad3433046
+      at /rust/deps/hashbrown-0.16.1/src/raw/mod.rs:1013
+    hashbrown::raw::RawTable$LT$T$C$A$GT$::reserve::h4671d92799949e63
+      at /rust/deps/hashbrown-0.16.1/src/raw/mod.rs:962
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    hashbrown::raw::RawTable$LT$T$C$A$GT$::find_or_find_insert_index::h45d81fcbd01d214b
+      at /rust/deps/hashbrown-0.16.1/src/raw/mod.rs:1167
+    hashbrown::map::HashMap$LT$K$C$V$C$S$C$A$GT$::find_or_find_insert_index::hda2f78bcec8c52c3
+      at /rust/deps/hashbrown-0.16.1/src/map.rs:1863
+    hashbrown::map::HashMap$LT$K$C$V$C$S$C$A$GT$::insert::hd6a89140cbdf73a8
+      at /rust/deps/hashbrown-0.16.1/src/map.rs:1843
+    std::collections::hash::map::HashMap$LT$K$C$V$C$S$C$A$GT$::insert::h89ec8cbdbf7dcbb8
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/collections/hash/map.rs:1296
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    fluent_bundle::bundle::FluentBundle$LT$R$C$M$GT$::add_resource_overriding::hf5774231718dfa9a
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/bundle.rs:315
+    uucore::mods::locale::create_english_bundle_from_embedded::h95b15b100d0d5522
+      at src/uucore/src/lib/mods/locale.rs:429
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::setup_localization::hc89fa4060dd4d63c
+      at src/uucore/src/lib/mods/locale.rs:701
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    true::main::h0a74e627d71a9043
+      at src/uucore/src/lib/lib.rs:233
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+4.82K consumed over 1 calls from:
+    uucore::mods::locale::parse_fluent_resource::hfeebed422db62ebf
+      at src/uucore/src/lib/mods/locale.rs:387
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::create_english_bundle_from_embedded::h95b15b100d0d5522
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:428
+    uucore::mods::locale::setup_localization::hc89fa4060dd4d63c
+      at src/uucore/src/lib/mods/locale.rs:701
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    true::main::h0a74e627d71a9043
+      at src/uucore/src/lib/lib.rs:233
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+4.16K consumed over 12 calls from:
+    alloc::raw_vec::RawVecInner$LT$A$GT$::grow_amortized::hafa86a3c40cc0af6
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:512
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::raw_vec::RawVecInner$LT$A$GT$::grow_one::h273a7f4ff9d5d0e9
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:476
+    alloc::raw_vec::RawVec$LT$T$C$A$GT$::grow_one::h09bd8c840ddfb1b8
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:188
+    alloc::vec::Vec$LT$T$C$A$GT$::push_mut::hfda9916917e8726c
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:1034
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::vec::Vec$LT$T$C$A$GT$::push::h4641b8cf19b50343
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:994
+    fluent_syntax::parser::pattern::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::get_pattern::hfc2f574fad3f1947
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/pattern.rs:66
+    fluent_syntax::parser::core::Parser$LT$S$GT$::get_message::hc0825fac63f311a2
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/core.rs:107
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    fluent_syntax::parser::runtime::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::get_entry_runtime::h4c984e4c2051d312
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/runtime.rs:57
+    fluent_syntax::parser::runtime::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::parse_runtime::he8cda6fd5caa8568
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/runtime.rs:25
+    fluent_syntax::parser::parse_runtime::h464acb24bcd6ba70
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/mod.rs:278
+    fluent_bundle::resource::FluentResource::try_new::_$u7b$$u7b$closure$u7d$$u7d$::h7a59da23ba429ec9
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resource.rs:85
+    fluent_bundle::resource::InnerFluentResource::new::h5aedb386104ffe75
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/self_cell-1.3.0/src/lib.rs:495
+    fluent_bundle::resource::FluentResource::try_new::h20a01527d88fc7fc
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resource.rs:85
+    uucore::mods::locale::parse_fluent_resource_owned::h61c94cbb3e71c6e5
+      at src/uucore/src/lib/mods/locale.rs:356
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::parse_fluent_resource::hfeebed422db62ebf
+      at src/uucore/src/lib/mods/locale.rs:387
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::create_english_bundle_from_embedded::h95b15b100d0d5522
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:428
+    uucore::mods::locale::setup_localization::hc89fa4060dd4d63c
+      at src/uucore/src/lib/mods/locale.rs:701
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    true::main::h0a74e627d71a9043
+      at src/uucore/src/lib/lib.rs:233
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+2.50K consumed over 6 calls from:
+    alloc::raw_vec::RawVecInner$LT$A$GT$::grow_amortized::hafa86a3c40cc0af6
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:512
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::raw_vec::RawVecInner$LT$A$GT$::grow_one::h273a7f4ff9d5d0e9
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:476
+    alloc::raw_vec::RawVec$LT$T$C$A$GT$::grow_one::h09bd8c840ddfb1b8
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:188
+    alloc::vec::Vec$LT$T$C$A$GT$::push_mut::hfda9916917e8726c
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:1034
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::vec::Vec$LT$T$C$A$GT$::push::h4641b8cf19b50343
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:994
+    fluent_syntax::parser::pattern::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::get_pattern::hfc2f574fad3f1947
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/pattern.rs:66
+    fluent_syntax::parser::core::Parser$LT$S$GT$::get_variants::h49275387c3deb6e6
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/core.rs:268
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    fluent_syntax::parser::expression::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::get_expression::he0e7c62c712e529d
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/expression.rs:58
+    fluent_syntax::parser::core::Parser$LT$S$GT$::get_placeable::hee6421a0fac01a7d
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/core.rs:291
+    fluent_syntax::parser::pattern::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::get_pattern::hfc2f574fad3f1947
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/pattern.rs:64
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    fluent_syntax::parser::core::Parser$LT$S$GT$::get_message::hc0825fac63f311a2
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/core.rs:107
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    fluent_syntax::parser::runtime::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::get_entry_runtime::h4c984e4c2051d312
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/runtime.rs:57
+    fluent_syntax::parser::runtime::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::parse_runtime::he8cda6fd5caa8568
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/runtime.rs:25
+    fluent_syntax::parser::parse_runtime::h464acb24bcd6ba70
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/mod.rs:278
+    fluent_bundle::resource::FluentResource::try_new::_$u7b$$u7b$closure$u7d$$u7d$::h7a59da23ba429ec9
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resource.rs:85
+    fluent_bundle::resource::InnerFluentResource::new::h5aedb386104ffe75
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/self_cell-1.3.0/src/lib.rs:495
+    fluent_bundle::resource::FluentResource::try_new::h20a01527d88fc7fc
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resource.rs:85
+    uucore::mods::locale::parse_fluent_resource_owned::h61c94cbb3e71c6e5
+      at src/uucore/src/lib/mods/locale.rs:356
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::parse_fluent_resource::hfeebed422db62ebf
+      at src/uucore/src/lib/mods/locale.rs:387
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::create_english_bundle_from_embedded::h95b15b100d0d5522
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:428
+    uucore::mods::locale::setup_localization::hc89fa4060dd4d63c
+      at src/uucore/src/lib/mods/locale.rs:701
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    true::main::h0a74e627d71a9043
+      at src/uucore/src/lib/lib.rs:233
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+  and 4.45K from 19 other places
+
+18.37K peak memory consumed over 15 calls from
+std::sys::alloc::unix::_$LT$impl$u20$core..alloc..global..GlobalAlloc$u20$for$u20$std..alloc..System$GT$::realloc::hbcfae9422fa95774
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/alloc/unix.rs:54
+  in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+_RNvCs1Y7DaGC1cwg_7___rustc13___rdl_realloc
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/alloc.rs:477
+alloc::alloc::realloc::h341a228f070c62ba
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/alloc.rs:135
+alloc::alloc::Global::grow_impl_runtime::h15750a6328f95588
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/alloc.rs:239
+alloc::alloc::Global::grow_impl::hbb3774b69f7a7121
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/alloc.rs:342
+_$LT$alloc..alloc..Global$u20$as$u20$core..alloc..Allocator$GT$::grow::h66bda64267496a76
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/alloc.rs:454
+alloc::raw_vec::RawVecInner$LT$A$GT$::finish_grow::hc7eac76a860b0e8d
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:540
+9.22K consumed over 4 calls from:
+    alloc::raw_vec::RawVecInner$LT$A$GT$::grow_amortized::hafa86a3c40cc0af6
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:512
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::raw_vec::RawVecInner$LT$A$GT$::grow_one::h273a7f4ff9d5d0e9
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:476
+    alloc::raw_vec::RawVec$LT$T$C$A$GT$::grow_one::h468aff7e819e5f2c
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:188
+    alloc::vec::Vec$LT$T$C$A$GT$::push_mut::h1f367fc1522c0eda
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:1034
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::vec::Vec$LT$T$C$A$GT$::push::heaa93cb554a53089
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:994
+    fluent_syntax::parser::runtime::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::parse_runtime::he8cda6fd5caa8568
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/runtime.rs:29
+    fluent_syntax::parser::parse_runtime::h464acb24bcd6ba70
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/mod.rs:278
+    fluent_bundle::resource::FluentResource::try_new::_$u7b$$u7b$closure$u7d$$u7d$::h7a59da23ba429ec9
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resource.rs:85
+    fluent_bundle::resource::InnerFluentResource::new::h5aedb386104ffe75
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/self_cell-1.3.0/src/lib.rs:495
+    fluent_bundle::resource::FluentResource::try_new::h20a01527d88fc7fc
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resource.rs:85
+    uucore::mods::locale::parse_fluent_resource_owned::h61c94cbb3e71c6e5
+      at src/uucore/src/lib/mods/locale.rs:356
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::parse_fluent_resource::hfeebed422db62ebf
+      at src/uucore/src/lib/mods/locale.rs:387
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::create_english_bundle_from_embedded::h95b15b100d0d5522
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:428
+    uucore::mods::locale::setup_localization::hc89fa4060dd4d63c
+      at src/uucore/src/lib/mods/locale.rs:701
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    true::main::h0a74e627d71a9043
+      at src/uucore/src/lib/lib.rs:233
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+6.66K consumed over 8 calls from:
+    alloc::raw_vec::RawVecInner$LT$A$GT$::grow_amortized::hafa86a3c40cc0af6
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:512
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::raw_vec::RawVecInner$LT$A$GT$::grow_one::h273a7f4ff9d5d0e9
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:476
+    alloc::raw_vec::RawVec$LT$T$C$A$GT$::grow_one::h09bd8c840ddfb1b8
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:188
+    alloc::vec::Vec$LT$T$C$A$GT$::push_mut::hfda9916917e8726c
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:1034
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::vec::Vec$LT$T$C$A$GT$::push::h4641b8cf19b50343
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:994
+    fluent_syntax::parser::pattern::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::get_pattern::hfc2f574fad3f1947
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/pattern.rs:106
+    fluent_syntax::parser::core::Parser$LT$S$GT$::get_message::hc0825fac63f311a2
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/core.rs:107
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    fluent_syntax::parser::runtime::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::get_entry_runtime::h4c984e4c2051d312
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/runtime.rs:57
+    fluent_syntax::parser::runtime::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::parse_runtime::he8cda6fd5caa8568
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/runtime.rs:25
+    fluent_syntax::parser::parse_runtime::h464acb24bcd6ba70
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/mod.rs:278
+    fluent_bundle::resource::FluentResource::try_new::_$u7b$$u7b$closure$u7d$$u7d$::h7a59da23ba429ec9
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resource.rs:85
+    fluent_bundle::resource::InnerFluentResource::new::h5aedb386104ffe75
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/self_cell-1.3.0/src/lib.rs:495
+    fluent_bundle::resource::FluentResource::try_new::h20a01527d88fc7fc
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resource.rs:85
+    uucore::mods::locale::parse_fluent_resource_owned::h61c94cbb3e71c6e5
+      at src/uucore/src/lib/mods/locale.rs:356
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::parse_fluent_resource::hfeebed422db62ebf
+      at src/uucore/src/lib/mods/locale.rs:387
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::create_english_bundle_from_embedded::h95b15b100d0d5522
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:428
+    uucore::mods::locale::setup_localization::hc89fa4060dd4d63c
+      at src/uucore/src/lib/mods/locale.rs:701
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    true::main::h0a74e627d71a9043
+      at src/uucore/src/lib/lib.rs:233
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+1.66K consumed over 2 calls from:
+    alloc::raw_vec::RawVecInner$LT$A$GT$::grow_amortized::hafa86a3c40cc0af6
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:512
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::raw_vec::RawVecInner$LT$A$GT$::grow_one::h273a7f4ff9d5d0e9
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:476
+    alloc::raw_vec::RawVec$LT$T$C$A$GT$::grow_one::h09bd8c840ddfb1b8
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:188
+    alloc::vec::Vec$LT$T$C$A$GT$::push_mut::hfda9916917e8726c
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:1034
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::vec::Vec$LT$T$C$A$GT$::push::h4641b8cf19b50343
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:994
+    fluent_syntax::parser::pattern::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::get_pattern::hfc2f574fad3f1947
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/pattern.rs:66
+    fluent_syntax::parser::core::Parser$LT$S$GT$::get_message::hc0825fac63f311a2
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/core.rs:107
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    fluent_syntax::parser::runtime::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::get_entry_runtime::h4c984e4c2051d312
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/runtime.rs:57
+    fluent_syntax::parser::runtime::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::parse_runtime::he8cda6fd5caa8568
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/runtime.rs:25
+    fluent_syntax::parser::parse_runtime::h464acb24bcd6ba70
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/mod.rs:278
+    fluent_bundle::resource::FluentResource::try_new::_$u7b$$u7b$closure$u7d$$u7d$::h7a59da23ba429ec9
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resource.rs:85
+    fluent_bundle::resource::InnerFluentResource::new::h5aedb386104ffe75
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/self_cell-1.3.0/src/lib.rs:495
+    fluent_bundle::resource::FluentResource::try_new::h20a01527d88fc7fc
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resource.rs:85
+    uucore::mods::locale::parse_fluent_resource_owned::h61c94cbb3e71c6e5
+      at src/uucore/src/lib/mods/locale.rs:356
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::parse_fluent_resource::hfeebed422db62ebf
+      at src/uucore/src/lib/mods/locale.rs:387
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::create_english_bundle_from_embedded::h95b15b100d0d5522
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:428
+    uucore::mods::locale::setup_localization::hc89fa4060dd4d63c
+      at src/uucore/src/lib/mods/locale.rs:701
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    true::main::h0a74e627d71a9043
+      at src/uucore/src/lib/lib.rs:233
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+832B consumed over 1 calls from:
+    alloc::raw_vec::RawVecInner$LT$A$GT$::grow_amortized::hafa86a3c40cc0af6
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:512
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::raw_vec::RawVecInner$LT$A$GT$::grow_one::h273a7f4ff9d5d0e9
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:476
+    alloc::raw_vec::RawVec$LT$T$C$A$GT$::grow_one::h09bd8c840ddfb1b8
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:188
+    alloc::vec::Vec$LT$T$C$A$GT$::push_mut::hfda9916917e8726c
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:1034
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::vec::Vec$LT$T$C$A$GT$::push::h4641b8cf19b50343
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:994
+    fluent_syntax::parser::pattern::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::get_pattern::hfc2f574fad3f1947
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/pattern.rs:106
+    fluent_syntax::parser::core::Parser$LT$S$GT$::get_message::hc0825fac63f311a2
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/core.rs:107
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    fluent_syntax::parser::runtime::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::get_entry_runtime::h4c984e4c2051d312
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/runtime.rs:57
+    fluent_syntax::parser::runtime::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::parse_runtime::he8cda6fd5caa8568
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/runtime.rs:25
+    fluent_syntax::parser::parse_runtime::h464acb24bcd6ba70
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/mod.rs:278
+    fluent_bundle::resource::FluentResource::try_new::_$u7b$$u7b$closure$u7d$$u7d$::h7a59da23ba429ec9
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resource.rs:85
+    fluent_bundle::resource::InnerFluentResource::new::h5aedb386104ffe75
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/self_cell-1.3.0/src/lib.rs:495
+    fluent_bundle::resource::FluentResource::try_new::h20a01527d88fc7fc
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resource.rs:85
+    uucore::mods::locale::parse_fluent_resource_owned::h61c94cbb3e71c6e5
+      at src/uucore/src/lib/mods/locale.rs:356
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::create_english_bundle_from_embedded::_$u7b$$u7b$closure$u7d$$u7d$::hefd425b46d025636
+      at src/uucore/src/lib/mods/locale.rs:444
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::cached_resource::h821013fe796e95f7
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:406
+    uucore::mods::locale::create_english_bundle_from_embedded::h95b15b100d0d5522
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:443
+    uucore::mods::locale::setup_localization::hc89fa4060dd4d63c
+      at src/uucore/src/lib/mods/locale.rs:701
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    true::main::h0a74e627d71a9043
+      at src/uucore/src/lib/lib.rs:233
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+
+1.57K peak memory consumed over 14 calls from
+std::sys::alloc::unix::_$LT$impl$u20$core..alloc..global..GlobalAlloc$u20$for$u20$std..alloc..System$GT$::alloc::h83536d09584c3555
+  at library/std/src/sys/alloc/unix.rs:14
+  in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+_RNvCs1Y7DaGC1cwg_7___rustc11___rdl_alloc
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/alloc.rs:455
+alloc::alloc::alloc::h5978ed8ca21d9a0f
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/alloc.rs:95
+alloc::alloc::Global::alloc_impl_runtime::he213c04b67e4a561
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/alloc.rs:190
+alloc::alloc::Global::alloc_impl::haccbcd8018bd386f
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/alloc.rs:312
+_$LT$alloc..alloc..Global$u20$as$u20$core..alloc..Allocator$GT$::allocate::h0da075f21210208d
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/alloc.rs:429
+alloc::boxed::Box$LT$T$C$A$GT$::try_clone_from_ref_in::h4efd81d6a3f7923a
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/boxed.rs:840
+alloc::boxed::Box$LT$T$C$A$GT$::clone_from_ref_in::he3cad802aaf8f514
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/boxed.rs:799
+alloc::boxed::Box$LT$T$GT$::clone_from_ref::hc297785f1ed7a73e
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/boxed.rs:752
+alloc::boxed::convert::_$LT$impl$u20$core..convert..From$LT$$RF$str$GT$$u20$for$u20$alloc..boxed..Box$LT$str$GT$$GT$::from::h13f01d975eb01bdd
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/boxed/convert.rs:138
+core::ops::function::FnOnce::call_once::h3946deecba115d01
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/ops/function.rs:250
+core::option::Option$LT$T$GT$::map::h6287dddc09afbd48
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/option.rs:1165
+std::sys::pal::unix::stack_overflow::thread_info::set_current_info::_$u7b$$u7b$closure$u7d$$u7d$::h058a282d848d9065
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/pal/unix/stack_overflow/thread_info.rs:114
+std::thread::current::with_current_name::_$u7b$$u7b$closure$u7d$$u7d$::hf8f92c19b1f308f0
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/thread/current.rs:234
+std::thread::current::try_with_current::h07f0efd48ba9f709
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/thread/current.rs:204
+std::thread::current::with_current_name::h53391ef2d1bb9ee1
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/thread/current.rs:216
+std::sys::pal::unix::stack_overflow::thread_info::set_current_info::h21653e4068580a44
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/pal/unix/stack_overflow/thread_info.rs:114
+1.02K consumed over 1 calls from:
+    std::sys::sync::once::futex::Once::call::h0f82344e1bccad40
+      at library/std/src/sys/sync/once/futex.rs:178
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sync::once::Once::call_once_force::h0ec4603ec118ad7d
+      at library/std/src/sync/once.rs:219
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sync::once_lock::OnceLock$LT$T$GT$::initialize::h3a08247861fc478d
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sync/once_lock.rs:542
+    std::sync::once_lock::OnceLock$LT$T$GT$::get_or_try_init::hdeb3e282c9b8a734
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sync/once_lock.rs:410
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sync::once_lock::OnceLock$LT$T$GT$::get_or_init::hef151f760a3e0b68
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sync/once_lock.rs:321
+    std::io::stdio::stdout::h2714a89a4dddbe89
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/io/stdio.rs:719
+    true::main::h0a74e627d71a9043
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/true/src/main.rs:6
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+544B consumed over 1 calls from:
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+4B consumed over 1 calls from:
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+  and 0B from 9 other places
+
+64B peak memory consumed over 2 calls from
+__cxa_thread_atexit_impl
+  at ./stdlib/cxa_thread_atexit_impl.c:106
+  in /lib/x86_64-linux-gnu/libc.so.6
+32B consumed over 1 calls from:
+    std::sys::thread_local::native::eager::Storage$LT$T$GT$::initialize::hc6bf46c625ed060f
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/thread_local/native/eager.rs:49
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::thread_local::native::eager::Storage$LT$T$GT$::get::h9bf01e7b69577f51
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/thread_local/native/eager.rs:38
+    uucore::mods::locale::setup_localization::LOCALIZED_UTIL::_$u7b$$u7b$constant$u7d$$u7d$::_$u7b$$u7b$closure$u7d$$u7d$::h8fab0a49a72f8bf3
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/thread_local/native/mod.rs:68
+    core::ops::function::FnOnce::call_once::hae56cc627467626b
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+    std::thread::local::LocalKey$LT$T$GT$::try_with::h089b7d19efbedaf2
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/thread/local.rs:512
+    std::thread::local::LocalKey$LT$T$GT$::with::h5a729e7fb6c0287f
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/thread/local.rs:477
+    std::thread::local::LocalKey$LT$core..cell..RefCell$LT$T$GT$$GT$::with_borrow::hcf663e68a3563219
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/thread/local.rs:724
+    uucore::mods::locale::setup_localization::hc89fa4060dd4d63c
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:660
+    true::main::h0a74e627d71a9043
+      at src/uucore/src/lib/lib.rs:233
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+32B consumed over 1 calls from:
+    std::sys::thread_local::native::eager::Storage$LT$T$GT$::initialize::hedda7be1d628c989
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/thread_local/native/eager.rs:49
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::thread_local::native::eager::Storage$LT$T$GT$::get::h11d9f7345531ccc3
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/thread_local/native/eager.rs:38
+    uucore::mods::locale::LOCALIZER::_$u7b$$u7b$constant$u7d$$u7d$::_$u7b$$u7b$closure$u7d$$u7d$::hcf994f7d14b260b7
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/thread_local/native/mod.rs:68
+    core::ops::function::FnOnce::call_once::h92bf1591548f9e16
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+    std::thread::local::LocalKey$LT$T$GT$::try_with::h734bd2c54e4b858a
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/thread/local.rs:512
+    std::thread::local::LocalKey$LT$T$GT$::with::h1f25e82d0cddf824
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/thread/local.rs:477
+    std::thread::local::LocalKey$LT$core..cell..RefCell$LT$T$GT$$GT$::with_borrow_mut::h26d475d6ad82022f
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/thread/local.rs:757
+    uucore::mods::locale::set_localizer::h77c770466c6cd8a2
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:499
+    uucore::mods::locale::setup_localization::hc89fa4060dd4d63c
+      at src/uucore/src/lib/mods/locale.rs:705
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    true::main::h0a74e627d71a9043
+      at src/uucore/src/lib/lib.rs:233
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+
+36B peak memory consumed over 10 calls from
+std::sys::alloc::unix::_$LT$impl$u20$core..alloc..global..GlobalAlloc$u20$for$u20$std..alloc..System$GT$::realloc::hbcfae9422fa95774
+  at library/std/src/sys/alloc/unix.rs:54
+  in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+_RNvCs1Y7DaGC1cwg_7___rustc13___rdl_realloc
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/alloc.rs:477
+alloc::alloc::realloc::h341a228f070c62ba
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/alloc.rs:135
+alloc::alloc::Global::shrink_impl_runtime::h75e6bfbc465ac335
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/alloc.rs:288
+alloc::alloc::Global::shrink_impl::hf9ea428c38455438
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/alloc.rs:359
+_$LT$alloc..alloc..Global$u20$as$u20$core..alloc..Allocator$GT$::shrink::hee670f1a6c410e74
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/alloc.rs:478
+alloc::raw_vec::RawVecInner$LT$A$GT$::shrink_unchecked::h4a23169657850c9b
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs:825
+alloc::raw_vec::RawVecInner$LT$A$GT$::shrink::hda687e897598990c
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs:786
+alloc::raw_vec::RawVecInner$LT$A$GT$::shrink_to_fit::hf680a4fb57ccac75
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs:729
+alloc::raw_vec::RawVec$LT$T$C$A$GT$::shrink_to_fit::h6a0cf38465465c96
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs:400
+alloc::vec::Vec$LT$T$C$A$GT$::shrink_to_fit::h9a7b9faf001d4376
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/vec/mod.rs:1589
+std::sys::fs::unix::readlink::h69aa508064a74099
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/fs/unix.rs:2106
+core::ops::function::Fn::call::h76bc9481cc71ff8a
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/ops/function.rs:79
+std::sys::helpers::small_c_string::run_with_cstr_stack::h73cd918911061227
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/helpers/small_c_string.rs:48
+std::sys::helpers::small_c_string::run_with_cstr::heac9c94138ee39f0
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/helpers/small_c_string.rs:28
+std::sys::helpers::small_c_string::run_path_with_cstr::ha7997b943a8d2309
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/helpers/small_c_string.rs:18
+std::sys::fs::read_link::h8bd5d65019afe2f9
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/fs/mod.rs:92
+std::fs::read_link::h429fed84935bc985
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/fs.rs:2992
+std::sys::pal::unix::os::current_exe::h537ed7583d9db57a
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/pal/unix/os.rs:266
+std::env::current_exe::h72eaee62d9359d7e
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/env.rs:751
+36B consumed over 1 calls from:
+    alloc::raw_vec::RawVecInner$LT$A$GT$::grow_amortized::hede1121575434293
+      at library/alloc/src/raw_vec/mod.rs:512
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::raw_vec::RawVecInner$LT$A$GT$::reserve::do_reserve_and_handle::ha4ed364a5d4c85d9
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs:651
+    alloc::raw_vec::RawVecInner$LT$A$GT$::reserve::h8cc53e26900b66f1
+      at library/alloc/src/raw_vec/mod.rs:658
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::raw_vec::RawVec$LT$T$C$A$GT$::reserve::hc14ae7416dcba391
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs:340
+    alloc::vec::Vec$LT$T$C$A$GT$::reserve::h6a53c76d82f748e8
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/vec/mod.rs:1451
+    alloc::vec::Vec$LT$T$C$A$GT$::append_elements::h0bfc21486a5c30bc
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/vec/mod.rs:2819
+    _$LT$alloc..vec..Vec$LT$T$C$A$GT$$u20$as$u20$alloc..vec..spec_extend..SpecExtend$LT$$RF$T$C$core..slice..iter..Iter$LT$T$GT$$GT$$GT$::spec_extend::h7f154205367fe8da
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/vec/spec_extend.rs:56
+    alloc::vec::Vec$LT$T$C$A$GT$::extend_from_slice::h021eb684e5b66398
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/vec/mod.rs:3436
+    alloc::string::String::push_str::h34f0bc6832aad235
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/string.rs:1102
+    _$LT$alloc..string..String$u20$as$u20$core..fmt..Write$GT$::write_str::h4a8c212290a281f9
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/string.rs:3347
+    core::fmt::rt::Argument::fmt::hca43ba1468fa0a13
+      at library/core/src/fmt/rt.rs:152
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::fmt::write::h469843d235cc4241
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/fmt/mod.rs:0
+    _$LT$$RF$mut$u20$W$u20$as$u20$core..fmt..Write..write_fmt..SpecWriteFmt$GT$::spec_write_fmt::he56f2c1f8bf7aaec
+      at library/core/src/fmt/mod.rs:236
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::fmt::Write::write_fmt::h12235c88e27e8036
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/fmt/mod.rs:241
+    alloc::fmt::format::format_inner::h655a6aa2517b043f
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/fmt.rs:649
+    alloc::fmt::format::_$u7b$$u7b$closure$u7d$$u7d$::hafeacd7a2fa2ac42
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/fmt.rs:654
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::option::Option$LT$T$GT$::map_or_else::hb6f71485580ab54b
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/option.rs:1278
+    alloc::fmt::format::h1d1fe0dae97fd51a
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/fmt.rs:654
+    uucore::mods::locale::create_english_bundle_from_embedded::h95b15b100d0d5522
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:443
+    uucore::mods::locale::setup_localization::hc89fa4060dd4d63c
+      at src/uucore/src/lib/mods/locale.rs:701
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    true::main::h0a74e627d71a9043
+      at src/uucore/src/lib/lib.rs:233
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+  and 0B from 5 other places
+
+4B peak memory consumed over 1 calls from
+alloc::alloc::alloc::h5978ed8ca21d9a0f
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/alloc.rs:95
+  in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+alloc::alloc::Global::alloc_impl_runtime::he213c04b67e4a561
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/alloc.rs:190
+alloc::alloc::Global::alloc_impl::haccbcd8018bd386f
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/alloc.rs:312
+_$LT$alloc..alloc..Global$u20$as$u20$core..alloc..Allocator$GT$::allocate::h0da075f21210208d
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/alloc.rs:429
+alloc::raw_vec::RawVecInner$LT$A$GT$::try_allocate_in::h67a64c622546b3e4
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:449
+alloc::raw_vec::RawVecInner$LT$A$GT$::with_capacity_in::h73d01a069a69829e
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:418
+alloc::raw_vec::RawVec$LT$T$C$A$GT$::with_capacity_in::h78407ee3d0d7b99f
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:177
+alloc::vec::Vec$LT$T$C$A$GT$::with_capacity_in::hbc75fd3522b8d363
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:967
+_$LT$T$u20$as$u20$alloc..slice..$LT$impl$u20$$u5b$T$u5d$$GT$..to_vec_in..ConvertVec$GT$::to_vec::hc6f24ad882402fd4
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/slice.rs:447
+alloc::slice::_$LT$impl$u20$$u5b$T$u5d$$GT$::to_vec_in::hcf40a4492d7b8061
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/slice.rs:400
+alloc::slice::_$LT$impl$u20$$u5b$T$u5d$$GT$::to_vec::h14a5af133309fd32
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/slice.rs:376
+alloc::slice::_$LT$impl$u20$alloc..borrow..ToOwned$u20$for$u20$$u5b$T$u5d$$GT$::to_owned::haf123c6587d179c4
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/slice.rs:840
+alloc::str::_$LT$impl$u20$alloc..borrow..ToOwned$u20$for$u20$str$GT$::to_owned::hfd8770c0e3926be2
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/str.rs:211
+_$LT$alloc..string..String$u20$as$u20$core..convert..From$LT$$RF$str$GT$$GT$::from::h0183c7cfaafd1120
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/string.rs:3116
+_$LT$str$u20$as$u20$alloc..string..SpecToString$GT$::spec_to_string::h3c1d023728dc1ff7
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/string.rs:3047
+_$LT$T$u20$as$u20$alloc..string..ToString$GT$::to_string::h7d25783977b3b96f
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/string.rs:2896
+uucore::mods::locale::setup_localization::_$u7b$$u7b$closure$u7d$$u7d$::hc9f3b85f3514a972
+  at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:707
+std::thread::local::LocalKey$LT$core..cell..RefCell$LT$T$GT$$GT$::with_borrow_mut::_$u7b$$u7b$closure$u7d$$u7d$::h0748da0c6ea6d49a
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/thread/local.rs:757
+std::thread::local::LocalKey$LT$T$GT$::try_with::h03219d1dcf197821
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/thread/local.rs:513
+std::thread::local::LocalKey$LT$T$GT$::with::h29fcb77547562998
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/thread/local.rs:477
+std::thread::local::LocalKey$LT$core..cell..RefCell$LT$T$GT$$GT$::with_borrow_mut::he2a7121dfe25dade
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/thread/local.rs:757
+uucore::mods::locale::setup_localization::hc89fa4060dd4d63c
+  at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:707
+4B consumed over 1 calls from:
+    true::main::h0a74e627d71a9043
+      at src/uucore/src/lib/lib.rs:233
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+
+
+MOST TEMPORARY ALLOCATIONS
+12 temporary allocations of 167 allocations in total (7.19%) from
+std::sys::alloc::unix::_$LT$impl$u20$core..alloc..global..GlobalAlloc$u20$for$u20$std..alloc..System$GT$::alloc::h83536d09584c3555
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/alloc/unix.rs:14
+  in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+_RNvCs1Y7DaGC1cwg_7___rustc11___rdl_alloc
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/alloc.rs:455
+alloc::alloc::alloc::h5978ed8ca21d9a0f
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/alloc.rs:95
+alloc::alloc::Global::alloc_impl_runtime::he213c04b67e4a561
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/alloc.rs:190
+alloc::alloc::Global::alloc_impl::haccbcd8018bd386f
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/alloc.rs:312
+_$LT$alloc..alloc..Global$u20$as$u20$core..alloc..Allocator$GT$::allocate::h0da075f21210208d
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/alloc.rs:429
+alloc::alloc::exchange_malloc::h6d8270e0470dde16
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/alloc.rs:489
+alloc::boxed::Box$LT$T$GT$::new::hdc59b788faa5338d
+  at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/boxed.rs:265
+uucore::mods::panic::mute_sigpipe_panic::h6b78aa85e08f11d1
+  at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/panic.rs:39
+true::main::h0a74e627d71a9043
+  at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/lib.rs:232
+8 temporary allocations of 53 allocations in total (15.09%) from:
+    alloc::raw_vec::RawVecInner$LT$A$GT$::grow_amortized::hafa86a3c40cc0af6
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:512
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::raw_vec::RawVecInner$LT$A$GT$::grow_one::h273a7f4ff9d5d0e9
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:476
+    alloc::raw_vec::RawVec$LT$T$C$A$GT$::grow_one::h09bd8c840ddfb1b8
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:188
+    alloc::vec::Vec$LT$T$C$A$GT$::push_mut::hfda9916917e8726c
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:1034
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::vec::Vec$LT$T$C$A$GT$::push::h4641b8cf19b50343
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:994
+    fluent_syntax::parser::pattern::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::get_pattern::hfc2f574fad3f1947
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/pattern.rs:106
+    fluent_syntax::parser::core::Parser$LT$S$GT$::get_message::hc0825fac63f311a2
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/core.rs:107
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    fluent_syntax::parser::runtime::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::get_entry_runtime::h4c984e4c2051d312
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/runtime.rs:57
+    fluent_syntax::parser::runtime::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::parse_runtime::he8cda6fd5caa8568
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/runtime.rs:25
+    fluent_syntax::parser::parse_runtime::h464acb24bcd6ba70
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/mod.rs:278
+    fluent_bundle::resource::FluentResource::try_new::_$u7b$$u7b$closure$u7d$$u7d$::h7a59da23ba429ec9
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resource.rs:85
+    fluent_bundle::resource::InnerFluentResource::new::h5aedb386104ffe75
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/self_cell-1.3.0/src/lib.rs:495
+    fluent_bundle::resource::FluentResource::try_new::h20a01527d88fc7fc
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resource.rs:85
+    uucore::mods::locale::parse_fluent_resource_owned::h61c94cbb3e71c6e5
+      at src/uucore/src/lib/mods/locale.rs:356
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::parse_fluent_resource::hfeebed422db62ebf
+      at src/uucore/src/lib/mods/locale.rs:387
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::create_english_bundle_from_embedded::h95b15b100d0d5522
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:428
+    uucore::mods::locale::setup_localization::hc89fa4060dd4d63c
+      at src/uucore/src/lib/mods/locale.rs:701
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    true::main::h0a74e627d71a9043
+      at src/uucore/src/lib/lib.rs:233
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+2 temporary allocations of 12 allocations in total (16.67%) from:
+    alloc::raw_vec::RawVecInner$LT$A$GT$::grow_amortized::hafa86a3c40cc0af6
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:512
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::raw_vec::RawVecInner$LT$A$GT$::grow_one::h273a7f4ff9d5d0e9
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:476
+    alloc::raw_vec::RawVec$LT$T$C$A$GT$::grow_one::h09bd8c840ddfb1b8
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:188
+    alloc::vec::Vec$LT$T$C$A$GT$::push_mut::hfda9916917e8726c
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:1034
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::vec::Vec$LT$T$C$A$GT$::push::h4641b8cf19b50343
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:994
+    fluent_syntax::parser::pattern::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::get_pattern::hfc2f574fad3f1947
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/pattern.rs:66
+    fluent_syntax::parser::core::Parser$LT$S$GT$::get_message::hc0825fac63f311a2
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/core.rs:107
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    fluent_syntax::parser::runtime::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::get_entry_runtime::h4c984e4c2051d312
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/runtime.rs:57
+    fluent_syntax::parser::runtime::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::parse_runtime::he8cda6fd5caa8568
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/runtime.rs:25
+    fluent_syntax::parser::parse_runtime::h464acb24bcd6ba70
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/mod.rs:278
+    fluent_bundle::resource::FluentResource::try_new::_$u7b$$u7b$closure$u7d$$u7d$::h7a59da23ba429ec9
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resource.rs:85
+    fluent_bundle::resource::InnerFluentResource::new::h5aedb386104ffe75
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/self_cell-1.3.0/src/lib.rs:495
+    fluent_bundle::resource::FluentResource::try_new::h20a01527d88fc7fc
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resource.rs:85
+    uucore::mods::locale::parse_fluent_resource_owned::h61c94cbb3e71c6e5
+      at src/uucore/src/lib/mods/locale.rs:356
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::parse_fluent_resource::hfeebed422db62ebf
+      at src/uucore/src/lib/mods/locale.rs:387
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::create_english_bundle_from_embedded::h95b15b100d0d5522
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:428
+    uucore::mods::locale::setup_localization::hc89fa4060dd4d63c
+      at src/uucore/src/lib/mods/locale.rs:701
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    true::main::h0a74e627d71a9043
+      at src/uucore/src/lib/lib.rs:233
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+1 temporary allocations of 1 allocations in total (100.00%) from:
+    alloc::raw_vec::RawVecInner$LT$A$GT$::grow_amortized::h25da0f83467f70a8
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:512
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::raw_vec::RawVecInner$LT$A$GT$::reserve::do_reserve_and_handle::h230e9fdcfcd8c53b
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:651
+    alloc::raw_vec::RawVecInner$LT$A$GT$::reserve::h556602e9f8f58d2a
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:658
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::raw_vec::RawVec$LT$T$C$A$GT$::reserve::hc3d3f0648f8ca4ee
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:340
+    alloc::vec::Vec$LT$T$C$A$GT$::reserve::h2ebe577af3826011
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:1451
+    alloc::vec::Vec$LT$T$C$A$GT$::append_elements::h14a75f66fc86eb1b
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:2819
+    _$LT$alloc..vec..Vec$LT$T$C$A$GT$$u20$as$u20$alloc..vec..spec_extend..SpecExtend$LT$$RF$T$C$core..slice..iter..Iter$LT$T$GT$$GT$$GT$::spec_extend::h701f40b3f84f5ab7
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/spec_extend.rs:56
+    alloc::vec::Vec$LT$T$C$A$GT$::extend_from_slice::hebe81eb33f186b86
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:3436
+    alloc::string::String::push_str::h34f0bc6832aad235
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/string.rs:1102
+    _$LT$alloc..string..String$u20$as$u20$core..fmt..Write$GT$::write_str::h4a8c212290a281f9
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/string.rs:3347
+    core::fmt::Formatter::write_str::h72189eba35977850
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/fmt/mod.rs:2093
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    _$LT$unic_langid_impl..subtags..language..Language$u20$as$u20$core..fmt..Display$GT$::fmt::he781ee461d5be996
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-langid-impl-0.9.6/src/subtags/language.rs:0
+    _$LT$unic_langid_impl..LanguageIdentifier$u20$as$u20$core..fmt..Display$GT$::fmt::h080ef2db22425cfd
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-langid-impl-0.9.6/src/lib.rs:468
+    _$LT$T$u20$as$u20$alloc..string..SpecToString$GT$::spec_to_string::hc0aa9165615c7aa1
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/string.rs:2917
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    _$LT$T$u20$as$u20$alloc..string..ToString$GT$::to_string::h44809ce4abc0ff6b
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/string.rs:2896
+    _$LT$unic_langid_impl..LanguageIdentifier$u20$as$u20$core..cmp..PartialEq$LT$$RF$str$GT$$GT$::eq::h6f747f4c6802c4d6
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unic-langid-impl-0.9.6/src/lib.rs:489
+    core::cmp::PartialEq::ne::hd93fb978b1e8953e
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/cmp.rs:265
+    uucore::mods::locale::create_english_bundle_from_embedded::h95b15b100d0d5522
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:417
+    uucore::mods::locale::setup_localization::hc89fa4060dd4d63c
+      at src/uucore/src/lib/mods/locale.rs:701
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    true::main::h0a74e627d71a9043
+      at src/uucore/src/lib/lib.rs:233
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+1 temporary allocations of 3 allocations in total (33.33%) from:
+    alloc::raw_vec::RawVecInner$LT$A$GT$::grow_amortized::hafa86a3c40cc0af6
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:512
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::raw_vec::RawVecInner$LT$A$GT$::grow_one::h273a7f4ff9d5d0e9
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:476
+    alloc::raw_vec::RawVec$LT$T$C$A$GT$::grow_one::h09bd8c840ddfb1b8
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs:188
+    alloc::vec::Vec$LT$T$C$A$GT$::push_mut::hfda9916917e8726c
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:1034
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::vec::Vec$LT$T$C$A$GT$::push::h4641b8cf19b50343
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs:994
+    fluent_syntax::parser::pattern::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::get_pattern::hfc2f574fad3f1947
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/pattern.rs:106
+    fluent_syntax::parser::core::Parser$LT$S$GT$::get_message::hc0825fac63f311a2
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/core.rs:107
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    fluent_syntax::parser::runtime::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::get_entry_runtime::h4c984e4c2051d312
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/runtime.rs:57
+    fluent_syntax::parser::runtime::_$LT$impl$u20$fluent_syntax..parser..core..Parser$LT$S$GT$$GT$::parse_runtime::he8cda6fd5caa8568
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/runtime.rs:25
+    fluent_syntax::parser::parse_runtime::h464acb24bcd6ba70
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-syntax-0.12.0/src/parser/mod.rs:278
+    fluent_bundle::resource::FluentResource::try_new::_$u7b$$u7b$closure$u7d$$u7d$::h7a59da23ba429ec9
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resource.rs:85
+    fluent_bundle::resource::InnerFluentResource::new::h5aedb386104ffe75
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/self_cell-1.3.0/src/lib.rs:495
+    fluent_bundle::resource::FluentResource::try_new::h20a01527d88fc7fc
+      at /home/callen/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fluent-bundle-0.16.0/src/resource.rs:85
+    uucore::mods::locale::parse_fluent_resource_owned::h61c94cbb3e71c6e5
+      at src/uucore/src/lib/mods/locale.rs:356
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::create_english_bundle_from_embedded::_$u7b$$u7b$closure$u7d$$u7d$::hefd425b46d025636
+      at src/uucore/src/lib/mods/locale.rs:444
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::cached_resource::h821013fe796e95f7
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:406
+    uucore::mods::locale::create_english_bundle_from_embedded::h95b15b100d0d5522
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:443
+    uucore::mods::locale::setup_localization::hc89fa4060dd4d63c
+      at src/uucore/src/lib/mods/locale.rs:701
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    true::main::h0a74e627d71a9043
+      at src/uucore/src/lib/lib.rs:233
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+  and 0B from 19 other places
+
+11 temporary allocations of 14 allocations in total (78.57%) from
+std::sys::alloc::unix::_$LT$impl$u20$core..alloc..global..GlobalAlloc$u20$for$u20$std..alloc..System$GT$::alloc::h83536d09584c3555
+  at library/std/src/sys/alloc/unix.rs:14
+  in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+_RNvCs1Y7DaGC1cwg_7___rustc11___rdl_alloc
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/alloc.rs:455
+alloc::alloc::alloc::h5978ed8ca21d9a0f
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/alloc.rs:95
+alloc::alloc::Global::alloc_impl_runtime::he213c04b67e4a561
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/alloc.rs:190
+alloc::alloc::Global::alloc_impl::haccbcd8018bd386f
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/alloc.rs:312
+_$LT$alloc..alloc..Global$u20$as$u20$core..alloc..Allocator$GT$::allocate::h0da075f21210208d
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/alloc.rs:429
+alloc::boxed::Box$LT$T$C$A$GT$::try_clone_from_ref_in::h4efd81d6a3f7923a
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/boxed.rs:840
+alloc::boxed::Box$LT$T$C$A$GT$::clone_from_ref_in::he3cad802aaf8f514
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/boxed.rs:799
+alloc::boxed::Box$LT$T$GT$::clone_from_ref::hc297785f1ed7a73e
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/boxed.rs:752
+alloc::boxed::convert::_$LT$impl$u20$core..convert..From$LT$$RF$str$GT$$u20$for$u20$alloc..boxed..Box$LT$str$GT$$GT$::from::h13f01d975eb01bdd
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/boxed/convert.rs:138
+core::ops::function::FnOnce::call_once::h3946deecba115d01
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/ops/function.rs:250
+core::option::Option$LT$T$GT$::map::h6287dddc09afbd48
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/option.rs:1165
+std::sys::pal::unix::stack_overflow::thread_info::set_current_info::_$u7b$$u7b$closure$u7d$$u7d$::h058a282d848d9065
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/pal/unix/stack_overflow/thread_info.rs:114
+std::thread::current::with_current_name::_$u7b$$u7b$closure$u7d$$u7d$::hf8f92c19b1f308f0
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/thread/current.rs:234
+std::thread::current::try_with_current::h07f0efd48ba9f709
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/thread/current.rs:204
+std::thread::current::with_current_name::h53391ef2d1bb9ee1
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/thread/current.rs:216
+std::sys::pal::unix::stack_overflow::thread_info::set_current_info::h21653e4068580a44
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/pal/unix/stack_overflow/thread_info.rs:114
+1 temporary allocations of 1 allocations in total (100.00%) from:
+    std::sys::sync::once::futex::Once::call::h0f82344e1bccad40
+      at library/std/src/sys/sync/once/futex.rs:178
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sync::once::Once::call_once_force::h0ec4603ec118ad7d
+      at library/std/src/sync/once.rs:219
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sync::once_lock::OnceLock$LT$T$GT$::initialize::h3a08247861fc478d
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sync/once_lock.rs:542
+    std::sync::once_lock::OnceLock$LT$T$GT$::get_or_try_init::hdeb3e282c9b8a734
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sync/once_lock.rs:410
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sync::once_lock::OnceLock$LT$T$GT$::get_or_init::hef151f760a3e0b68
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sync/once_lock.rs:321
+    std::io::stdio::stdout::h2714a89a4dddbe89
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/io/stdio.rs:719
+    true::main::h0a74e627d71a9043
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/true/src/main.rs:6
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+1 temporary allocations of 1 allocations in total (100.00%) from:
+    uucore::mods::locale::get_locales_dir::h36c74728b25d534d
+      at src/uucore/src/lib/mods/locale.rs:776
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::setup_localization::hc89fa4060dd4d63c
+      at src/uucore/src/lib/mods/locale.rs:663
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    true::main::h0a74e627d71a9043
+      at src/uucore/src/lib/lib.rs:233
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+1 temporary allocations of 1 allocations in total (100.00%) from:
+    std::path::Path::join::hbb444e18370f4151
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/path.rs:2997
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::resolve_locales_dir_from_exe_dir::h1a31b5919aa837c1
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:714
+    uucore::mods::locale::get_locales_dir::h36c74728b25d534d
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:784
+    uucore::mods::locale::setup_localization::hc89fa4060dd4d63c
+      at src/uucore/src/lib/mods/locale.rs:663
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    true::main::h0a74e627d71a9043
+      at src/uucore/src/lib/lib.rs:233
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+1 temporary allocations of 1 allocations in total (100.00%) from:
+    std::path::Path::join::hbb444e18370f4151
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/path.rs:2997
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::resolve_locales_dir_from_exe_dir::h1a31b5919aa837c1
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:714
+    uucore::mods::locale::get_locales_dir::h36c74728b25d534d
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:784
+    uucore::mods::locale::setup_localization::hc89fa4060dd4d63c
+      at src/uucore/src/lib/mods/locale.rs:663
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    true::main::h0a74e627d71a9043
+      at src/uucore/src/lib/lib.rs:233
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+1 temporary allocations of 1 allocations in total (100.00%) from:
+    std::path::Path::join::hbb444e18370f4151
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/path.rs:2997
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::resolve_locales_dir_from_exe_dir::h1a31b5919aa837c1
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:721
+    uucore::mods::locale::get_locales_dir::h36c74728b25d534d
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:784
+    uucore::mods::locale::setup_localization::hc89fa4060dd4d63c
+      at src/uucore/src/lib/mods/locale.rs:663
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    true::main::h0a74e627d71a9043
+      at src/uucore/src/lib/lib.rs:233
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+  and 6B from 9 other places
+
+1 temporary allocations of 1 allocations in total (100.00%) from
+0x7785a1ab738e
+  in /lib/x86_64-linux-gnu/libstdc++.so.6
+1 temporary allocations of 1 allocations in total (100.00%) from:
+    call_init
+      at ./elf/dl-init.c:74
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_init::call_init
+      at ./elf/dl-init.c:120
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_init
+      at ./elf/./elf/dl-init.c:121
+    _dl_start_user
+      in /lib64/ld-linux-x86-64.so.2
+
+1 temporary allocations of 10 allocations in total (10.00%) from
+std::sys::alloc::unix::_$LT$impl$u20$core..alloc..global..GlobalAlloc$u20$for$u20$std..alloc..System$GT$::realloc::hbcfae9422fa95774
+  at library/std/src/sys/alloc/unix.rs:54
+  in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+_RNvCs1Y7DaGC1cwg_7___rustc13___rdl_realloc
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/alloc.rs:477
+alloc::alloc::realloc::h341a228f070c62ba
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/alloc.rs:135
+alloc::alloc::Global::shrink_impl_runtime::h75e6bfbc465ac335
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/alloc.rs:288
+alloc::alloc::Global::shrink_impl::hf9ea428c38455438
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/alloc.rs:359
+_$LT$alloc..alloc..Global$u20$as$u20$core..alloc..Allocator$GT$::shrink::hee670f1a6c410e74
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/alloc.rs:478
+alloc::raw_vec::RawVecInner$LT$A$GT$::shrink_unchecked::h4a23169657850c9b
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs:825
+alloc::raw_vec::RawVecInner$LT$A$GT$::shrink::hda687e897598990c
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs:786
+alloc::raw_vec::RawVecInner$LT$A$GT$::shrink_to_fit::hf680a4fb57ccac75
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs:729
+alloc::raw_vec::RawVec$LT$T$C$A$GT$::shrink_to_fit::h6a0cf38465465c96
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs:400
+alloc::vec::Vec$LT$T$C$A$GT$::shrink_to_fit::h9a7b9faf001d4376
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/vec/mod.rs:1589
+std::sys::fs::unix::readlink::h69aa508064a74099
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/fs/unix.rs:2106
+core::ops::function::Fn::call::h76bc9481cc71ff8a
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/core/src/ops/function.rs:79
+std::sys::helpers::small_c_string::run_with_cstr_stack::h73cd918911061227
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/helpers/small_c_string.rs:48
+std::sys::helpers::small_c_string::run_with_cstr::heac9c94138ee39f0
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/helpers/small_c_string.rs:28
+std::sys::helpers::small_c_string::run_path_with_cstr::ha7997b943a8d2309
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/helpers/small_c_string.rs:18
+std::sys::fs::read_link::h8bd5d65019afe2f9
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/fs/mod.rs:92
+std::fs::read_link::h429fed84935bc985
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/fs.rs:2992
+std::sys::pal::unix::os::current_exe::h537ed7583d9db57a
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/pal/unix/os.rs:266
+std::env::current_exe::h72eaee62d9359d7e
+  at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/env.rs:751
+1 temporary allocations of 1 allocations in total (100.00%) from:
+    alloc::raw_vec::RawVecInner$LT$A$GT$::grow_amortized::h7c1c08b1c6997a63
+      at library/alloc/src/raw_vec/mod.rs:512
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::raw_vec::RawVecInner$LT$A$GT$::reserve::do_reserve_and_handle::h5d733d1e89adc793
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs:651
+    alloc::raw_vec::RawVecInner$LT$A$GT$::reserve::h75b20e6404f87da2
+      at library/alloc/src/raw_vec/mod.rs:658
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    alloc::raw_vec::RawVec$LT$T$C$A$GT$::reserve::h8680f27b38a3e633
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/raw_vec/mod.rs:340
+    alloc::vec::Vec$LT$T$C$A$GT$::reserve::h07fc7c3256c83e0f
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/vec/mod.rs:1451
+    alloc::vec::Vec$LT$T$C$A$GT$::append_elements::hb0e2cbc69abe4bbf
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/vec/mod.rs:2819
+    _$LT$alloc..vec..Vec$LT$T$C$A$GT$$u20$as$u20$alloc..vec..spec_extend..SpecExtend$LT$$RF$T$C$core..slice..iter..Iter$LT$T$GT$$GT$$GT$::spec_extend::h104428dc676c5e8a
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/vec/spec_extend.rs:56
+    alloc::vec::Vec$LT$T$C$A$GT$::extend_from_slice::h459dc69cdbc68485
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/alloc/src/vec/mod.rs:3436
+    std::sys::os_str::bytes::Buf::push_slice::h87f3eaf07c5d5540
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/sys/os_str/bytes.rs:139
+    _$LT$T$u20$as$u20$std..ffi..os_str..OsString..push..SpecPushTo$GT$::spec_push_to::h10c0ec0490d58a02
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/ffi/os_str.rs:268
+    std::ffi::os_str::OsString::push::ha5213c16394d5b9f
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/ffi/os_str.rs:284
+    std::path::PathBuf::_push::ha18f2de566eba6af
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/path.rs:1391
+    std::path::PathBuf::push::h73accadeed9a2a95
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/path.rs:1313
+    std::path::Path::_join::h772e9499befd4fe9
+      at /rustc/e408947bfd200af42db322daf0fadfe7e26d3bd1/library/std/src/path.rs:3002
+    std::path::Path::join::hbb444e18370f4151
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/path.rs:2997
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    uucore::mods::locale::resolve_locales_dir_from_exe_dir::h1a31b5919aa837c1
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:728
+    uucore::mods::locale::get_locales_dir::h36c74728b25d534d
+      at /home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore/src/lib/mods/locale.rs:784
+    uucore::mods::locale::setup_localization::hc89fa4060dd4d63c
+      at src/uucore/src/lib/mods/locale.rs:663
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    true::main::h0a74e627d71a9043
+      at src/uucore/src/lib/lib.rs:233
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    core::ops::function::FnOnce::call_once::h7558c667a9aaa5ca
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/ops/function.rs:250
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+    std::sys::backtrace::__rust_begin_short_backtrace::hbac85d13659088b0
+      at /home/callen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/sys/backtrace.rs:166
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+  and 0B from 5 other places
+
+1 temporary allocations of 1 allocations in total (100.00%) from
+__GI___getdelim
+  at ./libio/iogetdelim.c:107
+  in /lib/x86_64-linux-gnu/libc.so.6
+1 temporary allocations of 1 allocations in total (100.00%) from:
+    __pthread_getattr_np
+      at ./nptl/pthread_getattr_np.c:122
+      in /lib/x86_64-linux-gnu/libc.so.6
+    main
+      in /home/callen/work/coreutils-startup-8cf2e4f4/bin/single/true
+
+
+total runtime: 0.00s.
+calls to allocation functions: 217 (217000/s)
+temporary memory allocations: 26 (26000/s)
+peak heap memory consumption: 134.71K
+peak RSS (including heaptrack overhead): 5.46M
+total memory leaked: 51.92K

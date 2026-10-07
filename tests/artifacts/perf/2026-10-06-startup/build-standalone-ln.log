@@ -1,0 +1,7 @@
+   Compiling rustix v1.1.5
+   Compiling uucore v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uucore)
+   Compiling terminal_size v0.4.4
+   Compiling clap_builder v4.6.7
+   Compiling clap v4.6.7
+   Compiling uu_ln v0.13.0 (/home/callen/work/coreutils-startup-8cf2e4f4/source/src/uu/ln)
+    Finished `release` profile [optimized + debuginfo] target(s) in 10.03s
