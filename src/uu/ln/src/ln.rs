@@ -106,7 +106,12 @@ static ARG_FILES: &str = "files";
 pub fn uumain(args: impl uucore::Args) -> UResult<()> {
     // Help strings cannot affect accepted arguments. If parsing needs to emit
     // anything, replay it with the full command before any filesystem effects.
-    let args: Vec<OsString> = args.collect();
+    let mut args: Vec<OsString> = args.collect();
+    if let Some((settings, operands)) = parse_simple_args(&args) {
+        let paths = operands.map(|index| PathBuf::from(std::mem::take(&mut args[index])));
+        exec(&paths, &settings)?;
+        return Ok(());
+    }
     let matches = match command(false).try_get_matches_from(&args) {
         Ok(matches) => matches,
         Err(_) => uucore::clap_localization::handle_clap_result(uu_app(), args)?,
@@ -154,6 +159,72 @@ pub fn uumain(args: impl uucore::Args) -> UResult<()> {
 
     exec(&paths[..], &settings)?;
     Ok(())
+}
+
+/// Recognize two-operand invocations with only -s, -f, -n and -T. Everything
+/// else goes through Clap before any filesystem effects. Operand indexes let
+/// the caller move paths out of its argument buffer without cloning them.
+fn parse_simple_args(args: &[OsString]) -> Option<(Settings, [usize; 2])> {
+    const SYMBOLIC: u8 = 1;
+    const FORCE: u8 = 2;
+    const NO_DEREFERENCE: u8 = 4;
+    const NO_TARGET_DIRECTORY: u8 = 8;
+    let mut flags = 0;
+    let mut operands = [0; 2];
+    let mut count = 0;
+    let mut options_ended = false;
+    for (index, arg) in args.iter().enumerate().skip(1) {
+        let bytes = arg.as_encoded_bytes();
+        if !options_ended && bytes == b"--" {
+            options_ended = true;
+        } else if !options_ended && bytes.starts_with(b"-") && bytes.len() > 1 {
+            for byte in &bytes[1..] {
+                let flag = match byte {
+                    b's' => SYMBOLIC,
+                    b'f' => FORCE,
+                    b'n' => NO_DEREFERENCE,
+                    b'T' => NO_TARGET_DIRECTORY,
+                    _ => return None,
+                };
+                // Only -s explicitly overrides itself in the Clap schema.
+                // Let Clap decide diagnostics for all other repetitions.
+                if flag != SYMBOLIC && flags & flag != 0 {
+                    return None;
+                }
+                flags |= flag;
+            }
+        } else {
+            if arg.is_empty() || count == operands.len() {
+                return None;
+            }
+            operands[count] = index;
+            count += 1;
+        }
+    }
+    if count != operands.len() {
+        return None;
+    }
+    Some((
+        Settings {
+            overwrite: if flags & FORCE != 0 {
+                OverwriteMode::Force
+            } else {
+                OverwriteMode::NoClobber
+            },
+            // Without -b/--backup/--suffix, VERSION_CONTROL cannot enable
+            // backups. The suffix is never used in BackupMode::None.
+            backup: BackupMode::None,
+            suffix: OsString::new(),
+            symbolic: flags & SYMBOLIC != 0,
+            relative: false,
+            logical: false,
+            target_dir: None,
+            no_target_dir: flags & NO_TARGET_DIRECTORY != 0,
+            no_dereference: flags & NO_DEREFERENCE != 0,
+            verbose: false,
+        },
+        operands,
+    ))
 }
 
 pub fn uu_app() -> Command {

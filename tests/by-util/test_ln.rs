@@ -1346,3 +1346,24 @@ fn test_parse_error_with_operands_does_not_create_link() {
         .no_stdout();
     assert!(!at.file_exists("new-link"));
 }
+
+#[test]
+fn test_short_options_after_operands_and_combined() {
+    for flags in ["-s", "-sf", "-fsnT", "-ss"] {
+        let ts = TestScenario::new(util_name!());
+        ts.ucmd()
+            .args(&["source", "new-link", flags])
+            .succeeds()
+            .no_output();
+        assert_eq!(ts.fixtures.resolve_link("new-link"), "source");
+    }
+}
+
+#[test]
+fn test_double_dash_preserves_option_shaped_operand() {
+    let (at, mut ucmd) = at_and_ucmd!();
+    ucmd.args(&["-s", "--", "-sf", "new-link"])
+        .succeeds()
+        .no_output();
+    assert_eq!(at.resolve_link("new-link"), "-sf");
+}
